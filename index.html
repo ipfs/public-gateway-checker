@@ -2,70 +2,28 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Public IPFS Gateways</title>
+	<style>
+	body, html {
+		font-family: Verdana, sans-serif;
+		color: #121212;
+		background-color: #FAFAFA;
+	}
+
+	h1, h3 {
+		font-weight: normal;
+	}
+
+	#results {
+		font-family: "SourceCodePro", monospace;
+		white-space: pre;
+	}
+	</style>
 </head>
 <body>
 	<h1>Public IPFS Gateways</h1>
-	<h3 id='stats'></h3>
+	<h3 id="stats"></h3>
+	<div id="results"></div>
 </body>
-<script>
-const gateways = [
-	'https://ipfs.io/ipfs/:hash',
-	'https://gateway.ipfs.io/ipfs/:hash',
-	'https://ipfs.infura.io/ipfs/:hash',
-	'http://rx14.co.uk/ipfs/:hash',
-	'https://xmine128.tk/ipfs/:hash',
-	'https://upload.global/ipfs/:hash',
-	'https://ipfs.jes.xxx/ipfs/:hash',
-	'https://catalunya.network/ipfs/:hash',
-	'https://siderus.io/ipfs/:hash',
-	'https://eternum.io/ipfs/:hash',
-	'https://hardbin.com/ipfs/:hash',
-	'https://ipfs.macholibre.org/ipfs/:hash',
-	'https://ipfs.works/ipfs/:hash',
-	'https://ipfs.work/ipfs/:hash'
-]
-
-const hashToTest = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a'
-const hashString = 'Hello from IPFS Gateway Checker'
-
-function addNode (gateway, online, title) {
-	const para = document.createElement('div')
-	let node
-	if (online) {
-		node = document.createElement('strong')
-		node.innerText = '✅ - Online - ' + gateway
-	} else {
-		node = document.createElement('div')
-		node.innerText = '❌ - Offline -  ' + gateway
-	}
-	node.setAttribute('title', title)
-	para.appendChild(node)
-	document.body.appendChild(para)
-}
-
-function updateStats (total, checked) {
-	document.getElementById('stats').innerText = checked + '/' + total + ' gateways checked'
-}
-
-const total = gateways.length
-let checked = 0
-gateways.forEach((gateway) => {
-	const gatewayAndHash = gateway.replace(':hash', hashToTest)
-	fetch(gatewayAndHash)
-		.then(res => res.text())
-		.then((text) => {
-			const matched = text.trim() === hashString.trim()
-			addNode(gatewayAndHash, matched, matched ? 'All good' : 'Output did not match expected output')
-			checked++
-			updateStats(total, checked)
-		}).catch((err) => {
-			window.err = err
-			addNode(gatewayAndHash, false, err)
-			checked++
-			updateStats(total, checked)
-		})
-})
-
-</script>
+<script src="./app.js"></script>
 </html>

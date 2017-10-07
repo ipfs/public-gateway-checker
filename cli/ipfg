@@ -1,0 +1,417 @@
+#!/usr/bin/env bash
+
+# ipfg
+# v1.1
+# IPFS public gateway checker (extended cli version)
+# original repository: https://github.com/ipfs/public-gateway-checker
+# this script copyright 2017 by Joss Brown (pseud.): https://github.com/JayBrown
+# license: MIT
+
+echoerr() {
+	echo "$1" 1>&2
+}
+
+usage() {
+	echo "ipfg $VERSION ($DATE)"
+	echo "IPFS public gateway checker (extended cli version)"
+	echo ""
+	echo "Running ipfg without an option will check the online status of all available IPFS gateways."
+	echo "When using multiple options, only the final option will be recognized."
+	echo ""
+	echo "OPTIONS:"
+	echo -e "\t-a | --add <URL>\n\t\tAdd specified gateway URLs to local list (format: http[s]://<domain>.<tld>/ipfs/:hash)"
+	echo ""
+	echo -e "\t-d | --delete [<URL> | all]\n\t\tDelete specified or all gateway URLs from local list (format: see above)"
+	echo ""
+	echo -e "\t-g | --github | --repo\n\t\tOpen GitHub repository in default web browser"
+	echo ""
+	echo -e "\t-h | --help\n\t\tThis help page"
+	echo ""
+	echo -e "\t-l | --list [raw] [all | local | remote]\n\t\tDisplay listed gateways as domains or raw URLs"
+	echo ""
+	echo -e "\t-L | --local\n\t\tOnly check gateways on local list"
+	echo ""
+	echo -e "\t-M | --manual <URL>\n\t\tCheck only the specified URLs"
+	echo ""
+	echo -e "\t-R | --remote\n\t\tOnly check gateways on remote list"
+	echo ""
+	echo -e "\t-s | --save | --backup\n\t\tSave remote gateway list to a local backup file"
+	echo ""
+	echo -e "\t-V | --version\n\t\tPrint version number"
+	echo ""
+	echo "Copyright 2017 by Joss Brown (pseud.): https://github.com/JayBrown"
+	echo "License: MIT"
+}
+
+backup-remote() {
+	rm -f "$IPFG_DIR/remote-backup-old" 2>/dev/null \
+		&& cp "$RLB_PATH" "$IPFG_DIR/remote-backup-old" 2>/dev/null \
+		&& rm -f "$RLB_PATH" 2>/dev/null
+	if ! $INITIAL ; then
+		echoerr "Creating backup of remote gateway list. Please wait..."
+	fi
+	RGATEWAYS=$(curl --silent "$RL_PATH" | sed -e '$ d' -e '1,1d' -e '/^$/d' -e 's/\"//g' -e 's/,$//g')
+	if [[ $RGATEWAYS == "" ]] ; then
+		echoerr "Error: no access to remote list."
+		if ! $INITIAL ; then
+			echoerr "Restoring from backup..."
+			cp "$IPFG_DIR/remote-backup-old" "$RLB_PATH"
+		else
+			echoerr "Please try again later."
+			exit 1
+		fi
+	else
+		while read -r GATEWAY
+		do
+			GATEWAY=$(echo "$GATEWAY" | xargs)
+			echo "$GATEWAY" >> "$RLB_PATH"
+		done < <(echo "$RGATEWAYS")
+	fi
+	echoerr "Done."
+}
+
+RED='\033[0;31m'
+BLUE='\033[0;34m'
+GREEN='\033[0;32m'
+NC='\033[0m'
+
+VERSION="1.1"
+DATE="10-2017"
+
+RL_PATH="https://raw.githubusercontent.com/ipfs/public-gateway-checker/master/gateways.json"
+
+TESTHASH="Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a"
+
+INITIAL=false
+
+IPFG_DIR="$HOME/.ipfg"
+mkdir -p "$IPFG_DIR"
+
+RLB_PATH="$IPFG_DIR/remote-backup"
+LL_PATH="$IPFG_DIR/local"
+if ! [[ -f "$LL_PATH" ]] ; then
+	touch "$LL_PATH"
+fi
+if ! [[ -f "$RLB_PATH" ]] ; then
+	INITIAL=true
+	echoerr "Creating initial backup of remote gateway list. Please wait..."
+	backup-remote
+	INITIAL=false
+fi
+
+ADD=false
+DELETE=false
+LIST=false
+RAW=false
+LIST_REMOTE=false
+LIST_LOCAL=false
+MANUAL=false
+REMOTE=false
+LOCAL=false
+
+if [[ "$@" == "" ]] ; then
+	REMOTE=true
+	LOCAL=true
+else
+	if [[ $1 != "-"* ]] ; then
+		echoerr "Invalid option: $1"
+		echoerr ""
+		usage
+		exit 1
+	else
+		while :; do
+			case $1 in
+				-a|--add)
+					ADD=true
+					DELETE=false
+					;;
+				-d|--delete)
+					DELETE=true
+					ADD=false
+					;;
+				-g|--github|--repo)
+					echoerr "Opening GitHub repository in your default web browser..."
+					open https://github.com/ipfs/public-gateway-checker
+					exit 0
+					;;
+				-h|-\?|--help)
+					usage
+					exit 0
+					;;
+				-l|--list)
+					LIST=true
+					shift
+					if [[ $1 == "raw" ]] ; then
+						RAW=true
+						shift
+					fi
+					if [[ $1 == "remote" ]] ; then
+						LIST_REMOTE=true
+						LIST_LOCAL=false
+					elif [[ $1 == "local" ]] ; then
+						LIST_REMOTE=false
+						LIST_LOCAL=true
+					else
+						LIST_REMOTE=true
+						LIST_LOCAL=true
+					fi
+					;;
+				-L|--local)
+					LOCAL=true
+					MANUAL=false
+					;;
+				-M|--manual)
+					MANUAL=true
+					LOCAL=false
+					REMOTE=false
+					;;
+				-R|--remote)
+					REMOTE=true
+					MANUAL=false
+					;;
+				-s|--save|--backup)
+					backup-remote
+					exit 0
+					;;
+				-V|--version)
+					echo "ipfg $VERSION $DATE"
+					exit 0
+					;;
+				--)
+					shift
+					break
+					;;
+				-?*)
+					echoerr "Invalid option: $1"
+					echoerr ""
+					usage
+					exit 1
+					;;
+				*)
+					break
+			esac
+			shift
+		done
+	fi
+fi
+
+if $ADD ; then
+	if [[ "$@" == "" ]] ; then
+		echoerr "Error: no gateway URL specified."
+		exit 1
+	else
+		LOCAL_LIST=$(cat "$LL_PATH" | sed -e '/^$/d')
+		for ADD_URL in "$@"
+		do
+			if ! [[ $ADD_URL =~ ^("http://"|"https://") ]] ; then
+				echoerr "Error: wrong domain format: $ADD_URL"
+				echoerr "Format must be: http[s]://<domain>.<tld>/ipfs/:hash"
+				continue
+			elif [[ $ADD_URL != *"/ipfs/:hash" ]] ; then
+				echoerr "Error: wrong URL format: $ADD_URL"
+				echoerr "Format must be: http[s]://<domain>.<tld>/ipfs/:hash"
+				continue
+			else
+				if [[ $(echo "$LOCAL_LIST" | grep ^$ADD_URL$) != "" ]] ; then
+					echoerr "Already exists: $ADD_URL"
+					continue
+				else
+					echo "$ADD_URL" >> "$LL_PATH"
+					echo "Added: $ADD_URL"
+				fi
+			fi
+		done
+	fi
+	exit 0
+fi
+
+if $DELETE ; then
+	LOCAL_LIST=$(cat "$LL_PATH" | sed -e '/^$/d')
+	if [[ $LOCAL_LIST == "" ]] ; then
+		echoerr "Local gateway list is already empty."
+		exit 0
+	fi
+	if [[ "$@" == "" ]] ; then
+		echoerr "Error: no gateway URL specified."
+		exit 1
+	elif [[ "$@" == "all" ]] ; then
+		echo -e "Do you really want to delete all local gateway URL entries? (y/n)"
+		read -n 1 -s DELYN
+		if [[ $DELYN == "y" ]] ; then
+			LOCAL_LIST=$(cat "$LL_PATH" | sed -e '/^$/d')
+			echo "" > "$LL_PATH"
+			while read -r DEL_URL
+			do
+				echo "Deleted: $DEL_URL"
+			done < <(echo "$LOCAL_LIST")
+		else
+			echoerr "Canceled."
+		fi
+	else
+		for DEL_URL in "$@"
+		do
+			LOCAL_LIST=$(cat "$LL_PATH" | sed -e '/^$/d')
+			if [[ ! $DEL_URL =~ ^("http://"|"https://") ]] ; then
+				echoerr "Error: wrong domain format: $DEL_URL"
+				echoerr "Format must be: http[s]://<domain>.<tld>/ipfs/:hash"
+				continue
+			elif [[ $DEL_URL != *"/ipfs/:hash" ]] ; then
+				echoerr "Error: wrong URL format: $DEL_URL"
+				echoerr "Format must be: http[s]://<domain>.<tld>/ipfs/:hash"
+				continue
+			elif [[ $(echo "$LOCAL_LIST" | grep "^$DEL_URL$") == "" ]] ; then
+				echoerr "Error: not on the local gateway list: $DEL_URL"
+				continue
+			else
+				NEW_LIST=$(echo "$LOCAL_LIST" | grep -v "^$DEL_URL$")
+				echo "$NEW_LIST" > "$LL_PATH"
+				echo "Deleted: $DEL_URL"
+			fi
+		done
+	fi
+	exit 0
+fi
+
+if $LIST ; then
+	if $LIST_REMOTE ; then
+		RGATEWAYS=$(curl --silent "$RL_PATH" | sed -e '$ d' -e '1,1d' -e '/^$/d' -e 's/\"//g' -e 's/,$//g')
+		if ! $RAW ; then
+			RGATEWAYS=$(echo "$RGATEWAYS" | awk -F/ '{print $1"//"$3}')
+		fi
+		if [[ $RGATEWAYS == "" ]] ; then
+			echoerr "Error: remote gateway list is not accessible."
+			echoerr "Checking for backup list..."
+			RGATEWAYS=$(cat "$RLB_PATH" | awk -F/ '{print $1"//"$3}')
+		fi
+		if [[ $RGATEWAYS == "" ]] ; then
+			echoerr "Error: no backup list available."
+			LIST_REMOTE=false
+		else
+			RGATEWAYS=$(while read -r GATEWAY
+				do
+					GATEWAY=$(echo "$GATEWAY" | xargs)
+					echo "$GATEWAY"
+				done < <(echo "$RGATEWAYS")
+				)
+		fi
+	fi
+	if $LIST_LOCAL ; then
+		LGATEWAYS=$(cat "$LL_PATH" | sed -e '/^$/d')
+		if [[ $LGATEWAYS == "" ]] ; then
+			LIST_LOCAL=false
+		else
+			if ! $RAW ; then
+				LGATEWAYS=$(echo "$LGATEWAYS" |  awk -F/ '{print $1"//"$3}')
+			fi
+		fi
+	fi
+	if $LIST_REMOTE && $LIST_LOCAL ; then
+		echoerr "*** REMOTE ***"
+		echo "$RGATEWAYS"
+		echoerr "*** LOCAL ***"
+		echo "$LGATEWAYS"
+	elif $LIST_REMOTE && ! $LIST_LOCAL ; then
+		echo "$RGATEWAYS"
+	elif ! $LIST_REMOTE && $LIST_LOCAL ; then
+		echo "$LGATEWAYS"
+	fi
+	exit 0
+fi
+
+if $MANUAL ; then
+	if [[ "$@" == "" ]] ; then
+		echoerr "Error: no gateway URL specified."
+		exit 1
+	fi
+	GATEWAYS=$(for MANGW in "$@"
+		do
+			if ! [[ $MANGW =~ ^("http://"|"https://") ]] ; then
+				echoerr "Error: wrong domain format: $MANGW"
+				echoerr "Format must be: http[s]://<domain>.<tld>/ipfs/:hash"
+				continue
+			elif [[ $MANGW != *"/ipfs/:hash" ]] ; then
+				echoerr "Error: wrong URL format: $MANGW"
+				echoerr "Format must be: http[s]://<domain>.<tld>/ipfs/:hash"
+				continue
+			else
+				echo "$MANGW"
+			fi
+		done
+		)
+	if [[ $GATEWAYS == "" ]] ; then
+		echoerr "Error: no valid gateway URLs specified."
+		exit 1
+	fi
+else
+	if $REMOTE ; then
+		RGATEWAYS=$(curl --silent "$RL_PATH" | sed -e '$ d' -e '1,1d' -e 's/\"//g' -e 's/,$//g' -e '/^$/d')
+		if [[ $RGATEWAYS == "" ]] ; then
+			echoerr "Error: remote gateway list is not accessible."
+			echoerr "Checking for backup list..."
+			RGATEWAYS=$(cat "$RLB_PATH")
+		fi
+		if [[ $RGATEWAYS == "" ]] ; then
+			echoerr "Error: no backup list available."
+			REMOTE=false
+		fi
+	fi
+
+	if $LOCAL ; then
+		LGATEWAYS=$(cat "$LL_PATH" | sed -e '/^$/d')
+		if [[ $LGATEWAYS == "" ]] ; then
+			LOCAL=false
+			if ! $REMOTE ; then
+				echoerr "No gateway URLs available."
+			fi
+		fi
+	fi
+
+	if ! $REMOTE && ! $LOCAL ; then
+		exit 0
+	fi
+
+	if $REMOTE && $LOCAL ; then
+		GATEWAYS="$RGATEWAYS
+$LGATEWAYS"
+	elif $REMOTE && ! $LOCAL ; then
+		GATEWAYS="$RGATEWAYS"
+	elif ! $REMOTE && $LOCAL ; then
+		GATEWAYS="$LGATEWAYS"
+	fi
+fi
+
+GWNUM=$(echo "$GATEWAYS" | wc -l | xargs)
+if [[ $GWNUM -gt 1 ]] ; then
+	echoerr "*** Public IPFS Gateways ***"
+fi
+
+while read -r GATEWAY
+do
+
+	GATEWAY=$(echo "$GATEWAY" | xargs)
+	TESTURL=$(echo "$GATEWAY" | sed -e "s-:hash-$TESTHASH-")
+	DOMAIN=$(echo "$GATEWAY" | awk -F/ '{print $1"//"$3}')
+
+	if [[ $(curl --silent "$TESTURL") == "Hello from IPFS Gateway Checker" ]] ; then
+		echo -e "${GREEN}Online${NC}\t$DOMAIN"
+	else
+		RESP_CODE=$(/usr/bin/curl -o /dev/null --silent --head --write-out "%{http_code}\n" $TESTURL)
+		if [[ $RESP_CODE =~ ^(301|303|307|308)$ ]] ; then
+			RD_DOMAIN=$(curl -w "%{url_effective}\n" -I -L -s -S "$DOMAIN" -o /dev/null | sed 's-/*$--')
+			RD_TESTURL="$RD_DOMAIN/ipfs/$TESTHASH"
+			if [[ $(curl --silent "$RD_TESTURL") == "Hello from IPFS Gateway Checker" ]] ; then
+				echo -e "${BLUE}Online${NC}\t$RD_DOMAIN\t[$RESP_CODE: $DOMAIN]"
+			else
+				echo -e "${RED}Offline${NC}\t$RD_DOMAIN\t[$RESP_CODE: $DOMAIN]"
+			fi
+		else
+			echo -e "${RED}Offline${NC}\t$DOMAIN\t[$RESP_CODE]"
+		fi
+	fi
+
+done < <(echo "$GATEWAYS")
+
+if [[ $GWNUM -gt 1 ]] ; then
+	echoerr "Done: $GWNUM gateways checked."
+fi
+exit 0

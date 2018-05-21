@@ -15,5 +15,6 @@
 	"https://ipfs.work/ipfs/:hash",
 	"https://ipfs.wa.hle.rs/ipfs/:hash",
 	"https://api.wisdom.sh/ipfs/:hash",
-	"https://ipfs.renehsz.com/ipfs/:hash"
+	"https://gateway.blocksec.com/ipfs/:hash",
+  "https://ipfs.renehsz.com/ipfs/:hash"
 ]

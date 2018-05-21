@@ -14,5 +14,6 @@
 	"https://ipfs.works/ipfs/:hash",
 	"https://ipfs.work/ipfs/:hash",
 	"https://ipfs.wa.hle.rs/ipfs/:hash",
-	"https://api.wisdom.sh/ipfs/:hash"
+	"https://api.wisdom.sh/ipfs/:hash",
+	"http://ipfs.dry.ninja/ipfs/:hash",
 ]

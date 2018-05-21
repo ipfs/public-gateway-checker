@@ -2,7 +2,7 @@
 	"https://ipfs.io/ipfs/:hash",
 	"https://gateway.ipfs.io/ipfs/:hash",
 	"https://ipfs.infura.io/ipfs/:hash",
-	"http://rx14.co.uk/ipfs/:hash",
+	"https://rx14.co.uk/ipfs/:hash",
 	"https://xmine128.tk/ipfs/:hash",
 	"https://upload.global/ipfs/:hash",
 	"https://ipfs.jes.xxx/ipfs/:hash",
@@ -15,5 +15,6 @@
 	"https://ipfs.work/ipfs/:hash",
 	"https://ipfs.wa.hle.rs/ipfs/:hash",
 	"https://api.wisdom.sh/ipfs/:hash",
-	"https://gateway.blocksec.com/ipfs/:hash"
+	"https://gateway.blocksec.com/ipfs/:hash",
+  "https://ipfs.renehsz.com/ipfs/:hash"
 ]

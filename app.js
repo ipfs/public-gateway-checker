@@ -27,7 +27,9 @@ function checkGateways (gateways) {
   let checked = 0
   gateways.forEach((gateway) => {
     const gatewayAndHash = gateway.replace(':hash', hashToTest)
-    fetch(gatewayAndHash)
+    // opt-out from gateway redirects done by browser extension
+    const testUrl = gatewayAndHash + '#x-ipfs-companion-no-redirect'
+    fetch(testUrl)
       .then(res => res.text())
       .then((text) => {
         const matched = text.trim() === hashString.trim()

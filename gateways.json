@@ -19,5 +19,5 @@
 	"https://ipfs.renehsz.com/ipfs/:hash",
 	"https://cloudflare-ipfs.com/ipfs/:hash",
 	"https://ipns.co/:hash",
-  "https://ipfs.netw0rk.io/ipfs/:hash"
+	"https://ipfs.netw0rk.io/ipfs/:hash"
 ]

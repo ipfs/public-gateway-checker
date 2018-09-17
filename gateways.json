@@ -20,5 +20,6 @@
 	"https://cloudflare-ipfs.com/ipfs/:hash",
 	"https://ipns.co/:hash",
 	"https://ipfs.netw0rk.io/ipfs/:hash",
-	"https://gateway.swedneck.xyz/ipfs/:hash"
+	"https://gateway.swedneck.xyz/ipfs/:hash",
+	"http://10.139.105.114:8080/ipfs/:hash"
 ]

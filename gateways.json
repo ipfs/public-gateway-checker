@@ -22,5 +22,5 @@
 	"https://ipfs.netw0rk.io/ipfs/:hash",
 	"https://gateway.swedneck.xyz/ipfs/:hash",
 	"http://10.139.105.114:8080/ipfs/:hash",
-	"http://ipfs.dapps.earth/ipfs/:hash"
+	"https://ipfs.dapps.earth/ipfs/:hash"
 ]

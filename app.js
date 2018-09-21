@@ -5,7 +5,7 @@ const $results = document.querySelector('#results')
 
 function returnHtmlLink (gateway) {
 	let gatewayTitle = gateway.split(hashToTest)[0]
-	return '<a title="' + gatewayTitle + '" href="' + gateway '" >' + gateway + '</a>';
+	return '<a title="' + gatewayTitle + '" href="' + gateway + '">' + gateway + '</a>';
 }
 
 function addNode (gateway, online, title) {
@@ -13,7 +13,7 @@ function addNode (gateway, online, title) {
 	let node
 	if (online) {
 		node = document.createElement('strong')
-		node.innerText = '✅ - Online  - ' + returnHtmlLink(gateway)
+		node.innerHTML = '✅ - Online  - ' + returnHtmlLink(gateway)
 	} else {
 		node = document.createElement('div')
 		node.innerText = '❌ - Offline - ' + gateway

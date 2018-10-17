@@ -24,5 +24,6 @@
 	"http://10.139.105.114:8080/ipfs/:hash",
 	"https://ipfs.originprotocol.com/ipfs/:hash",
 	"https://gateway.originprotocol.com/ipfs/:hash",
-	"https://ipfs.dapps.earth/ipfs/:hash"
+	"https://ipfs.dapps.earth/ipfs/:hash",
+	"https://gateway.pinata.cloud/ipfs/:hash"
 ]

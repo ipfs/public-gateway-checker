@@ -3,12 +3,17 @@ const hashString = 'Hello from IPFS Gateway Checker'
 
 const $results = document.querySelector('#results')
 
+function returnHtmlLink (gateway) {
+	let gatewayTitle = gateway.split(hashToTest)[0]
+	return '<a title="' + gatewayTitle + '" href="' + gateway + '">' + gateway + '</a>';
+}
+
 function addNode (gateway, online, title) {
 	const para = document.createElement('div')
 	let node
 	if (online) {
 		node = document.createElement('strong')
-		node.innerText = '✅ - Online  - ' + gateway
+		node.innerHTML = '✅ - Online  - ' + returnHtmlLink(gateway)
 	} else {
 		node = document.createElement('div')
 		node.innerText = '❌ - Offline - ' + gateway

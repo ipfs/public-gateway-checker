@@ -21,7 +21,8 @@
 	"https://ipns.co/:hash",
 	"https://ipfs.netw0rk.io/ipfs/:hash",
 	"https://gateway.swedneck.xyz/ipfs/:hash",
-	"http://10.139.105.114:8080/ipfs/:hash"
+	"http://10.139.105.114:8080/ipfs/:hash",
+	"https://gateway.pinata.cloud/ipfs/:hash",
 	"https://ipfs.doolta.com/ipfs/:hash",
 	"https://ipfs.sloppyta.co/ipfs/:hash",
 	"https://ipfs.busy.org/ipfs/:hash",

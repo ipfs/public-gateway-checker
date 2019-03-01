@@ -4,22 +4,22 @@ const hashString = 'Hello from IPFS Gateway Checker'
 const $results = document.querySelector('#results')
 
 function addNode (gateway, online, title) {
-	const para = document.createElement('div')
-	let node
-	if (online) {
-		node = document.createElement('strong')
-		node.innerText = '✅ - Online  - ' + gateway
-	} else {
-		node = document.createElement('div')
-		node.innerText = '❌ - Offline - ' + gateway
-	}
-	node.setAttribute('title', title)
-	para.appendChild(node)
-	$results.appendChild(para)
+  const para = document.createElement('div')
+  let node
+  if (online) {
+    node = document.createElement('strong')
+    node.innerText = '✅ - Online  - ' + gateway
+  } else {
+    node = document.createElement('div')
+    node.innerText = '❌ - Offline - ' + gateway
+  }
+  node.setAttribute('title', title)
+  para.appendChild(node)
+  $results.appendChild(para)
 }
 
 function updateStats (total, checked) {
-	document.getElementById('stats').innerText = checked + '/' + total + ' gateways checked'
+  document.getElementById('stats').innerText = checked + '/' + total + ' gateways checked'
 }
 
 function checkGateways (gateways) {

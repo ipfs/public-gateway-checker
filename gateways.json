@@ -22,6 +22,7 @@
 	"https://ipfs.netw0rk.io/ipfs/:hash",
 	"https://gateway.swedneck.xyz/ipfs/:hash",
 	"http://10.139.105.114:8080/ipfs/:hash",
+	"https://ipfs.sloppyta.co/ipfs/:hash",
 	"https://ipfs.busy.org/ipfs/:hash",
 	"https://ipfs.greyh.at/ipfs/:hash",
 	"https://gateway.serph.network/ipfs/:hash"

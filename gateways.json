@@ -8,7 +8,7 @@
 	"https://ipfs.jes.xxx/ipfs/:hash",
 	"https://catalunya.network/ipfs/:hash",
 	"https://siderus.io/ipfs/:hash",
-	"https://www.eternum.io/ipfs/:hash",
+	"https://ipfs.eternum.io/ipfs/:hash",
 	"https://hardbin.com/ipfs/:hash",
 	"https://ipfs.macholibre.org/ipfs/:hash",
 	"https://ipfs.works/ipfs/:hash",
@@ -22,5 +22,9 @@
 	"https://ipfs.netw0rk.io/ipfs/:hash",
 	"https://gateway.swedneck.xyz/ipfs/:hash",
 	"http://10.139.105.114:8080/ipfs/:hash"
-	"https://ipfs.mrh.io/ipfs/:hash"
+	"https://ipfs.mrh.io/ipfs/:hash",
+	"https://ipfs.sloppyta.co/ipfs/:hash",
+	"https://ipfs.busy.org/ipfs/:hash",
+	"https://ipfs.greyh.at/ipfs/:hash",
+	"https://gateway.serph.network/ipfs/:hash"
 ]

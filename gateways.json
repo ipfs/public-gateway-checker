@@ -29,5 +29,6 @@
 	"https://ipfs.busy.org/ipfs/:hash",
 	"https://ipfs.greyh.at/ipfs/:hash",
 	"https://gateway.serph.network/ipfs/:hash",
-	"https://ipfs.deo.moe/ipfs/:hash'
+	"https://jorropo.ovh/ipfs/:hash",
+	"https://ipfs.deo.moe/ipfs/:hash"
 ]

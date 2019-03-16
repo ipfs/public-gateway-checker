@@ -30,5 +30,6 @@
 	"https://ipfs.greyh.at/ipfs/:hash",
 	"https://gateway.serph.network/ipfs/:hash",
 	"https://jorropo.ovh/ipfs/:hash",
-	"https://ipfs.deo.moe/ipfs/:hash"
+	"https://ipfs.deo.moe/ipfs/:hash",
+	"https://gateway.temporal.cloud/ipfs/:hash"
 ]

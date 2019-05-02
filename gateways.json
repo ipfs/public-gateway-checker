@@ -32,5 +32,6 @@
 	"https://jorropo.ovh/ipfs/:hash",
 	"https://gateway.temporal.cloud/ipfs/:hash",
 	"https://ipfs.fooock.com/ipfs/:hash",
+	"https://ipfstube.erindachtler.me/ipfs/:hash",
 	"https://cdn.cwinfo.net/ipfs/:hash"
 ]

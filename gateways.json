@@ -5,6 +5,7 @@
 	"https://rx14.co.uk/ipfs/:hash",
 	"https://ninetailed.ninja/ipfs/:hash",
 	"https://upload.global/ipfs/:hash",
+	"https://ipfs.globalupload.io/ipfs/:hash",
 	"https://ipfs.jes.xxx/ipfs/:hash",
 	"https://catalunya.network/ipfs/:hash",
 	"https://siderus.io/ipfs/:hash",

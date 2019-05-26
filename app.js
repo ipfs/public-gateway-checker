@@ -31,6 +31,7 @@ function updateStats (total, checked) {
 function checkGateways (gateways) {
   const total = gateways.length
   let checked = 0
+  updateStats(total, 0)
   gateways.forEach((gateway) => {
     const gatewayAndHash = gateway.replace(':hash', hashToTest)
     // opt-out from gateway redirects done by browser extension

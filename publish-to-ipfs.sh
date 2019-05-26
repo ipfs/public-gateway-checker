@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 
-ipfs add -wQ app.js index.html gateways.json > lastpubver
+ipfs add -wrQ app.js index.html gateways/ > lastpubver

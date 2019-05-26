@@ -54,6 +54,31 @@ function checkGateways (gateways) {
   })
 }
 
-fetch('./gateways.json')
+const $networks = document.querySelector('#networks')
+
+const pathnameSplited = window.location.href.split("?net=")
+fetch("./gateways/network.json")
   .then(res => res.json())
-  .then(gateways => checkGateways(gateways))
+  .then(networks => {
+    if (pathnameSplited.length == 1) {
+      window.location = pathnameSplited[0] + "?net=" + networks[0]
+    } else {
+      networks.forEach(network => {
+        let a = document.createElement("a")
+        a.innerText = network
+        if (network == pathnameSplited[1]) {
+          a.classList.add("selected")
+        } else {
+          a.href = pathnameSplited[0] + "?net=" + encodeURI(network)
+        }
+        $networks.appendChild(a)
+        $networks.innerHTML += " "
+      })
+    }
+})
+if (pathnameSplited.length == 2) {
+  // Decoding then Encoding may looks strange but that a security reason
+  fetch("./gateways/" + encodeURI(decodeURI(pathnameSplited[1])) + ".json")
+    .then(res => res.json())
+    .then(gateways => checkGateways(gateways))
+}

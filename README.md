@@ -15,3 +15,7 @@ A CLI version `ipfg` is available here: https://github.com/JayBrown/Tools/tree/m
 If you'd like to add a new public gateway, please edit `gateways/<network>.json` and submit a pull request.
 
 To add a network edit `gateways/networks.json` and create the coresponding `gateways/<network>.json` file.
+
+## Accessing this from IPFS
+
+If you would access this tool from IPFS you should look at [lastpubver](./lastpubver)

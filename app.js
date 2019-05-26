@@ -36,7 +36,10 @@ function checkGateways (gateways) {
     // opt-out from gateway redirects done by browser extension
     const testUrl = gatewayAndHash + '#x-ipfs-companion-no-redirect'
     const start = performance.now()
-    fetch(testUrl)
+    fetch(testUrl, {
+        "cache": "no-cache",
+        "referrerPolicy": "no-referrer"
+       })
       .then(res => res.text())
       .then((text) => {
         const matched = text.trim() === hashString.trim()

@@ -8,8 +8,10 @@ You can view this website on GitHub Pages: https://ipfs.github.io/public-gateway
 
 Here's a screenshot:
 
-[![screenshot](https://ipfs.io/ipfs/QmUeCSd4gHio7MxZuRXCcLFXED9GpfntKcL87gmXvZV3ed)](https://ipfs.github.io/public-gateway-checker/)
+[![screenshot](https://ipfs.io/ipfs/QmXjfm5cDZrgb17xYjzVpgswuQ1sVysBenDfcRYZ5t6K1H)](https://ipfs.github.io/public-gateway-checker/)
 
 A CLI version `ipfg` is available here: https://github.com/JayBrown/Tools/tree/master/ipfg
 
-If you'd like to add a new public gateway, please edit `gateways.json` and submit a pull request.
+If you'd like to add a new public gateway, please edit `gateways/<network>.json` and submit a pull request.
+
+To add a network edit `gateways/networks.json` and create the coresponding `gateways/<network>.json` file.

@@ -8,17 +8,18 @@ function returnHtmlLink (gateway) {
   return '<a title="' + gatewayTitle + '" href="' + gateway + '">' + gateway + '</a>'
 }
 
-function addNode (gateway, online, title) {
+function addNode (gateway, online, status, roundtripInMs) {
   const para = document.createElement('div')
   let node
   if (online) {
     node = document.createElement('strong')
     node.innerHTML = '✅ - Online  - ' + returnHtmlLink(gateway)
+    node.innerHTML += ' (' + roundtripInMs + 'ms)'
   } else {
     node = document.createElement('div')
     node.innerText = '❌ - Offline - ' + gateway
   }
-  node.setAttribute('title', title)
+  node.setAttribute('title', status)
   para.appendChild(node)
   $results.appendChild(para)
 }
@@ -34,11 +35,14 @@ function checkGateways (gateways) {
     const gatewayAndHash = gateway.replace(':hash', hashToTest)
     // opt-out from gateway redirects done by browser extension
     const testUrl = gatewayAndHash + '#x-ipfs-companion-no-redirect'
+    const start = performance.now()
     fetch(testUrl)
       .then(res => res.text())
       .then((text) => {
         const matched = text.trim() === hashString.trim()
-        addNode(gatewayAndHash, matched, matched ? 'All good' : 'Output did not match expected output')
+        const status = matched ? 'All good' : 'Output did not match expected output'
+        const ms = performance.now() - start
+        addNode(gatewayAndHash, matched, status, ms);
         checked++
         updateStats(total, checked)
       }).catch((err) => {

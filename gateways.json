@@ -5,7 +5,7 @@
 	"https://rx14.co.uk/:protocol/:hash",
 	"https://ninetailed.ninja/:protocol/:hash",
 	"https://upload.global/:protocol/:hash",
-	"https://ipfs.globalupload.io/:protocol/:hash",
+	"https://ipfs.globalupload.io/:hash",
 	"https://ipfs.jes.xxx/:protocol/:hash",
 	"https://catalunya.network/:protocol/:hash",
 	"https://siderus.io/:protocol/:hash",

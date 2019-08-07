@@ -1,7 +1,9 @@
+const protocolToTest = 'ipfs'
 const hashToTest = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a'
 const hashString = 'Hello from IPFS Gateway Checker'
 
 const $results = document.querySelector('#results')
+
 
 function returnHtmlLink (gateway) {
   let gatewayTitle = gateway.split(hashToTest)[0]
@@ -31,8 +33,9 @@ function updateStats (total, checked) {
 function checkGateways (gateways) {
   const total = gateways.length
   let checked = 0
+  
   gateways.forEach((gateway) => {
-    const gatewayAndHash = gateway.replace(':hash', hashToTest)
+    const gatewayAndHash = gateway.replace(':protocol', protocolToTest).replace(':hash', hashToTest)
     // opt-out from gateway redirects done by browser extension
     const testUrl = gatewayAndHash + '#x-ipfs-companion-no-redirect'
     const start = performance.now()
@@ -52,6 +55,7 @@ function checkGateways (gateways) {
         updateStats(total, checked)
       })
   })
+
 }
 
 fetch('./gateways.json')

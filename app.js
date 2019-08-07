@@ -1,6 +1,13 @@
-const protocolToTest = 'ipfs'
-const hashToTest = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a'
 const hashString = 'Hello from IPFS Gateway Checker'
+var protocolToTest = 'ipfs'
+var hashToTest = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a'
+
+var urlSegments = document.URL.replace('=', '/').replace('&', '/').replace('?', '/').split('/');
+if ((urlSegments.length >= 2) && (urlSegments[urlSegments.length - 2].length == 4) && (urlSegments[urlSegments.length - 1].length == 46)) {
+    protocolToTest = urlSegments[urlSegments.length - 2];
+    hashToTest = urlSegments[urlSegments.length - 1];
+}
+document.getElementById('url').innerText = '/' + protocolToTest + '/' + hashToTest;
 
 const $results = document.querySelector('#results')
 

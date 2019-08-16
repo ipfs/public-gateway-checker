@@ -33,5 +33,6 @@
 	"https://ipfs.fooock.com/ipfs/:hash",
 	"https://ipfstube.erindachtler.me/ipfs/:hash",
 	"https://cdn.cwinfo.net/ipfs/:hash",
-	"https://ipfs.privacytools.io/ipfs/:hash"
+	"https://ipfs.privacytools.io/ipfs/:hash",
+	"https://permaweb.io/ipfs/:hash"
 ]

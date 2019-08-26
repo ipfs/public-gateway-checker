@@ -19,7 +19,6 @@
 	"https://cloudflare-ipfs.com/ipfs/:hash",
 	"https://ipns.co/:hash",
 	"https://ipfs.netw0rk.io/ipfs/:hash",
-	"https://gateway.swedneck.xyz/ipfs/:hash",
 	"https://ipfs.mrh.io/ipfs/:hash",
 	"https://gateway.originprotocol.com/ipfs/:hash",
 	"https://gateway.pinata.cloud/ipfs/:hash",

@@ -49,7 +49,7 @@ Status.prototype.check = function() {
 
 	// we set a random number as a url parameter, to try to prevent content caching
 	// is it right ? ... do you know a better way ? ... does it always work ?
-	let rnd = Math.random();
+	let rnd = new Date()).getTime();
 
 	// 3 important things here
 	//   1) we add #x-ipfs-companion-no-redirect to the final url (self explanatory)
@@ -180,4 +180,3 @@ function checkGateways (gateways) {
 fetch('./gateways.json')
 	.then(res => res.json())
 	.then(gateways => checkGateways(gateways));
-

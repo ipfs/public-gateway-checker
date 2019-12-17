@@ -53,7 +53,7 @@ Status.prototype.check = function() {
 
 	// 3 important things here
 	//   1) we add #x-ipfs-companion-no-redirect to the final url (self explanatory)
-	//   2) we add filename=anyname.js as a parameter to let the gateway guess a mime type
+	//   2) we add ?filename=anyname.js as a parameter to let the gateway set correct Content-Type header
 	//      to be sent in headers in order to prevent CORB
 	//   3) parameter 'i' is the one used to identify the gateway once the script executes
 	let src = `${gatewayAndScriptHash}?i=${this.parent.index}&rnd=${rnd}&filename=anyname.js#x-ipfs-companion-no-redirect`;

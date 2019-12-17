@@ -8,7 +8,7 @@ You can view this website on GitHub Pages: https://ipfs.github.io/public-gateway
 
 Here's a screenshot:
 
-[![screenshot](https://ipfs.io/ipfs/QmUeCSd4gHio7MxZuRXCcLFXED9GpfntKcL87gmXvZV3ed)](https://ipfs.github.io/public-gateway-checker/)
+[![screenshot](https://ipfs.io/ipfs/QmY261PdTRv3eKgxqCfgAbKkCrSxdCerfjjPoc3Arq9C5q)](https://ipfs.github.io/public-gateway-checker/)
 
 A CLI version `ipfg` is available here: https://github.com/JayBrown/Tools/tree/master/ipfg
 

@@ -34,5 +34,6 @@
 	"https://ipfs.jeroendeneef.com/ipfs/:hash",
 	"https://permaweb.io/ipfs/:hash",
 	"https://ipfs.stibarc.gq/ipfs/:hash",
-	"https://ipfs.best-practice.se/ipfs/:hash"
+	"https://ipfs.best-practice.se/ipfs/:hash",
+	"https://ipfs.2read.net/ipfs/:hash"
 ]

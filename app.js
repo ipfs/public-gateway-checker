@@ -1,23 +1,26 @@
+/*
+	This program will check IPFS gateways status using 2 methods
+		1) By asking for a script through a <script src=""> tag, which when loaded, it executes some code
+		2) By asking data through ajax requests to verify gateway's CORS configuration
+*/
+
 const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m';
 const SCRIPT_HASH = 'bafybeietzsezxbgeeyrmwicylb5tpvf7yutrm3bxrfaoulaituhbi7q6yi';
 const HASH_STRING = 'Hello from IPFS Gateway Checker';
 
-// checker is the program root, it contains all involved objects
 let checker = document.getElementById('checker');
-checker.nodes = []; // nodes contains all created nodes, based on gateways.json
+checker.nodes = [];
 
 checker.updateStats = function(node) {
-	if (!node.tested) {
-		let up = 0, down = 0;
-		for (let savedNode of this.nodes) {
-			if (savedNode.tested || (node == savedNode)) {
-				savedNode.status.up ? ++up : ++down;
-			}
+	let up = 0, down = 0;
+	for (let savedNode of this.nodes) {
+		if ("up" in savedNode.status) {
+			savedNode.status.up ? ++up : ++down;
 		}
-		let gtwschckd = `${up + down}/${this.nodes.length} gateways checked`;
-		let totals = ` ==> ${up} ✅ - ${down} ❌`;
-		this.stats.textContent = gtwschckd + totals;
 	}
+	let gtwschckd = `${up+down}/${this.nodes.length} gateways checked`;
+	let totals = ` ==> ${up} ✅ - ${down} ❌`;
+	this.stats.textContent = gtwschckd + totals;
 };
 
 checker.stats = document.getElementById('checker.stats');
@@ -35,24 +38,34 @@ checker.results.failed = function(node) {
 	this.parent.updateStats(node);
 };
 
-// ////////////////////////////////////////////////////////////////////////////////////
-// STATUS
 let Status = function(parent, index) {
 	this.parent = parent;
 	this.tag = document.createElement("span");
 	this.tag.textContent = ' WAIT: 🕑 - ';
-	this.up = false;
 };
 
 Status.prototype.check = function() {
-	const gatewayAndScriptHash = this.parent.gateway.replace(":hash", SCRIPT_HASH);
-	const rnd = encodeURIComponent(Math.random());
-	const src = `${gatewayAndScriptHash}?i=${this.parent.index}&rnd=${rnd}#x-ipfs-companion-no-redirect`;
-	let script = document.createElement('script')
+	let gatewayAndScriptHash = this.parent.gateway.replace(":hash", SCRIPT_HASH);
+
+	// we set a unused number as a url parameter, to try to prevent content caching
+	// is it right ? ... do you know a better way ? ... does it always work ?
+	let now = Date.now();
+
+	// 3 important things here
+	//   1) we add #x-ipfs-companion-no-redirect to the final url (self explanatory)
+	//   2) we add ?filename=anyname.js as a parameter to let the gateway set correct Content-Type header
+	//      to be sent in headers in order to prevent CORB
+	//   3) parameter 'i' is the one used to identify the gateway once the script executes
+	let src = `${gatewayAndScriptHash}?i=${this.parent.index}&now=${now}&filename=anyname.js#x-ipfs-companion-no-redirect`;
+	
+	let script = document.createElement('script');
 	script.src = src;
 	document.body.append(script);
 	script.onerror = () => {
-		if (!this.up) { // it could be already checked by CORS before we reach here
+		// we check this because the gateway could be already checked by CORS before onerror executes
+		// and, even though it is failing here, we know it is UP
+		if (!this.up) {
+			this.up = false;
 			this.tag.textContent = 'DOWN: ❌ - ';
 			this.parent.failed();
 		}
@@ -64,6 +77,8 @@ Status.prototype.checked = function() {
 	this.tag.innerHTML = '&nbsp;&nbsp;UP: ✅ - ';
 };
 
+// this function is executed from that previously loaded script
+// it only contains the following: OnScriptloaded(document.currentScript ? document.currentScript.src : '');
 function OnScriptloaded(src) {
 	try {
 		let url = new URL(src);
@@ -73,24 +88,20 @@ function OnScriptloaded(src) {
 			node.checked();
 		}
 	} catch(e) {
-		// this is a URL exception, we can do nothing, the user is probably using Internet Explorer
+		// this is a URL exception, we can do nothing, user is probably using Internet Explorer
 	}
 }
-// ////////////////////////////////////////////////////////////////////////////////////
 
-// ////////////////////////////////////////////////////////////////////////////////////
-// CORS
 let Cors = function(parent) {
 	this.parent = parent;
-
 	this.tag = document.createElement("span");
 	this.tag.textContent = ' CORS: 🕑 - ';
 };
 
 Cors.prototype.check = function() {
 	const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST);
-	const rnd = encodeURIComponent(Math.random());
-	const testUrl = `${gatewayAndHash}?rnd=${rnd}#x-ipfs-companion-no-redirect`;
+	const now = Date.now();
+	const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`;
 	fetch(testUrl).then((res) => {
 		return res.text();
 	}).then((text) => {
@@ -102,7 +113,6 @@ Cors.prototype.check = function() {
 			this.onerror();
 		}
 	}).catch((err) => {
-		console.error(err, err.stack);
 		this.onerror();
 	});
 };
@@ -110,10 +120,7 @@ Cors.prototype.check = function() {
 Cors.prototype.onerror = function() {
 	this.tag.textContent = ' CORS: ❌ - ';
 };
-// ////////////////////////////////////////////////////////////////////////////////////
 
-// ////////////////////////////////////////////////////////////////////////////////////
-// ORIGIN
 let Origin = function(parent) {
 	this.parent = parent;
 
@@ -133,13 +140,9 @@ Origin.prototype.check = function() {
 Origin.prototype.onerror = function() {
 	this.tag.textContent = ' ORIGIN: ❌ - ';
 };
-// ////////////////////////////////////////////////////////////////////////////////////
 
-// ////////////////////////////////////////////////////////////////////////////////////
-// NODE
 let Node = function(parent, gateway, index) {
 	this.parent = parent;
-
 	this.tag = document.createElement("div");
 
 	this.status = new Status(this);
@@ -171,27 +174,21 @@ Node.prototype.check = function() {
 };
 
 Node.prototype.checked = function() {
-	this.status.checked();
-	this.parent.checked(this);
-
-	let gatewayTitle = this.gateway.split(":hash")[0];
-	let gatewayAndHash = this.gateway.replace(':hash', HASH_TO_TEST);
-	this.link.innerHTML = `<a title="${gatewayTitle}" href="${gatewayAndHash}#x-ipfs-companion-no-redirect" target="_blank">${gatewayAndHash}</a>`;
-
-	if (!this.tested) {
+	// we care only about the fatest method
+	if (!this.status.up) {
+		this.status.checked();
+		this.parent.checked(this);
+		let gatewayTitle = this.gateway.split(":hash")[0];
+		let gatewayAndHash = this.gateway.replace(':hash', HASH_TO_TEST);
+		this.link.innerHTML = `<a title="${gatewayTitle}" href="${gatewayAndHash}#x-ipfs-companion-no-redirect" target="_blank">${gatewayAndHash}</a>`;
 		let ms = (performance.now() - this.checkingTime).toFixed(2);
 		this.took.textContent = ` (${ms}ms)`;
 	}
-
-	this.tested = true;
 };
 
 Node.prototype.failed = function() {
 	this.parent.failed(this);
-	this.tested = true;
 };
-// ////////////////////////////////////////////////////////////////////////////////////
-
 
 function checkGateways (gateways) {
 	gateways.forEach((gateway) => {
@@ -205,3 +202,4 @@ function checkGateways (gateways) {
 fetch('./gateways.json')
 	.then(res => res.json())
 	.then(gateways => checkGateways(gateways));
+

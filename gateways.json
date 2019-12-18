@@ -1,5 +1,6 @@
 [
 	"https://ipfs.io/ipfs/:hash",
+	"https://:hash.ipfs.dweb.link",
 	"https://gateway.ipfs.io/ipfs/:hash",
 	"https://ipfs.infura.io/ipfs/:hash",
 	"https://rx14.co.uk/ipfs/:hash",
@@ -17,6 +18,7 @@
 	"https://gateway.blocksec.com/ipfs/:hash",
 	"https://ipfs.renehsz.com/ipfs/:hash",
 	"https://cloudflare-ipfs.com/ipfs/:hash",
+	"https://:hash.ipfs.cf-ipfs.com",
 	"https://ipns.co/:hash",
 	"https://ipfs.mrh.io/ipfs/:hash",
 	"https://gateway.originprotocol.com/ipfs/:hash",

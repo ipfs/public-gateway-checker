@@ -4,8 +4,8 @@
 		2) By asking data through ajax requests to verify gateway's CORS configuration
 */
 
-const HASH_TO_TEST = 'Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a';
-const SCRIPT_HASH = 'QmYHbXzTCbjavphzqrTe7zYYMW8HyeuMLNcLbqiUkj9TAH';
+const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m';
+const SCRIPT_HASH = 'bafybeietzsezxbgeeyrmwicylb5tpvf7yutrm3bxrfaoulaituhbi7q6yi';
 const HASH_STRING = 'Hello from IPFS Gateway Checker';
 
 let checker = document.getElementById('checker');
@@ -121,6 +121,31 @@ Cors.prototype.onerror = function() {
 	this.tag.textContent = ' CORS: ❌ - ';
 };
 
+// ////////////////////////////////////////////////////////////////////////////////////
+// ORIGIN
+let Origin = function(parent) {
+	this.parent = parent;
+
+	this.tag = document.createElement("span");
+	this.tag.textContent = ' ORIGIN: 🕑 - ';
+};
+
+Origin.prototype.check = function() {
+	const cidInSubdomain = this.parent.gateway.startsWith('https://:hash.ipfs.');
+	if (cidInSubdomain) {
+		this.tag.textContent = ' ORIGIN: ✅ - ';
+	} else {
+		this.onerror();
+	}
+};
+
+Origin.prototype.onerror = function() {
+	this.tag.textContent = ' ORIGIN: ❌ - ';
+};
+// ////////////////////////////////////////////////////////////////////////////////////
+
+// ////////////////////////////////////////////////////////////////////////////////////
+// NODE
 let Node = function(parent, gateway, index) {
 	this.parent = parent;
 	this.tag = document.createElement("div");
@@ -130,6 +155,9 @@ let Node = function(parent, gateway, index) {
 
 	this.cors = new Cors(this);
 	this.tag.append(this.cors.tag);
+
+	this.origin = new Origin(this);
+	this.tag.append(this.origin.tag);
 
 	this.link = document.createElement("span");
 	this.link.textContent = gateway.replace(':hash', HASH_TO_TEST);
@@ -147,6 +175,7 @@ Node.prototype.check = function() {
 	this.checkingTime = performance.now();
 	this.status.check();
 	this.cors.check();
+	this.origin.check();
 };
 
 Node.prototype.checked = function() {
@@ -154,11 +183,9 @@ Node.prototype.checked = function() {
 	if (!this.status.up) {
 		this.status.checked();
 		this.parent.checked(this);
-
-		let gatewayTitle = this.gateway.split(":hash")[0];
-		let gatewayAndHash = this.gateway.replace(':hash', HASH_TO_TEST);
-		this.link.innerHTML = `<a title="${gatewayTitle}"href="${gatewayAndHash}"target="_blank">${gatewayAndHash}</a>`;
-
+    let gatewayTitle = this.gateway.split(":hash")[0];
+    let gatewayAndHash = this.gateway.replace(':hash', HASH_TO_TEST);
+    this.link.innerHTML = `<a title="${gatewayTitle}" href="${gatewayAndHash}#x-ipfs-companion-no-redirect" target="_blank">${gatewayAndHash}</a>`;
 		let ms = (performance.now() - this.checkingTime).toFixed(2);
 		this.took.textContent = ` (${ms}ms)`;
 	}

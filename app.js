@@ -11,20 +11,48 @@ const HASH_STRING = 'Hello from IPFS Gateway Checker';
 let checker = document.getElementById('checker');
 checker.nodes = [];
 
-checker.updateStats = function(node) {
+checker.checkGateways = function(gateways) {
+	gateways.forEach((gateway) => {
+		let node = new Node(this.results, gateway, this.nodes.length);
+		this.nodes.push(node);
+		this.results.append(node.tag);
+		node.check();
+	});
+};
+
+checker.updateStats = function() {
+	this.stats.update();
+};
+
+let Stats = function(parent) {
+	this.parent = parent;
+	this.tag = document.getElementById('checker.stats');//document.createElement("div"); // TODO:: ugly i know, WIP
+	this.tag.className = "Stats";
+
+	this.gateways = document.createElement("div");
+	this.gateways.textContent = `0/0`;
+	this.gateways.className = "Gateways";
+	this.tag.append(this.gateways);
+
+	this.totals = document.createElement("div");
+	this.totals.textContent = `0 ✅`;
+	this.totals.className = "Totals";
+	this.tag.append(this.totals);
+};
+
+Stats.prototype.update = function() {
 	let up = 0, down = 0;
-	for (let savedNode of this.nodes) {
+	for (let savedNode of this.parent.nodes) {
 		if ("up" in savedNode.status) {
 			savedNode.status.up ? ++up : ++down;
 		}
 	}
-	let gtwschckd = `${up+down}/${this.nodes.length} gateways checked`;
-	let totals = ` ==> ${up} ✅ - ${down} ❌`;
-	this.stats.textContent = gtwschckd + totals;
+	this.gateways.textContent = `${up+down}/${this.parent.nodes.length} gateways`;
+	this.totals.textContent = `${up} ✅`;
 };
 
-checker.stats = document.getElementById('checker.stats');
-checker.stats.parent = checker;
+
+checker.stats = new Stats(checker);
 
 checker.results = document.getElementById('checker.results');
 checker.results.parent = checker;
@@ -40,8 +68,9 @@ checker.results.failed = function(node) {
 
 let Status = function(parent, index) {
 	this.parent = parent;
-	this.tag = document.createElement("span");
-	this.tag.textContent = ' WAIT: 🕑 - ';
+	this.tag = document.createElement("div");
+	this.tag.className = "Status";
+	this.tag.textContent = '🕑';
 };
 
 Status.prototype.check = function() {
@@ -53,7 +82,7 @@ Status.prototype.check = function() {
 
 	// 3 important things here
 	//   1) we add #x-ipfs-companion-no-redirect to the final url (self explanatory)
-	//   2) we add ?filename=anyname.js as a parameter to let the gateway set correct Content-Type header
+	//   2) we add ?filename=anyname.js as a parameter to let the gateway guess Content-Type header
 	//      to be sent in headers in order to prevent CORB
 	//   3) parameter 'i' is the one used to identify the gateway once the script executes
 	let src = `${gatewayAndScriptHash}?i=${this.parent.index}&now=${now}&filename=anyname.js#x-ipfs-companion-no-redirect`;
@@ -66,7 +95,7 @@ Status.prototype.check = function() {
 		// and, even though it is failing here, we know it is UP
 		if (!this.up) {
 			this.up = false;
-			this.tag.textContent = 'DOWN: ❌ - ';
+			this.tag.textContent = '❌';
 			this.parent.failed();
 		}
 	};
@@ -74,7 +103,7 @@ Status.prototype.check = function() {
 
 Status.prototype.checked = function() {
 	this.up = true;
-	this.tag.innerHTML = '&nbsp;&nbsp;UP: ✅ - ';
+	this.tag.innerHTML = '✅';
 };
 
 // this function is executed from that previously loaded script
@@ -94,8 +123,9 @@ function OnScriptloaded(src) {
 
 let Cors = function(parent) {
 	this.parent = parent;
-	this.tag = document.createElement("span");
-	this.tag.textContent = ' CORS: 🕑 - ';
+	this.tag = document.createElement("div");
+	this.tag.className = "Cors";
+	this.tag.textContent = '🕑';
 };
 
 Cors.prototype.check = function() {
@@ -108,7 +138,7 @@ Cors.prototype.check = function() {
 		const matched = (HASH_STRING === text.trim());
 		if (matched) {
 			this.parent.checked();
-			this.tag.textContent = ' CORS: ✅ - ';
+			this.tag.textContent = '✅';
 		} else {
 			this.onerror();
 		}
@@ -118,32 +148,34 @@ Cors.prototype.check = function() {
 };
 
 Cors.prototype.onerror = function() {
-	this.tag.textContent = ' CORS: ❌ - ';
+	this.tag.textContent = '❌';
 };
 
 let Origin = function(parent) {
 	this.parent = parent;
-
-	this.tag = document.createElement("span");
-	this.tag.textContent = ' ORIGIN: 🕑 - ';
+	this.tag = document.createElement("div");
+	this.tag.className = "Origin";
+	this.tag.textContent = '🕑';
 };
 
 Origin.prototype.check = function() {
 	const cidInSubdomain = this.parent.gateway.startsWith('https://:hash.ipfs.');
 	if (cidInSubdomain) {
-		this.tag.textContent = ' ORIGIN: ✅ - ';
+		this.tag.textContent = '✅';
 	} else {
 		this.onerror();
 	}
 };
 
 Origin.prototype.onerror = function() {
-	this.tag.textContent = ' ORIGIN: ❌ - ';
+	this.tag.textContent = '❌';
 };
+
 
 let Node = function(parent, gateway, index) {
 	this.parent = parent;
 	this.tag = document.createElement("div");
+	this.tag.className = "Node";
 
 	this.status = new Status(this);
 	this.tag.append(this.status.tag);
@@ -154,11 +186,15 @@ let Node = function(parent, gateway, index) {
 	this.origin = new Origin(this);
 	this.tag.append(this.origin.tag);
 
-	this.link = document.createElement("span");
-	this.link.textContent = gateway.replace(':hash', HASH_TO_TEST);
+	this.link = document.createElement("div");
+	let gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
+	this.link.url = new URL(gatewayAndHash);
+	this.link.textContent = this.link.url.host.replace(`${HASH_TO_TEST}.`, "");
+	this.link.className = "Link";
 	this.tag.append(this.link);
 
-	this.took = document.createElement("span");
+	this.took = document.createElement("div");
+	this.took.className = "Took";
 	this.tag.append(this.took);
 
 	this.gateway = gateway;
@@ -167,7 +203,7 @@ let Node = function(parent, gateway, index) {
 };
 
 Node.prototype.check = function() {
-	this.checkingTime = performance.now();
+	this.checkingTime = Date.now();
 	this.status.check();
 	this.cors.check();
 	this.origin.check();
@@ -178,11 +214,11 @@ Node.prototype.checked = function() {
 	if (!this.status.up) {
 		this.status.checked();
 		this.parent.checked(this);
-		let gatewayTitle = this.gateway.split(":hash")[0];
-		let gatewayAndHash = this.gateway.replace(':hash', HASH_TO_TEST);
-		this.link.innerHTML = `<a title="${gatewayTitle}" href="${gatewayAndHash}#x-ipfs-companion-no-redirect" target="_blank">${gatewayAndHash}</a>`;
-		let ms = (performance.now() - this.checkingTime).toFixed(2);
-		this.took.textContent = ` (${ms}ms)`;
+		let url = this.link.url;
+		let host = url.host.replace(`${HASH_TO_TEST}.`, "");
+		this.link.innerHTML = `<a title="${url.origin}" href="${url}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`;
+		let ms = (Date.now() - this.checkingTime) / 1000;
+		this.took.textContent = `${ms.toFixed(2)}s`;
 	}
 };
 
@@ -190,16 +226,8 @@ Node.prototype.failed = function() {
 	this.parent.failed(this);
 };
 
-function checkGateways (gateways) {
-	gateways.forEach((gateway) => {
-		let node = new Node(checker.results, gateway, checker.nodes.length);
-		checker.nodes.push(node);
-		checker.results.append(node.tag);
-		node.check();
-	});
-}
 
 fetch('./gateways.json')
 	.then(res => res.json())
-	.then(gateways => checkGateways(gateways));
+	.then(gateways => checker.checkGateways(gateways));
 

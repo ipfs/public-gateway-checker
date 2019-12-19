@@ -3,21 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Public IPFS Gateways</title>
-	<style>
-	body, html {
-		font-family: monospace;
-		color: #121212;
-		background-color: #FAFAFA;
-	}
-
-	h1, h3 {
-		font-weight: normal;
-	}
-	</style>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="styles.css" type="text/css" rel="stylesheet"/>
 </head>
 <body id="checker">
-	<h1>Public IPFS Gateways</h1>
-	<h3 id="checker.stats"></h3>
+	<div class="Header"><a href="https://ipfs.io" target="_blank" title="ipfs.io"><img src="https://ipfs.io/ipfs/QmTqZhR6f7jzdhLgPArDPnsbZpvvgxzCZycXK7ywkLxSyU?filename=ipfs-logo.3ea91a2f.svg" height="50"></a><div class="Title">Public Gateways</div></div>
+	<div id="checker.stats" class="Stats"></div>
+	<div class="Node"><div class="Status">UP</div><div class="Cors">cors</div><div class="Origin" title="Orign Isolation">
+	<a href="https://docs.ipfs.io/guides/guides/addressing/#subdomain-gateway" target="_blank">OI</a></div><div class="Link"></div><div class="Took">resp</div></div>
 	<div id="checker.results"></div>
 </body>
 <script src="./app.js"></script>

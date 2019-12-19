@@ -174,7 +174,7 @@ let Node = function(parent, gateway, index) {
 	this.parent = parent;
 	this.tag = document.createElement("div");
 	this.tag.className = "Node";
-	this.tag.style["order"] = 2 * Date.now();
+	this.tag.style["order"] = Date.now();
 
 	this.status = new Status(this);
 	this.tag.append(this.status.tag);

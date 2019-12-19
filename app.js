@@ -57,12 +57,10 @@ checker.stats = new Stats(checker);
 checker.results = document.getElementById('checker.results');
 checker.results.parent = checker;
 checker.results.checked = function(node) {
-	this.prepend(node.tag);
 	this.parent.updateStats(node);
 };
 
 checker.results.failed = function(node) {
-	this.append(node.tag);
 	this.parent.updateStats(node);
 };
 
@@ -176,6 +174,7 @@ let Node = function(parent, gateway, index) {
 	this.parent = parent;
 	this.tag = document.createElement("div");
 	this.tag.className = "Node";
+	this.tag.style["order"] = 2 * Date.now();
 
 	this.status = new Status(this);
 	this.tag.append(this.status.tag);
@@ -217,8 +216,10 @@ Node.prototype.checked = function() {
 		let url = this.link.url;
 		let host = url.host.replace(`${HASH_TO_TEST}.`, "");
 		this.link.innerHTML = `<a title="${url.origin}" href="${url}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`;
-		let ms = (Date.now() - this.checkingTime) / 1000;
-		this.took.textContent = `${ms.toFixed(2)}s`;
+		let ms = Date.now() - this.checkingTime;
+		this.tag.style["order"] = ms;
+		let s = (ms / 1000).toFixed(2);
+		this.took.textContent = `${s}s`;
 	}
 };
 

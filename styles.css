@@ -1,0 +1,113 @@
+body, html {
+	font-family: monospace;
+	color: #222;
+	background-color: #FAFAFA;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+div.Header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(100% - 2rem);
+	background-color: #0b3a53;
+	padding: 1rem;
+}
+
+div.Header a {
+	box-sizing: border-box;
+}
+
+div.Header a img {
+	height: 50px;
+}	
+
+div.Header div.Title {
+	position: relative;
+	display: inline-block;
+	color: #69c4cd;
+	font-family: Montserrat,Verdana,system-ui,sans-serif;
+	font-size: 1.5rem;
+	text-align: right;
+	font-weight: 200;
+}
+
+div.Stats {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 1em auto;
+	width: 95%;
+	max-width: 1024px;
+}
+
+div.Stats div.Totals,
+div.Stats div.Gateways {
+	border-radius: 9999px;
+	color: white;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	margin: 0 1em 0 0;
+}
+
+div.Stats div.Gateways {
+	background-color: #0b3a53;
+}
+
+div.Stats div.Totals {
+	background-color: rgb(0, 181, 0);
+}
+
+div.Results {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+}
+
+div.Node {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 95%;
+	padding: 0.5em 0;
+	margin: 0 2.5%;
+	border-bottom: 1px solid #EEE;
+}
+
+div.Node div.Link {
+	width: 100%;
+	text-align: left;
+}
+
+div.Node div.Link a {
+	text-decoration: none;
+	color: #357edd;
+	white-space: nowrap;
+}
+
+div.Node div.Status,
+div.Node div.Cors,
+div.Node div.Origin {
+	width: 4em;
+	text-align: center;
+	font-weight: bold;
+}
+
+div.Node div.Cors,
+div.Node div.Origin {
+	font-size: 80%;
+}
+
+div.Node div.Took {
+	width: 5em;
+	text-align: right;
+	font-size: 80%;
+	font-style: italic;
+}
+

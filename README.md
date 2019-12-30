@@ -8,11 +8,15 @@ You can view this website on GitHub Pages: https://ipfs.github.io/public-gateway
 
 **NOTE:** All of these (except `ipfs.io` and `dweb.link`) are hosted by third-parties and should be treated as such.
 
-
 ## Adding a new public gateway
 
 If you'd like to add a new public gateway, please edit `gateways.json` and submit a pull request.
 
+## Testing locally
+
+```console
+$ npx http-server . -a 127.0.0.1 -p 3000 -c-1
+```
 
 ## Command line
 

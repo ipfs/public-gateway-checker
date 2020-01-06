@@ -30,12 +30,12 @@ let Stats = function(parent) {
 	this.tag.className = "Stats";
 
 	this.gateways = document.createElement("div");
-	this.gateways.textContent = `0/0`;
+	this.gateways.textContent = `0/0 tested`;
 	this.gateways.className = "Gateways";
 	this.tag.append(this.gateways);
 
 	this.totals = document.createElement("div");
-	this.totals.textContent = `0 ✅`;
+	this.totals.textContent = "0 online";
 	this.totals.className = "Totals";
 	this.tag.append(this.totals);
 };
@@ -47,8 +47,8 @@ Stats.prototype.update = function() {
 			savedNode.status.up ? ++up : ++down;
 		}
 	}
-	this.gateways.textContent = `${up+down}/${this.parent.nodes.length} gateways`;
-	this.totals.textContent = `${up} ✅`;
+	this.gateways.textContent = `${up+down}/${this.parent.nodes.length} tested`;
+	this.totals.textContent = `${up} online`;
 };
 
 
@@ -84,7 +84,7 @@ Status.prototype.check = function() {
 	//      to be sent in headers in order to prevent CORB
 	//   3) parameter 'i' is the one used to identify the gateway once the script executes
 	let src = `${gatewayAndScriptHash}?i=${this.parent.index}&now=${now}&filename=anyname.js#x-ipfs-companion-no-redirect`;
-	
+
 	let script = document.createElement('script');
 	script.src = src;
 	document.body.append(script);
@@ -188,7 +188,7 @@ let Node = function(parent, gateway, index) {
 	this.link = document.createElement("div");
 	let gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
 	this.link.url = new URL(gatewayAndHash);
-	this.link.textContent = this.link.url.host.replace(`${HASH_TO_TEST}.`, "");
+	this.link.textContent = gatewayHostname(this.link.url);
 	this.link.className = "Link";
 	this.tag.append(this.link);
 
@@ -214,8 +214,8 @@ Node.prototype.checked = function() {
 		this.status.checked();
 		this.parent.checked(this);
 		let url = this.link.url;
-		let host = url.host.replace(`${HASH_TO_TEST}.`, "");
-		this.link.innerHTML = `<a title="${url.origin}" href="${url}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`;
+		let host = gatewayHostname(url);
+		this.link.innerHTML = `<a title="${host}" href="${url}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`;
 		let ms = Date.now() - this.checkingTime;
 		this.tag.style["order"] = ms;
 		let s = (ms / 1000).toFixed(2);
@@ -227,8 +227,12 @@ Node.prototype.failed = function() {
 	this.parent.failed(this);
 };
 
+function gatewayHostname (url) {
+	if (url && url.hostname) url = url.hostname.toString()
+	return url.replace(`${HASH_TO_TEST}.ipfs.`, "") // skip .ipfs. in subdomain gateways
+		.replace(`${HASH_TO_TEST}.`, "") // path-based
+}
 
 fetch('./gateways.json')
 	.then(res => res.json())
 	.then(gateways => checker.checkGateways(gateways));
-

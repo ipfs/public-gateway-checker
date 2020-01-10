@@ -34,5 +34,6 @@
 	"https://ipfs.stibarc.gq/ipfs/:hash",
 	"https://ipfs.best-practice.se/ipfs/:hash",
 	"https://:hash.ipfs.2read.net",
-	"https://ipfs.2read.net/ipfs/:hash"
+	"https://ipfs.2read.net/ipfs/:hash",
+	"https://storjipfs-gateway.com/ipfs/:hash"
 ]

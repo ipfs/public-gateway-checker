@@ -31,7 +31,7 @@
 	"https://ipfs.privacytools.io/ipfs/:hash",
 	"https://ipfs.jeroendeneef.com/ipfs/:hash",
 	"https://permaweb.io/ipfs/:hash",
-	"https://ipfs.stibarc.gq/ipfs/:hash",
+	"https://ipfs.stibarc.com/ipfs/:hash",
 	"https://ipfs.best-practice.se/ipfs/:hash",
 	"https://:hash.ipfs.2read.net",
 	"https://ipfs.2read.net/ipfs/:hash",

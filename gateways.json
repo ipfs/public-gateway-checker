@@ -32,5 +32,6 @@
 	"https://:hash.ipfs.2read.net",
 	"https://ipfs.2read.net/ipfs/:hash",
 	"https://storjipfs-gateway.com/ipfs/:hash",
-	"https://ipfs.runfission.com/ipfs/:hash"
+	"https://ipfs.runfission.com/ipfs/:hash",
+	"https://trusti.id/ipfs/:hash"
 ]

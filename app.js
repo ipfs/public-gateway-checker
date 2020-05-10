@@ -176,7 +176,7 @@ let Flag = function(parent, hostname) {
 	this.tag.textContent = '';
 
 	setTimeout(() => {
-		fetch(`http://ip-api.com/json/${hostname}?fields=16387`).then((res) => {
+		fetch(`https://ip-api.com/json/${hostname}?fields=16387`).then((res) => {
 			return res.text();
 		}).then((text) => {
 			let response = JSON.parse(text);
@@ -188,7 +188,6 @@ let Flag = function(parent, hostname) {
 };
 
 Flag.prototype.onResponse = function(response) {
-	console.log(response);
 	if ('success' == response.status) {
 		this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.countryCode.toLowerCase()}.svg')`;
 		this.tag.title = response.country;

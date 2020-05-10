@@ -169,6 +169,33 @@ Origin.prototype.onerror = function() {
 	this.tag.textContent = '❌';
 };
 
+let Flag = function(parent, hostname) {
+	this.parent = parent;
+	this.tag = document.createElement("div");
+	this.tag.className = "Flag";
+	this.tag.textContent = '';
+
+	setTimeout(() => {
+		fetch(`http://ip-api.com/json/${hostname}?fields=16387`).then((res) => {
+			return res.text();
+		}).then((text) => {
+			let response = JSON.parse(text);
+			this.onResponse(response);
+		}).catch((err) => {
+			console.log(err);
+		});
+	}, (60 * 1000 / 44) * Flag.requests++); // limit request to 44 / minute, which is the limit imposed by ip-api.com
+};
+
+Flag.prototype.onResponse = function(response) {
+	console.log(response);
+	if ('success' == response.status) {
+		this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.countryCode.toLowerCase()}.svg')`;
+		this.tag.title = response.country;
+	}
+};
+
+Flag.requests = 0;
 
 let Node = function(parent, gateway, index) {
 	this.parent = parent;
@@ -185,11 +212,15 @@ let Node = function(parent, gateway, index) {
 	this.origin = new Origin(this);
 	this.tag.append(this.origin.tag);
 
+
 	this.link = document.createElement("div");
 	let gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
 	this.link.url = new URL(gatewayAndHash);
 	this.link.textContent = gatewayHostname(this.link.url);
 	this.link.className = "Link";
+
+	this.flag = new Flag(this, this.link.textContent);
+	this.tag.append(this.flag.tag);
 	this.tag.append(this.link);
 
 	this.took = document.createElement("div");

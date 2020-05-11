@@ -175,22 +175,44 @@ let Flag = function(parent, hostname) {
 	this.tag.className = "Flag";
 	this.tag.textContent = '';
 
-	setTimeout(() => {
-		fetch(`https://ip-api.com/json/${hostname}?fields=16387`).then((res) => {
-			return res.text();
-		}).then((text) => {
-			let response = JSON.parse(text);
-			this.onResponse(response);
-		}).catch((err) => {
-			console.log(err);
-		});
-	}, (60 * 1000 / 44) * Flag.requests++); // limit request to 44 / minute, which is the limit imposed by ip-api.com
+	let ask = true;
+
+	try{
+		let savedSTR = localStorage.getItem(hostname);
+		if (savedSTR) {
+			let saved = JSON.parse(savedSTR);
+			let elapsed = Date.now() - saved.date;
+			let expiration = 7 * 24 * 60 * 60 * 1000; // 7 days
+			if (elapsed < expiration) {
+				ask = false;
+				this.onResponse(saved);
+			}
+		}
+	} catch(e) {
+
+	}
+
+	if (ask) {
+		setTimeout(() => {
+			fetch(`https://api.ipinfodb.com/v3/ip-country/?ip=${hostname}&key=967f21fe9ed8517b982f07fa30a9cd9b75ceb2d5f5393fc91ab1a5ba454ec02b&format=json`).then((res) => {
+				return res.text();
+			}).then((text) => {
+				let response = JSON.parse(text);
+				response.date = Date.now();
+				let resposeSTR = JSON.stringify(response);
+				localStorage.setItem(hostname, resposeSTR);
+				this.onResponse(response);
+			}).catch((err) => {
+				console.log(err);
+			});
+		}, 1000 * Flag.requests++); // limit request to 1 / second, which is under the limits imposed by ipinfodb.com
+	}
 };
 
 Flag.prototype.onResponse = function(response) {
-	if ('success' == response.status) {
+	if ('OK' == response.statusCode) {
 		this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.countryCode.toLowerCase()}.svg')`;
-		this.tag.title = response.country;
+		this.tag.title = response.countryName;
 	}
 };
 

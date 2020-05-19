@@ -181,7 +181,7 @@ let Flag = function(parent, hostname) {
 		let savedSTR = localStorage.getItem(hostname);
 		if (savedSTR) {
 			let saved = JSON.parse(savedSTR);
-			let elapsed = Date.now() - saved.time|0;
+			let elapsed = Date.now() - (saved.time|0);
 			let expiration = 7 * 24 * 60 * 60 * 1000; // 7 days
 			if (elapsed < expiration) {
 				ask = false;

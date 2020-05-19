@@ -204,13 +204,21 @@ let Flag = function(parent, hostname) {
 					if (200 == request.status) {
 						try {
 							let response = JSON.parse(request.responseText);
-							let ip = response.Answer[0].data;
-							let geoipResponse = await geoip.lookup(ip);							
-							if (geoipResponse && geoipResponse.country_code) {
-								this.onResponse(geoipResponse);
-								geoipResponse.time = Date.now();
-								let resposeSTR = JSON.stringify(geoipResponse);
-								localStorage.setItem(hostname, resposeSTR);
+							let ip = null;
+							for (let i = 0; i < response.Answer.length && !ip; i++) {
+								let answer = response.Answer[i];
+								if (1 == answer.type) {
+									ip = answer.data;
+								}
+							}
+							if (ip) {
+								let geoipResponse = await geoip.lookup(ip);							
+								if (geoipResponse && geoipResponse.country_code) {
+									this.onResponse(geoipResponse);
+									geoipResponse.time = Date.now();
+									let resposeSTR = JSON.stringify(geoipResponse);
+									localStorage.setItem(hostname, resposeSTR);
+								}
 							}
 						} catch(e) {
 
@@ -226,7 +234,6 @@ let Flag = function(parent, hostname) {
 
 Flag.prototype.onResponse = function(response) {
 	this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`;
-	this.tag.style["box-shadow"] = "0 0 0.25em #444";
 	this.tag.title = response.country_name;
 };
 

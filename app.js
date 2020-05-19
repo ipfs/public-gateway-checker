@@ -226,6 +226,7 @@ let Flag = function(parent, hostname) {
 
 Flag.prototype.onResponse = function(response) {
 	this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`;
+	this.tag.style["box-shaow"] = "0 0 0.25em #444";
 	this.tag.title = response.country_name;
 };
 

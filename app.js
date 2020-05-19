@@ -181,7 +181,7 @@ let Flag = function(parent, hostname) {
 		let savedSTR = localStorage.getItem(hostname);
 		if (savedSTR) {
 			let saved = JSON.parse(savedSTR);
-			let elapsed = Date.now() - saved.date;
+			let elapsed = Date.now() - saved.time|0;
 			let expiration = 7 * 24 * 60 * 60 * 1000; // 7 days
 			if (elapsed < expiration) {
 				ask = false;
@@ -194,26 +194,37 @@ let Flag = function(parent, hostname) {
 
 	if (ask) {
 		setTimeout(() => {
-			fetch(`https://api.ipinfodb.com/v3/ip-country/?ip=${hostname}&key=967f21fe9ed8517b982f07fa30a9cd9b75ceb2d5f5393fc91ab1a5ba454ec02b&format=json`).then((res) => {
-				return res.text();
-			}).then((text) => {
-				let response = JSON.parse(text);
-				response.date = Date.now();
-				let resposeSTR = JSON.stringify(response);
-				localStorage.setItem(hostname, resposeSTR);
-				this.onResponse(response);
-			}).catch((err) => {
-				console.log(err);
-			});
-		}, 1000 * Flag.requests++); // limit request to 1 / second, which is under the limits imposed by ipinfodb.com
+			let request = new XMLHttpRequest();
+			request.open('GET', `https://cloudflare-dns.com/dns-query?name=${hostname}&type=A`);
+			request.setRequestHeader("accept", "application/dns-json");
+			request.onreadystatechange = async () => {
+				if (4 == request.readyState) {
+					if (200 == request.status) {
+						try {
+							let response = JSON.parse(request.responseText);
+							let ip = response.Answer[0].data;
+							let geoipResponse = await geoip.lookup(ip);							
+							if (geoipResponse && geoipResponse.country_code) {
+								this.onResponse(geoipResponse);
+								geoipResponse.time = Date.now();
+								let resposeSTR = JSON.stringify(geoipResponse);
+								localStorage.setItem(hostname, resposeSTR);
+							}
+						} catch(e) {
+
+						}
+					}
+				}
+			};
+			request.onerror = (e) => {};
+			request.send();
+		}, 500 * Flag.requests++); // 2 / second, request limit
 	}
 };
 
 Flag.prototype.onResponse = function(response) {
-	if ('OK' == response.statusCode) {
-		this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.countryCode.toLowerCase()}.svg')`;
-		this.tag.title = response.countryName;
-	}
+	this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`;
+	this.tag.title = response.country_name;
 };
 
 Flag.requests = 0;

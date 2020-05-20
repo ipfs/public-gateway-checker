@@ -8,6 +8,9 @@ const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3
 const SCRIPT_HASH = 'bafybeietzsezxbgeeyrmwicylb5tpvf7yutrm3bxrfaoulaituhbi7q6yi';
 const HASH_STRING = 'Hello from IPFS Gateway Checker';
 
+const ipfs_http_client = window.IpfsHttpClient({ host: 'ipfs.io' });
+
+
 let checker = document.getElementById('checker');
 checker.nodes = [];
 
@@ -212,7 +215,7 @@ let Flag = function(parent, hostname) {
 								}
 							}
 							if (ip) {
-								let geoipResponse = await geoip.lookup(ip);							
+								let geoipResponse = await geoip.lookup(ip, ipfs_http_client);							
 								if (geoipResponse && geoipResponse.country_code) {
 									this.onResponse(geoipResponse);
 									geoipResponse.time = Date.now();

@@ -35,5 +35,5 @@
 	"https://ipfs.runfission.com/ipfs/:hash",
 	"https://trusti.id/ipfs/:hash",
 	"https://:hash.ipfs.cosmos-ink.net",
-	"https://ipfs.overpi.com/:hash"
+	"https://ipfs.overpi.com/ipfs/:hash"
 ]

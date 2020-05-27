@@ -215,7 +215,7 @@ let Flag = function(parent, hostname) {
 								}
 							}
 							if (ip) {
-								let geoipResponse = await geoip.lookup(ip, ipfs_http_client);							
+								let geoipResponse = await window.IpfsGeoip.lookup(ipfs_http_client, ip);							
 								if (geoipResponse && geoipResponse.country_code) {
 									this.onResponse(geoipResponse);
 									geoipResponse.time = Date.now();

@@ -198,7 +198,7 @@ let Flag = function(parent, hostname) {
 			}
 		}
 	} catch(e) {
-
+    console.error(`error while getting savedSTR for ${hostname}`, e)
 	}
 
 	if (ask) {
@@ -219,7 +219,7 @@ let Flag = function(parent, hostname) {
 								}
 							}
 							if (ip) {
-								let geoipResponse = await window.IpfsGeoip.lookup(ipfs_http_client, ip);							
+								let geoipResponse = await window.IpfsGeoip.lookup(ipfs_http_client, ip);
 								if (geoipResponse && geoipResponse.country_code) {
 									this.onResponse(geoipResponse);
 									geoipResponse.time = Date.now();
@@ -228,7 +228,7 @@ let Flag = function(parent, hostname) {
 								}
 							}
 						} catch(e) {
-
+              console.error(`error while getting DNS A record for ${hostname}`, e)
 						}
 					}
 				}

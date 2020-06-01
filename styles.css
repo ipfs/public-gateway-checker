@@ -3,30 +3,6 @@ body, html {
 	text-align: center;
 }
 
-div.Header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	background-color: #0b3a53;
-	padding: 1rem;
-	margin: 0;
-	padding: 0;
-}
-
-div.Header a {
-	box-sizing: border-box;
-}
-
-div.Header div.Title {
-	position: relative;
-	display: inline-block;
-	color: #69c4cd;
-	font-size: 1.5rem;
-	text-align: right;
-	font-weight: 200;
-}
-
 div.Stats {
 	display: flex;
 	justify-content: flex-start;

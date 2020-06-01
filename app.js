@@ -8,7 +8,11 @@ const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3
 const SCRIPT_HASH = 'bafybeietzsezxbgeeyrmwicylb5tpvf7yutrm3bxrfaoulaituhbi7q6yi';
 const HASH_STRING = 'Hello from IPFS Gateway Checker';
 
-const ipfs_http_client = window.IpfsHttpClient({ host: 'ipfs.io' });
+const ipfs_http_client = window.IpfsHttpClient({
+  host: 'ipfs.io',
+  port: 443,
+  protocol: 'https'
+});
 
 
 let checker = document.getElementById('checker');

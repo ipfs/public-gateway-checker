@@ -36,4 +36,7 @@
 	"https://trusti.id/ipfs/:hash",
 	"https://:hash.ipfs.cosmos-ink.net",
 	"https://ipfs.overpi.com/ipfs/:hash"
+	"https://ipfs.lc/ipfs/:hash",
+	"https://ipfs.leiyun.org/ipfs/:hash",
+	
 ]

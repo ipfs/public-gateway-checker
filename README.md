@@ -4,7 +4,7 @@
 
 You can view this website on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
 
-[![screenshot_2020-01-05.png](https://ipfs.io/ipfs/QmRjQyxLwvd6D4fGSDx3uPM1nRmBnX4HwEaK5p8fuZFtpp?filename=screenshot.jpg)](https://ipfs.github.io/public-gateway-checker/)
+[![screenshot_2020-01-05.png](https://gateway.ipfs.io/ipfs/Qma8nqj75L75aN3WpentAAEqyuEmwyrqUrX5yxAZV1Szma)](https://ipfs.github.io/public-gateway-checker/)
 
 **NOTE:** All of these (except `ipfs.io` and `dweb.link`) are hosted by third-parties and should be treated as such.
 

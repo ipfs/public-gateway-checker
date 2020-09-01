@@ -53,6 +53,6 @@
 	"https://ipfs.fleek.co/ipfs/:hash",
 	"https://ipfs.jbb.one/ipfs/:hash",
 	"https://ipfs.yt/ipfs/:hash",
-	"https://jacl.tech/ipfs/:hash",
+	"https://:hash.ipfs.jacl.tech",
 	"https://hashnews.k1ic.com/ipfs/:hash"
 ]

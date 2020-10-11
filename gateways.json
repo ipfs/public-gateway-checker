@@ -54,5 +54,6 @@
 	"https://ipfs.jbb.one/ipfs/:hash",
 	"https://ipfs.yt/ipfs/:hash",
 	"https://ipfs.jacl.tech/ipfs/:hash",
-	"https://hashnews.k1ic.com/ipfs/:hash"
+	"https://hashnews.k1ic.com/ipfs/:hash",
+	"https://ipfs.k1ic.com/ipfs/:hash"
 ]

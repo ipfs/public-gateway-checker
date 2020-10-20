@@ -90,3 +90,7 @@ div.Node div.Took {
 	font-size: 80%;
 	font-style: italic;
 }
+
+div.Node.origin div.Link::after {
+  content: " 🔒"
+}

@@ -92,5 +92,5 @@ div.Node div.Took {
 }
 
 div.Node.origin div.Link::after {
-  content: " 🔒"
+  content: " 💚"
 }

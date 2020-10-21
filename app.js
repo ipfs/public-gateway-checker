@@ -1,11 +1,13 @@
 /*
-	This program will check IPFS gateways status using 2 methods
+	This program will check IPFS gateways status using 3 methods
 		1) By asking for a script through a <script src=""> tag, which when loaded, it executes some code
-		2) By asking data through ajax requests to verify gateway's CORS configuration
+		2) By asking data through fetch requests to verify gateway's CORS configuration
+		3) By asking data through img requests to verify subdomain configuration
 */
 
 const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m';
 const SCRIPT_HASH = 'bafybeietzsezxbgeeyrmwicylb5tpvf7yutrm3bxrfaoulaituhbi7q6yi';
+const IMG_HASH = 'bafybeibwzifw52ttrkqlikfzext5akxu7lz4xiwjgwzmqcpdzmp3n5vnbe'; // 1x1.png
 const HASH_STRING = 'Hello from IPFS Gateway Checker';
 
 const ipfs_http_client = window.IpfsHttpClient({
@@ -19,13 +21,13 @@ let checker = document.getElementById('checker');
 checker.nodes = [];
 
 checker.checkGateways = function(gateways) {
-	gateways.forEach((gateway) => {
-		let node = new Node(this.results, gateway, this.nodes.length);
-		this.nodes.push(node);
-		this.results.append(node.tag);
-		node.check();
-	});
-};
+  for (const gateway of gateways) {
+    const node = new Node(this.results, gateway, this.nodes.length)
+    this.nodes.push(node)
+    this.results.append(node.tag)
+    setTimeout(() => node.check(), 100 * this.nodes.length);
+  }
+}
 
 checker.updateStats = function() {
 	this.stats.update();
@@ -77,6 +79,36 @@ let Status = function(parent, index) {
 	this.tag.className = "Status";
 	this.tag.textContent = '🕑';
 };
+
+
+function checkViaImgSrc (imgUrl) {
+  // we check if gateway is up by loading 1x1 px image:
+  // this is more robust check than loading js, as it won't be blocked
+  // by privacy protections present in modern browsers or in extensions such as Privacy Badger
+  const imgCheckTimeout = 15000
+  return new Promise((resolve, reject) => {
+    const timeout = () => {
+      if (!timer) return false
+      clearTimeout(timer)
+      timer = null
+      return true
+    }
+    let timer = setTimeout(() => { if (timeout()) reject() }, imgCheckTimeout)
+    const img = new Image()
+    img.onerror = () => {
+      timeout()
+      reject()
+    }
+    img.onload = () => {
+      timeout()
+      resolve()
+    }
+    // now - ensures we don't read from browser cache
+    // filename - ensures correct content-type is returned / sniffed
+    // x-ipfs-companion-no-redirect - hint for our browser extension, makes sure we test remote server
+    img.src = `${imgUrl}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`
+  })
+}
 
 Status.prototype.check = function() {
 	let gatewayAndScriptHash = this.parent.gateway.replace(":hash", SCRIPT_HASH);
@@ -134,23 +166,20 @@ let Cors = function(parent) {
 };
 
 Cors.prototype.check = function() {
-	const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST);
-	const now = Date.now();
-	const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`;
-	fetch(testUrl).then((res) => {
-		return res.text();
-	}).then((text) => {
-		const matched = (HASH_STRING === text.trim());
-		if (matched) {
-			this.parent.checked();
-			this.tag.textContent = '✅';
-		} else {
-			this.onerror();
-		}
-	}).catch((err) => {
-		this.onerror();
-	});
-};
+  const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST)
+  const now = Date.now()
+  const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`
+  fetch(testUrl).then((res) => res.text()).then((text) => {
+    const matched = (HASH_STRING === text.trim())
+    if (matched) {
+      this.parent.checked()
+      this.tag.textContent = '✅'
+      this.parent.tag.classList.add('cors')
+    } else {
+      this.onerror()
+    }
+  }).catch((err) => this.onerror())
+}
 
 Cors.prototype.onerror = function() {
 	this.tag.textContent = '❌';
@@ -164,13 +193,18 @@ let Origin = function(parent) {
 };
 
 Origin.prototype.check = function() {
-	const cidInSubdomain = this.parent.gateway.startsWith('https://:hash.ipfs.');
-	if (cidInSubdomain) {
-		this.tag.textContent = '✅';
-	} else {
-		this.onerror();
-	}
-};
+  // we are unable to check url after subdomain redirect because some gateways
+  // may not have proper CORS in place. instead, we manually construct subdomain
+  // URL and check if it loading known image works
+  const imgUrl = new URL(this.parent.gateway)
+  imgUrl.pathname = '/'
+  imgUrl.hostname = `${IMG_HASH}.ipfs.${imgUrl.hostname}`
+  checkViaImgSrc(imgUrl.toString()).then((res) => {
+    this.tag.textContent = '✅';
+    this.parent.tag.classList.add('origin')
+    this.parent.checked()
+  }).catch(() => this.onerror())
+}
 
 Origin.prototype.onerror = function() {
 	this.tag.textContent = '❌';

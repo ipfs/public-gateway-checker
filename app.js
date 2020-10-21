@@ -25,7 +25,7 @@ checker.checkGateways = function(gateways) {
     const node = new Node(this.results, gateway, this.nodes.length)
     this.nodes.push(node)
     this.results.append(node.tag)
-    setTimeout(() => node.check(), 100 * checker.nodes.length);
+    setTimeout(() => node.check(), 100 * this.nodes.length);
   }
 }
 
@@ -103,6 +103,9 @@ function checkViaImgSrc (imgUrl) {
       timeout()
       resolve()
     }
+    // now - ensures we don't read from browser cache
+    // filename - ensures correct content-type is returned / sniffed
+    // x-ipfs-companion-no-redirect - hint for our browser extension, makes sure we test remote server
     img.src = `${imgUrl}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`
   })
 }

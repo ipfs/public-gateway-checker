@@ -1,5 +1,5 @@
 <!--
-Hello! To ensure this PR is correctly addressed as soon as possible by the IPFS team, please ensure the following:
+Hello! To ensure this PR is correctly addressed as soon as possible by the IPFS team, please be sure of the following:
 
 IF ADDING A NEW PUBLIC GATEWAY:
 - Name your PR in the format `feat: add gateway.address.here`

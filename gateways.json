@@ -34,6 +34,7 @@
 	"https://storjipfs-gateway.com/ipfs/:hash",
 	"https://ipfs.runfission.com/ipfs/:hash",
 	"https://trusti.id/ipfs/:hash",
+	"https://apac.trusti.id/ipfs/:hash",
 	"https://ipfs.overpi.com/ipfs/:hash",
 	"https://ipfs.lc/ipfs/:hash",
 	"https://ipfs.leiyun.org/ipfs/:hash",

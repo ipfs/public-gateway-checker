@@ -3,30 +3,6 @@ body, html {
 	text-align: center;
 }
 
-div.Header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	background-color: #0b3a53;
-	padding: 1rem;
-	margin: 0;
-	padding: 0;
-}
-
-div.Header a {
-	box-sizing: border-box;
-}
-
-div.Header div.Title {
-	position: relative;
-	display: inline-block;
-	color: #69c4cd;
-	font-size: 1.5rem;
-	text-align: right;
-	font-weight: 200;
-}
-
 div.Stats {
 	display: flex;
 	justify-content: flex-start;
@@ -100,9 +76,21 @@ div.Node div.Origin {
 	user-select: none;
 }
 
+div.Node div.Flag {
+	width: 2em;
+	height: 1em;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
 div.Node div.Took {
 	min-width: 5em;
 	text-align: right;
 	font-size: 80%;
 	font-style: italic;
+}
+
+div.Node.origin div.Link::after {
+  content: " 💚"
 }

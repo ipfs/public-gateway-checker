@@ -1,16 +1,20 @@
-# ipfs/public-gateway-checker
+# IPFS Public Gateway Checker
 
-> Checks which public IPFS gateways are online or not.
+**A site displaying public IPFS gateways and their online/offline status.**
 
-You can view this website on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
+View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
 
-[![screenshot_2020-01-05.png](https://ipfs.io/ipfs/QmPw3s2zijn3zmCDAnWMEaHx9JTSevfG7uZaiCKc5A21U1?filename=screenshot_2020-01-05.png)](https://ipfs.github.io/public-gateway-checker/)
+[![Screenshot of Public Gateway Checker](https://gateway.ipfs.io/ipfs/QmdRug9VoYcuaSC2c5KkJuxYfYNvUWdUdZhm5VmNimjfLd)](https://ipfs.github.io/public-gateway-checker/)
 
-**NOTE:** All of these (except `ipfs.io` and `dweb.link`) are hosted by third-parties and should be treated as such.
+**NOTE:** With the exception of `ipfs.io` and `dweb.link`, all gateways listed are hosted by third parties and should be treated as such.
 
 ## Adding a new public gateway
 
-If you'd like to add a new public gateway, please edit `gateways.json` and submit a pull request.
+If you'd like to add a new public gateway, please edit `gateways.json`:
+1. Add the gateway's address to the bottom of the list
+2. Make sure the final item in the list does **not** have a comma at the end, but all preceding items do
+
+Then, submit a pull request for this change. Be sure to follow all the directions in the pull request template so your PR can be triaged as quickly as possible.
 
 ## Testing locally
 
@@ -20,4 +24,4 @@ $ npx http-server . -a 127.0.0.1 -p 3000 -c-1
 
 ## Command line
 
-A CLI version `ipfg` is available here: https://github.com/JayBrown/Tools/tree/master/ipfg
+Prefer to check public gateways from your terminal? A CLI version, `ipfg`, is available at https://github.com/JayBrown/Tools/tree/master/ipfg.

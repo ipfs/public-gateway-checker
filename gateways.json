@@ -25,7 +25,6 @@
 	"https://ipfs.fooock.com/ipfs/:hash",
 	"https://cdn.cwinfo.net/ipfs/:hash",
 	"https://ipfs.privacytools.io/ipfs/:hash",
-	"https://ipfs.jeroendeneef.com/ipfs/:hash",
 	"https://permaweb.io/ipfs/:hash",
 	"https://ipfs.stibarc.com/ipfs/:hash",
 	"https://ipfs.best-practice.se/ipfs/:hash",

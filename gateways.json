@@ -59,5 +59,6 @@
 	"https://ipfs.drink.cafe/ipfs/:hash",
 	"https://ipfs.azurewebsites.net/ipfs/:hash",
 	"https://gw.ipfspin.com/ipfs/:hash",
-	"https://ipfs.kavin.rocks/ipfs/:hash"
+	"https://ipfs.kavin.rocks/ipfs/:hash",
+	"https://ipfs.denarius.io/ipfs/:hash"
 ]

@@ -61,5 +61,5 @@
 	"https://ipfs.kavin.rocks/ipfs/:hash",
 	"https://ipfs.denarius.io/ipfs/:hash",
 	"https://ipfs.mihir.ch/ipfs/:hash",
-	"https://bluelight.link:hash"
+	"https://bluelight.link/:hash"
 ]

@@ -10,6 +10,7 @@
 	"https://hardbin.com/ipfs/:hash",
 	"https://gateway.blocksec.com/ipfs/:hash",
 	"https://cloudflare-ipfs.com/ipfs/:hash",
+	"https://astyanax.io/ipfs/:hash",
 	"https://cf-ipfs.com/ipfs/:hash",
 	"https://ipns.co/ipfs/:hash",
 	"https://ipfs.mrh.io/ipfs/:hash",

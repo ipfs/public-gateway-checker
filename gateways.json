@@ -37,7 +37,7 @@
 	"https://trusti.id/ipfs/:hash",
 	"https://apac.trusti.id/ipfs/:hash",
 	"https://ipfs.overpi.com/ipfs/:hash",
-	"https://ipfs.lc/ipfs/:hash",
+	"https://gateway.ipfs.lc/ipfs/:hash",
 	"https://ipfs.leiyun.org/ipfs/:hash",
 	"https://ipfs.ink/ipfs/:hash",
 	"https://ipfs.oceanprotocol.com/ipfs/:hash",

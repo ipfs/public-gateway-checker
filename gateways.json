@@ -62,5 +62,6 @@
 	"https://ipfs.kavin.rocks/ipfs/:hash",
 	"https://ipfs.denarius.io/ipfs/:hash",
 	"https://ipfs.mihir.ch/ipfs/:hash",
-	"https://bluelight.link/ipfs/:hash"
+	"https://bluelight.link/ipfs/:hash",
+	"https://crustwebsites.net/ipfs/:hash"
 ]

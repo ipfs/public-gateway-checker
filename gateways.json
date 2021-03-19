@@ -63,5 +63,20 @@
 	"https://ipfs.denarius.io/ipfs/:hash",
 	"https://ipfs.mihir.ch/ipfs/:hash",
 	"https://bluelight.link/ipfs/:hash",
-	"https://crustwebsites.net/ipfs/:hash"
+	"https://crustwebsites.net/ipfs/:hash",
+	"https://trusted-setup.filecoin.io/ipfs/:hash",
+	"http://3.211.196.68:8080/ipfs/:hash",
+	"https://ipfs0.sjc.cloudsigma.com/ipfs/:hash",
+	"https://ipfs-tezos.giganode.io/ipfs/:hash",
+	"http://183.252.17.149:82/ipfs/:hash",
+	"http://ipfs.genenetwork.org/ipfs/:hash",
+	"https://ipfs.eth.aragon.network/ipfs/:hash",
+	"https://ipfs.smartholdem.io/ipfs/:hash",
+	"https://bin.d0x.to/ipfs/:hash",
+	"https://ipfs.xoqq.ch/ipfs/:hash",
+	"https://birds-are-nice.me/ipfs/:hash",
+	"http://natoboram.mynetgear.com:8080/ipfs/:hash",
+	"https://ipfs.foxgirl.dev/ipfs/:hash",
+	"https://video.oneloveipfs.com/ipfs/:hash",
+	"http://ipfs.anonymize.com/ipfs/:hash"
 ]

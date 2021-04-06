@@ -79,5 +79,6 @@
 	"https://ipfs.foxgirl.dev/ipfs/:hash",
 	"https://video.oneloveipfs.com/ipfs/:hash",
 	"http://ipfs.anonymize.com/ipfs/:hash",
-	"https://ipfs.noormohammed.tech/ipfs/:hash"
+	"https://ipfs.noormohammed.tech/ipfs/:hash",
+	"https://ipfs.taxi/ipfs/:hash"
 ]

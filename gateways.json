@@ -80,5 +80,6 @@
 	"https://video.oneloveipfs.com/ipfs/:hash",
 	"http://ipfs.anonymize.com/ipfs/:hash",
 	"https://ipfs.noormohammed.tech/ipfs/:hash",
-	"https://ipfs.taxi/ipfs/:hash"
+	"https://ipfs.taxi/ipfs/:hash",
+	"https://ipfs.scalaproject.io/ipfs/:hash"
 ]

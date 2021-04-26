@@ -82,5 +82,6 @@
 	"https://ipfs.noormohammed.tech/ipfs/:hash",
 	"https://ipfs.taxi/ipfs/:hash",
 	"https://ipfs.scalaproject.io/ipfs/:hash", 
-	"https://search.ipfsgate.com/ipfs/:hash" 
+	"https://search.ipfsgate.com/ipfs/:hash",
+	"https://ipfs.itargo.io/ipfs/:hash"
 ]

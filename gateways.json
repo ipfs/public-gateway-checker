@@ -44,7 +44,6 @@
 	"https://d26g9c7mfuzstv.cloudfront.net/ipfs/:hash",
 	"https://ipfsgateway.makersplace.com/ipfs/:hash",
 	"https://gateway.ravenland.org/ipfs/:hash",
-	"https://ipfs.smartsignature.io/ipfs/:hash",
 	"https://ipfs.funnychain.co/ipfs/:hash",
 	"https://ipfs.telos.miami/ipfs/:hash",
 	"https://robotizing.net/ipfs/:hash",

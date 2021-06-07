@@ -83,5 +83,6 @@
 	"https://ipfs.scalaproject.io/ipfs/:hash", 
 	"https://search.ipfsgate.com/ipfs/:hash",
 	"https://ipfs.itargo.io/ipfs/:hash",
-	"https://ipfs.decoo.io/ipfs/:hash"
+	"https://ipfs.decoo.io/ipfs/:hash",
+	"https://ipfs.ivoputzer.xyz/ipfs/:hash"
 ]

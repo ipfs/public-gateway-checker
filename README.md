@@ -4,7 +4,7 @@
 
 View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
 
-[![Screenshot of Public Gateway Checker](https://gateway.ipfs.io/ipfs/QmZBvMaV3EBtuUB4yGD5gGJwmEyePpk2sWjvPEoLJKcH5D)](https://ipfs.github.io/public-gateway-checker/)
+[![Screenshot of Public Gateway Checker](https://user-images.githubusercontent.com/157609/121202304-7b485980-c875-11eb-913a-29b275afa0b3.png)](https://ipfs.github.io/public-gateway-checker/)
 
 
 ## SECURITY NOTES

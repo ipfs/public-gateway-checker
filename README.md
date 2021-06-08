@@ -4,7 +4,7 @@
 
 View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
 
-[![Screenshot of Public Gateway Checker](https://gateway.ipfs.io/ipfs/QmdRug9VoYcuaSC2c5KkJuxYfYNvUWdUdZhm5VmNimjfLd)](https://ipfs.github.io/public-gateway-checker/)
+[![Screenshot of Public Gateway Checker](https://gateway.ipfs.io/ipfs/QmZBvMaV3EBtuUB4yGD5gGJwmEyePpk2sWjvPEoLJKcH5D)](https://ipfs.github.io/public-gateway-checker/)
 
 **NOTE:** With the exception of `ipfs.io` and `dweb.link`, all gateways listed are hosted by third parties and should be treated as such.
 

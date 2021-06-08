@@ -171,7 +171,7 @@ checkViaImgSrc(imgPathUrl).then((res) => {
 
 Status.prototype.checked = function() {
 	this.up = true;
-	this.tag.innerHTML = '✅';
+	this.tag.innerHTML = '🌍';
   this.parent.tag.classList.add('online')
 };
 

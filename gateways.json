@@ -85,5 +85,5 @@
 	"https://search.ipfsgate.com/ipfs/:hash",
 	"https://ipfs.itargo.io/ipfs/:hash",
 	"https://ipfs.decoo.io/ipfs/:hash",
-	"https://ipfs.ivoputzer.xyz/ipfs/:hash"
+	"https://ivoputzer.xyz/ipfs/:hash"
 ]

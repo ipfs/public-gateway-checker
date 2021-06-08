@@ -61,7 +61,7 @@ div.Node div.Link {
 	text-overflow: ellipsis;
 }
 
-div.Node a {
+div.Node a, div#origin-warning a {
 	text-decoration: none;
 	color: #357edd;
 	white-space: nowrap;
@@ -93,4 +93,7 @@ div.Node div.Took {
 
 div.Node.origin div.Link::after {
   content: " 💚"
+}
+div.Node:not(.online):not(:first-child) {
+  opacity: .5
 }

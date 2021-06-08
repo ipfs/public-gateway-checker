@@ -3,6 +3,7 @@
 	"https://dweb.link/ipfs/:hash",
 	"https://gateway.ipfs.io/ipfs/:hash",
 	"https://ipfs.infura.io/ipfs/:hash",
+	"https://infura-ipfs.io/ipfs/:hash",
 	"https://ninetailed.ninja/ipfs/:hash",
 	"https://ipfs.globalupload.io/:hash",
 	"https://10.via0.com/ipfs/:hash",

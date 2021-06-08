@@ -19,7 +19,7 @@ Then, submit a pull request for this change. Be sure to follow all the direction
 ## Testing locally
 
 ```console
-$ npx http-server . -a 127.0.0.1 -p 3000 -c-1
+$ npx serve -l 3000
 ```
 
 ## Command line

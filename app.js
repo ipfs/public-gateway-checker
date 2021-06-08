@@ -6,8 +6,8 @@
 */
 
 const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m';
-const SCRIPT_HASH = 'bafybeietzsezxbgeeyrmwicylb5tpvf7yutrm3bxrfaoulaituhbi7q6yi';
 const IMG_HASH = 'bafybeibwzifw52ttrkqlikfzext5akxu7lz4xiwjgwzmqcpdzmp3n5vnbe'; // 1x1.png
+// const IFRAME_HASH = 'bafkreifx3g6bkkwl7b4v43lvcqfo5vshbiehuvmpky2zayhfpg5qj7y3ca'
 const HASH_STRING = 'Hello from IPFS Gateway Checker';
 
 const ipfs_http_client = window.IpfsHttpClient({
@@ -100,34 +100,65 @@ function checkViaImgSrc (imgUrl) {
       reject()
     }
     img.onload = () => {
+      // subdomain works
       timeout()
       resolve()
     }
-    // now - ensures we don't read from browser cache
-    // filename - ensures correct content-type is returned / sniffed
-    // x-ipfs-companion-no-redirect - hint for our browser extension, makes sure we test remote server
-    img.src = `${imgUrl}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`
+    img.src = imgUrl
   })
 }
 
+// This tries to load iframe and talk to it over postMessage
+// (tests CORS isolation)
+/* TODO: decide if this is useful
+function checkViaIframe (gateway) {
+  const gwUrl = new URL(gateway)
+  // now - ensures we don't read from browser cache
+  // filename - ensures correct content-type is returned / sniffed
+  // x-ipfs-companion-no-redirect - hint for our browser extension, makes sure we test remote server
+  const now = Date.now()
+  const iframePathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IFRAME_HASH}?now=${now}&filename=origin-check.html#x-ipfs-companion-no-redirect`)
+  const iframeSubdomainUrl = new URL(`${gwUrl.protocol}//${IFRAME_HASH}.ipfs.${gwUrl.hostname}/?now=${now}&filename=origin-check.html#x-ipfs-companion-no-redirect`)
+  const iframeCheckTimeout = 15000
+  return new Promise((resolve, reject) => {
+    const timeout = () => {
+      if (!timer) return false
+      clearTimeout(timer)
+      timer = null
+      return true
+    }
+    let timer = setTimeout(() => { if (timeout()) reject() }, iframeCheckTimeout)
+    const iframe = document.createElement("iframe")
+    iframe.src = iframePathUrl.toString()
+    iframe.name = `iframe-${gwUrl.hostname}`
+    iframe.style.display = 'none'
+    document.body.appendChild(iframe)
+    iframe.onerror = () => {
+      timeout()
+      reject()
+    }
+    iframe.onload = () => {
+      window.addEventListener("message", (event) => {
+        if (event.origin === iframeSubdomainUrl.origin) {
+          console.log('checkViaIframe.event', event)
+          timeout()
+          resolve()
+        }
+      }, false)
+      iframe.contentWindow.postMessage("hello there! is your origin correct?", iframeSubdomainUrl.origin)
+    }
+  })
+}
+*/
+
 Status.prototype.check = function() {
-	let gatewayAndScriptHash = this.parent.gateway.replace(":hash", SCRIPT_HASH);
-
-	// we set a unused number as a url parameter, to try to prevent content caching
-	// is it right ? ... do you know a better way ? ... does it always work ?
-	let now = Date.now();
-
-	// 3 important things here
-	//   1) we add #x-ipfs-companion-no-redirect to the final url (self explanatory)
-	//   2) we add ?filename=anyname.js as a parameter to let the gateway guess Content-Type header
-	//      to be sent in headers in order to prevent CORB
-	//   3) parameter 'i' is the one used to identify the gateway once the script executes
-	let src = `${gatewayAndScriptHash}?i=${this.parent.index}&now=${now}&filename=anyname.js#x-ipfs-companion-no-redirect`;
-
-	let script = document.createElement('script');
-	script.src = src;
-	document.body.append(script);
-	script.onerror = () => {
+// test by loading subresource via img.src (path will work on both old and subdomain gws)
+const gwUrl = new URL(this.parent.gateway)
+const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
+checkViaImgSrc(imgPathUrl).then((res) => {
+    this.tag.textContent = '✅';
+    this.parent.checked()
+  }).catch(() => {
 		// we check this because the gateway could be already checked by CORS before onerror executes
 		// and, even though it is failing here, we know it is UP
 		if (!this.up) {
@@ -135,12 +166,13 @@ Status.prototype.check = function() {
 			this.tag.textContent = '❌';
 			this.parent.failed();
 		}
-	};
+  })
 };
 
 Status.prototype.checked = function() {
 	this.up = true;
 	this.tag.innerHTML = '✅';
+  this.parent.tag.classList.add('online')
 };
 
 // this function is executed from that previously loaded script
@@ -166,14 +198,16 @@ let Cors = function(parent) {
 };
 
 Cors.prototype.check = function() {
-  const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST)
   const now = Date.now()
+  const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST)
   const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`
+  // response body can be accessed only if fetch was executed when
+  // liberal CORS is present (eg. '*')
   fetch(testUrl).then((res) => res.text()).then((text) => {
     const matched = (HASH_STRING === text.trim())
     if (matched) {
       this.parent.checked()
-      this.tag.textContent = '✅'
+      this.tag.textContent = '*'
       this.parent.tag.classList.add('cors')
     } else {
       this.onerror()
@@ -182,7 +216,7 @@ Cors.prototype.check = function() {
 }
 
 Cors.prototype.onerror = function() {
-	this.tag.textContent = '❌';
+	this.tag.textContent = '';
 };
 
 let Origin = function(parent) {
@@ -193,13 +227,13 @@ let Origin = function(parent) {
 };
 
 Origin.prototype.check = function() {
-  // we are unable to check url after subdomain redirect because some gateways
-  // may not have proper CORS in place. instead, we manually construct subdomain
-  // URL and check if it loading known image works
-  const imgUrl = new URL(this.parent.gateway)
-  imgUrl.pathname = '/'
-  imgUrl.hostname = `${IMG_HASH}.ipfs.${imgUrl.hostname}`
-  checkViaImgSrc(imgUrl.toString()).then((res) => {
+// we are unable to check url after subdomain redirect because some gateways
+// may not have proper CORS in place. instead, we manually construct subdomain
+// URL and check if it loading known image works
+const gwUrl = new URL(this.parent.gateway)
+// const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${now}&filename=1x1.png#x-ipfs-companion-no-redirect`)
+const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
+checkViaImgSrc(imgSubdomainUrl).then((res) => {
     this.tag.textContent = '✅';
     this.parent.tag.classList.add('origin')
     this.parent.checked()
@@ -207,7 +241,7 @@ Origin.prototype.check = function() {
 }
 
 Origin.prototype.onerror = function() {
-	this.tag.textContent = '❌';
+	this.tag.textContent = '⚠️';
 };
 
 let Flag = function(parent, hostname) {

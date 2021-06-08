@@ -156,7 +156,7 @@ Status.prototype.check = function() {
 const gwUrl = new URL(this.parent.gateway)
 const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
 checkViaImgSrc(imgPathUrl).then((res) => {
-    this.tag.textContent = '✅';
+    this.tag.textContent = '🌍';
     this.parent.checked()
   }).catch(() => {
 		// we check this because the gateway could be already checked by CORS before onerror executes

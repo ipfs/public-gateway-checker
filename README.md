@@ -9,7 +9,7 @@ View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-g
 
 ## SECURITY NOTES
 
-- With the exception of `ipfs.io` and `dweb.link`, all gateways listed are hosted by third parties and should be treated as such.
+- The list contains gateways operated by various parties, coordinated by loose mutual consensus, without a central governing authority. Protocol Labs operates and is responsible for only two of the listed gateways: `ipfs.io` and `dweb.link`.
 - Gateways without origin isolation will be marked with ⚠️, indicating they are not safe for use cases that require private local storage of data or credentials. [Learn more](https://github.com/ipfs/public-gateway-checker/issues/150).
 >>>>>>> 3cd5478 (docs: improved security notes)
 

@@ -12,7 +12,7 @@
 	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlo89/56ZQ/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUjDu1lo89/6mhTP+zrVP/nplD/5+aRK8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHNiIS6Wjz3/ubFY/761W/+vp1D/urRZ/8vDZf/GvmH/nplD/1BNIm8AAAAAAAAAAAAAAAAAAAAAAAAAAJaPPf+knEj/vrVb/761W/++tVv/r6dQ/7q0Wf/Lw2X/y8Nl/8vDZf+tpk7/nplD/wAAAAAAAAAAAAAAAJaPPf+2rVX/vrVb/761W/++tVv/vrVb/6+nUP+6tFn/y8Nl/8vDZf/Lw2X/y8Nl/8G6Xv+emUP/AAAAAAAAAACWjz3/vrVb/761W/++tVv/vrVb/761W/+vp1D/urRZ/8vDZf/Lw2X/y8Nl/8vDZf/Lw2X/nplD/wAAAAAAAAAAlo89/761W/++tVv/vrVb/761W/++tVv/r6dQ/7q0Wf/Lw2X/y8Nl/8vDZf/Lw2X/y8Nl/56ZQ/8AAAAAAAAAAJaPPf++tVv/vrVb/761W/++tVv/vbRa/5aPPf+emUP/y8Nl/8vDZf/Lw2X/y8Nl/8vDZf+emUP/AAAAAAAAAACWjz3/vrVb/761W/++tVv/vrVb/5qTQP+inkb/op5G/6KdRv/Lw2X/y8Nl/8vDZf/Lw2X/nplD/wAAAAAAAAAAlo89/761W/++tVv/sqlS/56ZQ//LxWb/0Mlp/9DJaf/Kw2X/oJtE/7+3XP/Lw2X/y8Nl/56ZQ/8AAAAAAAAAAJaPPf+9tFr/mJE+/7GsUv/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+xrFL/nplD/8vDZf+emUP/AAAAAAAAAACWjz3/op5G/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+inkb/nplD/wAAAAAAAAAAAAAAAKKeRv+3slb/0cpq/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+1sFX/op5G/wAAAAAAAAAAAAAAAAAAAAAAAAAAop5GUKKeRv/Nxmf/0cpq/9HKav/Rymr/0cpq/83GZ/+inkb/op5GSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAop5G16KeRv/LxWb/y8Vm/6KeRv+inkaPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAop5G/6KeRtcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPgfAADwDwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAPAPAAD4HwAA/n8AAA==" />
     <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client@44.1.1/dist/index.min.js" integrity="sha256-TMFHdG0nkNPPHBpd2UNil3TMjSPxWLcRgvwANAmjuRg=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/ipfs-geoip@6.0.0/dist/index.min.js" integrity="sha256-Vhr0hZsdmsT81gd4u2bs3bLYLfDdr46nvcI/VaT9YZ4=" crossorigin="anonymous"></script>
-	<link href="styles.css" type="text/css" rel="stylesheet"/>
+	<link href="styles.css?v=0.4" type="text/css" rel="stylesheet"/>
 </head>
 <body id="checker" class="sans-serif charcoal bg-snow-muted">
 
@@ -35,17 +35,21 @@
 	</header>
 
 	<div class="ph4-l pt4-l">
+      <div id="origin-warning" class="f5 pb2">
+        <strong>Security disclaimer:</strong> avoid storing sensitive data (or providing credentials) on websites loaded via gateways marked with <big>⚠️ </big><br/>
+        These are legacy gateways for fetching standalone data, not designed to serve dapps/websites (<strong>they do not provide <a href="https://docs.ipfs.io/how-to/address-ipfs-on-web/#path-gateway">origin isolation</a></strong>).
+        </div>
 		<div id="checker.stats" class="Stats monospace f6"></div>
 		<div id="checker.results" class="Results monospace f6">
 			<div class="Node">
-				<div class="Status truncate" title="Online status" style="cursor: help">Online</div>
-				<div class="Cors truncate" title="Allows Cross-Origin Resource Sharing"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank" style="cursor: help">CORS</a></div>
-				<div class="Origin truncate" title="Provides Orign Isolation"><a href="https://docs.ipfs.io/guides/guides/addressing/#subdomain-gateway" target="_blank" style="cursor: help">Origin</a></div>
-				<div class="Link truncate">Hostname</div>
+				<div class="Status truncate" title="Online status: is it possible to read data?" style="cursor: help">Online</div>
+                <div class="Cors truncate" title="Allows Cross-Origin Resource Sharing (CORS fetch)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">CORS</a></div>
+				<div class="Origin truncate" title="Provides Orign Isolation (Subdomain Gateway)"><a href="https://docs.ipfs.io/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
+                <div class="Link truncate">Hostname</div>
 				<div class="Took">ΔT</div>
 			</div>
 		</div>
 	</div>
+<script src="./app.js?v=0.4"></script>
 </body>
-<script src="./app.js?v=0.3"></script>
 </html>

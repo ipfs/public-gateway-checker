@@ -80,7 +80,6 @@ let Status = function(parent, index) {
 	this.tag.textContent = '🕑';
 };
 
-
 function checkViaImgSrc (imgUrl) {
   // we check if gateway is up by loading 1x1 px image:
   // this is more robust check than loading js, as it won't be blocked
@@ -155,7 +154,7 @@ Status.prototype.check = function() {
 // test by loading subresource via img.src (path will work on both old and subdomain gws)
 const gwUrl = new URL(this.parent.gateway)
 const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-checkViaImgSrc(imgPathUrl).then((res) => {
+checkViaImgSrc(imgPathUrl).then(() => {
     this.tag.textContent = '🌍';
     this.parent.checked()
   }).catch(() => {
@@ -226,6 +225,29 @@ let Origin = function(parent) {
 	this.tag.textContent = '🕑';
 };
 
+function expectSubdomainRedirect(url) {
+  // Detecting redirects on remote Origins is extra tricky,
+  // but we seem to be able to access xhr.responseURL which is enough to see
+  // if paths are redirected to subdomains.
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', url, true)
+    xhr.onload = function () {
+      // expect to be redirected to subdomain where first DNS label is CID
+      if (new URL(xhr.responseURL).hostname.startsWith(IMG_HASH)) {
+        resolve()
+      } else {
+        reject()
+      }
+    }
+    xhr.onerror = function (err) {
+      console.error(url, err)
+      reject()
+    }
+    xhr.send(null)
+  })
+}
+
 Origin.prototype.check = function() {
 // we are unable to check url after subdomain redirect because some gateways
 // may not have proper CORS in place. instead, we manually construct subdomain
@@ -233,16 +255,21 @@ Origin.prototype.check = function() {
 const gwUrl = new URL(this.parent.gateway)
 // const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${now}&filename=1x1.png#x-ipfs-companion-no-redirect`)
 const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-checkViaImgSrc(imgSubdomainUrl).then((res) => {
+const imgRedirectedPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
+checkViaImgSrc(imgSubdomainUrl)
+  .then(() => expectSubdomainRedirect(imgRedirectedPathUrl)
+  .then(() => {
     this.tag.textContent = '✅';
     this.parent.tag.classList.add('origin')
     this.parent.checked()
-  }).catch(() => this.onerror())
+  }))
+  .catch(() => this.onerror())
 }
 
 Origin.prototype.onerror = function() {
 	this.tag.textContent = '⚠️';
 };
+
 
 let Flag = function(parent, hostname) {
 	this.parent = parent;

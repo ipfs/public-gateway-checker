@@ -84,5 +84,20 @@
 	"https://search.ipfsgate.com/ipfs/:hash",
 	"https://ipfs.itargo.io/ipfs/:hash",
 	"https://ipfs.decoo.io/ipfs/:hash",
-	"https://ivoputzer.xyz/ipfs/:hash"
+	"https://ivoputzer.xyz/ipfs/:hash",
+	"https://alexdav.id/ipfs/:hash",
+	"https://ipfs.uploads.nu/ipfs/:hash",
+	"https://hub.textile.io/ipfs/:hash",
+	"https://ipfs1.pixura.io/ipfs/:hash",
+	"https://ravencoinipfs-gateway.com/ipfs/:hash",
+	"https://konubinix.eu/ipfs/:hash",
+	"https://ipfs.clansty.com/ipfs/:hash",
+	"https://3cloud.ee/ipfs/:hash",
+	"https://ipfs.tubby.cloud/ipfs/:hash",
+	"https://ipfs.forsla.app/ipfs/:hash",
+	"https://ipfs.lain.la/ipfs/:hash",
+	"https://ipfs.adatools.io/ipfs/:hash",
+	"https://ipfs.kaleido.art/ipfs/:hash",
+	"https://ipfs.slang.cx/ipfs/:hash",
+	"https://ipfs.arching-kaos.com/ipfs/:hash"
 ]

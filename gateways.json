@@ -64,7 +64,6 @@
 	"https://ipfs.mihir.ch/ipfs/:hash",
 	"https://bluelight.link/ipfs/:hash",
 	"https://crustwebsites.net/ipfs/:hash",
-	"https://trusted-setup.filecoin.io/ipfs/:hash",
 	"http://3.211.196.68:8080/ipfs/:hash",
 	"https://ipfs0.sjc.cloudsigma.com/ipfs/:hash",
 	"https://ipfs-tezos.giganode.io/ipfs/:hash",

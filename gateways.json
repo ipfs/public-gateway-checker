@@ -98,5 +98,6 @@
 	"https://ipfs.adatools.io/ipfs/:hash",
 	"https://ipfs.kaleido.art/ipfs/:hash",
 	"https://ipfs.slang.cx/ipfs/:hash",
-	"https://ipfs.arching-kaos.com/ipfs/:hash"
+	"https://ipfs.arching-kaos.com/ipfs/:hash",
+	"https://storry.tv/ipfs/:hash"
 ]

@@ -36,7 +36,6 @@
 	"https://ipfs.2read.net/ipfs/:hash",
 	"https://storjipfs-gateway.com/ipfs/:hash",
 	"https://ipfs.runfission.com/ipfs/:hash",
-	"https://ipfs.trusti.id/ipfs/:hash",
 	"https://ipfs.overpi.com/ipfs/:hash",
 	"https://gateway.ipfs.lc/ipfs/:hash",
 	"https://ipfs.leiyun.org/ipfs/:hash",

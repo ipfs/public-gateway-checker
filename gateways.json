@@ -100,5 +100,7 @@
 	"https://ipfs.arching-kaos.com/ipfs/:hash",
 	"https://storry.tv/ipfs/:hash",
 	"https://ipfs.kxv.io/ipfs/:hash",
-	"https://ipfs-nosub.stibarc.com/ipfs/:hash"
+	"https://ipfs-nosub.stibarc.com/ipfs/:hash",
+	"https://dweb.eu.org/ipfs/:hash",
+	"https://permaweb.eu.org/ipfs/:hash"
 ]

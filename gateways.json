@@ -73,7 +73,6 @@
 	"https://ipfs.smartholdem.io/ipfs/:hash",
 	"https://bin.d0x.to/ipfs/:hash",
 	"https://ipfs.xoqq.ch/ipfs/:hash",
-	"https://birds-are-nice.me/ipfs/:hash",
 	"http://natoboram.mynetgear.com:8080/ipfs/:hash",
 	"https://video.oneloveipfs.com/ipfs/:hash",
 	"http://ipfs.anonymize.com/ipfs/:hash",

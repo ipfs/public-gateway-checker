@@ -102,5 +102,6 @@
 	"https://ipfs-nosub.stibarc.com/ipfs/:hash",
 	"https://ipfs.1-2.dev/ipfs/:hash",
 	"https://dweb.eu.org/ipfs/:hash",
-	"https://permaweb.eu.org/ipfs/:hash"
+	"https://permaweb.eu.org/ipfs/:hash",
+	"https://ipfs.namebase.io/ipfs/:hash"
 ]

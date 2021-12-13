@@ -106,4 +106,5 @@
 	"https://ipfs.namebase.io/ipfs/:hash",
 	"https://ipfs.tribecap.co/ipfs/:hash",
 	"https://ipfs.kinematiks.com/ipfs/:hash"
+	"https://coldcdn.com/api/cdn/4wdhj2/:hash"
 ]

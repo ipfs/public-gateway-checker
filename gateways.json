@@ -105,5 +105,6 @@
 	"https://permaweb.eu.org/ipfs/:hash",
 	"https://ipfs.namebase.io/ipfs/:hash",
 	"https://ipfs.tribecap.co/ipfs/:hash",
-	"https://ipfs.kinematiks.com/ipfs/:hash"
+	"https://ipfs.kinematiks.com/ipfs/:hash",
+	"https://ipfs.webit.re/ipfs/:hash"
 ]

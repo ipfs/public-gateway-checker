@@ -106,5 +106,5 @@
 	"https://ipfs.namebase.io/ipfs/:hash",
 	"https://ipfs.tribecap.co/ipfs/:hash",
 	"https://ipfs.kinematiks.com/ipfs/:hash",
-	"https://ipfs.moralis.io:2053/:hash"
+	"https://ipfs.moralis.io:2053/ipfs/:hash"
 ]

@@ -5,7 +5,6 @@
 	"https://ipfs.infura.io/ipfs/:hash",
 	"https://infura-ipfs.io/ipfs/:hash",
 	"https://ninetailed.ninja/ipfs/:hash",
-  "https://ipfs.globalupload.io/:hash",
 	"https://via0.com/ipfs/:hash",
 	"https://ipfs.eternum.io/ipfs/:hash",
 	"https://hardbin.com/ipfs/:hash",

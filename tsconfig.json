@@ -14,7 +14,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "suppressImplicitAnyIndexErrors": true,
-    "outFile": "./app.js",
+    "outFile": "./dist/app.js",
     "isolatedModules": false
   },
   "include": [

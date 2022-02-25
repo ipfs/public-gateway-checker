@@ -1,0 +1,23 @@
+{
+  "name": "@ipfs/public-gateway-checker",
+  "version": "1.0.0",
+  "description": "Checks which public gateways are online or not",
+  "main": "src/app.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ipfs/public-gateway-checker.git"
+  },
+  "author": "Marcin Rataj <lidel@lidel.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ipfs/public-gateway-checker/issues"
+  },
+  "homepage": "https://github.com/ipfs/public-gateway-checker#readme",
+  "devDependencies": {
+    "ipfs-http-client": "^56.0.1",
+    "typescript": "^4.5.5"
+  }
+}

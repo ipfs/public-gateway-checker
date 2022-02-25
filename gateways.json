@@ -21,7 +21,6 @@
 	"https://ipfs.busy.org/ipfs/:hash",
 	"https://ipfs.greyh.at/ipfs/:hash",
 	"https://gateway.serph.network/ipfs/:hash",
-	"https://jorropo.ovh/ipfs/:hash",
 	"https://jorropo.net/ipfs/:hash",
 	"https://ipfs.fooock.com/ipfs/:hash",
 	"https://cdn.cwinfo.net/ipfs/:hash",
@@ -83,9 +82,11 @@
 	"https://storry.tv/ipfs/:hash",
 	"https://ipfs.kxv.io/ipfs/:hash",
 	"https://ipfs.1-2.dev/ipfs/:hash",
+	"https://ipfs-nosub.stibarc.com/ipfs/:hash",
 	"https://dweb.eu.org/ipfs/:hash",
 	"https://permaweb.eu.org/ipfs/:hash",
 	"https://ipfs.namebase.io/ipfs/:hash",
 	"https://ipfs.tribecap.co/ipfs/:hash",
-	"https://ipfs.kinematiks.com/ipfs/:hash"
+	"https://ipfs.kinematiks.com/ipfs/:hash",
+  "https://ipfs.zod.tv/ipfs/:hash"
 ]

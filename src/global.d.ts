@@ -1,8 +1,14 @@
-import { Tag } from './Tag';
+import { Tag } from './Tag'
 import { create } from 'ipfs-http-client'
+import IpfsGeoip from 'ipfs-geoip'
+import { Util } from './Util'
+import type { Checker } from './Checker'
 
-interface Check {
-    tag: Tag;
+declare global {
+  /**
+   * An interface that allows various properties for gateways to be checked
+   */
+  interface Checkable {
 
     // @todo: Update to async/await
     // check(): Promise<void>
@@ -10,9 +16,28 @@ interface Check {
     checked(): void
 
     onerror(): void
-}
-declare global {
-    interface Window {
-        IpfsHttpClient: typeof create
+  }
+
+  /**
+   * A class implementing the Visible interface supports functionality that can make it visible in the UI
+   */
+  interface Visible {
+    tag: Tag
+    _tagName: string
+    _className: string
+  }
+
+  interface Window {
+    IpfsHttpClient: typeof create
+    IpfsGeoip: IpfsGeoip
+    OnScriptloaded: typeof Util.OnScriptloaded
+    checker: Checker
+  }
+
+  namespace IpfsGeoip {
+    interface LookupResponse {
+      country_code: string
+      country_name: string
     }
+  }
 }

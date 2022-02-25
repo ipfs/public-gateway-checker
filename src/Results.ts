@@ -1,18 +1,23 @@
+import type { Checker } from './Checker'
+import type { Tag } from './Tag'
+
 class Results {
-    element: HTMLElement;
-    constructor(private readonly parent: Checker) {
-        this.element = document.getElementById('checker.results');
+  append (tag: Tag) {
+    throw new Error('Method not implemented.')
+  }
 
-    }
+  public readonly element: HTMLElement
+  constructor (readonly parent: Checker) {
+    this.element = document.getElementById('checker.results')!
+  }
 
-    private checked(node) {
-        this.parent.updateStats(node)
-    }
+  checked () {
+    this.parent.updateStats()
+  }
 
-    private failed(node) {
-        this.parent.updateStats(node);
-    };
-
+  failed () {
+    this.parent.updateStats()
+  }
 }
 // checker.results = document.getElementById('checker.results');
 // checker.results.parent = checker;

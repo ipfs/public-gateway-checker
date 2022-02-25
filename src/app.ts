@@ -1,10 +1,10 @@
-import { Checker } from './Checker';
-import { Util } from './Util';
+import { Checker } from './Checker'
+import { Util } from './Util'
 
-var OnScriptloaded = Util.OnScriptloaded
+window.OnScriptloaded = Util.OnScriptloaded
 
-const checker = new Checker()
+window.checker = new Checker()
 
 fetch('./gateways.json')
-	.then(res => res.json())
-	.then(gateways => checker.checkGateways(gateways));
+  .then(async res => await res.json())
+  .then((gateways: string[]) => window.checker.checkGateways(gateways))

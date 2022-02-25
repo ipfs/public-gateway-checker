@@ -1,0 +1,40 @@
+{
+  "extends": "./node_modules/aegir/src/config/tsconfig.aegir.json",
+  "compilerOptions": {
+    "lib": [
+      "es5",
+      "es2015.promise",
+      "dom",
+      "es2015"
+    ],
+    "target": "es5",
+    "outDir": "dist",
+    "emitDeclarationOnly": false,
+    "module": "amd",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "outFile": "./app.js",
+    "isolatedModules": false
+  },
+  "include": [
+    "src",
+    "./gateways.json"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "files": true,
+    "emit": false,
+    "compiler": "typescript",
+    "compilerHost": false,
+    "compilerOptions": {
+      "module": "CommonJS"
+    },
+    "preferTsExts": true,
+    "pretty": true,
+    "swc": true
+  }
+}

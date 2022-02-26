@@ -25,8 +25,9 @@ Then, submit a pull request for this change. Be sure to follow all the direction
 
 ## Testing locally
 
-```console
-$ npx serve -l 3000
+```bash
+npx aegir build
+npx serve -l 3000 public
 ```
 
 ## Command line

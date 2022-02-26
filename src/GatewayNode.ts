@@ -1,3 +1,5 @@
+import { URL } from 'url-ponyfill'
+
 import { Cors } from './Cors'
 import { Flag } from './Flag'
 import { Origin } from './Origin'
@@ -121,7 +123,7 @@ class GatewayNode extends UiComponent implements Checkable {
       const url = this.link.url
       if (url != null) {
         const host = Util.gatewayHostname(url)
-        this.link.innerHTML = `<a title="${host}" href="${url}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`
+        this.link.innerHTML = `<a title="${host}" href="${url.toString()}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`
       }
       const ms = Date.now() - this.checkingTime
       this.tag.style.order = ms.toString()
@@ -134,7 +136,7 @@ class GatewayNode extends UiComponent implements Checkable {
   //   this.parent.failed(this);
   // };
   failed () {
-      this.parent.failed()
+    this.parent.failed()
   }
 
   onerror () {

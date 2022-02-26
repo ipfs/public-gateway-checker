@@ -1,3 +1,5 @@
+import { URL } from 'url-ponyfill'
+
 class Util {
   // const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m';
   // const IMG_HASH = 'bafybeibwzifw52ttrkqlikfzext5akxu7lz4xiwjgwzmqcpdzmp3n5vnbe'; // 1x1.png
@@ -27,7 +29,7 @@ class Util {
     return await new Promise<void>((resolve, reject) => {
       let timer: null | ReturnType<typeof setTimeout> = setTimeout(() => {
         if (timeout()) {
-          reject()
+          reject(new Error('Timer was already cancelled'))
         }
       }, imgCheckTimeout)
       const timeout = () => {
@@ -41,7 +43,7 @@ class Util {
       const img = new Image()
       img.onerror = () => {
         timeout()
-        reject()
+        reject(new Error('image error'))
       }
       img.onload = () => {
         // subdomain works

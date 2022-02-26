@@ -1,6 +1,5 @@
 import { Tag } from './Tag'
 import { create } from 'ipfs-http-client'
-import IpfsGeoip from 'ipfs-geoip'
 import { Util } from './Util'
 import type { Checker } from './Checker'
 
@@ -11,11 +10,11 @@ declare global {
   interface Checkable {
 
     // @todo: Update to async/await
-    // check(): Promise<void>
-    check(): void
-    checked(): void
+    // check: () => Promise<void>
+    check: () => void
+    checked: () => void
 
-    onerror(): void
+    onerror: () => void
   }
 
   /**
@@ -29,7 +28,7 @@ declare global {
 
   interface Window {
     IpfsHttpClient: typeof create
-    IpfsGeoip: IpfsGeoip
+    IpfsGeoip: typeof import('ipfs-geoip')
     OnScriptloaded: typeof Util.OnScriptloaded
     checker: Checker
   }

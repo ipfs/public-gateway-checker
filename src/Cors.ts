@@ -1,14 +1,19 @@
+import fetchPonyfill from 'fetch-ponyfill'
+
+import { CheckBase } from './CheckBase'
+import type { GatewayNode } from './GatewayNode'
+import { Util } from './Util'
+import { Log } from './Log'
+
+const { fetch } = fetchPonyfill()
+
+const log = new Log('Cors')
 
 // let Cors = function(parent) {
 //   this.parent = parent;
 //   this.tag = document.createElement("div");
 //   this.tag.className = "Cors";
 //   this.tag.textContent = '🕑';
-
-import { CheckBase } from './CheckBase'
-import type { GatewayNode } from './GatewayNode'
-import { Util } from './Util'
-
 // };
 class Cors extends CheckBase implements Checkable {
   _className = 'Cors'
@@ -55,11 +60,14 @@ class Cors extends CheckBase implements Checkable {
       } else {
         this.onerror()
       }
-    }).catch((err) => this.onerror())
+    }).catch((err) => {
+      log.error(err)
+      this.onerror()
+    })
   }
 
   checked () {
-    console.warn('Not implemented yet')
+    log.warn('Not implemented yet')
   }
 
   // Cors.prototype.onerror = function() {

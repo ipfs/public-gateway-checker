@@ -5,7 +5,7 @@
       "es5",
       "es2015.promise",
       "dom",
-      "es2015",
+      "es2015"
     ],
     "target": "es6",
     "outDir": "dist",

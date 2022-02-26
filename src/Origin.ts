@@ -1,13 +1,14 @@
-// let Origin = function(parent) {
-//   this.parent = parent;
-//   this.tag = document.createElement("div");
-//   this.tag.className = "Origin";
-//   this.tag.textContent = '🕑';
+import { URL } from 'url-ponyfill'
 
 import type { GatewayNode } from './GatewayNode'
 import { Tag } from './Tag'
 import { Util } from './Util'
 
+// let Origin = function(parent) {
+//   this.parent = parent;
+//   this.tag = document.createElement("div");
+//   this.tag.className = "Origin";
+//   this.tag.textContent = '🕑';
 // };
 class Origin {
   tag: Tag

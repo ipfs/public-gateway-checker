@@ -1,8 +1,8 @@
 // let Origin = function(parent) {
-// 	this.parent = parent;
-// 	this.tag = document.createElement("div");
-// 	this.tag.className = "Origin";
-// 	this.tag.textContent = '🕑';
+//   this.parent = parent;
+//   this.tag = document.createElement("div");
+//   this.tag.className = "Origin";
+//   this.tag.textContent = '🕑';
 
 import type { GatewayNode } from './GatewayNode'
 import { Tag } from './Tag'

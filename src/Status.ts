@@ -1,9 +1,9 @@
 
 // let Status = function(parent, index) {
-// 	this.parent = parent;
-// 	this.tag = document.createElement("div");
-// 	this.tag.className = "Status";
-// 	this.tag.textContent = '🕑';
+//   this.parent = parent;
+//   this.tag = document.createElement("div");
+//   this.tag.className = "Status";
+//   this.tag.textContent = '🕑';
 
 import type { GatewayNode } from './GatewayNode'
 import { UiComponent } from './UiComponent'
@@ -26,13 +26,13 @@ class Status extends UiComponent {
   //     this.tag.textContent = '🌍';
   //     this.parent.checked()
   //   }).catch(() => {
-  // 		// we check this because the gateway could be already checked by CORS before onerror executes
-  // 		// and, even though it is failing here, we know it is UP
-  // 		if (!this.up) {
-  // 			this.up = false;
-  // 			this.tag.textContent = '❌';
-  // 			this.parent.failed();
-  // 		}
+  //     // we check this because the gateway could be already checked by CORS before onerror executes
+  //     // and, even though it is failing here, we know it is UP
+  //     if (!this.up) {
+  //       this.up = false;
+  //       this.tag.textContent = '❌';
+  //       this.parent.failed();
+  //     }
   //   })
   // };
   check () {
@@ -56,13 +56,13 @@ class Status extends UiComponent {
   }
 
   // Status.prototype.checked = function() {
-  // 	this.up = true;
-  // 	this.tag.innerHTML = '🌍';
+  //   this.up = true;
+  //   this.tag.innerHTML = '🌍';
   //   this.parent.tag.classList.add('online')
   // };
   checked () {
-    	this.up = true
-    	// this.tag.innerHTML = '🌍'
+      this.up = true
+      // this.tag.innerHTML = '🌍'
     this.tag.global()
     this.parent.tag.classList.add('online')
   }

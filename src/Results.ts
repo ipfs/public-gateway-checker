@@ -3,7 +3,7 @@ import type { Tag } from './Tag'
 
 class Results {
   append (tag: Tag) {
-    throw new Error('Method not implemented.')
+    this.element.append(tag.element)
   }
 
   public readonly element: HTMLElement

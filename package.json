@@ -2,7 +2,7 @@
   "name": "@ipfs/public-gateway-checker",
   "version": "1.0.0",
   "description": "Checks which public gateways are online or not",
-  "main": "src/app.ts",
+  "main": "src/index.ts",
   "scripts": {
     "lint": "aegir lint",
     "release": "aegir release",
@@ -23,6 +23,9 @@
   "homepage": "https://github.com/ipfs/public-gateway-checker#readme",
   "devDependencies": {
     "aegir": "^36.1.3",
+    "browserslist": "^4.19.3",
+    "eslint-config-ipfs": "^2.1.0",
+    "eslint-plugin-compat": "^4.0.2",
     "ipfs-geoip": "^7.0.0",
     "ipfs-http-client": "^56.0.1",
     "typescript": "^4.5.5"
@@ -31,11 +34,19 @@
     "tsRepo": true,
     "release": {
       "build": false
+    },
+    "docs": {
+      "publish": true,
+      "entryPoint": "src/index.ts"
     }
   },
   "files": [
     "src",
-    "dist"
+    "dist",
+    "public"
+  ],
+  "browserslist": [
+    "defaults"
   ],
   "todo": [
     "add browserlist support",

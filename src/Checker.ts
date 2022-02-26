@@ -13,7 +13,11 @@ class Checker {
   // gateway: string | URL
   // private results: HTMLElement;
   constructor () {
-    this.element = document.getElementById('checker')!
+    const element = document.getElementById('checker')
+    if (element == null) {
+      throw new Error('Element with Id "checker" not found.')
+    }
+    this.element = element
     this.stats = new Stats(this)
     this.results = new Results(this)
     // this.results = document.getElementById('checker.results');

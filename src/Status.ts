@@ -1,14 +1,14 @@
+import { URL } from 'url-ponyfill'
+
+import type { GatewayNode } from './GatewayNode'
+import { UiComponent } from './UiComponent'
+import { Util } from './Util'
 
 // let Status = function(parent, index) {
 //   this.parent = parent;
 //   this.tag = document.createElement("div");
 //   this.tag.className = "Status";
 //   this.tag.textContent = '🕑';
-
-import type { GatewayNode } from './GatewayNode'
-import { UiComponent } from './UiComponent'
-import { Util } from './Util'
-
 // };
 class Status extends UiComponent {
   up: boolean = false
@@ -61,8 +61,8 @@ class Status extends UiComponent {
   //   this.parent.tag.classList.add('online')
   // };
   checked () {
-      this.up = true
-      // this.tag.innerHTML = '🌍'
+    this.up = true
+    // this.tag.innerHTML = '🌍'
     this.tag.global()
     this.parent.tag.classList.add('online')
   }

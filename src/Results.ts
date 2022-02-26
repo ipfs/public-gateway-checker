@@ -8,7 +8,11 @@ class Results {
 
   public readonly element: HTMLElement
   constructor (readonly parent: Checker) {
-    this.element = document.getElementById('checker.results')!
+    const element = document.getElementById('checker.results')
+    if (element == null) {
+      throw new Error('Element with Id "checker.results" not found.')
+    }
+    this.element = element
   }
 
   checked () {

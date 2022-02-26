@@ -1,7 +1,9 @@
 import type { GatewayNode } from './GatewayNode'
+import { Log } from './Log'
 import { UiComponent } from './UiComponent'
 import { Util } from './Util'
 
+const log = new Log('Flag')
 // let Flag = function(parent, hostname) {
 //   this.parent = parent;
 //   this.tag = document.createElement("div");
@@ -24,7 +26,7 @@ import { Util } from './Util'
 //       }
 //     }
 //   } catch(e) {
-//     console.error(`error while getting savedSTR for ${hostname}`, e)
+//     log.error(`error while getting savedSTR for ${hostname}`, e)
 //   }
 
 //   if (ask) {
@@ -54,7 +56,7 @@ import { Util } from './Util'
 //                 }
 //               }
 //             } catch(e) {
-//               console.error(`error while getting DNS A record for ${hostname}`, e)
+//               log.error(`error while getting DNS A record for ${hostname}`, e)
 //             }
 //           }
 //         }
@@ -78,7 +80,7 @@ class Flag extends UiComponent {
 
     try {
       const savedSTR = localStorage.getItem(this.hostname)
-      if (savedSTR) {
+      if (savedSTR != null) {
         const saved = JSON.parse(savedSTR)
         const now = Date.now()
         const savedTime = saved.time
@@ -90,44 +92,52 @@ class Flag extends UiComponent {
         }
       }
     } catch (e) {
-      console.error(`error while getting savedSTR for ${this.hostname}`, e)
+      log.error(`error while getting savedSTR for ${this.hostname}`, e)
     }
 
     if (ask) {
-      setTimeout(() => {
-        const request = new XMLHttpRequest()
-        request.open('GET', `https://cloudflare-dns.com/dns-query?name=${this.hostname}&type=A`)
-        request.setRequestHeader('accept', 'application/dns-json')
-        request.onreadystatechange = async () => {
-          if (request.readyState == 4) {
-            if (request.status == 200) {
-              try {
-                const response = JSON.parse(request.responseText)
-                let ip = null
-                for (let i = 0; i < response.Answer.length && !ip; i++) {
-                  const answer = response.Answer[i]
-                  if (answer.type == 1) {
-                    ip = answer.data
-                  }
-                }
-                if (ip) {
-                  const geoipResponse = await window.IpfsGeoip.lookup(Util.ipfs_http_client, ip)
-                  if (geoipResponse && geoipResponse.country_code) {
-                    this.onResponse(geoipResponse)
-                    geoipResponse.time = Date.now()
-                    const resposeSTR = JSON.stringify(geoipResponse)
-                    localStorage.setItem(this.hostname, resposeSTR)
-                  }
-                }
-              } catch (e) {
-                console.error(`error while getting DNS A record for ${this.hostname}`, e)
-              }
-            }
-          }
+      setTimeout(this.dnsRequest, 500 * Flag.requests++) // 2 / second, request limit
+    }
+  }
+
+  private dnsRequest () {
+    const request = new XMLHttpRequest()
+    request.open('GET', `https://cloudflare-dns.com/dns-query?name=${this.hostname}&type=A`)
+    request.setRequestHeader('accept', 'application/dns-json')
+    request.onreadystatechange = async () => {
+      if (request.readyState === 4) {
+        if (request.status === 200) {
+          await this.handleSuccessfulRequest(request)
         }
-        request.onerror = (e) => { }
-        request.send()
-      }, 500 * Flag.requests++) // 2 / second, request limit
+      }
+    }
+    request.onerror = (err) => {
+      log.error(err)
+    }
+    request.send()
+  }
+
+  async handleSuccessfulRequest (request: XMLHttpRequest) {
+    try {
+      const response = JSON.parse(request.responseText)
+      let ip = null
+      for (let i = 0; i < response.Answer.length && ip == null; i++) {
+        const answer = response.Answer[i]
+        if (answer.type === 1) {
+          ip = answer.data
+        }
+      }
+      if (ip != null) {
+        const geoipResponse = await window.IpfsGeoip.lookup(Util.ipfs_http_client, ip)
+        if (geoipResponse?.country_code != null) {
+          this.onResponse(geoipResponse)
+          geoipResponse.time = Date.now()
+          const responseSTR = JSON.stringify(geoipResponse)
+          localStorage.setItem(this.hostname, responseSTR)
+        }
+      }
+    } catch (e) {
+      log.error(`error while getting DNS A record for ${this.hostname}`, e)
     }
   }
 

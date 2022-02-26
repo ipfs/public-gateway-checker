@@ -1,0 +1,6 @@
+{
+    "extends": ["ipfs", "plugin:compat/recommended"],
+    "env": {
+        "browser": true
+    }
+}

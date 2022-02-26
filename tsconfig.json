@@ -7,19 +7,16 @@
       "dom",
       "es2015"
     ],
-    "target": "es5",
+    "target": "es6",
     "outDir": "dist",
     "emitDeclarationOnly": false,
-    "module": "amd",
     "sourceMap": true,
     "resolveJsonModule": true,
     "suppressImplicitAnyIndexErrors": true,
-    "outFile": "./dist/app.js",
     "isolatedModules": false
   },
   "include": [
-    "src",
-    "./gateways.json"
+    "src"
   ],
   "exclude": [
     "node_modules"

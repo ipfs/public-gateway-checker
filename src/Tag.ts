@@ -16,7 +16,7 @@ class Tag {
     this.textContent = textContent
   }
 
-  public static fromElement(element: HTMLElement) {
+  public static fromElement (element: HTMLElement) {
     const tag = new Tag('div')
     tag.element = element
 
@@ -43,29 +43,30 @@ class Tag {
     this.textContent = TagStatus.caution
   }
 
-  get style() {
+  get style () {
     return this.element.style
   }
 
-  append(child: string | Node | Tag) {
+  append (child: string | Node | Tag) {
     if (child instanceof Tag) {
       child = child.element
     }
     return this.element.append(child)
   }
 
-  get classList() {
+  get classList () {
     return this.element.classList
   }
 
-  set title(newTitle: string) {
+  set title (newTitle: string) {
     this.element.title = newTitle
   }
 
-  private set className(className: TagClasses) {
+  private set className (className: TagClasses) {
     this.element.className = className
   }
-  private set textContent(content: typeof this.element.textContent) {
+
+  private set textContent (content: typeof this.element.textContent) {
     this.element.textContent = content
   }
 }

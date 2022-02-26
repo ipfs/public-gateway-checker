@@ -19,7 +19,7 @@ class Util {
     protocol: 'https'
   })
 
-  static async checkViaImgSrc(imgUrl: string | URL) {
+  static async checkViaImgSrc (imgUrl: string | URL) {
     // we check if gateway is up by loading 1x1 px image:
     // this is more robust check than loading js, as it won't be blocked
     // by privacy protections present in modern browsers or in extensions such as Privacy Badger
@@ -31,7 +31,7 @@ class Util {
         }
       }, imgCheckTimeout)
       const timeout = () => {
-        if (!timer) {
+        if (timer == null) {
           return false
         }
         clearTimeout(timer)
@@ -57,7 +57,7 @@ class Util {
   // 	return url.replace(`${HASH_TO_TEST}.ipfs.`, "") // skip .ipfs. in subdomain gateways
   // 		.replace(`${HASH_TO_TEST}.`, "") // path-based
   // }
-  static gatewayHostname(url: URL) {
+  static gatewayHostname (url: URL) {
     let urlString: string = url.toString()
 
     if (url && url.hostname) {
@@ -83,7 +83,7 @@ class Util {
 
   // this function is executed from that previously loaded script
   // it only contains the following: OnScriptloaded(document.currentScript ? document.currentScript.src : '');
-  static OnScriptloaded(src: ConstructorParameters<typeof URL>[0]) {
+  static OnScriptloaded (src: ConstructorParameters<typeof URL>[0]) {
     try {
       const url = new URL(src)
       const index = url.searchParams.get('i')
@@ -121,7 +121,7 @@ class Util {
   //     xhr.send(null)
   //   })
   // }
-  static async expectSubdomainRedirect(url: string | URL) {
+  static async expectSubdomainRedirect (url: string | URL) {
     // Detecting redirects on remote Origins is extra tricky,
     // but we seem to be able to access xhr.responseURL which is enough to see
     // if paths are redirected to subdomains.

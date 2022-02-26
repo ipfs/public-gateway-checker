@@ -13,9 +13,11 @@ class CheckBase extends UiComponent implements Checkable {
   get className () {
     return this._className
   }
+
   get tagName () {
     return this._tagName
   }
+
   constructor (protected readonly parent: Checker | GatewayNode, ...tagParams: ConstructorParameters<typeof Tag>) {
     super(parent, ...tagParams)
   }

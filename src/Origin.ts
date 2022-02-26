@@ -41,7 +41,7 @@ class Origin {
     const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${Util.IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     const imgRedirectedPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${Util.IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     Util.checkViaImgSrc(imgSubdomainUrl)
-      .then(() => Util.expectSubdomainRedirect(imgRedirectedPathUrl)
+      .then(async () => await Util.expectSubdomainRedirect(imgRedirectedPathUrl)
         .then(() => {
           this.tag.win()
           this.parent.tag.classList.add('origin')
@@ -50,7 +50,7 @@ class Origin {
       .catch(() => this.onerror())
   }
 
-  onerror() {
+  onerror () {
     this.tag.err()
   }
 }

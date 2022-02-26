@@ -67,13 +67,13 @@ import { Util } from './Util'
 class Flag extends UiComponent {
   // Flag.requests = 0;
   private static requests = 0
-  constructor(protected parent: GatewayNode, private readonly hostname: string) {
+  constructor (protected parent: GatewayNode, private readonly hostname: string) {
     super(parent, 'div', 'Flag')
 
     this.setup()
   }
 
-  setup() {
+  setup () {
     let ask = true
 
     try {
@@ -135,7 +135,7 @@ class Flag extends UiComponent {
   // 	this.tag.style["background-image"] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`;
   // 	this.tag.title = response.country_name;
   // };
-  onResponse(response: IpfsGeoip.LookupResponse) {
+  onResponse (response: IpfsGeoip.LookupResponse) {
     this.tag.style['background-image'] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`
     this.tag.title = response.country_name
   }

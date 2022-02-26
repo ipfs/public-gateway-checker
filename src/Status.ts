@@ -63,11 +63,11 @@ class Status extends UiComponent {
   checked () {
     	this.up = true
     	// this.tag.innerHTML = '🌍'
-      this.tag.global()
+    this.tag.global()
     this.parent.tag.classList.add('online')
   }
 
-  onerror() {
+  onerror () {
     throw new Error('Not implemented')
   }
 }

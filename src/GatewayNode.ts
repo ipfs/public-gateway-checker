@@ -137,7 +137,7 @@ class GatewayNode extends UiComponent implements Checkable {
     	this.parent.failed()
   }
 
-  onerror() {
+  onerror () {
     this.tag.err()
   }
 }

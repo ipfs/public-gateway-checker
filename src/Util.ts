@@ -53,9 +53,9 @@ class Util {
   }
 
   // function gatewayHostname (url) {
-  // 	if (url && url.hostname) url = url.hostname.toString()
-  // 	return url.replace(`${HASH_TO_TEST}.ipfs.`, "") // skip .ipfs. in subdomain gateways
-  // 		.replace(`${HASH_TO_TEST}.`, "") // path-based
+  //   if (url && url.hostname) url = url.hostname.toString()
+  //   return url.replace(`${HASH_TO_TEST}.ipfs.`, "") // skip .ipfs. in subdomain gateways
+  //     .replace(`${HASH_TO_TEST}.`, "") // path-based
   // }
   static gatewayHostname (url: URL) {
     let urlString: string = url.toString()
@@ -69,16 +69,16 @@ class Util {
   }
 
   // function OnScriptloaded(src) {
-  // 	try {
-  // 		let url = new URL(src);
-  // 		let index = url.searchParams.get("i");
-  // 		let node = checker.nodes[index];
-  // 		if (node) {
-  // 			node.checked();
-  // 		}
-  // 	} catch(e) {
-  // 		// this is a URL exception, we can do nothing, user is probably using Internet Explorer
-  // 	}
+  //   try {
+  //     let url = new URL(src);
+  //     let index = url.searchParams.get("i");
+  //     let node = checker.nodes[index];
+  //     if (node) {
+  //       node.checked();
+  //     }
+  //   } catch(e) {
+  //     // this is a URL exception, we can do nothing, user is probably using Internet Explorer
+  //   }
   // }
 
   // this function is executed from that previously loaded script

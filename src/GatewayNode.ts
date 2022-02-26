@@ -7,37 +7,37 @@ import { UiComponent } from './UiComponent'
 import { Util } from './Util'
 
 // let Node = function(parent, gateway, index) {
-// 	this.parent = parent;
-// 	this.tag = document.createElement("div");
-// 	this.tag.className = "Node";
-// 	this.tag.style["order"] = Date.now();
+//   this.parent = parent;
+//   this.tag = document.createElement("div");
+//   this.tag.className = "Node";
+//   this.tag.style["order"] = Date.now();
 
-// 	this.status = new Status(this);
-// 	this.tag.append(this.status.tag);
+//   this.status = new Status(this);
+//   this.tag.append(this.status.tag);
 
-// 	this.cors = new Cors(this);
-// 	this.tag.append(this.cors.tag);
+//   this.cors = new Cors(this);
+//   this.tag.append(this.cors.tag);
 
-// 	this.origin = new Origin(this);
-// 	this.tag.append(this.origin.tag);
+//   this.origin = new Origin(this);
+//   this.tag.append(this.origin.tag);
 
-// 	this.link = document.createElement("div");
-// 	let gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
-// 	this.link.url = new URL(gatewayAndHash);
-// 	this.link.textContent = gatewayHostname(this.link.url);
-// 	this.link.className = "Link";
+//   this.link = document.createElement("div");
+//   let gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
+//   this.link.url = new URL(gatewayAndHash);
+//   this.link.textContent = gatewayHostname(this.link.url);
+//   this.link.className = "Link";
 
-// 	this.flag = new Flag(this, this.link.textContent);
-// 	this.tag.append(this.flag.tag);
-// 	this.tag.append(this.link);
+//   this.flag = new Flag(this, this.link.textContent);
+//   this.tag.append(this.flag.tag);
+//   this.tag.append(this.link);
 
-// 	this.took = document.createElement("div");
-// 	this.took.className = "Took";
-// 	this.tag.append(this.took);
+//   this.took = document.createElement("div");
+//   this.took.className = "Took";
+//   this.tag.append(this.took);
 
-// 	this.gateway = gateway;
-// 	this.index = index;
-// 	this.checkingTime = 0;
+//   this.gateway = gateway;
+//   this.index = index;
+//   this.checkingTime = 0;
 // };
 class GatewayNode extends UiComponent implements Checkable {
   // tag: Tag
@@ -131,10 +131,10 @@ class GatewayNode extends UiComponent implements Checkable {
   }
 
   // Node.prototype.failed = function() {
-  // 	this.parent.failed(this);
+  //   this.parent.failed(this);
   // };
   failed () {
-    	this.parent.failed()
+      this.parent.failed()
   }
 
   onerror () {

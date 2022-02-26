@@ -1,9 +1,9 @@
 
 // let Cors = function(parent) {
-// 	this.parent = parent;
-// 	this.tag = document.createElement("div");
-// 	this.tag.className = "Cors";
-// 	this.tag.textContent = '🕑';
+//   this.parent = parent;
+//   this.tag = document.createElement("div");
+//   this.tag.className = "Cors";
+//   this.tag.textContent = '🕑';
 
 import { CheckBase } from './CheckBase'
 import type { GatewayNode } from './GatewayNode'
@@ -16,10 +16,10 @@ class Cors extends CheckBase implements Checkable {
   constructor (protected parent: GatewayNode) {
     super(parent, 'div', 'Cors')
     // this.tag = new Tag('div', 'Cors')
-    // 	this.parent = parent;
-    // 	this.tag = document.createElement("div");
-    // 	this.tag.className = "Cors";
-    // 	this.tag.textContent = '🕑';
+    //   this.parent = parent;
+    //   this.tag = document.createElement("div");
+    //   this.tag.className = "Cors";
+    //   this.tag.textContent = '🕑';
   }
 
   // Cors.prototype.check = function() {

@@ -21,7 +21,7 @@ class Checker {
   }
 
   // checker.updateStats = function() {
-  // 	this.stats.update();
+  //   this.stats.update();
   // };
   public updateStats () {
     this.stats.update()

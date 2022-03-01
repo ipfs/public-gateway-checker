@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "aegir lint",
     "release": "aegir release",
-    "build": "aegir build",
+    "build": "aegir build && mv dist public/dist",
     "test": "aegir test",
     "test:node": "aegir test --target node",
     "test:browser": "aegir test --target browser"

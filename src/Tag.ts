@@ -58,14 +58,17 @@ class Tag {
     return this.element.classList
   }
 
+  // eslint-disable-next-line accessor-pairs
   set title (newTitle: string) {
     this.element.title = newTitle
   }
 
+  // eslint-disable-next-line accessor-pairs
   private set className (className: TagClasses) {
     this.element.className = className
   }
 
+  // eslint-disable-next-line accessor-pairs
   private set textContent (content: typeof this.element.textContent) {
     this.element.textContent = content
   }

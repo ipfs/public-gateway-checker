@@ -26,7 +26,7 @@ Then, submit a pull request for this change. Be sure to follow all the direction
 ## Testing locally
 
 ```bash
-npx aegir build
+npm run build
 npx serve -l 3000 public
 ```
 

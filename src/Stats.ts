@@ -3,15 +3,14 @@ import { Tag } from './Tag'
 import { UiComponent } from './UiComponent'
 
 class Stats extends UiComponent {
-  // tag: HTMLElement
   gateways: HTMLDivElement
   totals: HTMLDivElement
   constructor (readonly parent: Checker) {
     super(parent)
-    // this.parent = parent;
-    // this.tag = document.getElementById('checker.stats')// document.createElement("div"); // TODO:: ugly i know, WIP
-    // this.tag.className = 'Stats'
-    const statsElement = document.getElementById('checker.stats')!
+    const statsElement = document.getElementById('checker.stats')
+    if (statsElement == null) {
+      throw new Error('Could not find element with Id "checker.stats"')
+    }
     this.tag = Tag.fromElement(statsElement)
 
     this.gateways = document.createElement('div')

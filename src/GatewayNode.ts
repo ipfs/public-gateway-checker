@@ -55,9 +55,7 @@ class GatewayNode extends UiComponent implements Checkable {
 
   constructor (readonly parent: Results, gateway: string, index: unknown) {
     super(parent, 'div', 'Node')
-    // this.parent = parent;
-    // this.tag = new Tag('div', 'Node')
-    // this.tag.className = "Node";
+
     this.tag.style.order = Date.now().toString()
 
     this.status = new Status(this)
@@ -88,12 +86,6 @@ class GatewayNode extends UiComponent implements Checkable {
     this.checkingTime = 0
   }
 
-  // Node.prototype.check = function() {
-  //     this.checkingTime = Date.now();
-  //     this.status.check();
-  //     this.cors.check();
-  //     this.origin.check();
-  // };
   public check () {
     this.checkingTime = Date.now()
     this.status.check()
@@ -101,20 +93,6 @@ class GatewayNode extends UiComponent implements Checkable {
     this.origin.check()
   }
 
-  // Node.prototype.checked = function() {
-  //     // we care only about the fatest method
-  //     if (!this.status.up) {
-  //         this.status.checked();
-  //         this.parent.checked(this);
-  //         let url = this.link.url;
-  //         let host = gatewayHostname(url);
-  //         this.link.innerHTML = `<a title="${host}" href="${url}#x-ipfs-companion-no-redirect" target="_blank">${host}</a>`;
-  //         let ms = Date.now() - this.checkingTime;
-  //         this.tag.style["order"] = ms;
-  //         let s = (ms / 1000).toFixed(2);
-  //         this.took.textContent = `${s}s`;
-  //     }
-  // };
   public checked () {
     // we care only about the fatest method
     if (!this.status.up) {
@@ -132,9 +110,6 @@ class GatewayNode extends UiComponent implements Checkable {
     }
   }
 
-  // Node.prototype.failed = function() {
-  //   this.parent.failed(this);
-  // };
   failed () {
     this.parent.failed()
   }

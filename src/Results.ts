@@ -23,14 +23,5 @@ class Results {
     this.parent.updateStats()
   }
 }
-// checker.results = document.getElementById('checker.results');
-// checker.results.parent = checker;
-// checker.results.checked = function(node) {
-//   this.parent.updateStats(node);
-// };
-
-// checker.results.failed = function(node) {
-//   this.parent.updateStats(node);
-// };
 
 export { Results }

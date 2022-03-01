@@ -1,20 +1,14 @@
 import { URL } from 'url-ponyfill'
+import { Log } from './Log'
 
+const logger = new Log('Util')
+// eslint-disable-next-line @typescript-eslint/no-extraneous-class
 class Util {
-  // const HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m';
-  // const IMG_HASH = 'bafybeibwzifw52ttrkqlikfzext5akxu7lz4xiwjgwzmqcpdzmp3n5vnbe'; // 1x1.png
-  // // const IFRAME_HASH = 'bafkreifx3g6bkkwl7b4v43lvcqfo5vshbiehuvmpky2zayhfpg5qj7y3ca'
-  // const HASH_STRING = 'Hello from IPFS Gateway Checker';
   static HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m'
   static IMG_HASH = 'bafybeibwzifw52ttrkqlikfzext5akxu7lz4xiwjgwzmqcpdzmp3n5vnbe' // 1x1.png
   // static IFRAME_HASH = 'bafkreifx3g6bkkwl7b4v43lvcqfo5vshbiehuvmpky2zayhfpg5qj7y3ca'
   static HASH_STRING = 'Hello from IPFS Gateway Checker'
 
-  // const ipfs_http_client = window.IpfsHttpClient({
-  //   host: 'ipfs.io',
-  //   port: 443,
-  //   protocol: 'https'
-  // });
   static ipfs_http_client = window.IpfsHttpClient({
     host: 'ipfs.io',
     port: 443,
@@ -54,34 +48,16 @@ class Util {
     })
   }
 
-  // function gatewayHostname (url) {
-  //   if (url && url.hostname) url = url.hostname.toString()
-  //   return url.replace(`${HASH_TO_TEST}.ipfs.`, "") // skip .ipfs. in subdomain gateways
-  //     .replace(`${HASH_TO_TEST}.`, "") // path-based
-  // }
   static gatewayHostname (url: URL) {
     let urlString: string = url.toString()
 
-    if (url && url.hostname) {
+    if (url?.hostname != null) {
       urlString = url.hostname.toString()
     }
 
     return urlString.replace(`${Util.HASH_TO_TEST}.ipfs.`, '') // skip .ipfs. in subdomain gateways
       .replace(`${Util.HASH_TO_TEST}.`, '') // path-based
   }
-
-  // function OnScriptloaded(src) {
-  //   try {
-  //     let url = new URL(src);
-  //     let index = url.searchParams.get("i");
-  //     let node = checker.nodes[index];
-  //     if (node) {
-  //       node.checked();
-  //     }
-  //   } catch(e) {
-  //     // this is a URL exception, we can do nothing, user is probably using Internet Explorer
-  //   }
-  // }
 
   // this function is executed from that previously loaded script
   // it only contains the following: OnScriptloaded(document.currentScript ? document.currentScript.src : '');
@@ -91,13 +67,13 @@ class Util {
       const index = url.searchParams.get('i')
       if (index != null) {
         const node = window.checker.nodes[Number(index)]
-        if (node) {
+        if (node != null) {
           node.checked()
         }
       }
     } catch (e) {
       // this is a URL exception, we can do nothing, user is probably using Internet Explorer
-      console.error(e)
+      logger.error(e)
     }
   }
 
@@ -132,15 +108,16 @@ class Util {
       xhr.open('GET', url, true)
       xhr.onload = function () {
         // expect to be redirected to subdomain where first DNS label is CID
-        if (new URL(xhr.responseURL).hostname.startsWith(Util.IMG_HASH)) {
+        const { hostname } = new URL(xhr.responseURL)
+        if (hostname.startsWith(Util.IMG_HASH)) {
           resolve()
         } else {
-          reject()
+          reject(new Error('Expected to be redirected to subdomain where first DNS label is CID'))
         }
       }
       xhr.onerror = function (err) {
-        console.error(url, err)
-        reject()
+        logger.error(url, err)
+        reject(err)
       }
       xhr.send(null)
     })

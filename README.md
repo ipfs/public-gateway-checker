@@ -25,7 +25,7 @@ Then, submit a pull request for this change. Be sure to follow all the direction
 
 ```bash
 npm run build
-npx serve -l 3000 dist
+npm start
 ```
 
 ## Command line

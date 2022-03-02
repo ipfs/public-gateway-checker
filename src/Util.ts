@@ -9,12 +9,6 @@ class Util {
   // static IFRAME_HASH = 'bafkreifx3g6bkkwl7b4v43lvcqfo5vshbiehuvmpky2zayhfpg5qj7y3ca'
   static HASH_STRING = 'Hello from IPFS Gateway Checker'
 
-  static ipfs_http_client = window.IpfsHttpClient({
-    host: 'ipfs.io',
-    port: 443,
-    protocol: 'https'
-  })
-
   static async checkViaImgSrc (imgUrl: string | URL) {
     // we check if gateway is up by loading 1x1 px image:
     // this is more robust check than loading js, as it won't be blocked
@@ -57,24 +51,6 @@ class Util {
 
     return urlString.replace(`${Util.HASH_TO_TEST}.ipfs.`, '') // skip .ipfs. in subdomain gateways
       .replace(`${Util.HASH_TO_TEST}.`, '') // path-based
-  }
-
-  // this function is executed from that previously loaded script
-  // it only contains the following: OnScriptloaded(document.currentScript ? document.currentScript.src : '');
-  static OnScriptloaded (src: ConstructorParameters<typeof URL>[0]) {
-    try {
-      const url = new URL(src)
-      const index = url.searchParams.get('i')
-      if (index != null) {
-        const node = window.checker.nodes[Number(index)]
-        if (node != null) {
-          node.checked()
-        }
-      }
-    } catch (e) {
-      // this is a URL exception, we can do nothing, user is probably using Internet Explorer
-      logger.error(e)
-    }
   }
 
   // function expectSubdomainRedirect(url) {

@@ -1,11 +1,25 @@
 import { Checker } from './Checker'
-import { Util } from './Util'
 import gateways from './gateways.json'
+import { Log } from './Log'
 
-window.OnScriptloaded = Util.OnScriptloaded
+const logger = new Log('Index')
 
-const checker = new Checker()
+// this function is executed from that previously loaded script
+// it only contains the following: OnScriptloaded(document.currentScript ? document.currentScript.src : '');
+window.OnScriptloaded = (src: ConstructorParameters<typeof URL>[0]) => {
+  try {
+    const url = new URL(src)
+    const index = url.searchParams.get('i')
+    if (index != null) {
+      const node = window.checker.nodes[Number(index)]
+      if (node != null) {
+        node.checked()
+      }
+    }
+  } catch (e) {
+    // this is a URL exception, we can do nothing, user is probably using Internet Explorer
+    logger.error(e)
+  }
+}
 
-window.checker = checker
-
-checker.checkGateways(gateways)
+(window.checker = new Checker()).checkGateways(gateways)

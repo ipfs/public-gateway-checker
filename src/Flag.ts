@@ -1,8 +1,7 @@
-import { runInThisContext } from 'vm'
 import type { GatewayNode } from './GatewayNode'
 import { Log } from './Log'
 import { UiComponent } from './UiComponent'
-import { Util } from './Util'
+import { ipfsHttpClient } from './ipfsHttpClient'
 
 const log = new Log('Flag')
 
@@ -67,7 +66,7 @@ class Flag extends UiComponent {
         }
       }
       if (ip != null) {
-        const geoipResponse = await window.IpfsGeoip.lookup(Util.ipfs_http_client, ip)
+        const geoipResponse = await window.IpfsGeoip.lookup(ipfsHttpClient, ip)
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)
           geoipResponse.time = Date.now()

@@ -43,6 +43,10 @@ class Tag {
     this.textContent = TagStatus.caution
   }
 
+  empty () {
+    this.textContent = TagStatus.empty
+  }
+
   get style () {
     return this.element.style
   }

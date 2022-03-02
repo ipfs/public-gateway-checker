@@ -1,5 +1,6 @@
 
 enum TagStatus {
+  empty = '',
   pending = '🕑',
   successful = '✅',
   caution = '⚠️',

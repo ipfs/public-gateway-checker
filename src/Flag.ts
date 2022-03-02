@@ -31,6 +31,7 @@ class Flag extends UiComponent {
       }
     } catch (e) {
       log.error(`error while getting savedSTR for ${this.hostname}`, e)
+      this.onError()
     }
 
     if (ask) {
@@ -51,6 +52,7 @@ class Flag extends UiComponent {
     }
     request.onerror = (err) => {
       log.error(err)
+      this.onError()
     }
     request.send()
   }
@@ -58,6 +60,10 @@ class Flag extends UiComponent {
   async handleSuccessfulRequest (request: XMLHttpRequest) {
     try {
       const response = JSON.parse(request.responseText)
+      if (response.Answer == null) {
+        log.error('Response does not contain the "Answer" property:', request.responseText)
+        return this.onError()
+      }
       let ip = null
       for (let i = 0; i < response.Answer.length && ip == null; i++) {
         const answer = response.Answer[i]
@@ -76,7 +82,12 @@ class Flag extends UiComponent {
       }
     } catch (e) {
       log.error(`error while getting DNS A record for ${this.hostname}`, e)
+      this.onError()
     }
+  }
+
+  private onError () {
+    this.tag.err()
   }
 
   onResponse (response: IpfsGeoip.LookupResponse) {

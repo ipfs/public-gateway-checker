@@ -55,6 +55,7 @@ class GatewayNode extends UiComponent implements Checkable {
 
   constructor (readonly parent: Results, gateway: string, index: unknown) {
     super(parent, 'div', 'Node')
+    this.tag.empty()
 
     this.tag.style.order = Date.now().toString()
 

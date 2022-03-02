@@ -34,7 +34,7 @@ class Flag extends UiComponent {
     }
 
     if (ask) {
-      setTimeout(this.dnsRequest, 500 * Flag.requests++) // 2 / second, request limit
+      setTimeout(this.dnsRequest.bind(this), 500 * Flag.requests++) // 2 / second, request limit
     }
   }
 

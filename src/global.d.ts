@@ -1,6 +1,5 @@
 import { Tag } from './Tag'
 import * as ipfsHttpClient from 'ipfs-http-client'
-import { Util } from './Util'
 import type { Checker } from './Checker'
 
 declare global {
@@ -29,7 +28,7 @@ declare global {
   interface Window {
     IpfsHttpClient: typeof ipfsHttpClient
     IpfsGeoip: typeof import('ipfs-geoip')
-    OnScriptloaded: typeof Util.OnScriptloaded
+    OnScriptloaded: import('./onScriptLoaded').onScriptLoaded
     checker: Checker
   }
 

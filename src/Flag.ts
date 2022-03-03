@@ -91,7 +91,7 @@ class Flag extends UiComponent {
   }
 
   onResponse (response: IpfsGeoip.LookupResponse) {
-    this.tag.style['background-image'] = `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`
+    this.tag.style.setProperty('background-image', `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`)
     this.tag.title = response.country_name
     this.tag.empty() // remove textContent icon since we're using a background image
   }

@@ -108,7 +108,7 @@
   "scripts": {
     "start": "npx serve -l 3000 dist",
     "copy-assets": "cp-cli src/index.html dist/index.html && cp-cli src/styles.css dist/styles.css",
-    "lint": "aegir lint",
+    "lint": "aegir lint && aegir ts -p check",
     "release": "aegir release",
     "publish-to-ipfs": "jsipfs add -wrQ dist > lastpubver",
     "build": "aegir build && npm run copy-assets",

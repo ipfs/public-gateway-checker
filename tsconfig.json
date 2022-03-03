@@ -1,39 +1,18 @@
 {
-  "extends": "./node_modules/aegir/src/config/tsconfig.aegir.json",
+  "extends": "aegir/src/config/tsconfig.aegir.json",
   "compilerOptions": {
-    "lib": [
-      "es5",
-      "es2015.promise",
-      "dom",
-      "es2015"
-    ],
-    "target": "es6",
-    "emitDeclarationOnly": false,
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "isolatedModules": false,
-    "module": "ESNext",
-    "baseUrl": "./src"
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "./types/*"
+      ]
+    }
   },
   "include": [
+    "types",
+    "test", // remove this line if you don't want to type-check tests
     "src",
     "src/gateways.json"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true,
-    "emit": false,
-    "compiler": "typescript",
-    "compilerHost": false,
-    "compilerOptions": {
-      "module": "CommonJS"
-    },
-    "preferTsExts": true,
-    "pretty": true,
-    "swc": true
-  }
+  ]
 }

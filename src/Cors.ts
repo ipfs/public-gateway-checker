@@ -43,7 +43,7 @@ class Cors extends CheckBase implements Checkable {
   }
 
   onerror () {
-    this.tag.err()
+    this.tag.empty()
   }
 }
 

@@ -2,15 +2,18 @@ import type { GatewayNode } from './GatewayNode'
 import { Log } from './Log'
 import { UiComponent } from './UiComponent'
 import { ipfsHttpClient } from './ipfsHttpClient'
+import { TokenBucketLimiter } from '@dutu/rate-limiter'
 
 const log = new Log('Flag')
 
 class Flag extends UiComponent {
-  private static requests = 0
+  /**
+   */
+  public static readonly googleLimiter = new TokenBucketLimiter({ bucketSize: 1, tokensPerInterval: 1, interval: 1000 * 2, stopped: true })
+  public static readonly cloudFlareLimiter = new TokenBucketLimiter({ bucketSize: 1, tokensPerInterval: 1, interval: 1000 * 2, stopped: true })
+
   constructor (protected parent: GatewayNode, private readonly hostname: string) {
     super(parent, 'div', 'Flag')
-
-    this.setup()
   }
 
   async check () {
@@ -35,59 +38,95 @@ class Flag extends UiComponent {
     }
 
     if (ask) {
-      setTimeout(this.dnsRequest.bind(this), 500 * Flag.requests++) // 2 / second, request limit
+      this.startLimiters()
+      const url = await this.waitForAvailableEndpoint()
+      await this.dnsRequest(url)
     }
   }
 
-  private dnsRequest () {
-    const request = new XMLHttpRequest()
-    request.open('GET', `https://cloudflare-dns.com/dns-query?name=${this.hostname}&type=A`)
-    request.setRequestHeader('accept', 'application/dns-json')
-    request.onreadystatechange = async () => {
-      if (request.readyState === 4) {
-        if (request.status === 200) {
-          await this.handleSuccessfulRequest(request)
-        }
-      }
+  private startLimiters () {
+    if (Flag.googleLimiter.isStopped === true) {
+      Flag.googleLimiter.start()
     }
-    request.onerror = (err) => {
-      log.error(err)
+    if (Flag.cloudFlareLimiter.isStopped === true) {
+      Flag.cloudFlareLimiter.start()
+    }
+  }
+
+  async waitForAvailableEndpoint (): Promise<string> {
+    const url: string | null = await Promise.race([
+      Flag.googleLimiter.awaitTokens(1).then(() => Flag.googleLimiter.tryRemoveTokens(1)).then((tokenAvailable: boolean) => {
+        if (tokenAvailable) {
+          return `https://dns.google/resolve?name=${this.hostname}&type=A`
+        }
+      }),
+      Flag.cloudFlareLimiter.awaitTokens(1).then(() => Flag.cloudFlareLimiter.tryRemoveTokens(1)).then((tokenAvailable: boolean) => {
+        if (tokenAvailable) {
+          return `https://cloudflare-dns.com/dns-query?name=${this.hostname}&type=A`
+        }
+      })
+    ])
+    if (url == null) {
+      // No available tokens...
+      log.info('we awaited tokens, but could not retrieve any.. restarting dnsRequest')
+      return await this.waitForAvailableEndpoint()
+    } else {
+      return url
+    }
+  }
+
+  private async dnsRequest (url: string): Promise<void> {
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          Accept: 'application/dns-json'
+        }
+      })
+      const responseJson = await response.json()
+
+      await this.handleDnsQueryResponse(responseJson)
+    } catch (err) {
+      log.error('problem submitting DNS request', err)
       this.onError()
     }
-    request.send()
   }
 
-  async handleSuccessfulRequest (request: XMLHttpRequest) {
-    try {
-      const response = JSON.parse(request.responseText)
-      if (response.Answer == null) {
-        log.error('Response does not contain the "Answer" property:', request.responseText)
-        return this.onError()
+  async handleDnsQueryResponse (response: DnsQueryResponse) {
+    if (response.Answer == null) {
+      log.error('Response does not contain the "Answer" property:', response)
+      return this.onError()
+    }
+    let ip = null
+    for (let i = 0; i < response.Answer.length && ip == null; i++) {
+      const answer = response.Answer[i]
+      if (answer.type === 1) {
+        ip = answer.data
       }
-      let ip = null
-      for (let i = 0; i < response.Answer.length && ip == null; i++) {
-        const answer = response.Answer[i]
-        if (answer.type === 1) {
-          ip = answer.data
-        }
-      }
-      if (ip != null) {
+    }
+    if (ip != null) {
+      try {
         const geoipResponse = await window.IpfsGeoip.lookup(ipfsHttpClient, ip)
+
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)
           geoipResponse.time = Date.now()
           const responseSTR = JSON.stringify(geoipResponse)
           localStorage.setItem(this.hostname, responseSTR)
+        } else {
+          log.error('geoipResponse.country_code is null')
         }
+      } catch (e) {
+        log.error(`error while getting DNS A record for ${this.hostname}`, e)
+        this.onError()
       }
-    } catch (e) {
-      log.error(`error while getting DNS A record for ${this.hostname}`, e)
-      this.onError()
+    } else {
+      log.error('IP is still null', response)
     }
   }
 
   private onError () {
-    this.tag.err()
+    this.tag.empty()
   }
 
   onResponse (response: IpfsGeoip.LookupResponse) {

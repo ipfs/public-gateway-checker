@@ -16,26 +16,29 @@ class Cors extends CheckBase implements Checkable {
     super(parent, 'div', 'Cors')
   }
 
-  check () {
+  async check () {
     const now = Date.now()
     const gatewayAndHash = this.parent.gateway.replace(':hash', Util.HASH_TO_TEST)
     const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`
     // response body can be accessed only if fetch was executed when
     // liberal CORS is present (eg. '*')
-    fetch(testUrl).then(async (res) => await res.text()).then((text) => {
-      const matched = (Util.HASH_STRING === text.trim())
-      if (matched) {
+    try {
+      const response = await fetch(testUrl)
+      const { status } = response
+      const text = await response.text()
+      this.tag.title = `Response code: ${status}`
+      if (Util.HASH_STRING === text.trim()) {
         this.parent.checked()
-        // this.tag.textContent = '*'
         this.tag.asterisk()
         this.parent.tag.classList.add('cors')
       } else {
+        log.debug('The response text did not match the expected string')
         this.onerror()
       }
-    }).catch((err) => {
+    } catch (err) {
       log.error(err)
       this.onerror()
-    })
+    }
   }
 
   checked () {

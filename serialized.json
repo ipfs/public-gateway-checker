@@ -118,7 +118,7 @@
     "Link": "gateway.pinata.cloud"
   },
   {
-    "Status": "🌍",
+    "Status": "❌",
     "Cors": "",
     "Origin": "⚠️",
     "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
@@ -296,7 +296,7 @@
     "Status": "❌",
     "Cors": "",
     "Origin": "⚠️",
-    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/nl.svg\")",
     "Link": "ipfs.funnychain.co"
   },
   {
@@ -611,7 +611,7 @@
     "Status": "❌",
     "Cors": "",
     "Origin": "⚠️",
-    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/gb.svg\")",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
     "Link": "storjipfs-gateway.com"
   },
   {

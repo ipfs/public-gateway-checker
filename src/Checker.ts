@@ -2,6 +2,9 @@
 import { GatewayNode } from './GatewayNode'
 import { Results } from './Results'
 import { Stats } from './Stats'
+import { Log } from './Log'
+
+const log = new Log('Checker')
 
 class Checker {
   public readonly element: HTMLElement

@@ -3,6 +3,10 @@ import { URL } from 'url-ponyfill'
 import type { GatewayNode } from './GatewayNode'
 import { Tag } from './Tag'
 import { Util } from './Util'
+import { Log } from './Log'
+import { expectSubdomainRedirect } from './expectSubdomainRedirect'
+
+const log = new Log('Origin')
 
 class Origin {
   tag: Tag
@@ -19,16 +23,17 @@ class Origin {
     const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${Util.IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     const imgRedirectedPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${Util.IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     await Util.checkViaImgSrc(imgSubdomainUrl)
-      .then(async () => await Util.expectSubdomainRedirect(imgRedirectedPathUrl)
-        .then(() => {
-          this.tag.win()
-          this.parent.tag.classList.add('origin')
-          this.parent.checked()
-        }))
-      .catch(() => this.onerror())
+      .then(async () => await expectSubdomainRedirect(imgRedirectedPathUrl))
+      .then(() => {
+        this.tag.win()
+        this.parent.tag.classList.add('origin')
+        // this.parent.checked()
+      })
+      .catch((err) => this.onerror(err))
   }
 
-  onerror () {
+  onerror (err: Error) {
+    log.error(err)
     this.tag.err()
   }
 }

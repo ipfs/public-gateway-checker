@@ -52,52 +52,6 @@ class Util {
     return urlString.replace(`${Util.HASH_TO_TEST}.ipfs.`, '') // skip .ipfs. in subdomain gateways
       .replace(`${Util.HASH_TO_TEST}.`, '') // path-based
   }
-
-  // function expectSubdomainRedirect(url) {
-  //   // Detecting redirects on remote Origins is extra tricky,
-  //   // but we seem to be able to access xhr.responseURL which is enough to see
-  //   // if paths are redirected to subdomains.
-  //   return new Promise((resolve, reject) => {
-  //     const xhr = new XMLHttpRequest()
-  //     xhr.open('GET', url, true)
-  //     xhr.onload = function () {
-  //       // expect to be redirected to subdomain where first DNS label is CID
-  //       if (new URL(xhr.responseURL).hostname.startsWith(IMG_HASH)) {
-  //         resolve()
-  //       } else {
-  //         reject()
-  //       }
-  //     }
-  //     xhr.onerror = function (err) {
-  //       console.error(url, err)
-  //       reject()
-  //     }
-  //     xhr.send(null)
-  //   })
-  // }
-  static async expectSubdomainRedirect (url: string | URL) {
-    // Detecting redirects on remote Origins is extra tricky,
-    // but we seem to be able to access xhr.responseURL which is enough to see
-    // if paths are redirected to subdomains.
-    return await new Promise<void>((resolve, reject) => {
-      const xhr = new XMLHttpRequest()
-      xhr.open('GET', url, true)
-      xhr.onload = function () {
-        // expect to be redirected to subdomain where first DNS label is CID
-        const { hostname } = new URL(xhr.responseURL)
-        if (hostname.startsWith(Util.IMG_HASH)) {
-          resolve()
-        } else {
-          reject(new Error('Expected to be redirected to subdomain where first DNS label is CID'))
-        }
-      }
-      xhr.onerror = function (err) {
-        logger.error(url, err)
-        reject(err)
-      }
-      xhr.send(null)
-    })
-  }
 }
 
 export { Util }

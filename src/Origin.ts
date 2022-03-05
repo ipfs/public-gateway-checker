@@ -2,9 +2,11 @@ import { URL } from 'url-ponyfill'
 
 import type { GatewayNode } from './GatewayNode'
 import { Tag } from './Tag'
-import { Util } from './Util'
+
 import { Log } from './Log'
 import { expectSubdomainRedirect } from './expectSubdomainRedirect'
+import { checkViaImgSrc } from './checkViaImgSrc'
+import { IMG_HASH } from './constants'
 
 const log = new Log('Origin')
 
@@ -20,9 +22,9 @@ class Origin {
     // URL and check if it loading known image works
     const gwUrl = new URL(this.parent.gateway)
     // const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${now}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-    const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${Util.IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-    const imgRedirectedPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${Util.IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-    await Util.checkViaImgSrc(imgSubdomainUrl)
+    const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
+    const imgRedirectedPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
+    await checkViaImgSrc(imgSubdomainUrl)
       .then(async () => await expectSubdomainRedirect(imgRedirectedPathUrl))
       .then(() => {
         this.tag.win(imgSubdomainUrl.toString())
@@ -35,6 +37,7 @@ class Origin {
   onerror (err: Error) {
     log.error(err)
     this.tag.err()
+    throw err
   }
 }
 

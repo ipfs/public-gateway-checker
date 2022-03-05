@@ -16,11 +16,11 @@ class Log {
    * @param args
    */
   private log<M extends Extract<keyof Console, keyof Omit<Log, 'log'>>>(method: M, ...args: Parameters<Console[M]>) {
-    const [msg, optionalParams] = args
-    const prefix = this.namespace != null ? `${this.namespace}: ` : ''
+    const [msg, ...optionalParams] = args
+    const prefix = this.namespace != null ? `${this.namespace}.${method}: ` : ''
 
     // eslint-disable-next-line no-console
-    console[method](`${prefix}${msg as string}`, optionalParams)
+    console[method](`${prefix}${msg as string}`, ...optionalParams)
   }
 
   debug (...args: Parameters<Console['debug']>) {

@@ -16,7 +16,7 @@ class Status extends UiComponent {
     const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${Util.IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     await Util.checkViaImgSrc(imgPathUrl).then(() => {
       // this.tag.textContent = '❌'
-      this.tag.lose()
+      this.tag.global()
       this.parent.checked()
     }).catch(() => {
       // we check this because the gateway could be already checked by CORS before onerror executes

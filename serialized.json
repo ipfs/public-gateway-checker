@@ -1,0 +1,638 @@
+[
+  {
+    "Status truncate": "Online",
+    "Cors truncate": "CORS",
+    "Origin truncate": "Origin",
+    "Link truncate": "Hostname"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "2read.net"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/jp.svg\")",
+    "Link": "3cloud.ee"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "alexdav.id"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "aragon.ventures"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "✅",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "astyanax.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "cdn.cwinfo.net"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "",
+    "Origin": "✅",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "cf-ipfs.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "cloudflare-ipfs.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "crustwebsites.net"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "dweb.eu.org"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "✅",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "dweb.link"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "gateway.blocksec.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "gateway.ipfs.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "gateway.ipfs.lc"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "gateway.originprotocol.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "gateway.pinata.cloud"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "gateway.ravenland.org"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/be.svg\")",
+    "Link": "gateway.serph.network"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "gw.ipfspin.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/nl.svg\")",
+    "Link": "hardbin.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/cn.svg\")",
+    "Link": "hashnews.k1ic.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "hub.textile.io"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "✅",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "infura-ipfs.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "ipfs-cdn.aragon.ventures"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "ipfs-nosub.stibarc.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg\")",
+    "Link": "ipfs.1-2.dev"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg\")",
+    "Link": "ipfs.2read.net"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg\")",
+    "Link": "ipfs.adatools.io"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/ca.svg\")",
+    "Link": "ipfs.anonymize.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "ipfs.arching-kaos.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.azurewebsites.net"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/se.svg\")",
+    "Link": "ipfs.best-practice.se"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.busy.org"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/cn.svg\")",
+    "Link": "ipfs.decoo.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.denarius.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "ipfs.doolta.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.drink.cafe"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.eternum.io"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.eth.aragon.network"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.fleek.co"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg\")",
+    "Link": "ipfs.fooock.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.funnychain.co"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.genenetwork.org"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.greyh.at"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.infura.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "ipfs.ink"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/hk.svg\")",
+    "Link": "ipfs.jbb.one"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.kaleido.art"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.kavin.rocks"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/tr.svg\")",
+    "Link": "ipfs.kinematiks.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "ipfs.kxv.io"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.lain.la"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/in.svg\")",
+    "Link": "ipfs.mihir.ch"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.mrh.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.mttk.net"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.namebase.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.overpi.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.runfission.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg\")",
+    "Link": "ipfs.scalaproject.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.slang.cx"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "ipfs.sloppyta.co"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.smartholdem.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/nl.svg\")",
+    "Link": "ipfs.taxi"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.telos.miami"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.tribecap.co"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.trusti.id"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.tubby.cloud"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.uploads.nu"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "",
+    "Link": "ipfs.vip"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/ch.svg\")",
+    "Link": "ipfs.xoqq.ch"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.yt"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs.zod.tv"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs0.sjc.cloudsigma.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfs1.pixura.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ipfsgateway.makersplace.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "ipns.co"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/ca.svg\")",
+    "Link": "ivoputzer.xyz"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "jorropo.net"
+  },
+  {
+    "Status": "❌",
+    "Cors": "🕑",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "konubinix.eu"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/ca.svg\")",
+    "Link": "natoboram.mynetgear.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/de.svg\")",
+    "Link": "ninetailed.ninja"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "permaweb.eu.org"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "permaweb.io"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "ravencoinipfs-gateway.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "search.ipfsgate.com"
+  },
+  {
+    "Status": "❌",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/gb.svg\")",
+    "Link": "storjipfs-gateway.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "storry.tv"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/us.svg\")",
+    "Link": "via0.com"
+  },
+  {
+    "Status": "🌍",
+    "Cors": "*",
+    "Origin": "⚠️",
+    "Flag": "url(\"https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/fr.svg\")",
+    "Link": "video.oneloveipfs.com"
+  }
+]

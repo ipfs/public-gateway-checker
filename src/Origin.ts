@@ -10,7 +10,7 @@ class Origin {
     this.tag = new Tag('div', 'Origin')
   }
 
-  check () {
+  async check () {
     // we are unable to check url after subdomain redirect because some gateways
     // may not have proper CORS in place. instead, we manually construct subdomain
     // URL and check if it loading known image works
@@ -18,7 +18,7 @@ class Origin {
     // const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${now}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     const imgSubdomainUrl = new URL(`${gwUrl.protocol}//${Util.IMG_HASH}.ipfs.${gwUrl.hostname}/?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     const imgRedirectedPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${Util.IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-    Util.checkViaImgSrc(imgSubdomainUrl)
+    await Util.checkViaImgSrc(imgSubdomainUrl)
       .then(async () => await Util.expectSubdomainRedirect(imgRedirectedPathUrl)
         .then(() => {
           this.tag.win()

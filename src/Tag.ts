@@ -26,7 +26,10 @@ class Tag {
   /**
    * Use the below functions to keep displays consistent
    */
-  asterisk () {}
+  asterisk () {
+    this.textContent = TagStatus.asterisk
+  }
+
   lose () {
     this.textContent = TagStatus.failed
   }

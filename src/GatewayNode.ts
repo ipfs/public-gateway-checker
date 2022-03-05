@@ -87,11 +87,9 @@ class GatewayNode extends UiComponent implements Checkable {
     this.checkingTime = 0
   }
 
-  public check () {
+  public async check () {
     this.checkingTime = Date.now()
-    this.status.check()
-    this.cors.check()
-    this.origin.check()
+    await Promise.all([this.flag.check(), this.status.check(), this.cors.check(), this.origin.check()])
   }
 
   public checked () {

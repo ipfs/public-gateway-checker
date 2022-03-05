@@ -13,7 +13,7 @@ class Flag extends UiComponent {
     this.setup()
   }
 
-  setup () {
+  async check () {
     let ask = true
 
     try {

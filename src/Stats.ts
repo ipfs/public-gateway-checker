@@ -28,7 +28,7 @@ class Stats extends UiComponent {
     let up = 0
     let down = 0
     for (const savedNode of this.parent.nodes) {
-      if ('up' in savedNode.status) {
+      if (savedNode.doneChecking) {
         savedNode.status.up ? ++up : ++down
       }
     }

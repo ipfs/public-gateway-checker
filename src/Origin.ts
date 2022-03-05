@@ -25,7 +25,7 @@ class Origin {
     await Util.checkViaImgSrc(imgSubdomainUrl)
       .then(async () => await expectSubdomainRedirect(imgRedirectedPathUrl))
       .then(() => {
-        this.tag.win()
+        this.tag.win(imgSubdomainUrl.toString())
         this.parent.tag.classList.add('origin')
         // this.parent.checked()
       })

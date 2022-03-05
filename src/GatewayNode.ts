@@ -11,7 +11,7 @@ import { Log } from './Log'
 
 const log = new Log('GatewayNode')
 
-class GatewayNode extends UiComponent implements Checkable {
+class GatewayNode extends UiComponent /* implements Checkable */ {
   // tag: Tag
   status: Status
   cors: Cors
@@ -23,8 +23,12 @@ class GatewayNode extends UiComponent implements Checkable {
   index: unknown
   checkingTime: number
 
+  doneChecking = false
+  online = false
+
   constructor (readonly parent: Results, gateway: string, index: unknown) {
     super(parent, 'div', 'Node')
+
     this.tag.empty()
 
     this.tag.style.order = Date.now().toString()
@@ -59,14 +63,21 @@ class GatewayNode extends UiComponent implements Checkable {
 
   public async check () {
     this.checkingTime = Date.now()
-    await Promise.all([this.flag.check(), this.status.check(), this.cors.check(), this.origin.check()])
+    const checks = [this.flag.check(), this.status.check(), this.cors.check(), this.origin.check()]
+
+    // we care only about the fastest method to return a success
+    Promise.race(checks).then(this.checked.bind(this)).catch((err) => {
+      log.error(err)
+    })
+
+    await Promise.all(checks)
   }
 
-  public checked () {
-    // we care only about the fatest method
-    if (!this.status.up) {
+  private checked () {
+    if (!this.doneChecking) {
+      this.doneChecking = true
       this.status.checked()
-      this.parent.checked()
+      // this.parent.checked()
       const url = this.link.url
       if (url != null) {
         const host = Util.gatewayHostname(url)
@@ -76,11 +87,9 @@ class GatewayNode extends UiComponent implements Checkable {
       this.tag.style.order = ms.toString()
       const s = (ms / 1000).toFixed(2)
       this.took.textContent = `${s}s`
+    } else {
+      log.warn('"checked" method called more than once.. potential logic error')
     }
-  }
-
-  failed () {
-    this.parent.failed()
   }
 
   onerror () {

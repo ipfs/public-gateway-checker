@@ -34,8 +34,18 @@ class Tag {
     this.textContent = TagStatus.failed
   }
 
-  win () {
-    this.textContent = TagStatus.successful
+  win (url?: string) {
+    if (url != null) {
+      this.textContent = TagStatus.empty
+      const linkToImageSubdomain = document.createElement('a')
+      linkToImageSubdomain.href = url
+      linkToImageSubdomain.target = '_blank'
+      linkToImageSubdomain.textContent = TagStatus.successful
+      this.element.title = url
+      this.element.appendChild(linkToImageSubdomain)
+    } else {
+      this.textContent = TagStatus.successful
+    }
   }
 
   global () {

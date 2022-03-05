@@ -19,19 +19,25 @@ class Checker {
     this.element = element
     this.stats = new Stats(this)
     this.results = new Results(this)
+    this.updateStats = this.updateStats.bind(this)
   }
 
-  public updateStats () {
+  private updateStats () {
     this.stats.update()
   }
 
-  checkGateways (gateways: string[]) {
+  async checkGateways (gateways: string[]) {
+    const allChecks: Array<Promise<void>> = []
     for (const gateway of gateways) {
       const node = new GatewayNode(this.results, gateway, this.nodes.length)
       this.nodes.push(node)
       this.results.append(node.tag)
-      setTimeout(() => node.check(), 100 * this.nodes.length)
+      // void node.check()
+      setTimeout(() => {
+        allChecks.push(node.check().catch((err) => log.error(err)).finally(this.updateStats))
+      }, 100 * this.nodes.length)
     }
+    // await Promise.all(allChecks).finally(this.updateStats)
   }
 }
 

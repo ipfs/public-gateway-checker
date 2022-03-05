@@ -4,6 +4,10 @@ import type { GatewayNode } from './GatewayNode'
 import { UiComponent } from './UiComponent'
 import { Util } from './Util'
 
+import { Log } from './Log'
+
+const log = new Log('Status')
+
 class Status extends UiComponent {
   up: boolean = false
   constructor (readonly parent: GatewayNode) {
@@ -16,16 +20,19 @@ class Status extends UiComponent {
     const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${Util.IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
     await Util.checkViaImgSrc(imgPathUrl).then(() => {
       // this.tag.textContent = '❌'
-      this.tag.global()
-      this.parent.checked()
-    }).catch(() => {
+      this.checked()
+      // this.parent.checked()
+    }).catch((err) => {
+      if (err != null) {
+        log.error(err)
+      }
       // we check this because the gateway could be already checked by CORS before onerror executes
       // and, even though it is failing here, we know it is UP
       if (!this.up) {
         this.up = false
         // this.tag.textContent = '❌'
         this.tag.lose()
-        this.parent.failed()
+        // this.parent.failed()
       }
     })
   }

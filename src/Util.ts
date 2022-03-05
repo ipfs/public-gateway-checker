@@ -1,7 +1,6 @@
-import { URL } from 'url-ponyfill'
-import { Log } from './Log'
+// import { Log } from './Log'
 
-const logger = new Log('Util')
+// const logger = new Log('Util')
 // eslint-disable-next-line @typescript-eslint/no-extraneous-class
 class Util {
   static HASH_TO_TEST = 'bafybeifx7yeb55armcsxwwitkymga5xf53dxiarykms3ygqic223w5sk3m'

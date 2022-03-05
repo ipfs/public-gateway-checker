@@ -15,13 +15,13 @@ class Results {
     this.element = element
   }
 
-  checked () {
-    this.parent.updateStats()
-  }
+  // checked () {
+  //   this.parent.updateStats()
+  // }
 
-  failed () {
-    this.parent.updateStats()
-  }
+  // failed () {
+  //   this.parent.updateStats()
+  // }
 }
 
 export { Results }

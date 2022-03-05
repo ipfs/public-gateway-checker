@@ -28,7 +28,7 @@ class Cors extends CheckBase implements Checkable {
       const text = await response.text()
       this.tag.title = `Response code: ${status}`
       if (Util.HASH_STRING === text.trim()) {
-        this.parent.checked()
+        // this.parent.checked()
         this.tag.asterisk()
         this.parent.tag.classList.add('cors')
       } else {

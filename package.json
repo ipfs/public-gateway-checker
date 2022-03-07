@@ -1,5 +1,6 @@
 {
   "name": "@ipfs/public-gateway-checker",
+  "private": true,
   "version": "1.0.0",
   "description": "Checks which public gateways are online or not",
   "author": "Marcin Rataj <lidel@lidel.org>",

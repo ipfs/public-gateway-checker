@@ -1,0 +1,124 @@
+body, html {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+div.Stats {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin: 1em auto;
+	width: 95%;
+	max-width: 1024px;
+}
+
+div.Stats div.Totals,
+div.Stats div.Gateways {
+	border-radius: 9999px;
+	color: white;
+	font-weight: bold;
+	padding: 0.5em 1em;
+	margin: 0 1em 0 0;
+	font-family: Consolas, monaco, monospace;
+}
+
+div.Stats div.Gateways {
+	background-color: #0b3a53;
+}
+
+div.Stats div.Totals {
+	background-color: #0cb892;
+}
+
+div.Results {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1024px;
+}
+
+div.Node {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-bottom: 1px solid #edf0f4;
+	padding: 0.5em 1em;
+}
+
+div.Node:hover {
+	background-color: #edf0f4;
+}
+
+
+div.Node div.Link {
+	width: 100%;
+	text-align: left;
+	padding-left: 2em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+div.Node a, div#origin-warning a {
+	text-decoration: none;
+	color: #357edd;
+	white-space: nowrap;
+}
+
+div.Node div.Status,
+div.Node div.Cors,
+div.Node div.Origin,
+div.Node div.Flag {
+	width: 5em;
+	text-align: center;
+	margin: 0 0.5em;
+	user-select: none;
+}
+
+div.Node div.Flag {
+	/* width: 2em; */
+	height: 1em;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+  display: inline-block
+}
+
+div.Node div.Took {
+	min-width: 5em;
+	text-align: right;
+	font-size: 80%;
+	font-style: italic;
+}
+
+div.Node.origin div.Link::after {
+  content: " 💚"
+}
+div.Node:not(.online):not(:first-child) {
+  opacity: .5
+}
+
+div#origin-warning {
+  padding: .1rem 1.5rem;
+  border-left: 4px solid #e7c000;
+  background-color: #fff7d2;
+  color: #34373f;
+}
+
+div#origin-warning p {
+  letter-spacing: .5px;
+  color: #b29400;
+  font-weight: 600;
+  margin-bottom: -.4rem;
+}
+
+div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
+    line-height: 1.7;
+}
+
+
+div#checker\.results .Node:nth-child(1) .Link {
+  padding-left: 1em;
+}

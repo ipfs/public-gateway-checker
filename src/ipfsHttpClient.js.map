@@ -1,0 +1,1 @@
+{"version":3,"file":"ipfsHttpClient.js","sourceRoot":"","sources":["../../src/ipfsHttpClient.ts"],"names":[],"mappings":"AAAA,MAAM,cAAc,GAAG,MAAM,CAAC,cAAc,CAAC;IAC3C,IAAI,EAAE,SAAS;IACf,IAAI,EAAE,GAAG;IACT,QAAQ,EAAE,OAAO;CAClB,CAAC,CAAA;AACF,MAAM,CAAC,MAAM,GAAG,cAAc,CAAA;AAE9B,OAAO,EAAE,cAAc,EAAE,CAAA"}

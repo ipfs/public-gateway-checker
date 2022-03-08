@@ -55,7 +55,7 @@ div.Node:hover {
 div.Node div.Link {
 	width: 100%;
 	text-align: left;
-	padding-left: 1em;
+	padding-left: 2em;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -69,7 +69,8 @@ div.Node a, div#origin-warning a {
 
 div.Node div.Status,
 div.Node div.Cors,
-div.Node div.Origin {
+div.Node div.Origin,
+div.Node div.Flag {
 	width: 5em;
 	text-align: center;
 	margin: 0 0.5em;
@@ -77,11 +78,12 @@ div.Node div.Origin {
 }
 
 div.Node div.Flag {
-	width: 2em;
+	/* width: 2em; */
 	height: 1em;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: center;
+  display: inline-block
 }
 
 div.Node div.Took {
@@ -114,4 +116,9 @@ div#origin-warning p {
 
 div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
     line-height: 1.7;
+}
+
+
+div#checker\.results .Node:nth-child(1) .Link {
+  padding-left: 1em;
 }

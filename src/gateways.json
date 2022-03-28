@@ -89,5 +89,6 @@
     "https://ipfs.tribecap.co/ipfs/:hash",
     "https://ipfs.kinematiks.com/ipfs/:hash",
     "https://c4rex.co/ipfs/:hash",
-    "https://ipfs.zod.tv/ipfs/:hash"
+    "https://ipfs.zod.tv/ipfs/:hash",
+    "https://gravity.jup.io/ipfs/:hash"
 ]

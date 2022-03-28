@@ -1,9 +1,15 @@
-name: test & maybe release
+name: test
 on:
   push:
+    paths-ignore:
+      - 'README.md'
+      - 'src/gateways.json'
     branches:
       - master # with #262 - ${{{ github.default_branch }}}
   pull_request:
+    paths-ignore:
+      - 'README.md'
+      - 'src/gateways.json'
     branches:
       - master # with #262 - ${{{ github.default_branch }}}
 

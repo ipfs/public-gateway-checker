@@ -3,7 +3,7 @@ Hello! To ensure this PR is correctly addressed as soon as possible by the IPFS 
 
 IF ADDING A NEW PUBLIC GATEWAY:
 - Name your PR in the format `feat: add gateway.address.here`
-- Make sure there is no trailing comma in the final gateway in the list at `gateways.json`
+- Make sure there is no trailing comma in the final gateway in the list at `src/gateways.json`
 - Include a brief description of the gateway to be added (e.g. geographic location, connection speed, available space, etc)
 
 ALL OTHER PULL REQUESTS:

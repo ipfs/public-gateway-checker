@@ -28,8 +28,6 @@
     "https://ipfs-cdn.aragon.ventures/ipfs/:hash",
     "https://permaweb.io/ipfs/:hash",
     "https://ipfs.best-practice.se/ipfs/:hash",
-    "https://2read.net/ipfs/:hash",
-    "https://ipfs.2read.net/ipfs/:hash",
     "https://storjipfs-gateway.com/ipfs/:hash",
     "https://ipfs.runfission.com/ipfs/:hash",
     "https://ipfs.trusti.id/ipfs/:hash",

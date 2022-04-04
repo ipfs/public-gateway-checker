@@ -13,7 +13,7 @@ View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-g
 
 ## Adding a new public gateway
 
-If you'd like to add a new public gateway, please edit `gateways.json`:
+If you'd like to add a new public gateway, please edit `./src/gateways.json`:
 
 1. Add the gateway's address to the bottom of the list
 2. Make sure the final item in the list does **not** have a comma at the end, but all preceding items do
@@ -24,6 +24,7 @@ Then, submit a pull request for this change. Be sure to follow all the direction
 ## Testing locally
 
 ```bash
+npm ci
 npm run build
 npm start
 ```

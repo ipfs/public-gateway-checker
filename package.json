@@ -129,7 +129,7 @@
     "eslint-plugin-compat": "^4.0.2",
     "fetch-ponyfill": "^7.1.0",
     "ipfs": "^0.62.1",
-    "ipfs-geoip": "^6.0.0",
+    "ipfs-geoip": "^7.0.0",
     "ipfs-http-client": "^44.1.1",
     "typescript": "^4.6.2"
   },

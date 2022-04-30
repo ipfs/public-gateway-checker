@@ -91,6 +91,6 @@
 	"https://nftstorage.link/ipfs/:hash",
 	"https://gravity.jup.io/ipfs/:hash",
 	"http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion/ipfs/:hash",
-  "https://tth-ipfs.com/ipfs/:hash",
-  "https://gateway.alterdot.network/ipfs/:hash"
+	"https://tth-ipfs.com/ipfs/:hash",
+	"https://gateway.alterdot.network/ipfs/:hash"
 ]

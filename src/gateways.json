@@ -1,5 +1,6 @@
 [
 	"https://ipfs.io/ipfs/:hash",
+	"https://ipfs-gateway.cloud",
 	"https://dweb.link/ipfs/:hash",
 	"https://gateway.ipfs.io/ipfs/:hash",
 	"https://ipfs.infura.io/ipfs/:hash",

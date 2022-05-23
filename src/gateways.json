@@ -91,5 +91,7 @@
 	"https://gravity.jup.io/ipfs/:hash",
 	"http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion/ipfs/:hash",
 	"https://tth-ipfs.com/ipfs/:hash",
+	"https://ipfs.chisdealhd.co.uk/ipfs/:hash",
+	"https://ipfs.alloyxuast.tk/ipfs/:hash",
   "https://ipfs.litnet.work/ipfs/:hash"
 ]

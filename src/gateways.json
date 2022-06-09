@@ -93,5 +93,6 @@
     "https://tth-ipfs.com/ipfs/:hash",
     "https://ipfs.chisdealhd.co.uk/ipfs/:hash",
     "https://ipfs.alloyxuast.tk/ipfs/:hash",
-    "https://ipfs.litnet.work/ipfs/:hash"
+    "https://ipfs.litnet.work/ipfs/:hash",
+    "https://ipfs-gateway.cloud/ipfs/:hash"
 ]

@@ -94,5 +94,6 @@
     "https://ipfs.chisdealhd.co.uk/ipfs/:hash",
     "https://ipfs.alloyxuast.tk/ipfs/:hash",
     "https://ipfs.litnet.work/ipfs/:hash",
+    "https://4everland.io/ipfs/:hash",
     "https://ipfs-gateway.cloud/ipfs/:hash"
 ]

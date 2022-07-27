@@ -122,7 +122,7 @@
   },
   "devDependencies": {
     "aegir": "^36.2.3",
-    "browserslist": "^4.19.3",
+    "browserslist": "^4.21.3",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",
     "eslint-config-ipfs": "^2.1.0",

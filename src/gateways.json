@@ -2,8 +2,6 @@
     "https://ipfs.io/ipfs/:hash",
     "https://dweb.link/ipfs/:hash",
     "https://gateway.ipfs.io/ipfs/:hash",
-    "https://ipfs.infura.io/ipfs/:hash",
-    "https://infura-ipfs.io/ipfs/:hash",
     "https://ninetailed.ninja/ipfs/:hash",
     "https://via0.com/ipfs/:hash",
     "https://ipfs.eternum.io/ipfs/:hash",

@@ -2,8 +2,6 @@
 	"https://ipfs.io/ipfs/:hash",
 	"https://dweb.link/ipfs/:hash",
 	"https://gateway.ipfs.io/ipfs/:hash",
-	"https://ninetailed.ninja/ipfs/:hash",
-	"https://via0.com/ipfs/:hash",
 	"https://ipfs.eternum.io/ipfs/:hash",
 	"https://hardbin.com/ipfs/:hash",
 	"https://cloudflare-ipfs.com/ipfs/:hash",
@@ -12,12 +10,14 @@
 	"https://jorropo.net/ipfs/:hash",
 	"https://ipfs.best-practice.se/ipfs/:hash",
 	"https://ipfs.fleek.co/ipfs/:hash",
+	"https://jorropo.net/ipfs/:hash",
+	"https://ipfs.best-practice.se/ipfs/:hash",
+	"https://ipfs.telos.miami/ipfs/:hash",
+	"https://ipfs.fleek.co/ipfs/:hash",
 	"https://crustwebsites.net/ipfs/:hash",
 	"https://ipfs.eth.aragon.network/ipfs/:hash",
-	"https://ipfs.lain.la/ipfs/:hash",
-	"https://permaweb.eu.org/ipfs/:hash",
 	"https://nftstorage.link/ipfs/:hash",
+	"https://ipfs.litnet.work/ipfs/:hash",
 	"https://4everland.io/ipfs/:hash",
-	"https://ipfs-gateway.cloud/ipfs/:hash",
-  "https://ipfs.telos.miami/ipfs/:hash"
+	"https://ipfs-gateway.cloud/ipfs/:hash"
 ]

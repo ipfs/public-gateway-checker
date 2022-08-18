@@ -20,5 +20,8 @@
 	"https://ipfs.litnet.work/ipfs/:hash",
 	"http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion/ipfs/:hash",
 	"https://4everland.io/ipfs/:hash",
-	"https://ipfs-gateway.cloud/ipfs/:hash"
+	"https://ipfs-gateway.cloud/ipfs/:hash",
+	"https://dweb.eu.org/ipfs/:hash",
+	"https://permaweb.eu.org/ipfs/:hash",
+	"https://ipfs.yt/ipfs/:hash"
 ]

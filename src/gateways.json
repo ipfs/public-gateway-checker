@@ -79,5 +79,6 @@
     "https://ipfs.litnet.work/ipfs/:hash",
     "https://4everland.io/ipfs/:hash",
     "https://ipfs-gateway.cloud/ipfs/:hash",
-    "https://w3s.link/ipfs/:hash"
+    "https://w3s.link/ipfs/:hash",
+    "https://cthd.icu/ipfs/:hash"
 ]

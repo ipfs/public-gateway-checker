@@ -117,7 +117,7 @@
     "test-TBD:browser": "aegir test --target browser"
   },
   "dependencies": {
-    "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.0",
+    "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.1",
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {

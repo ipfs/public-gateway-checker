@@ -117,18 +117,18 @@
     "test-TBD:browser": "aegir test --target browser"
   },
   "dependencies": {
-    "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.0",
+    "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.1",
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {
     "aegir": "^36.2.3",
-    "browserslist": "^4.19.3",
+    "browserslist": "^4.21.4",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",
     "eslint-config-ipfs": "^2.1.0",
     "eslint-plugin-compat": "^4.0.2",
     "fetch-ponyfill": "^7.1.0",
-    "ipfs": "^0.62.1",
+    "ipfs": "^0.64.2",
     "ipfs-geoip": "^8.0.0",
     "ipfs-http-client": "^44.1.1",
     "typescript": "^4.6.2"

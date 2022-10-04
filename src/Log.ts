@@ -15,7 +15,7 @@ class Log {
    * @param method - log
    * @param args
    */
-  private log<M extends Extract<keyof Console, keyof Omit<Log, 'log'>>>(method: M, ...args: Parameters<Console[M]>) {
+  private log<M extends Extract<keyof Console, keyof Omit<Log, 'log'>>>(method: M, ...args: Parameters<Console[M]>): void {
     const [msg, ...optionalParams] = args
     const prefix = this.namespace != null ? `${this.namespace}.${method}: ` : ''
 
@@ -23,19 +23,19 @@ class Log {
     console[method](`${prefix}${msg as string}`, ...optionalParams)
   }
 
-  debug (...args: Parameters<Console['debug']>) {
+  debug (...args: Parameters<Console['debug']>): void {
     this.log('debug', ...args)
   }
 
-  info (...args: Parameters<Console['info']>) {
+  info (...args: Parameters<Console['info']>): void {
     this.log('info', ...args)
   }
 
-  warn (...args: Parameters<Console['warn']>) {
+  warn (...args: Parameters<Console['warn']>): void {
     this.log('warn', ...args)
   }
 
-  error (...args: Parameters<Console['error']>) {
+  error (...args: Parameters<Console['error']>): void {
     this.log('error', ...args)
   }
 }

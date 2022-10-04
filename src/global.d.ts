@@ -43,10 +43,10 @@ declare namespace IpfsGeoip {
     country_name: string
   }
 }
-type DnsQueryResponseAnswer = { name: string, type: number, TTL: number, data: string }
-type DnsQueryResponseQuestion = { name: string, type: number }
+interface DnsQueryResponseAnswer { name: string, type: number, TTL: number, data: string }
+interface DnsQueryResponseQuestion { name: string, type: number }
 
-type DnsQueryResponseAuthority = {
+interface DnsQueryResponseAuthority {
   TTL: number
   data: string // "aragorn.ns.cloudflare.com. dns.cloudflare.com. 2271826322 10000 2400 604800 3600"
   name: string // "stibarc.com"

@@ -109,7 +109,7 @@
   "scripts": {
     "start": "npm run build && npx -y serve -l 3000 dist",
     "copy-assets": "cp-cli src/index.html dist/index.html && cp-cli src/styles.css dist/styles.css",
-    "lint": "aegir lint && aegir ts -p check",
+    "lint": "aegir lint",
     "release": "aegir release",
     "build": "aegir build && npm run copy-assets",
     "test-TBD": "aegir test",

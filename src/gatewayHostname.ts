@@ -1,6 +1,6 @@
 import { HASH_TO_TEST } from './constants'
 
-function gatewayHostname (url: URL) {
+function gatewayHostname (url: URL): string {
   let urlString: string = url.toString()
 
   if (url?.hostname != null) {

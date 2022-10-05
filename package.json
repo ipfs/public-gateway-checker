@@ -109,7 +109,7 @@
   "scripts": {
     "start": "npm run build && npx -y serve -l 3000 dist",
     "copy-assets": "cp-cli src/index.html dist/index.html && cp-cli src/styles.css dist/styles.css",
-    "lint": "aegir lint && aegir ts -p check",
+    "lint": "aegir lint",
     "release": "aegir release",
     "build": "aegir build && npm run copy-assets",
     "test-TBD": "aegir test",
@@ -121,17 +121,17 @@
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {
-    "aegir": "^36.2.3",
+    "aegir": "^37.5.5",
     "browserslist": "^4.21.4",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",
-    "eslint-config-ipfs": "^2.1.0",
+    "eslint-config-ipfs": "^3.1.1",
     "eslint-plugin-compat": "^4.0.2",
     "fetch-ponyfill": "^7.1.0",
     "ipfs": "^0.64.2",
     "ipfs-geoip": "^8.0.0",
-    "ipfs-http-client": "^58.0.1",
-    "typescript": "^4.8.3"
+    "ipfs-http-client": "^44.1.1",
+    "typescript": "^4.8.4"
   },
   "aegir": {
     "tsRepo": true,

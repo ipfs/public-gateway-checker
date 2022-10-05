@@ -22,11 +22,11 @@ class Checker {
     this.updateStats = this.updateStats.bind(this)
   }
 
-  private updateStats () {
+  private updateStats (): void {
     this.stats.update()
   }
 
-  async checkGateways (gateways: string[]) {
+  async checkGateways (gateways: string[]): Promise<void> {
     const allChecks: Array<Promise<void>> = []
     for (const gateway of gateways) {
       const node = new GatewayNode(this.results, gateway, this.nodes.length)

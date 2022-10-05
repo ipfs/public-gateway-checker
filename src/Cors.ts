@@ -17,7 +17,7 @@ class Cors extends CheckBase implements Checkable {
     super(parent, 'div', 'Cors')
   }
 
-  async check () {
+  async check (): Promise<void> {
     const now = Date.now()
     const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST)
     const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`
@@ -44,11 +44,11 @@ class Cors extends CheckBase implements Checkable {
     }
   }
 
-  checked () {
+  checked (): void {
     log.warn('Not implemented yet')
   }
 
-  onerror () {
+  onerror (): void {
     this.tag.empty()
   }
 }

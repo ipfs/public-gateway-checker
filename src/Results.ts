@@ -2,7 +2,7 @@ import type { Checker } from './Checker'
 import type { Tag } from './Tag'
 
 class Results {
-  append (tag: Tag) {
+  append (tag: Tag): void {
     this.element.append(tag.element)
   }
 

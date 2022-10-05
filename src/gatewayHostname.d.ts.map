@@ -1,1 +1,1 @@
-{"version":3,"file":"gatewayHostname.d.ts","sourceRoot":"","sources":["../../src/gatewayHostname.ts"],"names":[],"mappings":"AAEA,iBAAS,eAAe,CAAE,GAAG,EAAE,GAAG,UASjC;AAED,OAAO,EAAE,eAAe,EAAE,CAAA"}
+{"version":3,"file":"gatewayHostname.d.ts","sourceRoot":"","sources":["../../src/gatewayHostname.ts"],"names":[],"mappings":"AAEA,iBAAS,eAAe,CAAE,GAAG,EAAE,GAAG,GAAG,MAAM,CAS1C;AAED,OAAO,EAAE,eAAe,EAAE,CAAA"}

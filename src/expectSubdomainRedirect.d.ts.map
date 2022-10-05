@@ -1,1 +1,1 @@
-{"version":3,"file":"expectSubdomainRedirect.d.ts","sourceRoot":"","sources":["../../src/expectSubdomainRedirect.ts"],"names":[],"mappings":"AAOA,iBAAe,uBAAuB,CAAE,GAAG,EAAE,MAAM,GAAG,GAAG,iBAmBxD;AAED,OAAO,EAAE,uBAAuB,EAAE,CAAA"}
+{"version":3,"file":"expectSubdomainRedirect.d.ts","sourceRoot":"","sources":["../../src/expectSubdomainRedirect.ts"],"names":[],"mappings":"AAOA,iBAAe,uBAAuB,CAAE,GAAG,EAAE,MAAM,GAAG,GAAG,GAAG,OAAO,CAAC,IAAI,CAAC,CAmBxE;AAED,OAAO,EAAE,uBAAuB,EAAE,CAAA"}

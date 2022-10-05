@@ -1,8 +1,8 @@
-const ipfsHttpClient = window.IpfsHttpClient({
+import * as ipfsHttpClient from 'ipfs-http-client';
+window.client = ipfsHttpClient.create({
     host: 'ipfs.io',
     port: 443,
     protocol: 'https'
 });
-window.client = ipfsHttpClient;
 export { ipfsHttpClient };
 //# sourceMappingURL=ipfsHttpClient.js.map

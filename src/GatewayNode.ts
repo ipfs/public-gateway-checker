@@ -63,7 +63,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
     this.checkingTime = 0
   }
 
-  public async check () {
+  public async check (): Promise<void> {
     this.checkingTime = Date.now()
     // const onFailedCheck = () => { this.status.down = true }
     // const onSuccessfulCheck = () => { this.status.up = true }
@@ -100,7 +100,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
     })
   }
 
-  private onSuccessfulCheck () {
+  private onSuccessfulCheck (): void {
     if (!this.atLeastOneSuccess) {
       log.info(`For gateway '${this.gateway}', at least one check was successful`)
       this.atLeastOneSuccess = true
@@ -135,7 +135,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
   //   }
   // }
 
-  onerror () {
+  onerror (): void {
     this.tag.err()
   }
 }

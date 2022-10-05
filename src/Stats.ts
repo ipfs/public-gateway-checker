@@ -24,7 +24,7 @@ class Stats extends UiComponent {
     this.tag.append(this.totals)
   }
 
-  public update () {
+  public update (): void {
     let up = 0
     let down = 0
     for (const savedNode of this.parent.nodes) {

@@ -18,6 +18,13 @@ Countly.q.push(['track_sessions'])
 // track web page views automatically (recommended)
 Countly.q.push(['track_pageview'])
 
+const metricsConsent = localStorage.getItem('metrics_consent')
+function addConsent (): void {
+  Countly.add_consent('all')
+  const banner = document.querySelector('#metrics-notification')
+  banner?.classList.add('hidden')
+  localStorage.setItem('metrics_consent', 'true')
+}
 /**
  * Display the consent banner and handle the user's choice
  */
@@ -25,11 +32,7 @@ function displayConsentBanner (): void {
   const banner = document.querySelector('#metrics-notification')
   banner?.classList.remove('hidden')
   const acceptButton = document.querySelector('#metrics-notification-accept')
-  acceptButton?.addEventListener('click', () => {
-    Countly.add_consent('all')
-    localStorage.setItem('metrics_consent', 'true')
-    banner?.classList.add('hidden')
-  })
+  acceptButton?.addEventListener('click', addConsent)
 }
 
 function loadCountly (): void {
@@ -37,9 +40,8 @@ function loadCountly (): void {
   Countly.group_features({
     all: ['sessions', 'events', 'views'] // , 'scrolls', 'clicks', 'forms', 'crashes', 'attribution', 'users']
   })
-  const consent = localStorage.getItem('metrics_consent')
-  if (consent === 'true') {
-    Countly.add_consent('all')
+  if (metricsConsent === 'true') {
+    addConsent()
   } else {
     displayConsentBanner()
   }

@@ -122,3 +122,37 @@ div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
 div#checker\.results .Node:nth-child(1) .Link {
   padding-left: 1em;
 }
+
+/**
+ * Consent notification for metrics collection
+ * Should be a color that is not too bright, but still visible
+ */
+div#metrics-notification {
+  background-color: #fff7d2;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px dashed #e7c000;
+}
+
+div#metrics-notification.hidden {
+  display: none;
+}
+
+div#metrics-notification span {
+  /* color: white; */
+  padding: 1em;
+}
+
+div#metrics-notification button#metrics-notification-accept {
+  background-color: #0cb892;
+  border: none;
+  color: white;
+  padding: 1em;
+  /* margin: 0 1em; */
+  /* width: auto; */
+  flex-basis: fit-content;
+  flex-shrink: 1;
+  cursor: pointer;
+}

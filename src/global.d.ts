@@ -5,6 +5,30 @@
 // import type { Checker } from './Checker'
 
 declare module '@dutu/rate-limiter'
+declare module 'countly-sdk-web' {
+  /**
+   * From https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#minimal-setup
+   */
+  interface CountlyEventData {
+    key: string
+    count: number
+    sum: number
+    segmentation: Record<string, string | number>
+  }
+  type CountlyEventQueueItem = [string, CountlyEventData] | [eventName: string, key: string] | [eventName: string]
+  interface CountlyWebSdk {
+    group_features: (arg0: { all: string[] }) => unknown
+    add_consent: (arg0: string) => unknown
+    require_consent: boolean
+    init: () => void
+    add_event: (event: { key: string, count: number, sum: number, dur: number }) => void
+    app_key: string
+    url: string
+    q?: CountlyEventQueueItem[]
+  }
+  declare const Countly: CountlyWebSdk
+  export default Countly
+}
 
 // declare global {
 /**

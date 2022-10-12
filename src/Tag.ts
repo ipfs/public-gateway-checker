@@ -1,6 +1,6 @@
 import { TagStatus } from './TagStatus'
 
-type TagClasses = 'Status' | 'Node' | 'Cors' | 'Origin' | 'Flag'
+type TagClasses = 'Status' | 'Node' | 'Cors' | 'Origin' | 'Flag' | 'Trustless'
 
 type TagContent = TagStatus
 

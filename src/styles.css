@@ -70,8 +70,9 @@ div.Node a, div#origin-warning a {
 div.Node div.Status,
 div.Node div.Cors,
 div.Node div.Origin,
+div.Node div.Trustless,
 div.Node div.Flag {
-	width: 5em;
+	width: 6em;
 	text-align: center;
 	margin: 0 0.5em;
 	user-select: none;
@@ -91,6 +92,10 @@ div.Node div.Took {
 	text-align: right;
 	font-size: 80%;
 	font-style: italic;
+}
+
+div.Node.trustless div.Trustless {
+	margin: 0 1.3em;
 }
 
 div.Node.origin div.Link::after {

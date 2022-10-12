@@ -2,6 +2,7 @@ import { URL } from 'url-ponyfill';
 import { Cors } from './Cors';
 import { Flag } from './Flag';
 import { Origin } from './Origin';
+import { Trustless } from './Trustless';
 import { Status } from './Status';
 import { UiComponent } from './UiComponent';
 import { Log } from './Log';
@@ -21,6 +22,8 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
         this.tag.append(this.cors.tag);
         this.origin = new Origin(this);
         this.tag.append(this.origin.tag);
+        this.trustless = new Trustless(this);
+        this.tag.append(this.trustless.tag);
         this.link = document.createElement('div');
         const gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
         this.link.url = new URL(gatewayAndHash);
@@ -46,7 +49,8 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
             // this.flag.check().then(() => log.debug(this.gateway, 'Flag success')),
             this.status.check().then(() => log.debug(this.gateway, 'Status success')).then(this.onSuccessfulCheck.bind(this)),
             this.cors.check().then(() => log.debug(this.gateway, 'CORS success')).then(this.onSuccessfulCheck.bind(this)),
-            this.origin.check().then(() => log.debug(this.gateway, 'Origin success')).then(this.onSuccessfulCheck.bind(this))
+            this.origin.check().then(() => log.debug(this.gateway, 'Origin success')).then(this.onSuccessfulCheck.bind(this)),
+            this.trustless.check().then(() => log.debug(this.gateway, 'Trustless success')).then(this.onSuccessfulCheck.bind(this))
         ];
         // we care only about the fastest method to return a success
         // Promise.race(onlineChecks).catch((err) => {

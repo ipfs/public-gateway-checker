@@ -11,6 +11,7 @@ import { UiComponent } from './UiComponent'
 import { Log } from './Log'
 import { gatewayHostname } from './gatewayHostname'
 import { HASH_TO_TEST } from './constants'
+import { IPNSCheck } from './Ipns'
 
 const log = new Log('GatewayNode')
 
@@ -18,6 +19,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
   // tag: Tag
   status: Status
   cors: Cors
+  ipns: IPNSCheck
   origin: Origin
   trustless: Trustless
   link: HTMLDivElement & { url?: URL }
@@ -41,6 +43,9 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
 
     this.cors = new Cors(this)
     this.tag.append(this.cors.tag)
+
+    this.ipns = new IPNSCheck(this)
+    this.tag.append(this.ipns.tag)
 
     this.origin = new Origin(this)
     this.tag.append(this.origin.tag)
@@ -77,6 +82,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
       // this.flag.check().then(() => log.debug(this.gateway, 'Flag success')),
       this.status.check().then(() => log.debug(this.gateway, 'Status success')).then(this.onSuccessfulCheck.bind(this)),
       this.cors.check().then(() => log.debug(this.gateway, 'CORS success')).then(this.onSuccessfulCheck.bind(this)),
+      this.ipns.check().then(() => log.debug(this.gateway, 'IPNS success')).then(this.onSuccessfulCheck.bind(this)),
       this.origin.check().then(() => log.debug(this.gateway, 'Origin success')).then(this.onSuccessfulCheck.bind(this)),
       this.trustless.check().then(
         () => log.debug(this.gateway, 'Trustless success')).then(this.onSuccessfulCheck.bind(this))

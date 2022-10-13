@@ -21,13 +21,15 @@ class Trustless extends CheckBase {
                 const response = await fetch(testUrl);
                 return Boolean(response.headers.get('Content-Type')?.includes(`application/vnd.ipld.${trustlessTypes}`));
             }));
-            if (!trustlessResponseTypesTests.includes(false)) {
+            const failedTests = TRUSTLESS_RESPONSE_TYPES.filter((_result, idx) => !trustlessResponseTypesTests[idx]);
+            if (failedTests.length === 0) {
                 this.tag.win();
             }
             else {
-                log.debug('The response type did not match the expected type');
-                this.onerror();
-                throw new Error(`URL '${gatewayAndHash} does not support Trustless`);
+                const errorMsg = `URL '${gatewayAndHash} does not support the following Trustless response types: [` +
+                    `${failedTests.join(', ')}]`;
+                log.debug(errorMsg);
+                throw new Error(errorMsg);
             }
         }
         catch (err) {

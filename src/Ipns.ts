@@ -19,6 +19,7 @@ class IPNSCheck extends CheckBase implements Checkable {
 
   async check (): Promise<void> {
     const now = Date.now()
+    // Since gateway URLs are hard coded with /ipfs/, we need to parse URLs and override the path to /ipns/.
     const gatewayUrl = new URL(this.parent.gateway)
     gatewayUrl.pathname = IPNS_PATH_TO_TEST
     const testUrl = `${gatewayUrl.href}?now=${now}`

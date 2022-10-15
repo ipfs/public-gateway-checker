@@ -4,8 +4,14 @@ const IMG_HASH = 'bafybeibwzifw52ttrkqlikfzext5akxu7lz4xiwjgwzmqcpdzmp3n5vnbe' /
 // const IFRAME_HASH = 'bafkreifx3g6bkkwl7b4v43lvcqfo5vshbiehuvmpky2zayhfpg5qj7y3ca'
 const HASH_STRING = 'Hello from IPFS Gateway Checker'
 const TRUSTLESS_RESPONSE_TYPES = ['raw', 'car']
+const DEFAULT_IPFS_CLIENT_OPTIONS = {
+  host: 'ipfs.io',
+  port: 443,
+  protocol: 'https'
+}
 
 export {
+  DEFAULT_IPFS_CLIENT_OPTIONS,
   HASH_STRING,
   HASH_TO_TEST,
   // IFRAME_HASH,

@@ -1,9 +1,7 @@
 import * as ipfsHttpClient from 'ipfs-http-client'
+import { DEFAULT_IPFS_CLIENT_OPTIONS } from './constants'
 
-window.client = ipfsHttpClient.create({
-  host: 'ipfs.io',
-  port: 443,
-  protocol: 'https'
-})
+// Creating a client for the IPFS HTTP API
+window.client = ipfsHttpClient.create(DEFAULT_IPFS_CLIENT_OPTIONS)
 
 export { ipfsHttpClient }

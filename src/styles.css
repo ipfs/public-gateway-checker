@@ -71,8 +71,9 @@ div.Node div.Status,
 div.Node div.Cors,
 div.Node div.Origin,
 div.Node div.Trustless,
+div.Node div.Writable,
 div.Node div.Flag {
-	width: 6em;
+	width: 7.9em;
 	text-align: center;
 	margin: 0 0.5em;
 	user-select: none;

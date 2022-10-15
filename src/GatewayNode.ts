@@ -11,6 +11,7 @@ import { UiComponent } from './UiComponent'
 import { Log } from './Log'
 import { gatewayHostname } from './gatewayHostname'
 import { HASH_TO_TEST } from './constants'
+import { Writable } from './Writable'
 
 const log = new Log('GatewayNode')
 
@@ -20,6 +21,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
   cors: Cors
   origin: Origin
   trustless: Trustless
+  writable: Writable
   link: HTMLDivElement & { url?: URL }
   flag: Flag
   took: HTMLDivElement
@@ -47,6 +49,9 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
 
     this.trustless = new Trustless(this)
     this.tag.append(this.trustless.tag)
+
+    this.writable = new Writable(this)
+    this.tag.append(this.writable.tag)
 
     this.link = document.createElement('div')
     const gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST)
@@ -79,7 +84,9 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
       this.cors.check().then(() => log.debug(this.gateway, 'CORS success')).then(this.onSuccessfulCheck.bind(this)),
       this.origin.check().then(() => log.debug(this.gateway, 'Origin success')).then(this.onSuccessfulCheck.bind(this)),
       this.trustless.check().then(
-        () => log.debug(this.gateway, 'Trustless success')).then(this.onSuccessfulCheck.bind(this))
+        () => log.debug(this.gateway, 'Trustless success')).then(this.onSuccessfulCheck.bind(this)),
+      this.writable.check().then(
+        () => log.debug(this.gateway, 'Writable success')).then(this.onSuccessfulCheck.bind(this))
     ]
 
     // we care only about the fastest method to return a success

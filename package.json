@@ -122,11 +122,11 @@
     "ipfs-http-client": "^58.0.1"
   },
   "devDependencies": {
-    "aegir": "^37.5.5",
+    "aegir": "^37.5.6",
     "browserslist": "^4.21.4",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",
-    "eslint-config-ipfs": "^3.1.1",
+    "eslint-config-ipfs": "^3.1.2",
     "eslint-plugin-compat": "^4.0.2",
     "fetch-ponyfill": "^7.1.0",
     "ipfs": "^0.64.2",

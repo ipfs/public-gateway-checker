@@ -1,7 +1,9 @@
 import type { GatewayNode } from './GatewayNode'
 import { Log } from './Log'
+import { lookup } from 'ipfs-geoip'
 import { UiComponent } from './UiComponent'
 import { TokenBucketLimiter } from '@dutu/rate-limiter'
+import { create } from 'ipfs-http-client'
 
 const log = new Log('Flag')
 
@@ -10,9 +12,15 @@ class Flag extends UiComponent {
    */
   public static readonly googleLimiter = new TokenBucketLimiter({ bucketSize: 1, tokensPerInterval: 1, interval: 1000 * 2, stopped: true })
   public static readonly cloudFlareLimiter = new TokenBucketLimiter({ bucketSize: 1, tokensPerInterval: 1, interval: 1000 * 2, stopped: true })
+  private readonly ipfsClient
 
   constructor (protected parent: GatewayNode, private readonly hostname: string) {
     super(parent, 'div', 'Flag')
+    this.ipfsClient = create({
+      host: 'ipfs.io',
+      port: 443,
+      protocol: 'https'
+    })
   }
 
   async check (): Promise<void> {
@@ -106,7 +114,7 @@ class Flag extends UiComponent {
     }
     if (ip != null) {
       try {
-        const geoipResponse = await window.IpfsGeoip.lookup(window.client, ip)
+        const geoipResponse = await lookup(this.ipfsClient, ip)
 
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)

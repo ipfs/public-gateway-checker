@@ -1,7 +1,6 @@
 import type { GatewayNode } from './GatewayNode'
 import { Log } from './Log'
 import { UiComponent } from './UiComponent'
-import { ipfsHttpClient } from './ipfsHttpClient'
 import { TokenBucketLimiter } from '@dutu/rate-limiter'
 
 const log = new Log('Flag')
@@ -88,7 +87,7 @@ class Flag extends UiComponent {
 
       await this.handleDnsQueryResponse(responseJson)
     } catch (err) {
-      log.error('problem submitting DNS request', err)
+      log.error('problem submitting DNS request', url, err)
       this.onError()
     }
   }
@@ -107,7 +106,7 @@ class Flag extends UiComponent {
     }
     if (ip != null) {
       try {
-        const geoipResponse = await window.IpfsGeoip.lookup(ipfsHttpClient, ip)
+        const geoipResponse = await window.IpfsGeoip.lookup(window.client, ip)
 
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)

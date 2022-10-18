@@ -5,6 +5,12 @@ import { Log } from './Log'
 
 const log = new Log('App index')
 
+window.client = window.IpfsHttpClient.create({
+  host: 'ipfs.io',
+  port: 443,
+  protocol: 'https'
+})
+
 window.checker = new Checker()
 
 window.checker.checkGateways(gateways).catch((err) => {

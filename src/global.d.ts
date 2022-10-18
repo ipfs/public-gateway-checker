@@ -5,6 +5,7 @@
 // import type { Checker } from './Checker'
 
 declare module '@dutu/rate-limiter'
+declare module 'ipfs-geoip'
 
 // declare global {
 /**

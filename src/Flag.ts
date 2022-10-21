@@ -3,7 +3,7 @@ import { Log } from './Log'
 import { lookup as IpfsGeoIpLookup } from 'ipfs-geoip'
 import { UiComponent } from './UiComponent'
 import { TokenBucketLimiter } from '@dutu/rate-limiter'
-import { ipfsHttpClientSingleton } from './ipfsHttpClientSingleton'
+import { DEFAULT_IPFS_GATEWAY } from './constants'
 
 const log = new Log('Flag')
 
@@ -108,7 +108,7 @@ class Flag extends UiComponent {
     }
     if (ip != null) {
       try {
-        const geoipResponse = await IpfsGeoIpLookup(ipfsHttpClientSingleton, ip)
+        const geoipResponse = await IpfsGeoIpLookup(DEFAULT_IPFS_GATEWAY, ip)
 
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)

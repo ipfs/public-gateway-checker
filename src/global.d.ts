@@ -31,11 +31,8 @@ interface Visible {
 }
 
 interface Window {
-  IpfsHttpClient: typeof import('ipfs-http-client')
-  IpfsGeoip: typeof import('ipfs-geoip')
   OnScriptloaded: typeof import('./onScriptLoaded').onScriptLoaded
   checker: import('./Checker').Checker
-  client: ReturnValue<typeof import('ipfs-http-client').create>
 }
 
 declare namespace IpfsGeoip {

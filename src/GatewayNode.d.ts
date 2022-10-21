@@ -5,10 +5,12 @@ import { Trustless } from './Trustless';
 import type { Results } from './Results';
 import { Status } from './Status';
 import { UiComponent } from './UiComponent';
+import { IPNSCheck } from './Ipns';
 declare class GatewayNode extends UiComponent {
     readonly parent: Results;
     status: Status;
     cors: Cors;
+    ipns: IPNSCheck;
     origin: Origin;
     trustless: Trustless;
     link: HTMLDivElement & {

@@ -1,7 +1,8 @@
 import { Log } from './Log';
+import { lookup as IpfsGeoIpLookup } from 'ipfs-geoip';
 import { UiComponent } from './UiComponent';
-import { ipfsHttpClient } from './ipfsHttpClient';
 import { TokenBucketLimiter } from '@dutu/rate-limiter';
+import { DEFAULT_IPFS_GATEWAY } from './constants';
 const log = new Log('Flag');
 class Flag extends UiComponent {
     constructor(parent, hostname) {
@@ -78,7 +79,7 @@ class Flag extends UiComponent {
             await this.handleDnsQueryResponse(responseJson);
         }
         catch (err) {
-            log.error('problem submitting DNS request', err);
+            log.error('problem submitting DNS request', url, err);
             this.onError();
         }
     }
@@ -96,7 +97,7 @@ class Flag extends UiComponent {
         }
         if (ip != null) {
             try {
-                const geoipResponse = await window.IpfsGeoip.lookup(ipfsHttpClient, ip);
+                const geoipResponse = await IpfsGeoIpLookup(DEFAULT_IPFS_GATEWAY, ip);
                 if (geoipResponse?.country_code != null) {
                     this.onResponse(geoipResponse);
                     geoipResponse.time = Date.now();

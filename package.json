@@ -130,9 +130,18 @@
     "eslint-plugin-compat": "^4.0.2",
     "fetch-ponyfill": "^7.1.0",
     "ipfs": "^0.64.2",
-    "ipfs-geoip": "https://gitpkg.vercel.app/ipfs-shipyard/ipfs-geoip?refactor/dag-cbor",
-    "os-browserify": "^0.3.0",
+    "ipfs-geoip": "^9.0.0",
     "typescript": "^4.8.4"
+  },
+  "aegir": {
+    "tsRepo": true,
+    "release": {
+      "build": false
+    },
+    "docs": {
+      "publish": true,
+      "entryPoint": "src/index.ts"
+    }
   },
   "browserslist": [
     "defaults",

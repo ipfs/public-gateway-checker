@@ -1,6 +1,6 @@
 import type { GatewayNode } from './GatewayNode'
 import { Log } from './Log'
-import { lookup } from 'ipfs-geoip'
+import { lookup as IpfsGeoIpLookup } from 'ipfs-geoip'
 import { UiComponent } from './UiComponent'
 import { TokenBucketLimiter } from '@dutu/rate-limiter'
 import { ipfsHttpClientSingleton } from './ipfsHttpClientSingleton'
@@ -108,7 +108,7 @@ class Flag extends UiComponent {
     }
     if (ip != null) {
       try {
-        const geoipResponse = await lookup(ipfsHttpClientSingleton, ip)
+        const geoipResponse = await IpfsGeoIpLookup(ipfsHttpClientSingleton, ip)
 
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)

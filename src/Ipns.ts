@@ -22,7 +22,7 @@ class IPNSCheck extends CheckBase implements Checkable {
     // Since gateway URLs are hard coded with /ipfs/, we need to parse URLs and override the path to /ipns/.
     const gatewayUrl = new URL(this.parent.gateway)
     gatewayUrl.pathname = IPNS_PATH_TO_TEST
-    const testUrl = `${gatewayUrl.href}?now=${now}`
+    const testUrl = `${gatewayUrl.href}?now=${now}#x-ipfs-companion-no-redirect`
     try {
       const response = await fetch(testUrl)
       if (response.status === 200) {

@@ -1,5 +1,7 @@
 # IPFS Public Gateway Checker
 
+An example test to try out https://github.com/ipfs/public-gateway-checker/pull/328.
+
 **A site displaying public IPFS gateways and their online/offline status.**
 
 View the Public Gateway Checker on GitHub Pages: https://ipfs.github.io/public-gateway-checker/

@@ -1,0 +1,19 @@
+name: test
+on:
+  push:
+    paths:
+      - "README.md"
+      - "src/gateways.json"
+    branches:
+      - master # with #262 - ${{{ github.default_branch }}}
+  pull_request:
+    paths:
+      - "README.md"
+      - "src/gateways.json"
+    branches:
+      - master # with #262 - ${{{ github.default_branch }}}
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo "No check necessary"'

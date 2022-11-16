@@ -99,9 +99,6 @@ div.Node.trustless div.Trustless {
 	margin: 0 1.3em;
 }
 
-div.Node.origin div.Link::after {
-  content: " 💚"
-}
 div.Node:not(.online):not(:first-child) {
   opacity: .5
 }

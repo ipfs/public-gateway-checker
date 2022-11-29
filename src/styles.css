@@ -131,12 +131,14 @@ div#checker\.results .Node:nth-child(1) .Link {
  * Should be a color that is not too bright, but still visible
  */
 div#metrics-notification {
-  background-color: #fff7d2;
+  background-color: #ECF5F7;
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 4px dashed #e7c000;
+  border-left: 4px solid #5EC9CE;
+  margin: 1rem 0;
+  padding: 1rem 0;
 }
 
 div#metrics-notification.hidden {
@@ -149,7 +151,7 @@ div#metrics-notification span {
 }
 
 div#metrics-notification button#metrics-notification-accept {
-  background-color: #0cb892;
+  background-color: #57C7CC;
   border: none;
   color: white;
   padding: 1em;

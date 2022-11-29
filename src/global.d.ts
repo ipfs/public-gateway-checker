@@ -5,6 +5,7 @@
 // import type { Checker } from './Checker'
 
 declare module '@dutu/rate-limiter'
+declare module 'ipfs-geoip'
 declare module 'countly-sdk-web' {
   /**
    * From https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#minimal-setup

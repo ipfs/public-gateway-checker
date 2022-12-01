@@ -25,6 +25,7 @@ function addConsent (): void {
   banner?.classList.add('hidden')
   localStorage.setItem('metrics_consent', 'true')
 }
+
 /**
  * Display the consent banner and handle the user's choice
  */

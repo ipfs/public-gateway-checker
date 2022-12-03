@@ -6,7 +6,7 @@
       "*": [
         "./types/*"
       ]
-    }
+    },
   },
   "include": [
     "types",

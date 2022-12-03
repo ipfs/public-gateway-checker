@@ -13,7 +13,27 @@
 	<link href="styles.css?v=0.4" type="text/css" rel="stylesheet"/>
 </head>
 <body id="checker" class="sans-serif charcoal bg-snow-muted">
-
+  <div class="hidden js-metrics-notification-decline-warning metrics-notification-wrapper">
+    <button id="metrics-notification-warning-close" class="js-metrics-notification-warning-close">✕</button>
+    <span id="metrics-notification-decline-warning" class="metrics-notification-text">
+      We will limit collection of metrics to only "necessary" features:
+      <ul>
+        <li><bold>sessions</bold> - tracks when, how often, and how long users use your website</li>
+        <li><bold>views</bold> - allows for the views/pages accessed by a user to be tracked</li>
+      </ul>
+      See <a href="https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent">Countly's group_features</a> for more information.
+    </span>
+  </div>
+  <div class="hidden js-metrics-notification metrics-notification-wrapper">
+    <div id="metrics-notification-container">
+      <span class="metrics-notification-text">We're collecting <a href="https://github.com/ipfs/ipfs-gui/issues/125">web-vitals, pageview, and other metrics</a> in order to improve and prioritize our work on IPFS and its public gateways.
+        Please consent to the collection of these metrics to assist in our efforts!</span>
+      <div id="metrics-notification-buttons">
+        <button id="metrics-notification-accept" class="js-metrics-notification-accept">☑&nbsp;Agree</button>
+        <button id="metrics-notification-decline" class="js-metrics-notification-decline">Decline</button>
+      </div>
+    </div>
+  </div>
 	<header class='flex-l items-center pa3 bg-navy bb bw3 border-aqua tc tl-l'>
 		<a href="https://ipfs.io" target="_blank" title="ipfs.io" class='flex-none v-mid'>
 			<img src="https://ipfs.io/ipfs/QmTqZhR6f7jzdhLgPArDPnsbZpvvgxzCZycXK7ywkLxSyU?filename=ipfs-logo.3ea91a2f.svg" alt="IPFS" height="50px" width="117.5px" />
@@ -45,11 +65,6 @@
           Protocol Labs operates and is responsible for only two of the listed gateways: <code>ipfs.io</code> and <code>dweb.link</code>.
         </li>
       </ul>
-    </div>
-    <div id="metrics-notification" class="hidden">
-      <span>We're collecting <a href="https://github.com/ipfs/ipfs-gui/issues/125">web-vitals, pageview, and other metrics</a> in order to improve and prioritize our work on IPFS and its public gateways.
-        Please consent to the collection of these metrics to assist in our efforts!</span>
-      <button id="metrics-notification-accept">Contribute to the improvement of IPFS</button>
     </div>
 		<div id="checker.stats" class="Stats monospace f6"></div>
 		<div id="checker.results" class="Results monospace f6">

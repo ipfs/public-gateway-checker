@@ -130,34 +130,79 @@ div#checker\.results .Node:nth-child(1) .Link {
  * Consent notification for metrics collection
  * Should be a color that is not too bright, but still visible
  */
-div#metrics-notification {
-  background-color: #ECF5F7;
+div.metrics-notification-wrapper {
+  background-color: rgba(246, 248, 251, 1);
   justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-left: 4px solid #5EC9CE;
-  margin: 1rem 0;
-  padding: 1rem 0;
+  padding: 15px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
 }
 
-div#metrics-notification.hidden {
+div#metrics-notification-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 5rem;
+}
+
+.hidden {
   display: none;
 }
 
-div#metrics-notification span {
-  /* color: white; */
-  padding: 1em;
+div.metrics-notification-wrapper .metrics-notification-text {
+  color: rgba(7, 58, 83, 1);
+  order: 1;
+  align-self: flex-start;
+}
+div.metrics-notification-wrapper #metrics-notification-buttons {
+  order: 3;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  gap: 1rem;
+}
+div.metrics-notification-wrapper a {
+  color: rgba(107, 196, 206, 1);
 }
 
-div#metrics-notification button#metrics-notification-accept {
-  background-color: #57C7CC;
+div.metrics-notification-wrapper button {
   border: none;
-  color: white;
-  padding: 1em;
-  /* margin: 0 1em; */
-  /* width: auto; */
-  flex-basis: fit-content;
-  flex-shrink: 1;
+  color: rgba(107, 196, 206, 1);
   cursor: pointer;
+  background-color: transparent;
+  align-content: center;
+  vertical-align: center;
+  text-align: center;
+}
+
+.metrics-notification-wrapper button#metrics-notification-accept {
+  border: 1pt solid rgba(107, 196, 206, 1);
+  /* grid-column-start: 3; */
+}
+
+#metrics-notification-decline-warning ul {
+  list-style-type: none;
+}
+
+button#metrics-notification-warning-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+}
+
+@media (max-width: 1002px) {
+
+	.metrics-notification-wrapper .metrics-notification-text {
+	  color: rgba(7, 58, 83, 1);
+	  order: 1;
+	  align-self: flex-start;
+	  padding: 0 2rem;
+	}
+
+  #metrics-notification-container {
+    display: flex;
+    flex-direction: column;
+  }
 }

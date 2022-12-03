@@ -1,54 +1,97 @@
 import Countly from 'countly-sdk-web'
 
-Countly.q = Countly.q ?? []
-
-/**
- * metrics consent and GDPR stuffs
- *
- * @see https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent
- */
-Countly.require_consent = true
-Countly.app_key = '3c2c0819434074fc4d339ddd8e112a1e741ecb72'
-Countly.url = 'https://countly.ipfs.io'
-
-// Start pushing function calls to queue
-// Track sessions automatically (recommended)
-Countly.q.push(['track_sessions'])
-
-// track web page views automatically (recommended)
-Countly.q.push(['track_pageview'])
-
 const metricsConsent = localStorage.getItem('metrics_consent')
-function addConsent (): void {
-  Countly.add_consent('all')
-  const banner = document.querySelector('#metrics-notification')
+
+const banner = document.querySelector('.js-metrics-notification')
+const declineWarning = document.querySelector('.js-metrics-notification-decline-warning')
+const acceptButton = document.querySelector('.js-metrics-notification-accept')
+const declineButton = document.querySelector('.js-metrics-notification-decline')
+const declineWarningClose = document.querySelector('.js-metrics-notification-warning-close')
+
+function addConsent (consent: string[]): void {
   banner?.classList.add('hidden')
-  localStorage.setItem('metrics_consent', 'true')
+  Countly.add_consent(consent)
+
+  if (Array.isArray(consent)) {
+    localStorage.setItem('metrics_consent', JSON.stringify(consent))
+  } else {
+    localStorage.setItem('metrics_consent', JSON.stringify([consent]))
+  }
+}
+
+function addConsentEventHandler (): void {
+  acceptButton?.removeEventListener('click', addConsentEventHandler)
+
+  addConsent(['all'])
+}
+
+function declineConsentEventHandler (): void {
+  acceptButton?.removeEventListener('click', addConsentEventHandler)
+  banner?.classList.add('hidden')
+  declineWarning?.classList.remove('hidden')
+
+  addConsent(['necessary'])
+}
+
+function declineWarningCloseEventHandler (): void {
+  declineWarningClose?.removeEventListener('click', declineWarningCloseEventHandler)
+  declineWarning?.classList.add('hidden')
 }
 
 /**
  * Display the consent banner and handle the user's choice
  */
 function displayConsentBanner (): void {
-  const banner = document.querySelector('#metrics-notification')
   banner?.classList.remove('hidden')
-  const acceptButton = document.querySelector('#metrics-notification-accept')
-  acceptButton?.addEventListener('click', addConsent)
 }
-
 function loadCountly (): void {
-  Countly.init()
-  Countly.group_features({
-    all: ['sessions', 'events', 'views'] // , 'scrolls', 'clicks', 'forms', 'crashes', 'attribution', 'users']
+  acceptButton?.addEventListener('click', addConsentEventHandler)
+  declineButton?.addEventListener('click', declineConsentEventHandler)
+  declineWarningClose?.addEventListener('click', declineWarningCloseEventHandler)
+  Countly.init({
+    app_key: '3c2c0819434074fc4d339ddd8e112a1e741ecb72',
+    url: 'https://countly.ipfs.io',
+    require_consent: true // this true means consent is required
   })
-  if (metricsConsent === 'true') {
-    addConsent()
+  /**
+   * @see https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent
+   */
+  const necessaryFeatures = ['sessions', 'views']
+  const marketingFeatures = ['attribution', 'users', 'location']
+  const performanceFeatures = ['events', 'crashes', 'apm']
+  const trackingFeatures = ['scrolls', 'clicks', 'forms', 'star-rating', 'feedback']
+
+  Countly.group_features({
+    all: [...necessaryFeatures, ...marketingFeatures, ...performanceFeatures, ...trackingFeatures],
+    necessary: necessaryFeatures,
+    marketing: marketingFeatures,
+    tracking: trackingFeatures,
+    performance: performanceFeatures
+  })
+
+  /**
+   * we can call all the helper methods we want, they won't record until consent is provided for specific features
+   */
+  //
+  Countly.track_clicks()
+  Countly.track_errors()
+  Countly.track_forms()
+  Countly.track_links()
+  Countly.track_pageview()
+  Countly.track_scrolls()
+  Countly.track_sessions()
+  Countly.track_view()
+
+  if (metricsConsent != null) {
+    try {
+      addConsent(JSON.parse(metricsConsent))
+    } catch {
+      displayConsentBanner()
+    }
   } else {
     displayConsentBanner()
   }
 }
-
-document.querySelector('#metrics-notification')
 
 export {
   loadCountly,

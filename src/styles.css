@@ -139,7 +139,7 @@ div.metrics-notification-wrapper {
   max-width: 1024px;
 }
 
-div#metrics-notification-container {
+div.metrics-notification-container {
   display: flex;
   align-items: center;
   gap: 0.5rem 5rem;
@@ -154,7 +154,8 @@ div.metrics-notification-wrapper .metrics-notification-text {
   order: 1;
   align-self: flex-start;
 }
-div.metrics-notification-wrapper #metrics-notification-buttons {
+
+div.metrics-notification-wrapper .metrics-notification-buttons {
   order: 3;
   align-self: center;
   align-items: center;
@@ -162,6 +163,7 @@ div.metrics-notification-wrapper #metrics-notification-buttons {
   display: flex;
   gap: 1rem;
 }
+
 div.metrics-notification-wrapper a {
   color: rgba(107, 196, 206, 1);
 }
@@ -178,18 +180,11 @@ div.metrics-notification-wrapper button {
 
 .metrics-notification-wrapper button#metrics-notification-accept {
   border: 1pt solid rgba(107, 196, 206, 1);
-  /* grid-column-start: 3; */
-}
-
-#metrics-notification-decline-warning ul {
-  list-style-type: none;
 }
 
 button#metrics-notification-warning-close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px;
+  border: 1pt solid rgba(107, 196, 206, 1);
+  /* color: rgba(7, 58, 83, 1); */
 }
 
 @media (max-width: 1002px) {
@@ -201,8 +196,40 @@ button#metrics-notification-warning-close {
 	  padding: 0 2rem;
 	}
 
-  #metrics-notification-container {
+  .metrics-notification-container {
     display: flex;
     flex-direction: column;
   }
+}
+
+/**
+ * From https://unpkg.com/@beyonk/gdpr-cookie-consent-banner@9.1.0/dist/style.css
+ */
+.cookieConsentToggle {
+  width: 40px;
+  height: 40px;
+  will-change: transform;
+  padding: 9px;
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  border-radius: 50%;
+  transition: 200ms;
+  opacity: 1;
+  z-index: 99980;
+  cursor: pointer;
+  margin: 0 1em 0 0;
+}
+
+.cookieConsentToggle:disabled {
+  cursor: default;
+}
+
+.cookieConsentToggle:hover:not(:disabled) {
+  color: white;
+  background: #69c4cd;
+}
+
+.cookieConsentToggle * {
+  fill: currentColor;
 }

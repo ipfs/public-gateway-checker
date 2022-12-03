@@ -7,9 +7,10 @@ const declineWarning = document.querySelector('.js-metrics-notification-decline-
 const acceptButton = document.querySelector('.js-metrics-notification-accept')
 const declineButton = document.querySelector('.js-metrics-notification-decline')
 const declineWarningClose = document.querySelector('.js-metrics-notification-warning-close')
+const bannerToggle = document.querySelector('.js-cookie-banner-toggle')
 
 function addConsent (consent: string[]): void {
-  banner?.classList.add('hidden')
+  hideConsentBanner()
   Countly.add_consent(consent)
 
   if (Array.isArray(consent)) {
@@ -26,28 +27,46 @@ function addConsentEventHandler (): void {
 }
 
 function declineConsentEventHandler (): void {
-  acceptButton?.removeEventListener('click', addConsentEventHandler)
-  banner?.classList.add('hidden')
-  declineWarning?.classList.remove('hidden')
-
   addConsent(['necessary'])
+  hideConsentBanner()
+  displayDeclineWarning()
+}
+
+function displayDeclineWarning (): void {
+  declineWarning?.classList.remove('hidden')
+  bannerToggle?.setAttribute('disabled', '')
 }
 
 function declineWarningCloseEventHandler (): void {
   declineWarningClose?.removeEventListener('click', declineWarningCloseEventHandler)
   declineWarning?.classList.add('hidden')
+  bannerToggle?.removeAttribute('disabled')
+}
+
+function hideConsentBanner (): void {
+  acceptButton?.removeEventListener('click', addConsentEventHandler)
+  declineButton?.removeEventListener('click', declineConsentEventHandler)
+  banner?.classList.add('hidden')
+  bannerToggle?.removeAttribute('disabled')
 }
 
 /**
  * Display the consent banner and handle the user's choice
  */
 function displayConsentBanner (): void {
-  banner?.classList.remove('hidden')
-}
-function loadCountly (): void {
   acceptButton?.addEventListener('click', addConsentEventHandler)
   declineButton?.addEventListener('click', declineConsentEventHandler)
   declineWarningClose?.addEventListener('click', declineWarningCloseEventHandler)
+  banner?.classList.remove('hidden')
+  bannerToggle?.setAttribute('disabled', '')
+  declineWarning?.classList.add('hidden')
+}
+
+function bannerToggleEventHandler (): void {
+  displayConsentBanner()
+}
+function loadCountly (): void {
+  bannerToggle?.addEventListener('click', bannerToggleEventHandler)
   Countly.init({
     app_key: '3c2c0819434074fc4d339ddd8e112a1e741ecb72',
     url: 'https://countly.ipfs.io',

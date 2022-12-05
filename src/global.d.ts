@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 /* eslint-disable etc/prefer-interface */
-// import { Tag } from './Tag'
-// import * as ipfsHttpClient from 'ipfs-http-client'
-// import type { Checker } from './Checker'
 
 declare module '@dutu/rate-limiter'
 declare module 'ipfs-geoip'

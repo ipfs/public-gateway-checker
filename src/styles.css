@@ -125,3 +125,111 @@ div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
 div#checker\.results .Node:nth-child(1) .Link {
   padding-left: 1em;
 }
+
+/**
+ * Consent notification for metrics collection
+ * Should be a color that is not too bright, but still visible
+ */
+div.metrics-notification-wrapper {
+  background-color: rgba(246, 248, 251, 1);
+  justify-content: center;
+  padding: 15px 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+}
+
+div.metrics-notification-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+div.metrics-notification-wrapper .metrics-notification-text {
+  color: rgba(7, 58, 83, 1);
+  order: 1;
+  align-self: flex-start;
+}
+
+div.metrics-notification-wrapper .metrics-notification-buttons {
+  order: 3;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  gap: 1rem;
+}
+
+div.metrics-notification-wrapper a {
+  color: rgba(107, 196, 206, 1);
+}
+
+div.metrics-notification-wrapper button {
+  border: none;
+  color: rgba(107, 196, 206, 1);
+  cursor: pointer;
+  background-color: transparent;
+  align-content: center;
+  vertical-align: center;
+  text-align: center;
+}
+
+.metrics-notification-wrapper button#metrics-notification-accept {
+  border: 1pt solid rgba(107, 196, 206, 1);
+}
+
+button#metrics-notification-warning-close {
+  border: 1pt solid rgba(107, 196, 206, 1);
+  /* color: rgba(7, 58, 83, 1); */
+}
+
+@media (max-width: 1002px) {
+
+	.metrics-notification-wrapper .metrics-notification-text {
+	  color: rgba(7, 58, 83, 1);
+	  order: 1;
+	  align-self: flex-start;
+	  padding: 0 2rem;
+	}
+
+  .metrics-notification-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/**
+ * From https://unpkg.com/@beyonk/gdpr-cookie-consent-banner@9.1.0/dist/style.css
+ */
+.cookieConsentToggle {
+  width: 40px;
+  height: 40px;
+  will-change: transform;
+  padding: 9px;
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  border-radius: 50%;
+  transition: 200ms;
+  opacity: 1;
+  z-index: 99980;
+  cursor: pointer;
+  margin: 0 1em 0 0;
+}
+
+.cookieConsentToggle:disabled {
+  cursor: default;
+}
+
+.cookieConsentToggle:hover:not(:disabled) {
+  color: white;
+  background: #69c4cd;
+}
+
+.cookieConsentToggle * {
+  fill: currentColor;
+}

@@ -81,5 +81,6 @@
 	"https://w3s.link/ipfs/:hash",
 	"https://cthd.icu/ipfs/:hash",
 	"https://ipfs.joaoleitao.org/ipfs/:hash",
-	"https://ipfs.tayfundogdas.me/ipfs/:hash"
+	"https://ipfs.tayfundogdas.me/ipfs/:hash",
+	"https://ipfs.jpu.jp/ipfs/:hash"
 ]

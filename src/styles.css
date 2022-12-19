@@ -131,17 +131,22 @@ div#checker\.results .Node:nth-child(1) .Link {
  * Should be a color that is not too bright, but still visible
  */
 div.metrics-notification-wrapper {
-  background-color: rgba(246, 248, 251, 1);
   justify-content: center;
-  padding: 15px 0;
-  margin: 0 auto;
+  display: flex;
   width: 100%;
-  max-width: 1024px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
 }
 
 div.metrics-notification-container {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  max-width: 1024px;
+  padding: 15px 0;
   gap: 0.5rem 5rem;
 }
 
@@ -149,10 +154,18 @@ div.metrics-notification-container {
   display: none;
 }
 
+.hidden.metrics-notification-wrapper {
+  opacity: 0;
+  position: relative;
+  display: none;
+}
+
+
 div.metrics-notification-wrapper .metrics-notification-text {
-  color: rgba(7, 58, 83, 1);
-  order: 1;
+  color:rgba(246, 248, 251, 1);
+  order: 2;
   align-self: flex-start;
+  text-align: left;
 }
 
 div.metrics-notification-wrapper .metrics-notification-buttons {
@@ -176,10 +189,15 @@ div.metrics-notification-wrapper button {
   align-content: center;
   vertical-align: center;
   text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 8px;
 }
 
 .metrics-notification-wrapper button#metrics-notification-accept {
   border: 1pt solid rgba(107, 196, 206, 1);
+  background-color: rgba(107, 196, 206, 1);
+  color:rgba(246, 248, 251, 1);
 }
 
 button#metrics-notification-warning-close {
@@ -187,13 +205,18 @@ button#metrics-notification-warning-close {
   /* color: rgba(7, 58, 83, 1); */
 }
 
+.metrics-notification-spacer {
+  width: 70px;
+}
+
 @media (max-width: 1002px) {
 
 	.metrics-notification-wrapper .metrics-notification-text {
-	  color: rgba(7, 58, 83, 1);
-	  order: 1;
+	  color:rgba(246, 248, 251, 1);
+	  order: 2;
 	  align-self: flex-start;
 	  padding: 0 2rem;
+    text-align: left;
 	}
 
   .metrics-notification-container {
@@ -219,6 +242,9 @@ button#metrics-notification-warning-close {
   z-index: 99980;
   cursor: pointer;
   margin: 0 1em 0 0;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
 }
 
 .cookieConsentToggle:disabled {

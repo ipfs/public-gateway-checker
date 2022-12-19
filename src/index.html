@@ -18,6 +18,32 @@
 </head>
 
 <body id="checker" class="sans-serif charcoal bg-snow-muted">
+  <div class="hidden js-metrics-notification-decline-warning metrics-notification-wrapper bg-navy bt bw1 border-aqua">
+    <div class="metrics-notification-container">
+      <span id="metrics-notification-decline-warning" class="metrics-notification-text">
+        We will limit collection of metrics to only necessary features, 'sessions' and 'views'. See <a
+          href="https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent">Countly's
+          group_features</a> for more information.
+      </span>
+      <div class="metrics-notification-buttons">
+        <button id="metrics-notification-warning-close"
+          class="js-metrics-notification-warning-close">✕&nbsp;Close</button>
+      </div>
+    </div>
+  </div>
+  <div class="hidden js-metrics-notification metrics-notification-wrapper bg-navy bt bw1 border-aqua">
+    <div class="metrics-notification-spacer"></div>
+    <div class="metrics-notification-container">
+      <span class="metrics-notification-text">We're collecting <a
+          href="https://github.com/ipfs/ipfs-gui/issues/125">web-vitals, pageview, and other metrics</a> in order to
+        improve and prioritize our work on IPFS and its public gateways.
+        Please consent to the collection of these metrics to assist in our efforts!</span>
+      <div class="metrics-notification-buttons">
+        <button id="metrics-notification-accept" class="js-metrics-notification-accept">Allow</button>
+        <button id="metrics-notification-decline" class="js-metrics-notification-decline">Decline</button>
+      </div>
+    </div>
+  </div>
   <header class='flex-l items-center pa3 bg-navy bb bw3 border-aqua tc tl-l'>
     <a href="https://ipfs.io" target="_blank" title="ipfs.io" class='flex-none v-mid'>
       <img src="https://ipfs.io/ipfs/QmTqZhR6f7jzdhLgPArDPnsbZpvvgxzCZycXK7ywkLxSyU?filename=ipfs-logo.3ea91a2f.svg"

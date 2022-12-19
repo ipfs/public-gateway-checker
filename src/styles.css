@@ -193,6 +193,7 @@ div.metrics-notification-wrapper h3.metrics-notification-heading::after {
 
 div.metrics-notification-container {
   width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -202,6 +203,13 @@ div.metrics-notification-container {
 .hidden {
   display: none !important;
 }
+
+.hidden.metrics-notification-wrapper {
+  opacity: 0;
+  position: relative;
+  display: none;
+}
+
 
 .hidden.metrics-notification-wrapper {
   opacity: 0;
@@ -410,7 +418,7 @@ button#metrics-notification-warning-close {
   opacity: 1;
   z-index: 1;
   cursor: pointer;
-  margin: 0;
+  margin: 0 1em 0 0;
   position: fixed;
   bottom: 12px;
   left: 20px;

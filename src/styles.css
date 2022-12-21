@@ -175,6 +175,7 @@ div.metrics-notification-wrapper .metrics-notification-buttons {
   align-content: center;
   display: flex;
   gap: 1rem;
+  padding-right: 15px;
 }
 
 div.metrics-notification-wrapper a {
@@ -190,7 +191,7 @@ div.metrics-notification-wrapper button {
   vertical-align: center;
   text-align: center;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 600;
   padding: 8px;
 }
 
@@ -206,7 +207,7 @@ button#metrics-notification-warning-close {
 }
 
 .metrics-notification-spacer {
-  width: 70px;
+  width: 80px;
 }
 
 @media (max-width: 1002px) {
@@ -217,11 +218,22 @@ button#metrics-notification-warning-close {
 	  align-self: flex-start;
 	  padding: 0 2rem;
     text-align: left;
+    font-size: 15px;
 	}
 
-  .metrics-notification-container {
+  div.metrics-notification-container {
     display: flex;
     flex-direction: column;
+    gap: 0.75rem 5rem;
+  }
+
+  .metrics-notification-spacer {
+    width: 0;
+  }
+
+  div.metrics-notification-wrapper .metrics-notification-buttons {
+    font-size: 15px;
+    padding-right: 0;
   }
 }
 
@@ -241,9 +253,9 @@ button#metrics-notification-warning-close {
   opacity: 1;
   z-index: 99980;
   cursor: pointer;
-  margin: 0 1em 0 0;
+  margin: 0;
   position: fixed;
-  bottom: 15px;
+  bottom: 12px;
   left: 15px;
 }
 

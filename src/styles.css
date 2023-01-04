@@ -203,6 +203,13 @@ div.metrics-notification-container {
   display: none !important;
 }
 
+.hidden.metrics-notification-wrapper {
+  opacity: 0;
+  position: relative;
+  display: none;
+}
+
+
 div.metrics-notification-wrapper .metrics-notification-text {
   text-align: left;
   color: #073A53;

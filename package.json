@@ -120,7 +120,7 @@
   "dependencies": {
     "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.1",
     "countly-sdk-web": "^22.6.2",
-    "ipfs-http-client": "^58.0.1",
+    "ipfs-http-client": "^59.0.0",
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {

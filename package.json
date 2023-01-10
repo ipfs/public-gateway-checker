@@ -109,8 +109,8 @@
   "scripts": {
     "start": "npm run build && npx -y serve -l 3000 dist",
     "copy-assets": "cp-cli src/index.html dist/index.html && cp-cli src/styles.css dist/styles.css",
-    "lint": "aegir lint && npx -y standard && node scripts/beautify-html.mjs",
-    "lint:fix": "aegir lint --fix && npx -y standard --fix && node scripts/beautify-html.mjs --fix",
+    "lint": "aegir lint && npx -y standard && node scripts/beautify.mjs",
+    "lint:fix": "aegir lint --fix && npx -y standard --fix && node scripts/beautify.mjs --fix",
     "release": "aegir release",
     "sw": "node scripts/build-sw.mjs",
     "build": "aegir build && npm run copy-assets && npm run sw",

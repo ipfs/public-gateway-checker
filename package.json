@@ -111,7 +111,8 @@
     "copy-assets": "cp-cli src/index.html dist/index.html && cp-cli src/styles.css dist/styles.css",
     "lint": "aegir lint",
     "release": "aegir release",
-    "build": "aegir build && npm run copy-assets",
+    "sw": "node scripts/build-sw.mjs",
+    "build": "aegir build && npm run copy-assets && npm run sw",
     "test-TBD": "aegir test",
     "test-TBD:node": "aegir test --target node",
     "test-TBD:browser": "aegir test --target browser"
@@ -132,7 +133,9 @@
     "fetch-ponyfill": "^7.1.0",
     "ipfs": "^0.65.0",
     "ipfs-geoip": "^9.0.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.8.4",
+    "workbox-build": "6.5.4",
+    "workbox-window": "6.5.4"
   },
   "aegir": {
     "tsRepo": true,

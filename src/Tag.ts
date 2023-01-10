@@ -1,6 +1,6 @@
 import { TagStatus } from './TagStatus'
 
-type TagClasses = 'Status' | 'Node' | 'Cors' | 'Origin' | 'Flag'
+type TagClasses = 'Cors' | 'Flag' | 'Ipns' | 'Node' | 'Origin' | 'Status' | 'Trustless'
 
 type TagContent = TagStatus
 
@@ -16,7 +16,7 @@ class Tag {
     this.textContent = textContent
   }
 
-  public static fromElement (element: HTMLElement) {
+  public static fromElement (element: HTMLElement): Tag {
     const tag = new Tag('div')
     tag.element = element
 
@@ -26,15 +26,15 @@ class Tag {
   /**
    * Use the below functions to keep displays consistent
    */
-  asterisk () {
+  asterisk (): void {
     this.textContent = TagStatus.asterisk
   }
 
-  lose () {
+  lose (): void {
     this.textContent = TagStatus.failed
   }
 
-  win (url?: string) {
+  win (url?: string): void {
     if (url != null) {
       this.textContent = TagStatus.empty
       const linkToImageSubdomain = document.createElement('a')
@@ -48,30 +48,30 @@ class Tag {
     }
   }
 
-  global () {
+  global (): void {
     this.textContent = TagStatus.global
   }
 
-  err () {
+  err (): void {
     this.textContent = TagStatus.caution
   }
 
-  empty () {
+  empty (): void {
     this.textContent = TagStatus.empty
   }
 
-  get style () {
+  get style (): CSSStyleDeclaration {
     return this.element.style
   }
 
-  append (child: string | Node | Tag) {
+  append (child: string | Node | Tag): void {
     if (child instanceof Tag) {
       child = child.element
     }
     return this.element.append(child)
   }
 
-  get classList () {
+  get classList (): DOMTokenList {
     return this.element.classList
   }
 

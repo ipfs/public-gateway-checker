@@ -10,7 +10,6 @@
 	"https://astyanax.io/ipfs/:hash",
 	"https://cf-ipfs.com/ipfs/:hash",
 	"https://ipns.co/ipfs/:hash",
-	"https://ipfs.mrh.io/ipfs/:hash",
 	"https://gateway.originprotocol.com/ipfs/:hash",
 	"https://gateway.pinata.cloud/ipfs/:hash",
 	"https://ipfs.sloppyta.co/ipfs/:hash",
@@ -81,5 +80,8 @@
 	"https://ipfs-gateway.cloud/ipfs/:hash",
 	"https://w3s.link/ipfs/:hash",
 	"https://cthd.icu/ipfs/:hash",
+	"https://ipfs.joaoleitao.org/ipfs/:hash",
+	"https://ipfs.tayfundogdas.me/ipfs/:hash",
+	"https://ipfs.jpu.jp/ipfs/:hash",
 	"https://public.records/ipfs/:hash"
 ]

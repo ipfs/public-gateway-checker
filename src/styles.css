@@ -70,8 +70,10 @@ div.Node a, div#origin-warning a {
 div.Node div.Status,
 div.Node div.Cors,
 div.Node div.Origin,
+div.Node div.Trustless,
+div.Node div.Ipns,
 div.Node div.Flag {
-	width: 5em;
+	width: 7.2em;
 	text-align: center;
 	margin: 0 0.5em;
 	user-select: none;
@@ -93,9 +95,10 @@ div.Node div.Took {
 	font-style: italic;
 }
 
-div.Node.origin div.Link::after {
-  content: " 💚"
+div.Node.trustless div.Trustless {
+	margin: 0 1.3em;
 }
+
 div.Node:not(.online):not(:first-child) {
   opacity: .5
 }
@@ -121,4 +124,150 @@ div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
 
 div#checker\.results .Node:nth-child(1) .Link {
   padding-left: 1em;
+}
+
+/**
+ * Consent notification for metrics collection
+ * Should be a color that is not too bright, but still visible
+ */
+div.metrics-notification-wrapper {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+div.metrics-notification-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1024px;
+  padding: 15px 0;
+  gap: 0.5rem 5rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.hidden.metrics-notification-wrapper {
+  opacity: 0;
+  position: relative;
+  display: none;
+}
+
+
+div.metrics-notification-wrapper .metrics-notification-text {
+  color:rgba(246, 248, 251, 1);
+  order: 2;
+  align-self: flex-start;
+  text-align: left;
+}
+
+div.metrics-notification-wrapper .metrics-notification-buttons {
+  order: 3;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  gap: 1rem;
+  padding-right: 15px;
+}
+
+div.metrics-notification-wrapper a {
+  color: rgba(107, 196, 206, 1);
+}
+
+div.metrics-notification-wrapper button {
+  border: none;
+  color: rgba(107, 196, 206, 1);
+  cursor: pointer;
+  background-color: transparent;
+  align-content: center;
+  vertical-align: center;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 8px;
+}
+
+.metrics-notification-wrapper button#metrics-notification-accept {
+  border: 1pt solid rgba(107, 196, 206, 1);
+  background-color: rgba(107, 196, 206, 1);
+  color:rgba(246, 248, 251, 1);
+}
+
+button#metrics-notification-warning-close {
+  border: 1pt solid rgba(107, 196, 206, 1);
+  /* color: rgba(7, 58, 83, 1); */
+}
+
+.metrics-notification-spacer {
+  width: 80px;
+}
+
+@media (max-width: 1002px) {
+
+	.metrics-notification-wrapper .metrics-notification-text {
+	  color:rgba(246, 248, 251, 1);
+	  order: 2;
+	  align-self: flex-start;
+	  padding: 0 2rem;
+    text-align: left;
+    font-size: 15px;
+	}
+
+  div.metrics-notification-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem 5rem;
+  }
+
+  .metrics-notification-spacer {
+    width: 0;
+  }
+
+  div.metrics-notification-wrapper .metrics-notification-buttons {
+    font-size: 15px;
+    padding-right: 0;
+  }
+}
+
+/**
+ * From https://unpkg.com/@beyonk/gdpr-cookie-consent-banner@9.1.0/dist/style.css
+ */
+.cookieConsentToggle {
+  width: 40px;
+  height: 40px;
+  will-change: transform;
+  padding: 9px;
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  border-radius: 50%;
+  transition: 200ms;
+  opacity: 1;
+  z-index: 99980;
+  cursor: pointer;
+  margin: 0;
+  position: fixed;
+  bottom: 12px;
+  left: 15px;
+}
+
+.cookieConsentToggle:disabled {
+  cursor: default;
+}
+
+.cookieConsentToggle:hover:not(:disabled) {
+  color: white;
+  background: #69c4cd;
+}
+
+.cookieConsentToggle * {
+  fill: currentColor;
 }

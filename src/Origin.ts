@@ -16,7 +16,7 @@ class Origin {
     this.tag = new Tag('div', 'Origin')
   }
 
-  async check () {
+  async check (): Promise<void> {
     // we are unable to check url after subdomain redirect because some gateways
     // may not have proper CORS in place. instead, we manually construct subdomain
     // URL and check if it loading known image works
@@ -34,7 +34,7 @@ class Origin {
       .catch((err) => this.onerror(err))
   }
 
-  onerror (err: Error) {
+  onerror (err: Error): void {
     log.error(err)
     this.tag.err()
     throw err

@@ -1,10 +1,8 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 /* eslint-disable etc/prefer-interface */
-// import { Tag } from './Tag'
-// import * as ipfsHttpClient from 'ipfs-http-client'
-// import type { Checker } from './Checker'
 
 declare module '@dutu/rate-limiter'
+declare module 'ipfs-geoip'
 
 // declare global {
 /**
@@ -30,11 +28,8 @@ interface Visible {
 }
 
 interface Window {
-  IpfsHttpClient: typeof import('ipfs-http-client')
-  IpfsGeoip: typeof import('ipfs-geoip')
   OnScriptloaded: typeof import('./onScriptLoaded').onScriptLoaded
   checker: import('./Checker').Checker
-  client: ReturnValue<typeof import('ipfs-http-client').create>
 }
 
 declare namespace IpfsGeoip {
@@ -43,10 +38,10 @@ declare namespace IpfsGeoip {
     country_name: string
   }
 }
-type DnsQueryResponseAnswer = { name: string, type: number, TTL: number, data: string }
-type DnsQueryResponseQuestion = { name: string, type: number }
+interface DnsQueryResponseAnswer { name: string, type: number, TTL: number, data: string }
+interface DnsQueryResponseQuestion { name: string, type: number }
 
-type DnsQueryResponseAuthority = {
+interface DnsQueryResponseAuthority {
   TTL: number
   data: string // "aragorn.ns.cloudflare.com. dns.cloudflare.com. 2271826322 10000 2400 604800 3600"
   name: string // "stibarc.com"

@@ -16,7 +16,7 @@ const beautifiedHtml = beautify(htmlSrc, {
   editorconfig: false,
   eol: '\n',
   end_with_newline: true,
-  indent_level: 0,
+  indent_level: 0
 })
 
 // lint mode.. fail if not beautified

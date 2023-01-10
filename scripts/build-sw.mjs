@@ -1,4 +1,4 @@
-import {generateSW} from 'workbox-build';
+import { generateSW } from 'workbox-build'
 
 generateSW({
   globDirectory: 'dist/',
@@ -11,8 +11,8 @@ generateSW({
   runtimeCaching: [
     {
       urlPattern: /\.(?:png|jpg|jpeg|svg)$/,
-      handler: 'NetworkFirst',
+      handler: 'NetworkFirst'
     }
   ],
   swDest: 'dist/sw.js'
-});
+})

@@ -60,45 +60,69 @@
         <div class="Took">ΔT</div>
       </div>
     </div>
-    <div class="hidden js-metrics-notification-decline-warning metrics-notification-wrapper bg-navy bt bw1 border-aqua">
-      <div class="metrics-notification-spacer"></div>
-      <div class="metrics-notification-container">
-        <span id="metrics-notification-decline-warning" class="metrics-notification-text">
-          We will limit collection of metrics to only necessary features, 'sessions' and 'views'. See <a href="https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent">Countly's group_features</a> for more information.
+
+    <div class="hidden js-metrics-notification-modal metrics-notification-wrapper bg-navy bt bw1 border-jade">
+      <div class="metrics-modal-close js-modal-close">✕&nbsp</div>
+      <div class="metrics-notification-content js-metrics-agreement">
+        <h3 class="js-metrics-notification-heading metrics-notification-heading montserrat">
+          Metrics and Telemetry Notice
+        </h3>
+        <!-- metric agreement -->
+        <span class="metrics-notification-text montserrat">
+          This site collects metrics and other telemetry data in accordance with our <a
+            href="https://github.com/ipfs/ipfs-gui/issues/125">metrics collection policy</a>. You can learn more about
+          how we use this information and customize your preferences by clicking “manage settings” below.
         </span>
         <div class="metrics-notification-buttons">
-          <button id="metrics-notification-warning-close" class="js-metrics-notification-warning-close">✕&nbsp;Close</button>
+          <button id="metrics-notification-manage" class="js-metrics-notification-manage">Manage settings</button>
+          <button id="metrics-notification-confirm" class="primary js-metrics-notification-confirm">Got it!</button>
         </div>
       </div>
-    </div>
-    <div class="hidden js-metrics-notification metrics-notification-wrapper bg-navy bt bw1 border-aqua">
-      <div class="metrics-notification-spacer"></div>
-      <div class="metrics-notification-container">
-        <span class="metrics-notification-text">We're collecting <a href="https://github.com/ipfs/ipfs-gui/issues/125">web-vitals, pageview, and other metrics</a> in order to improve and prioritize our work on IPFS and its public gateways.
-          Please consent to the collection of these metrics to assist in our efforts!</span>
+      <div class="hidden metrics-notification-content metrics-notification-content-preferences js-metrics-preferences">
+        <h3 class="js-metrics-notification-heading metrics-notification-heading montserrat">
+          Metrics and Telemetry Settings
+        </h3>
+        <!-- manage preferences -->
+        <span class="metrics-notification-text montserrat">
+          This site collects metrics and other telemetry data in order to improve and prioritize work on IPFS. It does not collect any personally identifiable information.
+        </span>
+        <div class="metrics-notification-customize">
+          <span class="metrics-notification-text metrics-notification-customize-text montserrat">
+            Opt-in or out at any time by using the toggle below.<br/>
+            For more details, read the full<a href="https://github.com/ipfs/ipfs-gui/issues/125"> metrics collection policy</a>.
+          </span>
+          <ul class="metrics-notification-preference-list">
+            <li class="metrics-notification-preference-list-item">
+              <span class="preference-list-item-text">Minimal Telemetry</span>
+              <label class="preference-list-item-switch">
+                <input class="js-necessary-toggle" type="checkbox">
+                <span class="toggle-slider"></span>
+              </label>
+            </li>
+          </ul>
+        </div>
         <div class="metrics-notification-buttons">
-          <button id="metrics-notification-accept" class="js-metrics-notification-accept">Allow</button>
-          <button id="metrics-notification-decline" class="js-metrics-notification-decline">Decline</button>
+          <button id="metrics-notification-preferences-save" class="primary js-metrics-notification-preferences-save">
+            Save and Exit
+          </button>
         </div>
       </div>
     </div>
-    <button class="cookieConsentToggle js-cookie-banner-toggle" aria-label="Edit cookie settings">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-        <path d="M510.52 255.82c-69.97-.85-126.47-57.69-126.47-127.86-70.17
-        0-127-56.49-127.86-126.45-27.26-4.14-55.13.3-79.72 12.82l-69.13
-        35.22a132.221 132.221 0 0 0-57.79 57.81l-35.1 68.88a132.645 132.645 0 0
-        0-12.82 80.95l12.08 76.27a132.521 132.521 0 0 0 37.16 72.96l54.77
-        54.76a132.036 132.036 0 0 0 72.71 37.06l76.71 12.15c27.51 4.36 55.7-.11
-        80.53-12.76l69.13-35.21a132.273 132.273 0 0 0
-        57.79-57.81l35.1-68.88c12.56-24.64 17.01-52.58 12.91-79.91zM176
-        368c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33 32-32
-        32zm32-160c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32 32-14.33
-        32-32 32zm160 128c-17.67 0-32-14.33-32-32s14.33-32 32-32 32 14.33 32
-        32-14.33 32-32 32z" />
+
+    <button class="metricsConsentToggle js-metrics-modal-toggle" aria-label="Edit metrics settings">
+      <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21.2333" cy="21.4634" r="20.3114" fill="white" stroke="white" />
+        <rect x="8.35547" y="17.8948" width="6.0781" height="14.5421" fill="#C4C7D6" />
+        <rect x="18.4336" y="21.7493" width="6.0781" height="10.6877" fill="#C4C7D6" />
+        <rect x="28.5117" y="15.4712" width="6.0781" height="16.9658" fill="#C4C7D6" />
+        <circle cx="10.5458" cy="14.0489" r="1.21184" fill="#C4C7D6" />
+        <circle cx="21.4716" cy="18.2176" r="1.21184" fill="#C4C7D6" />
+        <circle cx="31.9208" cy="10.5678" r="1.21184" fill="#C4C7D6" />
+        <path d="M10.5352 14.0284L21.5802 18.3007L32.104 10.6941" stroke="#C4C7D6" />
       </svg>
     </button>
   </div>
-  <script src="./index.min.js"></script>
+<script src="./index.min.js"></script>
 </body>
 
 </html>

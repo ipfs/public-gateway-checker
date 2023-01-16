@@ -2,9 +2,7 @@ import Countly from 'countly-sdk-web'
 
 const metricsConsent = localStorage.getItem('metrics_consent')
 
-const metricsNotificationModal = document.querySelector(
-  '.js-metrics-notification-modal'
-)
+const metricsNotificationModal = document.querySelector('.js-metrics-notification-modal')
 const metricsAgreementContent = document.querySelector('.js-metrics-agreement')
 const metricsManagePreferencesContent = document.querySelector('.js-metrics-preferences')
 
@@ -13,13 +11,9 @@ const confirmMetricNoticeBtn = document.querySelector('.js-metrics-notification-
 
 const saveMetricPreferencesBtn = document.querySelector('.js-metrics-notification-preferences-save')
 
-const managePreferencesBtn = document.querySelector(
-  '.js-metrics-notification-manage'
-)
+const managePreferencesBtn = document.querySelector('.js-metrics-notification-manage')
 const necessaryMetricsToggle = document.querySelector('.js-necessary-toggle') as HTMLInputElement
-const metricsModalToggle = document.querySelector(
-  '.js-metrics-modal-toggle'
-)
+const metricsModalToggle = document.querySelector('.js-metrics-modal-toggle')
 
 function addConsent (consent: string[]): void {
   Countly.add_consent(consent)
@@ -127,6 +121,8 @@ function loadCountly (): void {
 
   if (metricsConsent != null) {
     addConsent(JSON.parse(metricsConsent))
+  } else {
+    addConsent(['all'])
   }
 }
 

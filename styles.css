@@ -1,70 +1,72 @@
-body, html {
-	box-sizing: border-box;
-	text-align: center;
+body,
+html {
+  box-sizing: border-box;
+  text-align: center;
 }
 
 div.Stats {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	margin: 1em auto;
-	width: 95%;
-	max-width: 1024px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1em auto;
+  width: 95%;
+  max-width: 1024px;
 }
 
 div.Stats div.Totals,
 div.Stats div.Gateways {
-	border-radius: 9999px;
-	color: white;
-	font-weight: bold;
-	padding: 0.5em 1em;
-	margin: 0 1em 0 0;
-	font-family: Consolas, monaco, monospace;
+  border-radius: 9999px;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 0 1em 0 0;
+  font-family: Consolas, monaco, monospace;
 }
 
 div.Stats div.Gateways {
-	background-color: #0b3a53;
+  background-color: #0b3a53;
 }
 
 div.Stats div.Totals {
-	background-color: #0cb892;
+  background-color: #0cb892;
 }
 
 div.Results {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
 }
 
 div.Node {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	border-bottom: 1px solid #edf0f4;
-	padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #edf0f4;
+  padding: 0.5em 1em;
 }
 
 div.Node:hover {
-	background-color: #edf0f4;
+  background-color: #edf0f4;
 }
 
 
 div.Node div.Link {
-	width: 100%;
-	text-align: left;
-	padding-left: 2em;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  width: 100%;
+  text-align: left;
+  padding-left: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-div.Node a, div#origin-warning a {
-	text-decoration: none;
-	color: #357edd;
-	white-space: nowrap;
+div.Node a,
+div#origin-warning a {
+  text-decoration: none;
+  color: #357edd;
+  white-space: nowrap;
 }
 
 div.Node div.Status,
@@ -73,30 +75,30 @@ div.Node div.Origin,
 div.Node div.Trustless,
 div.Node div.Ipns,
 div.Node div.Flag {
-	width: 7.2em;
-	text-align: center;
-	margin: 0 0.5em;
-	user-select: none;
+  width: 7.2em;
+  text-align: center;
+  margin: 0 0.5em;
+  user-select: none;
 }
 
 div.Node div.Flag {
-	/* width: 2em; */
-	height: 1em;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+  /* width: 2em; */
+  height: 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   display: inline-block
 }
 
 div.Node div.Took {
-	min-width: 5em;
-	text-align: right;
-	font-size: 80%;
-	font-style: italic;
+  min-width: 5em;
+  text-align: right;
+  font-size: 80%;
+  font-style: italic;
 }
 
 div.Node.trustless div.Trustless {
-	margin: 0 1.3em;
+  margin: 0 1.3em;
 }
 
 div.Node:not(.online):not(:first-child) {
@@ -117,8 +119,10 @@ div#origin-warning p {
   margin-bottom: -.4rem;
 }
 
-div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
-    line-height: 1.7;
+div#origin-warning ol,
+div#origin-warning p,
+div#origin-warning ul {
+  line-height: 1.7;
 }
 
 
@@ -162,7 +166,7 @@ div.metrics-notification-container {
 
 
 div.metrics-notification-wrapper .metrics-notification-text {
-  color:rgba(246, 248, 251, 1);
+  color: rgba(246, 248, 251, 1);
   order: 2;
   align-self: flex-start;
   text-align: left;
@@ -198,7 +202,7 @@ div.metrics-notification-wrapper button {
 .metrics-notification-wrapper button#metrics-notification-accept {
   border: 1pt solid rgba(107, 196, 206, 1);
   background-color: rgba(107, 196, 206, 1);
-  color:rgba(246, 248, 251, 1);
+  color: rgba(246, 248, 251, 1);
 }
 
 button#metrics-notification-warning-close {
@@ -212,14 +216,14 @@ button#metrics-notification-warning-close {
 
 @media (max-width: 1002px) {
 
-	.metrics-notification-wrapper .metrics-notification-text {
-	  color:rgba(246, 248, 251, 1);
-	  order: 2;
-	  align-self: flex-start;
-	  padding: 0 2rem;
+  .metrics-notification-wrapper .metrics-notification-text {
+    color: rgba(246, 248, 251, 1);
+    order: 2;
+    align-self: flex-start;
+    padding: 0 2rem;
     text-align: left;
     font-size: 15px;
-	}
+  }
 
   div.metrics-notification-container {
     display: flex;

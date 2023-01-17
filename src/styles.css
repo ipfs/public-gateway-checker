@@ -155,13 +155,13 @@ div.metrics-notification-wrapper {
 
 div.metrics-notification-wrapper div.metrics-modal-close {
   position: absolute;
-  font-size: 15px;
-  top: 8px;
-  right: 10px;
+  font-size: 20px;
+  top: 5px;
+  right: 5px;
   font-weight: 100;
   color: #073A53;
-  height: 22px;
-  width: 22px;
+  height: 30px;
+  width: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -286,7 +286,6 @@ button#metrics-notification-warning-close {
   margin: 0;
   padding: 20px 0 0;
   width: 100%;
-  max-width: 375px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -378,6 +377,7 @@ button#metrics-notification-warning-close {
     left: 0;
     bottom: 0;
     padding: 20px;
+    border-top: 3px solid #3B8C90;
   }
 
   div.metrics-notification-wrapper div.metrics-modal-close {

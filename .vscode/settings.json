@@ -1,11 +1,25 @@
 {
-    "editor.tabSize": 2,
-    "typescript.format.semicolons": "remove",
-    "javascript.format.semicolons": "remove",
-    "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
-    "editor.formatOnSave": true,
-    "eslint.codeActionsOnSave.rules": [],
-    "files.exclude": {
-        "package-lock.json": true
-    }
+  "editor.tabSize": 2,
+  "typescript.format.semicolons": "remove",
+  "javascript.format.semicolons": "remove",
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "editor.formatOnSave": false,
+  "eslint.codeActionsOnSave.rules": [],
+  "files.exclude": {
+    "package-lock.json": true
+  },
+  "standard.enable": true,
+  "standard.enableGlobally": false,
+  "standard.run": "onSave",
+  "standard.autoFixOnSave": true,
+  "editor.defaultFormatter": "standard.vscode-standard",
+  "[html]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+  },
+  "[json]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "standard.vscode-standard",
+  }
 }

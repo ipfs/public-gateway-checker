@@ -27,6 +27,7 @@ declare module 'countly-sdk-web' {
   interface CountlyWebSdk {
     group_features: (arg0: Record<string, string[]>) => unknown
     add_consent: (consentFeature: string | string[]) => void
+    remove_consent: (consentFeature: string | string[]) => void
     require_consent: boolean
     init: (configOptions?: Partial<CountlyWebSdk>) => void
     /**

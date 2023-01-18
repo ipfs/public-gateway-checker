@@ -31,15 +31,17 @@ function addConsent (consent: string[]): void {
 function addConsentEventHandler (): void {
   metricsNotificationModal?.classList.add('hidden')
 
-  addConsent(['all'])
+  addConsent(['minimal'])
 }
 
-function updateMetricPreferences (): void {
+function updateNecessaryMetricPreferences (): void {
   const necessaryMetricsAccepted = necessaryMetricsToggle.checked
+
   if (necessaryMetricsAccepted) {
-    addConsent(['all'])
+    addConsent(['minimal'])
   } else {
-    addConsent(['necessary'])
+    Countly.remove_consent(['minimal'])
+    localStorage.setItem('metrics_consent', JSON.stringify([]))
   }
 }
 
@@ -61,12 +63,12 @@ function hideMetricsModal (): void {
 
 function managePreferencesClicked (): void {
   const metricsConsent = localStorage.getItem('metrics_consent')
-  if (metricsConsent != null) necessaryMetricsToggle.checked = JSON.parse(metricsConsent)[0] === 'all'
+  if (metricsConsent != null) necessaryMetricsToggle.checked = JSON.parse(metricsConsent)[0] === 'minimal'
   metricsAgreementContent?.classList.add('hidden')
   saveMetricPreferencesBtn?.classList.remove('hidden')
   metricsManagePreferencesContent?.classList.remove('hidden')
 
-  necessaryMetricsToggle.addEventListener('click', updateMetricPreferences)
+  necessaryMetricsToggle.addEventListener('click', updateNecessaryMetricPreferences)
   saveMetricPreferencesBtn?.addEventListener('click', hideMetricsModal)
 }
 
@@ -122,7 +124,7 @@ function loadCountly (): void {
   if (metricsConsent != null) {
     addConsent(JSON.parse(metricsConsent))
   } else {
-    addConsent(['all'])
+    addConsent(['minimal'])
   }
 }
 

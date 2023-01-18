@@ -2,71 +2,82 @@ import Countly from 'countly-sdk-web'
 
 const metricsConsent = localStorage.getItem('metrics_consent')
 
-const banner = document.querySelector('.js-metrics-notification')
-const declineWarning = document.querySelector('.js-metrics-notification-decline-warning')
-const acceptButton = document.querySelector('.js-metrics-notification-accept')
-const declineButton = document.querySelector('.js-metrics-notification-decline')
-const declineWarningClose = document.querySelector('.js-metrics-notification-warning-close')
-const bannerToggle = document.querySelector('.js-cookie-banner-toggle')
+const metricsNotificationModal = document.querySelector('.js-metrics-notification-modal')
+const metricsAgreementContent = document.querySelector('.js-metrics-agreement')
+const metricsManagePreferencesContent = document.querySelector('.js-metrics-preferences')
+
+const closeNotificationModalX = document.querySelector('.js-modal-close')
+const confirmMetricNoticeBtn = document.querySelector('.js-metrics-notification-confirm')
+
+const saveMetricPreferencesBtn = document.querySelector('.js-metrics-notification-preferences-save')
+
+const managePreferencesBtn = document.querySelector('.js-metrics-notification-manage')
+const necessaryMetricsToggle = document.querySelector('.js-necessary-toggle') as HTMLInputElement
+const metricsModalToggle = document.querySelector('.js-metrics-modal-toggle')
 
 function addConsent (consent: string[]): void {
-  hideConsentBanner()
   Countly.add_consent(consent)
 
   if (Array.isArray(consent)) {
     localStorage.setItem('metrics_consent', JSON.stringify(consent))
   } else {
-    localStorage.setItem('metrics_consent', JSON.stringify([consent]))
+    localStorage.setItem(
+      'metrics_consent',
+      JSON.stringify([consent])
+    )
   }
 }
 
 function addConsentEventHandler (): void {
-  acceptButton?.removeEventListener('click', addConsentEventHandler)
+  metricsNotificationModal?.classList.add('hidden')
 
-  addConsent(['all'])
+  addConsent(['minimal'])
 }
 
-function declineConsentEventHandler (): void {
-  addConsent(['necessary'])
-  hideConsentBanner()
-  displayDeclineWarning()
+function updateNecessaryMetricPreferences (): void {
+  const necessaryMetricsAccepted = necessaryMetricsToggle.checked
+
+  if (necessaryMetricsAccepted) {
+    addConsent(['minimal'])
+  } else {
+    Countly.remove_consent(['minimal'])
+    localStorage.setItem('metrics_consent', JSON.stringify([]))
+  }
 }
 
-function displayDeclineWarning (): void {
-  declineWarning?.classList.remove('hidden')
-  bannerToggle?.setAttribute('disabled', '')
+function initMetricsModal (): void {
+  metricsNotificationModal?.classList.remove('hidden')
+  confirmMetricNoticeBtn?.classList.remove('hidden')
+  managePreferencesBtn?.classList.remove('hidden')
+  metricsAgreementContent?.classList.remove('hidden')
+  closeNotificationModalX?.addEventListener('click', hideMetricsModal)
+  confirmMetricNoticeBtn?.addEventListener('click', addConsentEventHandler)
+  managePreferencesBtn?.addEventListener('click', managePreferencesClicked)
 }
 
-function declineWarningCloseEventHandler (): void {
-  declineWarningClose?.removeEventListener('click', declineWarningCloseEventHandler)
-  declineWarning?.classList.add('hidden')
-  bannerToggle?.removeAttribute('disabled')
+function hideMetricsModal (): void {
+  metricsNotificationModal?.classList.add('hidden')
+  metricsManagePreferencesContent?.classList.add('hidden')
+  metricsAgreementContent?.classList.remove('hidden')
 }
 
-function hideConsentBanner (): void {
-  acceptButton?.removeEventListener('click', addConsentEventHandler)
-  declineButton?.removeEventListener('click', declineConsentEventHandler)
-  banner?.classList.add('hidden')
-  bannerToggle?.removeAttribute('disabled')
+function managePreferencesClicked (): void {
+  const metricsConsent = localStorage.getItem('metrics_consent')
+  if (metricsConsent != null) necessaryMetricsToggle.checked = JSON.parse(metricsConsent)[0] === 'minimal'
+  metricsAgreementContent?.classList.add('hidden')
+  saveMetricPreferencesBtn?.classList.remove('hidden')
+  metricsManagePreferencesContent?.classList.remove('hidden')
+
+  necessaryMetricsToggle.addEventListener('click', updateNecessaryMetricPreferences)
+  saveMetricPreferencesBtn?.addEventListener('click', hideMetricsModal)
 }
 
-/**
- * Display the consent banner and handle the user's choice
- */
-function displayConsentBanner (): void {
-  acceptButton?.addEventListener('click', addConsentEventHandler)
-  declineButton?.addEventListener('click', declineConsentEventHandler)
-  declineWarningClose?.addEventListener('click', declineWarningCloseEventHandler)
-  banner?.classList.remove('hidden')
-  bannerToggle?.setAttribute('disabled', '')
-  declineWarning?.classList.add('hidden')
+function metricsModalToggleEventHandler (): void {
+  initMetricsModal()
 }
 
-function bannerToggleEventHandler (): void {
-  displayConsentBanner()
-}
 function loadCountly (): void {
-  bannerToggle?.addEventListener('click', bannerToggleEventHandler)
+  metricsModalToggle?.addEventListener('click', metricsModalToggleEventHandler)
   Countly.init({
     app_key: '3c2c0819434074fc4d339ddd8e112a1e741ecb72',
     url: 'https://countly.ipfs.io',
@@ -75,17 +86,26 @@ function loadCountly (): void {
   /**
    * @see https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent
    */
-  const necessaryFeatures = ['sessions', 'views']
-  const marketingFeatures = ['attribution', 'users', 'location']
-  const performanceFeatures = ['events', 'crashes', 'apm']
-  const trackingFeatures = ['scrolls', 'clicks', 'forms', 'star-rating', 'feedback']
+
+  const minimalFeatures = ['sessions', 'views', 'events']
+  const performanceFeatures = ['crashes', 'apm']
+  const uxFeatures = ['scrolls', 'clicks', 'forms']
+  const feedbackFeatures = ['star-rating', 'feedback']
+  const locationFeatures = ['location']
 
   Countly.group_features({
-    all: [...necessaryFeatures, ...marketingFeatures, ...performanceFeatures, ...trackingFeatures],
-    necessary: necessaryFeatures,
-    marketing: marketingFeatures,
-    tracking: trackingFeatures,
-    performance: performanceFeatures
+    all: [
+      ...minimalFeatures,
+      ...performanceFeatures,
+      ...uxFeatures,
+      ...feedbackFeatures,
+      ...locationFeatures
+    ],
+    minimal: minimalFeatures,
+    performance: performanceFeatures,
+    ux: uxFeatures,
+    feedback: feedbackFeatures,
+    location: locationFeatures
   })
 
   /**
@@ -102,17 +122,10 @@ function loadCountly (): void {
   Countly.track_view()
 
   if (metricsConsent != null) {
-    try {
-      addConsent(JSON.parse(metricsConsent))
-    } catch {
-      displayConsentBanner()
-    }
+    addConsent(JSON.parse(metricsConsent))
   } else {
-    displayConsentBanner()
+    addConsent(['minimal'])
   }
 }
 
-export {
-  loadCountly,
-  Countly
-}
+export { loadCountly, Countly }

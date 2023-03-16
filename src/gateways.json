@@ -83,5 +83,5 @@
 	"https://ipfs.joaoleitao.org/ipfs/:hash",
 	"https://ipfs.tayfundogdas.me/ipfs/:hash",
 	"https://ipfs.jpu.jp/ipfs/:hash",
-	"https://ipfs.czip.it/ipfs/:hash"	
+	"https://gateway.czip.it/ipfs/:hash"	
 ]

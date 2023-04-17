@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/ipfs/public-gateway-checker/compare/v1.0.0...v1.0.1) (2023-04-17)
+
+
+### Trivial Changes
+
+* npx update-browserslist-db@latest ([194e968](https://github.com/ipfs/public-gateway-checker/commit/194e96883837e03c1355deef409a3447b2330e18))
+
 ## 1.0.0 (2023-04-17)
 
 

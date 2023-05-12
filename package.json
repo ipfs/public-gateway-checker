@@ -1,7 +1,7 @@
 {
   "name": "@ipfs/public-gateway-checker",
   "private": true,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Checks which public gateways are online or not",
   "author": "Marcin Rataj <lidel@lidel.org>",
   "license": "Apache-2.0 OR MIT",

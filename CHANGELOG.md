@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/ipfs/public-gateway-checker/compare/v1.0.2...v1.0.3) (2023-05-12)
+
+
+### Trivial Changes
+
+* **deps:** bump xml2js and @achingbrain/nat-port-mapper ([#401](https://github.com/ipfs/public-gateway-checker/issues/401)) ([a5ff08b](https://github.com/ipfs/public-gateway-checker/commit/a5ff08b31611907e3671ae7ca98e0405023c570a))
+
 ## [1.0.2](https://github.com/ipfs/public-gateway-checker/compare/v1.0.1...v1.0.2) (2023-05-12)
 
 

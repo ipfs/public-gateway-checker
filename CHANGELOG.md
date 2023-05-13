@@ -1,3 +1,18 @@
+## [1.0.3](https://github.com/ipfs/public-gateway-checker/compare/v1.0.2...v1.0.3) (2023-05-12)
+
+
+### Trivial Changes
+
+* **deps:** bump xml2js and @achingbrain/nat-port-mapper ([#401](https://github.com/ipfs/public-gateway-checker/issues/401)) ([a5ff08b](https://github.com/ipfs/public-gateway-checker/commit/a5ff08b31611907e3671ae7ca98e0405023c570a))
+
+## [1.0.2](https://github.com/ipfs/public-gateway-checker/compare/v1.0.1...v1.0.2) (2023-05-12)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump aegir from 37.5.6 to 38.1.7 ([#388](https://github.com/ipfs/public-gateway-checker/issues/388)) ([2318df6](https://github.com/ipfs/public-gateway-checker/commit/2318df6348e51e77ce44a5ecc196ebea979640b2))
+* **deps:** bump @sideway/formula from 3.0.0 to 3.0.1 ([#380](https://github.com/ipfs/public-gateway-checker/issues/380)) ([2e4d663](https://github.com/ipfs/public-gateway-checker/commit/2e4d66312205af463801d58a855b8bf3f34a8fce))
+
 ## [1.0.1](https://github.com/ipfs/public-gateway-checker/compare/v1.0.0...v1.0.1) (2023-04-17)
 
 

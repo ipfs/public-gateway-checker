@@ -1,3 +1,10 @@
+## [1.1.0](https://github.com/ipfs/public-gateway-checker/compare/v1.0.3...v1.1.0) (2023-05-14)
+
+
+### Features
+
+* add starbase.gw3.io ([#398](https://github.com/ipfs/public-gateway-checker/issues/398)) ([822d885](https://github.com/ipfs/public-gateway-checker/commit/822d8853d809bfaef3b9d5cef05cb207db7eb0b8))
+
 ## [1.0.3](https://github.com/ipfs/public-gateway-checker/compare/v1.0.2...v1.0.3) (2023-05-12)
 
 

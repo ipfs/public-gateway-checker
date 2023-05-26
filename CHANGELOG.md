@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/ipfs/public-gateway-checker/compare/v1.1.0...v1.2.0) (2023-05-26)
+
+
+### Features
+
+* rename starbase.gw3.io to gw3.io ([#405](https://github.com/ipfs/public-gateway-checker/issues/405)) ([f1f8522](https://github.com/ipfs/public-gateway-checker/commit/f1f8522c52e97bf53e9f98060fc7b2eb0f792909))
+
 ## [1.1.0](https://github.com/ipfs/public-gateway-checker/compare/v1.0.3...v1.1.0) (2023-05-14)
 
 

@@ -16,6 +16,7 @@
     "https://ipfs.busy.org/ipfs/:hash",
     "https://ipfs.greyh.at/ipfs/:hash",
     "https://gateway.serph.network/ipfs/:hash",
+    "https://gw3.io/ipfs/:hash",
     "https://jorropo.net/ipfs/:hash",
     "https://ipfs.fooock.com/ipfs/:hash",
     "https://cdn.cwinfo.net/ipfs/:hash",
@@ -80,6 +81,5 @@
     "https://cthd.icu/ipfs/:hash",
     "https://ipfs.tayfundogdas.me/ipfs/:hash",
     "https://ipfs.jpu.jp/ipfs/:hash",
-    "https://ipfs.soul-network.com/ipfs/:hash",
-    "https://starbase.gw3.io/ipfs/:hash"
+    "https://ipfs.soul-network.com/ipfs/:hash"
 ]

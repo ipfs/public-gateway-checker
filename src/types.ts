@@ -15,7 +15,6 @@ export interface Checkable {
   // check: () => Promise<void>
   check: () => void
   checked: () => void
-
   onerror: () => void
 }
 

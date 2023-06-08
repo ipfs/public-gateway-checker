@@ -98,7 +98,8 @@ class Flag extends UiComponent {
   async handleDnsQueryResponse (response: DnsQueryResponse): Promise<void> {
     if (response.Answer == null) {
       log.error('Response does not contain the "Answer" property:', response)
-      this.onError(); return
+      this.onError()
+      return
     }
     let ip = null
     for (let i = 0; i < response.Answer.length && ip == null; i++) {

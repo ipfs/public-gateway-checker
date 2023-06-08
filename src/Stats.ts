@@ -1,6 +1,6 @@
-import type { Checker } from './Checker'
 import { Tag } from './Tag'
 import { UiComponent } from './UiComponent'
+import type { Checker } from './Checker'
 
 class Stats extends UiComponent {
   gateways: HTMLDivElement

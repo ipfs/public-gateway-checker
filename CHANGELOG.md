@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/ipfs/public-gateway-checker/compare/v1.2.0...v1.2.1) (2023-06-08)
+
+
+### Trivial Changes
+
+* **deps:** bump undici from 5.10.0 to 5.20.0 ([#387](https://github.com/ipfs/public-gateway-checker/issues/387)) ([5157670](https://github.com/ipfs/public-gateway-checker/commit/5157670558880761309ff16a84c12d04a44381cc))
+
 ## [1.2.0](https://github.com/ipfs/public-gateway-checker/compare/v1.1.0...v1.2.0) (2023-05-26)
 
 

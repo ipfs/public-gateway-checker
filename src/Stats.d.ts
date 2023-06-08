@@ -1,5 +1,5 @@
-import type { Checker } from './Checker';
 import { UiComponent } from './UiComponent';
+import type { Checker } from './Checker';
 declare class Stats extends UiComponent {
     readonly parent: Checker;
     gateways: HTMLDivElement;

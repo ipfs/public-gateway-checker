@@ -1,6 +1,6 @@
 import { URL } from 'url-ponyfill';
-import { UiComponent } from './UiComponent';
 import { Log } from './Log';
+import { UiComponent } from './UiComponent';
 import { checkViaImgSrc } from './checkViaImgSrc';
 import { IMG_HASH } from './constants';
 const log = new Log('Status');

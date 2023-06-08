@@ -1,7 +1,7 @@
 import fetchPonyfill from 'fetch-ponyfill';
 import { CheckBase } from './CheckBase';
-import { HASH_TO_TEST, TRUSTLESS_RESPONSE_TYPES } from './constants';
 import { Log } from './Log';
+import { HASH_TO_TEST, TRUSTLESS_RESPONSE_TYPES } from './constants';
 const { fetch } = fetchPonyfill();
 const log = new Log('Trustless');
 class Trustless extends CheckBase {

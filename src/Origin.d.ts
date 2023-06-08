@@ -1,5 +1,5 @@
-import type { GatewayNode } from './GatewayNode';
 import { Tag } from './Tag';
+import type { GatewayNode } from './GatewayNode';
 declare class Origin {
     parent: GatewayNode;
     tag: Tag;

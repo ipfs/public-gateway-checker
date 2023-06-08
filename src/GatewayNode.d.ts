@@ -1,11 +1,11 @@
 import { Cors } from './Cors';
 import { Flag } from './Flag';
-import { Origin } from './Origin';
-import { Trustless } from './Trustless';
-import type { Results } from './Results';
-import { Status } from './Status';
-import { UiComponent } from './UiComponent';
 import { IPNSCheck } from './Ipns';
+import { Origin } from './Origin';
+import { Status } from './Status';
+import { Trustless } from './Trustless';
+import { UiComponent } from './UiComponent';
+import type { Results } from './Results';
 declare class GatewayNode extends UiComponent {
     readonly parent: Results;
     status: Status;

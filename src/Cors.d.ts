@@ -1,5 +1,6 @@
 import { CheckBase } from './CheckBase';
 import type { GatewayNode } from './GatewayNode';
+import type { Checkable } from './types';
 declare class Cors extends CheckBase implements Checkable {
     protected parent: GatewayNode;
     _className: string;

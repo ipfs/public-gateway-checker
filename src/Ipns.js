@@ -1,7 +1,7 @@
 import fetchPonyfill from 'fetch-ponyfill';
 import { CheckBase } from './CheckBase';
-import { IPNS_PATH_TO_TEST } from './constants';
 import { Log } from './Log';
+import { IPNS_PATH_TO_TEST } from './constants';
 const { fetch } = fetchPonyfill();
 const log = new Log('Ipns');
 class IPNSCheck extends CheckBase {

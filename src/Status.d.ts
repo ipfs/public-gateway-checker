@@ -1,5 +1,5 @@
-import type { GatewayNode } from './GatewayNode';
 import { UiComponent } from './UiComponent';
+import type { GatewayNode } from './GatewayNode';
 declare class Status extends UiComponent {
     readonly parent: GatewayNode;
     private _up;

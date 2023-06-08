@@ -1,7 +1,7 @@
 import fetchPonyfill from 'fetch-ponyfill';
 import { CheckBase } from './CheckBase';
-import { HASH_STRING, HASH_TO_TEST } from './constants';
 import { Log } from './Log';
+import { HASH_STRING, HASH_TO_TEST } from './constants';
 const { fetch } = fetchPonyfill();
 const log = new Log('Cors');
 class Cors extends CheckBase {

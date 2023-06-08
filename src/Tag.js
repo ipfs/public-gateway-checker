@@ -52,7 +52,7 @@ class Tag {
         if (child instanceof Tag) {
             child = child.element;
         }
-        return this.element.append(child);
+        this.element.append(child);
     }
     get classList() {
         return this.element.classList;

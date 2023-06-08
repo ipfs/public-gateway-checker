@@ -1,5 +1,6 @@
-import type { GatewayNode } from './GatewayNode';
 import { UiComponent } from './UiComponent';
+import type { GatewayNode } from './GatewayNode';
+import type { DnsQueryResponse } from './types';
 declare class Flag extends UiComponent {
     protected parent: GatewayNode;
     private readonly hostname;

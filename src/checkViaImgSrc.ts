@@ -7,7 +7,7 @@ async function checkViaImgSrc (imgUrl: string | URL): Promise<void> {
   // this is more robust check than loading js, as it won't be blocked
   // by privacy protections present in modern browsers or in extensions such as Privacy Badger
   const imgCheckTimeout = 15000
-  return await new Promise((resolve, reject) => {
+  await new Promise<void>((resolve, reject) => {
     const img = new Image()
     const timer: ReturnType<typeof setTimeout> = setTimeout(() => {
       // clearTimeout(timer)

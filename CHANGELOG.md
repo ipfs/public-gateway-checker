@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/ipfs/public-gateway-checker/compare/v1.2.1...v1.2.2) (2023-06-08)
+
+
+### Trivial Changes
+
+* update eslint-config-ipfs and fix lint ([#413](https://github.com/ipfs/public-gateway-checker/issues/413)) ([165f35c](https://github.com/ipfs/public-gateway-checker/commit/165f35ce394f0f6e452174e0133cd111ba48170e))
+
 ## [1.2.1](https://github.com/ipfs/public-gateway-checker/compare/v1.2.0...v1.2.1) (2023-06-08)
 
 

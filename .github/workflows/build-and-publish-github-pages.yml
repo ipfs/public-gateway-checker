@@ -18,7 +18,7 @@ jobs:
 
       # Deploy to gh pages branch
       - name: Deploy
-        uses: s0/git-publish-subdir-action@399aab378450f99b7de6767f62b0d1dbfcb58b53
+        uses: s0/git-publish-subdir-action@92faf786f11dfa44fc366ac3eb274d193ca1af7e
         env:
           REPO: self
           BRANCH: gh-pages

@@ -1,6 +1,6 @@
-import type { Checker } from './Checker'
 import { Tag } from './Tag'
 import { UiComponent } from './UiComponent'
+import type { Checker } from './Checker'
 
 class Stats extends UiComponent {
   gateways: HTMLDivElement
@@ -24,7 +24,7 @@ class Stats extends UiComponent {
     this.tag.append(this.totals)
   }
 
-  public update () {
+  public update (): void {
     let up = 0
     let down = 0
     for (const savedNode of this.parent.nodes) {

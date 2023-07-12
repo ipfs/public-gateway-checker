@@ -1,8 +1,13 @@
+import { Workbox } from 'workbox-window'
 import { Checker } from './Checker'
-import gateways from './gateways.json'
-
 import { Log } from './Log'
+import gateways from './gateways.json'
+import { loadCountly } from './metrics'
 
+const wb = new Workbox('/sw.js')
+void wb.register()
+
+loadCountly()
 const log = new Log('App index')
 
 window.checker = new Checker()

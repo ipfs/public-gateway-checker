@@ -1,15 +1,15 @@
 import { URL } from 'url-ponyfill'
-
 import { Cors } from './Cors'
 import { Flag } from './Flag'
-import { Origin } from './Origin'
-import type { Results } from './Results'
-import { Status } from './Status'
-import { UiComponent } from './UiComponent'
-
+import { IPNSCheck } from './Ipns'
 import { Log } from './Log'
-import { gatewayHostname } from './gatewayHostname'
+import { Origin } from './Origin'
+import { Status } from './Status'
+import { Trustless } from './Trustless'
+import { UiComponent } from './UiComponent'
 import { HASH_TO_TEST } from './constants'
+import { gatewayHostname } from './gatewayHostname'
+import type { Results } from './Results'
 
 const log = new Log('GatewayNode')
 
@@ -17,7 +17,9 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
   // tag: Tag
   status: Status
   cors: Cors
+  ipns: IPNSCheck
   origin: Origin
+  trustless: Trustless
   link: HTMLDivElement & { url?: URL }
   flag: Flag
   took: HTMLDivElement
@@ -40,8 +42,14 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
     this.cors = new Cors(this)
     this.tag.append(this.cors.tag)
 
+    this.ipns = new IPNSCheck(this)
+    this.tag.append(this.ipns.tag)
+
     this.origin = new Origin(this)
     this.tag.append(this.origin.tag)
+
+    this.trustless = new Trustless(this)
+    this.tag.append(this.trustless.tag)
 
     this.link = document.createElement('div')
     const gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST)
@@ -63,16 +71,19 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
     this.checkingTime = 0
   }
 
-  public async check () {
+  public async check (): Promise<void> {
     this.checkingTime = Date.now()
     // const onFailedCheck = () => { this.status.down = true }
     // const onSuccessfulCheck = () => { this.status.up = true }
-    void this.flag.check().then(() => log.debug(this.gateway, 'Flag success'))
+    void this.flag.check().then(() => { log.debug(this.gateway, 'Flag success') })
     const onlineChecks = [
       // this.flag.check().then(() => log.debug(this.gateway, 'Flag success')),
-      this.status.check().then(() => log.debug(this.gateway, 'Status success')).then(this.onSuccessfulCheck.bind(this)),
-      this.cors.check().then(() => log.debug(this.gateway, 'CORS success')).then(this.onSuccessfulCheck.bind(this)),
-      this.origin.check().then(() => log.debug(this.gateway, 'Origin success')).then(this.onSuccessfulCheck.bind(this))
+      this.status.check().then(() => { log.debug(this.gateway, 'Status success') }).then(this.onSuccessfulCheck.bind(this)),
+      this.cors.check().then(() => { log.debug(this.gateway, 'CORS success') }).then(this.onSuccessfulCheck.bind(this)),
+      this.ipns.check().then(() => { log.debug(this.gateway, 'IPNS success') }).then(this.onSuccessfulCheck.bind(this)),
+      this.origin.check().then(() => { log.debug(this.gateway, 'Origin success') }).then(this.onSuccessfulCheck.bind(this)),
+      this.trustless.check().then(
+        () => { log.debug(this.gateway, 'Trustless success') }).then(this.onSuccessfulCheck.bind(this))
     ]
 
     // we care only about the fastest method to return a success
@@ -100,7 +111,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
     })
   }
 
-  private onSuccessfulCheck () {
+  private onSuccessfulCheck (): void {
     if (!this.atLeastOneSuccess) {
       log.info(`For gateway '${this.gateway}', at least one check was successful`)
       this.atLeastOneSuccess = true
@@ -135,7 +146,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
   //   }
   // }
 
-  onerror () {
+  onerror (): void {
     this.tag.err()
   }
 }

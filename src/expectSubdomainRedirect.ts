@@ -1,11 +1,10 @@
 import { URL } from 'url-ponyfill'
-import { IMG_HASH } from './constants'
-
 import { Log } from './Log'
+import { IMG_HASH } from './constants'
 
 const log = new Log('expectSubdomainRedirect')
 
-async function expectSubdomainRedirect (url: string | URL) {
+async function expectSubdomainRedirect (url: string | URL): Promise<void> {
   // Detecting redirects on remote Origins is extra tricky,
   // but we seem to be able to access xhr.responseURL which is enough to see
   // if paths are redirected to subdomains.

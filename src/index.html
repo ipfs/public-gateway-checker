@@ -1,68 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Public Gateway Checker | IPFS</title>
-	<meta name="description" content="Check which public IPFS gateways are currently online.">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="mobile-web-app-capable" content="yes">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tachyons@4.11.1/css/tachyons.min.css" integrity="sha256-XiJ+PedljEmPP2VaQzSzekfCZdPr0fpqmh9dY6kpsuQ=" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ipfs-css@0.13.1/ipfs.css" integrity="sha256-crEOQ/1aKoWgku50e0aqNzt0Tt/ev2C97PVr5hGpeEY=" crossorigin="anonymous">
-	<link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlo89/56ZQ/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUjDu1lo89/6mhTP+zrVP/nplD/5+aRK8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHNiIS6Wjz3/ubFY/761W/+vp1D/urRZ/8vDZf/GvmH/nplD/1BNIm8AAAAAAAAAAAAAAAAAAAAAAAAAAJaPPf+knEj/vrVb/761W/++tVv/r6dQ/7q0Wf/Lw2X/y8Nl/8vDZf+tpk7/nplD/wAAAAAAAAAAAAAAAJaPPf+2rVX/vrVb/761W/++tVv/vrVb/6+nUP+6tFn/y8Nl/8vDZf/Lw2X/y8Nl/8G6Xv+emUP/AAAAAAAAAACWjz3/vrVb/761W/++tVv/vrVb/761W/+vp1D/urRZ/8vDZf/Lw2X/y8Nl/8vDZf/Lw2X/nplD/wAAAAAAAAAAlo89/761W/++tVv/vrVb/761W/++tVv/r6dQ/7q0Wf/Lw2X/y8Nl/8vDZf/Lw2X/y8Nl/56ZQ/8AAAAAAAAAAJaPPf++tVv/vrVb/761W/++tVv/vbRa/5aPPf+emUP/y8Nl/8vDZf/Lw2X/y8Nl/8vDZf+emUP/AAAAAAAAAACWjz3/vrVb/761W/++tVv/vrVb/5qTQP+inkb/op5G/6KdRv/Lw2X/y8Nl/8vDZf/Lw2X/nplD/wAAAAAAAAAAlo89/761W/++tVv/sqlS/56ZQ//LxWb/0Mlp/9DJaf/Kw2X/oJtE/7+3XP/Lw2X/y8Nl/56ZQ/8AAAAAAAAAAJaPPf+9tFr/mJE+/7GsUv/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+xrFL/nplD/8vDZf+emUP/AAAAAAAAAACWjz3/op5G/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+inkb/nplD/wAAAAAAAAAAAAAAAKKeRv+3slb/0cpq/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+1sFX/op5G/wAAAAAAAAAAAAAAAAAAAAAAAAAAop5GUKKeRv/Nxmf/0cpq/9HKav/Rymr/0cpq/83GZ/+inkb/op5GSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAop5G16KeRv/LxWb/y8Vm/6KeRv+inkaPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAop5G/6KeRtcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPgfAADwDwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAPAPAAD4HwAA/n8AAA==" />
-    <!-- <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client@56/index.min.js" integrity="sha384-nQtRd3sp3e41qrWYq2Kdr4uYrAYYFjpjVG8M76OR39X6ythvU/tl3ZBmMUtS54o+" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ipfs-geoip@7/dist/index.min.js" integrity="sha384-xRhSHsWz2C384OynfHjLg113EXg3fohlDdASs7o6gCxkW1/nfciC5WynCV/s1Bpt" crossorigin="anonymous"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/ipfs-http-client@44.1.1/dist/index.min.js" integrity="sha256-TMFHdG0nkNPPHBpd2UNil3TMjSPxWLcRgvwANAmjuRg=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/ipfs-geoip@6.0.0/dist/index.min.js" integrity="sha256-Vhr0hZsdmsT81gd4u2bs3bLYLfDdr46nvcI/VaT9YZ4=" crossorigin="anonymous"></script>
-
-	<link href="styles.css?v=0.4" type="text/css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <title>Public Gateway Checker | IPFS</title>
+  <meta name="description" content="Check which public IPFS gateways are currently online.">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tachyons@4.11.1/css/tachyons.min.css" integrity="sha256-XiJ+PedljEmPP2VaQzSzekfCZdPr0fpqmh9dY6kpsuQ=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ipfs-css@0.13.1/ipfs.css" integrity="sha256-crEOQ/1aKoWgku50e0aqNzt0Tt/ev2C97PVr5hGpeEY=" crossorigin="anonymous">
+  <link rel="shortcut icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlo89/56ZQ/8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACUjDu1lo89/6mhTP+zrVP/nplD/5+aRK8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHNiIS6Wjz3/ubFY/761W/+vp1D/urRZ/8vDZf/GvmH/nplD/1BNIm8AAAAAAAAAAAAAAAAAAAAAAAAAAJaPPf+knEj/vrVb/761W/++tVv/r6dQ/7q0Wf/Lw2X/y8Nl/8vDZf+tpk7/nplD/wAAAAAAAAAAAAAAAJaPPf+2rVX/vrVb/761W/++tVv/vrVb/6+nUP+6tFn/y8Nl/8vDZf/Lw2X/y8Nl/8G6Xv+emUP/AAAAAAAAAACWjz3/vrVb/761W/++tVv/vrVb/761W/+vp1D/urRZ/8vDZf/Lw2X/y8Nl/8vDZf/Lw2X/nplD/wAAAAAAAAAAlo89/761W/++tVv/vrVb/761W/++tVv/r6dQ/7q0Wf/Lw2X/y8Nl/8vDZf/Lw2X/y8Nl/56ZQ/8AAAAAAAAAAJaPPf++tVv/vrVb/761W/++tVv/vbRa/5aPPf+emUP/y8Nl/8vDZf/Lw2X/y8Nl/8vDZf+emUP/AAAAAAAAAACWjz3/vrVb/761W/++tVv/vrVb/5qTQP+inkb/op5G/6KdRv/Lw2X/y8Nl/8vDZf/Lw2X/nplD/wAAAAAAAAAAlo89/761W/++tVv/sqlS/56ZQ//LxWb/0Mlp/9DJaf/Kw2X/oJtE/7+3XP/Lw2X/y8Nl/56ZQ/8AAAAAAAAAAJaPPf+9tFr/mJE+/7GsUv/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+xrFL/nplD/8vDZf+emUP/AAAAAAAAAACWjz3/op5G/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+inkb/nplD/wAAAAAAAAAAAAAAAKKeRv+3slb/0cpq/9HKav/Rymr/0cpq/9HKav/Rymr/0cpq/9HKav+1sFX/op5G/wAAAAAAAAAAAAAAAAAAAAAAAAAAop5GUKKeRv/Nxmf/0cpq/9HKav/Rymr/0cpq/83GZ/+inkb/op5GSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAop5G16KeRv/LxWb/y8Vm/6KeRv+inkaPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAop5G/6KeRtcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/n8AAPgfAADwDwAAwAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAwAMAAPAPAAD4HwAA/n8AAA==" />
+  <link href="styles.css" type="text/css" rel="stylesheet" />
 </head>
+
 <body id="checker" class="sans-serif charcoal bg-snow-muted">
+  <header class='flex-l items-center pa3 bg-navy bb bw3 border-aqua tc tl-l'>
+    <a href="https://ipfs.io" target="_blank" title="ipfs.io" class='flex-none v-mid'>
+      <img src="https://ipfs.io/ipfs/QmTqZhR6f7jzdhLgPArDPnsbZpvvgxzCZycXK7ywkLxSyU?filename=ipfs-logo.3ea91a2f.svg" alt="IPFS" height="50px" width="117.5px" />
+    </a>
+    <div class='flex-auto'>
+    </div>
+    <div class='pt2 pt0-l ma0 inline-flex items-center'>
+      <h1 class='f3 fw2 montserrat aqua ttu ma0'>Public Gateways</h1>
+      <div class='pl3'>
+        <a href='https://github.com/ipfs/public-gateway-checker' target='_blank' rel="noopener noreferrer" aria-label='View source on GitHub'>
+          <svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 32.58 31.77'>
+            <path fill='#7f8491' d='M16.29 0a16.29 16.29 0 00-5.15 31.75c.82.15 1.11-.36 1.11-.79v-2.77C7.7 29.18 6.74 26 6.74 26a4.36 4.36 0 00-1.81-2.39c-1.47-1 .12-1 .12-1a3.43 3.43 0 012.49 1.68 3.48 3.48 0 004.74 1.36 3.46 3.46 0 011-2.18c-3.62-.41-7.42-1.81-7.42-8a6.3 6.3 0 011.67-4.37 5.94 5.94 0 01.16-4.31s1.37-.44 4.48 1.67a15.41 15.41 0 018.16 0c3.11-2.11 4.47-1.67 4.47-1.67a5.91 5.91 0 01.2 4.28 6.3 6.3 0 011.67 4.37c0 6.26-3.81 7.63-7.44 8a3.85 3.85 0 011.11 3v4.47c0 .53.29.94 1.12.78A16.29 16.29 0 0016.29 0z' />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
 
-	<header class='flex-l items-center pa3 bg-navy bb bw3 border-aqua tc tl-l'>
-		<a href="https://ipfs.io" target="_blank" title="ipfs.io" class='flex-none v-mid'>
-			<img src="https://ipfs.io/ipfs/QmTqZhR6f7jzdhLgPArDPnsbZpvvgxzCZycXK7ywkLxSyU?filename=ipfs-logo.3ea91a2f.svg" alt="IPFS" height="50px" width="117.5px" />
-		</a>
-		<div class='flex-auto'>
-		</div>
-		<div class='pt2 pt0-l ma0 inline-flex items-center'>
-			<h1 class='f3 fw2 montserrat aqua ttu ma0'>Public Gateways</h1>
-			<div class='pl3'>
-				<a href='https://github.com/ipfs/public-gateway-checker' target='_blank' rel="noopener noreferrer" aria-label='View source on GitHub'>
-					<svg xmlns='http://www.w3.org/2000/svg' height='24' viewBox='0 0 32.58 31.77'>
-						<path fill='#7f8491' d='M16.29 0a16.29 16.29 0 00-5.15 31.75c.82.15 1.11-.36 1.11-.79v-2.77C7.7 29.18 6.74 26 6.74 26a4.36 4.36 0 00-1.81-2.39c-1.47-1 .12-1 .12-1a3.43 3.43 0 012.49 1.68 3.48 3.48 0 004.74 1.36 3.46 3.46 0 011-2.18c-3.62-.41-7.42-1.81-7.42-8a6.3 6.3 0 011.67-4.37 5.94 5.94 0 01.16-4.31s1.37-.44 4.48 1.67a15.41 15.41 0 018.16 0c3.11-2.11 4.47-1.67 4.47-1.67a5.91 5.91 0 01.2 4.28 6.3 6.3 0 011.67 4.37c0 6.26-3.81 7.63-7.44 8a3.85 3.85 0 011.11 3v4.47c0 .53.29.94 1.12.78A16.29 16.29 0 0016.29 0z'/>
-					</svg>
-				</a>
-			</div>
-		</div>
-	</header>
+  <div class="ph4-l pt4-l overflow-hidden">
+    <div id="origin-warning" class="f5 pa2 tl">
+      <p>SECURITY NOTES</p>
+      <ul class="pl3">
+        <li>Avoid storing sensitive data (or providing credentials) on websites loaded via gateways marked with <big>⚠️ </big><br />
+          These are legacy gateways for fetching standalone data, not designed to serve dapps/websites.<br />
+          <strong>They do not provide <a href="https://docs.ipfs.io/how-to/address-ipfs-on-web/#path-gateway">origin isolation</a></strong>.
+        </li>
+        <li class="pt2">
+          The list contains gateways operated by various parties, coordinated by loose mutual consensus, <strong>without a central governing authority</strong>.<br />
+          Protocol Labs operates and is responsible for only two of the listed gateways: <code>ipfs.io</code> and <code>dweb.link</code>.
+        </li>
+      </ul>
+    </div>
+    <div id="checker.stats" class="Stats monospace f6"></div>
+    <div id="checker.results" class="Results monospace f6">
+      <div class="Node Header">
+        <div class="Status" title="Online status: is it possible to read data?" style="cursor: help">Online</div>
+        <div class="Cors" title="Allows Cross-Origin Resource Sharing (CORS fetch)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">CORS</a></div>
+        <div class="Ipns" title="Allows IPNS Resolution to IPFS Content Addresses"><a href="https://docs.ipfs.tech/concepts/ipns" target="_blank">IPNS</a></div>
+        <div class="Origin" title="Provides Origin Isolation (Subdomain Gateway)"><a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
+        <div class="Trustless" title="Supports Trustless Gateway Specification"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Block/CAR</a></div>
+        <div class="Flag">Country</div>
+        <div class="Link">Hostname</div>
+        <div class="Took">ΔT</div>
+      </div>
+    </div>
 
-	<div class="ph4-l pt4-l">
-        <div id="origin-warning" class="f5 pa2 tl">
-          <p>SECURITY NOTES</p>
-          <ul class="pl3">
-            <li>Avoid storing sensitive data (or providing credentials) on websites loaded via gateways marked with <big>⚠️ </big><br/>
-              These are legacy gateways for fetching standalone data, not designed to serve dapps/websites.<br/>
-              <strong>They do not provide <a href="https://docs.ipfs.io/how-to/address-ipfs-on-web/#path-gateway">origin isolation</a></strong>.
-            </li>
-            <li class="pt2">
-              The list contains gateways operated by various parties, coordinated by loose mutual consensus, <strong>without a central governing authority</strong>.<br/>
-              Protocol Labs operates and is responsible for only two of the listed gateways: <code>ipfs.io</code> and <code>dweb.link</code>.
+    <div class="hidden js-metrics-notification-modal metrics-notification-wrapper bg-navy bt bw1 border-jade">
+      <div class="metrics-modal-close js-modal-close">✕</div>
+      <div class="metrics-notification-content js-metrics-agreement">
+        <h3 class="js-metrics-notification-heading metrics-notification-heading montserrat">
+          Metrics and Telemetry Notice
+        </h3>
+        <!-- metric agreement -->
+        <span class="metrics-notification-text montserrat">
+          This site collects metrics and other telemetry data in accordance with our <a href="https://github.com/ipfs-shipyard/ignite-metrics/blob/main/docs/telemetry/COLLECTION_POLICY.md">metrics collection policy</a>. You can learn more about
+          how we use this information and customize your preferences by clicking “manage settings” below.
+        </span>
+        <div class="metrics-notification-buttons">
+          <button id="metrics-notification-manage" class="js-metrics-notification-manage">Manage settings</button>
+          <button id="metrics-notification-confirm" class="primary js-metrics-notification-confirm">Got it!</button>
+        </div>
+      </div>
+      <div class="hidden metrics-notification-content metrics-notification-content-preferences js-metrics-preferences">
+        <h3 class="js-metrics-notification-heading metrics-notification-heading montserrat">
+          Metrics and Telemetry Settings
+        </h3>
+        <!-- manage preferences -->
+        <span class="metrics-notification-text montserrat">
+          This site collects metrics and other telemetry data in order to improve and prioritize work on IPFS. It does not collect any personally identifiable information.
+        </span>
+        <div class="metrics-notification-customize">
+          <span class="metrics-notification-text metrics-notification-customize-text montserrat">
+            Opt-in or out at any time by using the toggle below.
+            For more details, read the full <a href="https://github.com/ipfs-shipyard/ignite-metrics/blob/main/docs/telemetry/COLLECTION_POLICY.md">metrics collection policy</a>.
+          </span>
+          <ul class="metrics-notification-preference-list">
+            <li class="metrics-notification-preference-list-item">
+              <span class="preference-list-item-text">Minimal Telemetry</span>
+              <label class="preference-list-item-switch">
+                <input class="js-necessary-toggle" type="checkbox">
+                <span class="toggle-slider"></span>
+              </label>
             </li>
           </ul>
         </div>
-		<div id="checker.stats" class="Stats monospace f6"></div>
-		<div id="checker.results" class="Results monospace f6">
-			<div class="Node Header">
-				<div class="Status" title="Online status: is it possible to read data?" style="cursor: help">Online</div>
-        <div class="Cors" title="Allows Cross-Origin Resource Sharing (CORS fetch)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">CORS</a></div>
-				<div class="Origin" title="Provides Origin Isolation (Subdomain Gateway)"><a href="https://docs.ipfs.io/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
-        <div class="Flag">Country</div>
-        <div class="Link">Hostname</div>
-				<div class="Took">ΔT</div>
-			</div>
-		</div>
-	</div>
-<script src="./index.min.js?v=0.4"></script>
+        <div class="metrics-notification-buttons">
+          <button id="metrics-notification-preferences-save" class="primary js-metrics-notification-preferences-save">
+            Save and Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <button class="metricsConsentToggle js-metrics-modal-toggle" aria-label="Edit metrics settings">
+      <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="21.2333" cy="21.4634" r="20.3114" fill="white" stroke="white" />
+        <rect x="8.35547" y="17.8948" width="6.0781" height="14.5421" fill="#C4C7D6" />
+        <rect x="18.4336" y="21.7493" width="6.0781" height="10.6877" fill="#C4C7D6" />
+        <rect x="28.5117" y="15.4712" width="6.0781" height="16.9658" fill="#C4C7D6" />
+        <circle cx="10.5458" cy="14.0489" r="1.21184" fill="#C4C7D6" />
+        <circle cx="21.4716" cy="18.2176" r="1.21184" fill="#C4C7D6" />
+        <circle cx="31.9208" cy="10.5678" r="1.21184" fill="#C4C7D6" />
+        <path d="M10.5352 14.0284L21.5802 18.3007L32.104 10.6941" stroke="#C4C7D6" />
+      </svg>
+    </button>
+  </div>
+  <script src="./index.min.js"></script>
 </body>
+
 </html>

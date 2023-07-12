@@ -1,8 +1,10 @@
-import type { GatewayNode } from './GatewayNode'
+import { TokenBucketLimiter } from '@dutu/rate-limiter'
+import { lookup as IpfsGeoIpLookup } from 'ipfs-geoip'
 import { Log } from './Log'
 import { UiComponent } from './UiComponent'
-import { ipfsHttpClient } from './ipfsHttpClient'
-import { TokenBucketLimiter } from '@dutu/rate-limiter'
+import { DEFAULT_IPFS_GATEWAY } from './constants'
+import type { GatewayNode } from './GatewayNode'
+import type { DnsQueryResponse } from './types'
 
 const log = new Log('Flag')
 
@@ -16,7 +18,7 @@ class Flag extends UiComponent {
     super(parent, 'div', 'Flag')
   }
 
-  async check () {
+  async check (): Promise<void> {
     let ask = true
 
     try {
@@ -45,7 +47,7 @@ class Flag extends UiComponent {
     }
   }
 
-  private startLimiters () {
+  private startLimiters (): void {
     if (Flag.googleLimiter.isStopped === true) {
       Flag.googleLimiter.start()
     }
@@ -70,7 +72,7 @@ class Flag extends UiComponent {
     if (url == null) {
       // No available tokens...
       log.info('we awaited tokens, but could not retrieve any.. restarting dnsRequest')
-      return await this.waitForAvailableEndpoint()
+      return this.waitForAvailableEndpoint()
     } else {
       return url
     }
@@ -88,15 +90,16 @@ class Flag extends UiComponent {
 
       await this.handleDnsQueryResponse(responseJson)
     } catch (err) {
-      log.error('problem submitting DNS request', err)
+      log.error('problem submitting DNS request', url, err)
       this.onError()
     }
   }
 
-  async handleDnsQueryResponse (response: DnsQueryResponse) {
+  async handleDnsQueryResponse (response: DnsQueryResponse): Promise<void> {
     if (response.Answer == null) {
       log.error('Response does not contain the "Answer" property:', response)
-      return this.onError()
+      this.onError()
+      return
     }
     let ip = null
     for (let i = 0; i < response.Answer.length && ip == null; i++) {
@@ -107,7 +110,7 @@ class Flag extends UiComponent {
     }
     if (ip != null) {
       try {
-        const geoipResponse = await window.IpfsGeoip.lookup(ipfsHttpClient, ip)
+        const geoipResponse = await IpfsGeoIpLookup(DEFAULT_IPFS_GATEWAY, ip)
 
         if (geoipResponse?.country_code != null) {
           this.onResponse(geoipResponse)
@@ -126,11 +129,11 @@ class Flag extends UiComponent {
     }
   }
 
-  private onError () {
+  private onError (): void {
     this.tag.empty()
   }
 
-  onResponse (response: IpfsGeoip.LookupResponse) {
+  onResponse (response: IpfsGeoip.LookupResponse): void {
     this.tag.style.setProperty('background-image', `url('https://ipfs.io/ipfs/QmaYjj5BHGAWfopTdE8ESzypbuthsZqTeqz9rEuh3EJZi6/${response.country_code.toLowerCase()}.svg')`)
     this.tag.title = response.country_name
     this.tag.empty() // remove textContent icon since we're using a background image

@@ -1,101 +1,106 @@
-body, html {
-	box-sizing: border-box;
-	text-align: center;
+body,
+html {
+  box-sizing: border-box;
+  text-align: center;
 }
 
 div.Stats {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	margin: 1em auto;
-	width: 95%;
-	max-width: 1024px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1em auto;
+  width: 95%;
+  max-width: 1024px;
 }
 
 div.Stats div.Totals,
 div.Stats div.Gateways {
-	border-radius: 9999px;
-	color: white;
-	font-weight: bold;
-	padding: 0.5em 1em;
-	margin: 0 1em 0 0;
-	font-family: Consolas, monaco, monospace;
+  border-radius: 9999px;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 0 1em 0 0;
+  font-family: Consolas, monaco, monospace;
 }
 
 div.Stats div.Gateways {
-	background-color: #0b3a53;
+  background-color: #0b3a53;
 }
 
 div.Stats div.Totals {
-	background-color: #0cb892;
+  background-color: #0cb892;
 }
 
 div.Results {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin: 0 auto;
-	width: 100%;
-	max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
 }
 
 div.Node {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	border-bottom: 1px solid #edf0f4;
-	padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #edf0f4;
+  padding: 0.5em 1em;
 }
 
 div.Node:hover {
-	background-color: #edf0f4;
+  background-color: #edf0f4;
 }
 
 
 div.Node div.Link {
-	width: 100%;
-	text-align: left;
-	padding-left: 2em;
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  width: 100%;
+  text-align: left;
+  padding-left: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-div.Node a, div#origin-warning a {
-	text-decoration: none;
-	color: #357edd;
-	white-space: nowrap;
+div.Node a,
+div#origin-warning a {
+  text-decoration: none;
+  color: #357edd;
+  white-space: nowrap;
 }
 
 div.Node div.Status,
 div.Node div.Cors,
 div.Node div.Origin,
+div.Node div.Trustless,
+div.Node div.Ipns,
 div.Node div.Flag {
-	width: 5em;
-	text-align: center;
-	margin: 0 0.5em;
-	user-select: none;
+  width: 7.2em;
+  text-align: center;
+  margin: 0 0.5em;
+  user-select: none;
 }
 
 div.Node div.Flag {
-	/* width: 2em; */
-	height: 1em;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
+  /* width: 2em; */
+  height: 1em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   display: inline-block
 }
 
 div.Node div.Took {
-	min-width: 5em;
-	text-align: right;
-	font-size: 80%;
-	font-style: italic;
+  min-width: 5em;
+  text-align: right;
+  font-size: 80%;
+  font-style: italic;
 }
 
-div.Node.origin div.Link::after {
-  content: " 💚"
+div.Node.trustless div.Trustless {
+  margin: 0 1.3em;
 }
+
 div.Node:not(.online):not(:first-child) {
   opacity: .5
 }
@@ -114,11 +119,309 @@ div#origin-warning p {
   margin-bottom: -.4rem;
 }
 
-div#origin-warning ol, div#origin-warning p, div#origin-warning ul {
-    line-height: 1.7;
+div#origin-warning ol,
+div#origin-warning p,
+div#origin-warning ul {
+  line-height: 1.7;
 }
 
 
 div#checker\.results .Node:nth-child(1) .Link {
   padding-left: 1em;
+}
+
+/**
+ * Consent notification for metrics collection
+ * Should be a color that is not too bright, but still visible
+ */
+div.metrics-notification-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 480px;
+  width: 100%;
+  position: fixed;
+  bottom: 12px;
+  left: 20px;
+  z-index: 2;
+  background: #ffffff;
+  border-radius: 4px;
+  border-top: 6px solid #3B8C90;
+  box-shadow: 0px 8px 14px rgba(77, 72, 69, 0.15),
+    0px 1px 4px rgba(77, 72, 69, 0.15);
+  padding: 28px 40px;
+}
+
+div.metrics-notification-wrapper div.metrics-modal-close {
+  position: absolute;
+  font-size: 20px;
+  top: 5px;
+  right: 5px;
+  font-weight: 100;
+  color: #073A53;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+div.metrics-notification-wrapper h3.metrics-notification-heading {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 12px;
+  color: #073A53;
+  font-style: normal;
+  margin: 0;
+}
+
+div.metrics-notification-wrapper h3.metrics-notification-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #3B8C90;
+  border-radius: 2px;
+
+}
+
+div.metrics-notification-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+div.metrics-notification-wrapper .metrics-notification-text {
+  text-align: left;
+  color: #073A53;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 16px;
+  line-height: 20px;
+  width: 100%;
+}
+
+.metrics-notification-text .metrics-notification-customize-text {
+  padding-left: 10px;
+}
+
+div.metrics-notification-wrapper .metrics-notification-customize {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div.metrics-notification-wrapper .metrics-notification-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 315px;
+}
+
+div.metrics-notification-wrapper .metrics-notification-content-preferences .metrics-notification-buttons {
+  justify-content: center;
+  max-width: 100%;
+}
+
+div.metrics-notification-wrapper a {
+  /* color: rgba(107, 196, 206, 1); */
+  color: #073A53;
+}
+
+div.metrics-notification-wrapper .metrics-notification-buttons button {
+  border: none;
+  color: #3B8C90;
+  cursor: pointer;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 11px 20px;
+}
+
+.metrics-notification-wrapper .metrics-notification-buttons button.primary {
+  background-color: #3B8C90;
+  color: rgba(246, 248, 251, 1);
+  font-weight: 600;
+}
+
+.metrics-notification-wrapper .metrics-notification-buttons button#metrics-notification-preferences-save {
+  width: 215px;
+}
+
+
+.metrics-notification-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+button#metrics-notification-warning-close {
+  border: 1pt solid rgba(107, 196, 206, 1);
+  /* color: rgba(7, 58, 83, 1); */
+}
+
+.metrics-notification-preference-list {
+  margin: 0;
+  padding: 20px 0 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.metrics-notification-preference-list .metrics-notification-preference-list-item {
+  width: 100%;
+  height: 40px;
+  background: #F5F7FD;
+  color: #073A53;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 8px;
+}
+
+.metrics-notification-preference-list .preference-list-item-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+.metrics-notification-preference-list .preference-list-item-switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.metrics-notification-preference-list .preference-list-item-switch .toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #C4C7D6;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50px;
+}
+
+.metrics-notification-preference-list .preference-list-item-switch .toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 1px;
+  bottom: 2px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #E8EAEA 100%);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.metrics-notification-preference-list .preference-list-item-switch input:checked+.toggle-slider {
+  background-color: #3B8C90;
+}
+
+.metrics-notification-preference-list .preference-list-item-switch input:checked+.toggle-slider:before {
+  -webkit-transform: translateX(29px);
+  -ms-transform: translateX(29px);
+  transform: translateX(29px);
+}
+
+@media (max-width: 768px) {
+  div.metrics-notification-wrapper {
+    left: 0;
+    bottom: 0;
+  }
+
+  .metrics-notification-wrapper .metrics-notification-text {
+    font-size: 15px;
+  }
+
+  div.metrics-notification-wrapper .metrics-notification-buttons {
+    font-size: 15px;
+  }
+
+  div.metrics-notification-wrapper h3.metrics-notification-heading {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  div.metrics-notification-wrapper {
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    border-top: 3px solid #3B8C90;
+  }
+
+  div.metrics-notification-wrapper div.metrics-modal-close {
+    top: 4px;
+    right: 4px;
+  }
+}
+
+
+/**
+ * From https://unpkg.com/@beyonk/gdpr-cookie-consent-banner@9.1.0/dist/style.css
+ */
+.metricsConsentToggle {
+  width: 43px;
+  height: 43px;
+  will-change: transform;
+  padding: 0;
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background: white;
+  border-radius: 50%;
+  transition: 200ms;
+  opacity: 1;
+  z-index: 1;
+  cursor: pointer;
+  margin: 0;
+  position: fixed;
+  bottom: 12px;
+  left: 20px;
+}
+
+.metricsConsentToggle:disabled {
+  cursor: default;
+}
+
+.metricsConsentToggle:hover {
+  fill: #60BCC7 !important;
+}
+
+.metricsConsentToggle:hover rect,
+.metricsConsentToggle:hover circle:not(:first-child) {
+  fill: #60BCC7 !important;
+}
+
+.metricsConsentToggle:hover path {
+  stroke: #60BCC7 !important;
 }

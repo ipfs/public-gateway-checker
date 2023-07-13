@@ -120,24 +120,24 @@
   },
   "dependencies": {
     "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.1",
-    "countly-sdk-web": "^22.6.2",
+    "countly-sdk-web": "^23.2.2",
     "ipfs-http-client": "^58.0.1",
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {
-    "aegir": "^38.1.7",
-    "browserslist": "^4.21.4",
+    "aegir": "^39.0.13",
+    "browserslist": "^4.21.9",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",
     "eslint-config-ipfs": "^4.0.3",
-    "eslint-plugin-compat": "^4.0.2",
+    "eslint-plugin-compat": "^4.1.4",
     "fetch-ponyfill": "^7.1.0",
     "ipfs": "^0.65.0",
-    "ipfs-geoip": "^9.0.0",
-    "js-beautify": "^1.14.7",
-    "typescript": "^4.8.4",
-    "workbox-build": "6.5.4",
-    "workbox-window": "6.5.4"
+    "ipfs-geoip": "^9.0.1",
+    "js-beautify": "^1.14.8",
+    "typescript": "^5.1.6",
+    "workbox-build": "7.0.0",
+    "workbox-window": "7.0.0"
   },
   "aegir": {
     "tsRepo": true,

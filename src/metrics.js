@@ -64,7 +64,7 @@ function loadCountly() {
     Countly.init({
         app_key: '3c2c0819434074fc4d339ddd8e112a1e741ecb72',
         url: 'https://countly.ipfs.io',
-        require_consent: true // this true means consent is required
+        require_consent: true, // this true means consent is required
     });
     /**
      * @see https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent
@@ -80,13 +80,13 @@ function loadCountly() {
             ...performanceFeatures,
             ...uxFeatures,
             ...feedbackFeatures,
-            ...locationFeatures
+            ...locationFeatures,
         ],
         minimal: minimalFeatures,
         performance: performanceFeatures,
         ux: uxFeatures,
         feedback: feedbackFeatures,
-        location: locationFeatures
+        location: locationFeatures,
     });
     /**
      * we can call all the helper methods we want, they won't record until consent is provided for specific features

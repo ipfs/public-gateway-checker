@@ -1,7 +1,7 @@
 import { Workbox } from 'workbox-window';
 import { Checker } from './Checker';
 import { Log } from './Log';
-import gateways from './gateways.json';
+import gateways from './gateways';
 import { loadCountly } from './metrics';
 const wb = new Workbox('/sw.js');
 void wb.register();

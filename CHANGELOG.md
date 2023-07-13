@@ -1,3 +1,16 @@
+## [1.4.0](https://github.com/ipfs/public-gateway-checker/compare/v1.3.2...v1.4.0) (2023-07-13)
+
+
+### Features
+
+* add twdragon.net ([#361](https://github.com/ipfs/public-gateway-checker/issues/361)) ([16454d3](https://github.com/ipfs/public-gateway-checker/commit/16454d34b57c67aee525d926e51a31f8e88e5a2b))
+
+
+### Trivial Changes
+
+* Update .github/dependabot.yml [skip ci] ([035d92c](https://github.com/ipfs/public-gateway-checker/commit/035d92cec96f73fb37b4b32f9a97427cdfdcef6f))
+* Update .github/workflows/stale.yml [skip ci] ([cdd2e14](https://github.com/ipfs/public-gateway-checker/commit/cdd2e14240bf2f00268cce830120d813996456ce))
+
 ## [1.3.2](https://github.com/ipfs/public-gateway-checker/compare/v1.3.1...v1.3.2) (2023-06-15)
 
 

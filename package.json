@@ -132,7 +132,7 @@
     "eslint-config-ipfs": "^4.0.3",
     "eslint-plugin-compat": "^4.1.4",
     "fetch-ponyfill": "^7.1.0",
-    "ipfs": "^0.65.0",
+    "ipfs": "^0.66.1",
     "ipfs-geoip": "^9.0.1",
     "js-beautify": "^1.14.8",
     "typescript": "^5.1.6",

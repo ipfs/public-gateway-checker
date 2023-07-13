@@ -6,5 +6,9 @@
   "env": {
     "browser": true,
     "node": false
+  },
+  "rules": {
+    "comma-dangle": ["error", "always-multiline"],
+    "@typescript-eslint/comma-dangle": ["error", "always-multiline"]
   }
 }

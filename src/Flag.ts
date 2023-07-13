@@ -67,7 +67,7 @@ class Flag extends UiComponent {
         if (tokenAvailable) {
           return `https://cloudflare-dns.com/dns-query?name=${this.hostname}&type=A`
         }
-      })
+      }),
     ])
     if (url == null) {
       // No available tokens...
@@ -83,8 +83,8 @@ class Flag extends UiComponent {
       const response = await fetch(url, {
         method: 'GET',
         headers: {
-          Accept: 'application/dns-json'
-        }
+          Accept: 'application/dns-json',
+        },
       })
       const responseJson = await response.json()
 

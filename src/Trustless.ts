@@ -1,10 +1,9 @@
 import fetchPonyfill from 'fetch-ponyfill'
-
 import { CheckBase } from './CheckBase'
+import { Log } from './Log'
 import { HASH_TO_TEST, TRUSTLESS_RESPONSE_TYPES } from './constants'
 import type { GatewayNode } from './GatewayNode'
-
-import { Log } from './Log'
+import type { Checkable } from './types'
 
 const { fetch } = fetchPonyfill()
 

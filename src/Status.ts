@@ -1,11 +1,9 @@
 import { URL } from 'url-ponyfill'
-
-import type { GatewayNode } from './GatewayNode'
-import { UiComponent } from './UiComponent'
-
 import { Log } from './Log'
+import { UiComponent } from './UiComponent'
 import { checkViaImgSrc } from './checkViaImgSrc'
 import { IMG_HASH } from './constants'
+import type { GatewayNode } from './GatewayNode'
 
 const log = new Log('Status')
 

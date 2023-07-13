@@ -1,3 +1,73 @@
+## [1.3.2](https://github.com/ipfs/public-gateway-checker/compare/v1.3.1...v1.3.2) (2023-06-15)
+
+
+### Trivial Changes
+
+* **deps:** bump s0/git-publish-subdir-action from 399aab378450f99b7de6767f62b0d1dbfcb58b53 to 92faf786f11dfa44fc366ac3eb274d193ca1af7e ([#417](https://github.com/ipfs/public-gateway-checker/issues/417)) ([041f23e](https://github.com/ipfs/public-gateway-checker/commit/041f23eeda151c252e46ba17e61082e4aac4345c))
+
+## [1.3.1](https://github.com/ipfs/public-gateway-checker/compare/v1.3.0...v1.3.1) (2023-06-15)
+
+
+### Trivial Changes
+
+* **deps:** bump actions/checkout from 2 to 3 ([#416](https://github.com/ipfs/public-gateway-checker/issues/416)) ([0706590](https://github.com/ipfs/public-gateway-checker/commit/07065904417fa2ee609b697b54fb7feb156b13c2))
+* **deps:** bump codecov/codecov-action from 3.1.1 to 3.1.4 ([#415](https://github.com/ipfs/public-gateway-checker/issues/415)) ([2caf047](https://github.com/ipfs/public-gateway-checker/commit/2caf0474a5d8bc3ccfe3b6ab95b37b0933fcd5f5))
+
+## [1.3.0](https://github.com/ipfs/public-gateway-checker/compare/v1.2.2...v1.3.0) (2023-06-14)
+
+
+### Features
+
+* use typescript ([#194](https://github.com/ipfs/public-gateway-checker/issues/194)) ([9bbe1b5](https://github.com/ipfs/public-gateway-checker/commit/9bbe1b53a18215efa3304def3b3ac7f3e8495caf))
+
+
+### Trivial Changes
+
+* Update .github/workflows/stale.yml [skip ci] ([25aecd9](https://github.com/ipfs/public-gateway-checker/commit/25aecd9f865b6d2eb612006070826b038fb9dfbe))
+
+## [1.2.2](https://github.com/ipfs/public-gateway-checker/compare/v1.2.1...v1.2.2) (2023-06-08)
+
+
+### Trivial Changes
+
+* update eslint-config-ipfs and fix lint ([#413](https://github.com/ipfs/public-gateway-checker/issues/413)) ([165f35c](https://github.com/ipfs/public-gateway-checker/commit/165f35ce394f0f6e452174e0133cd111ba48170e))
+
+## [1.2.1](https://github.com/ipfs/public-gateway-checker/compare/v1.2.0...v1.2.1) (2023-06-08)
+
+
+### Trivial Changes
+
+* **deps:** bump undici from 5.10.0 to 5.20.0 ([#387](https://github.com/ipfs/public-gateway-checker/issues/387)) ([5157670](https://github.com/ipfs/public-gateway-checker/commit/5157670558880761309ff16a84c12d04a44381cc))
+
+## [1.2.0](https://github.com/ipfs/public-gateway-checker/compare/v1.1.0...v1.2.0) (2023-05-26)
+
+
+### Features
+
+* rename starbase.gw3.io to gw3.io ([#405](https://github.com/ipfs/public-gateway-checker/issues/405)) ([f1f8522](https://github.com/ipfs/public-gateway-checker/commit/f1f8522c52e97bf53e9f98060fc7b2eb0f792909))
+
+## [1.1.0](https://github.com/ipfs/public-gateway-checker/compare/v1.0.3...v1.1.0) (2023-05-14)
+
+
+### Features
+
+* add starbase.gw3.io ([#398](https://github.com/ipfs/public-gateway-checker/issues/398)) ([822d885](https://github.com/ipfs/public-gateway-checker/commit/822d8853d809bfaef3b9d5cef05cb207db7eb0b8))
+
+## [1.0.3](https://github.com/ipfs/public-gateway-checker/compare/v1.0.2...v1.0.3) (2023-05-12)
+
+
+### Trivial Changes
+
+* **deps:** bump xml2js and @achingbrain/nat-port-mapper ([#401](https://github.com/ipfs/public-gateway-checker/issues/401)) ([a5ff08b](https://github.com/ipfs/public-gateway-checker/commit/a5ff08b31611907e3671ae7ca98e0405023c570a))
+
+## [1.0.2](https://github.com/ipfs/public-gateway-checker/compare/v1.0.1...v1.0.2) (2023-05-12)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump aegir from 37.5.6 to 38.1.7 ([#388](https://github.com/ipfs/public-gateway-checker/issues/388)) ([2318df6](https://github.com/ipfs/public-gateway-checker/commit/2318df6348e51e77ce44a5ecc196ebea979640b2))
+* **deps:** bump @sideway/formula from 3.0.0 to 3.0.1 ([#380](https://github.com/ipfs/public-gateway-checker/issues/380)) ([2e4d663](https://github.com/ipfs/public-gateway-checker/commit/2e4d66312205af463801d58a855b8bf3f34a8fce))
+
 ## [1.0.1](https://github.com/ipfs/public-gateway-checker/compare/v1.0.0...v1.0.1) (2023-04-17)
 
 

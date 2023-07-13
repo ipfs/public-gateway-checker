@@ -5,11 +5,12 @@ import { HASH_TO_TEST, TRUSTLESS_RESPONSE_TYPES } from './constants';
 const { fetch } = fetchPonyfill();
 const log = new Log('Trustless');
 class Trustless extends CheckBase {
+    parent;
+    _className = 'Trustless';
+    _tagName = 'div';
     constructor(parent) {
         super(parent, 'div', 'Trustless');
         this.parent = parent;
-        this._className = 'Trustless';
-        this._tagName = 'div';
     }
     async check() {
         const now = Date.now();

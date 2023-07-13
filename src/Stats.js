@@ -1,6 +1,9 @@
 import { Tag } from './Tag';
 import { UiComponent } from './UiComponent';
 class Stats extends UiComponent {
+    parent;
+    gateways;
+    totals;
     constructor(parent) {
         super(parent);
         this.parent = parent;

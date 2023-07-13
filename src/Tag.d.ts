@@ -1,6 +1,6 @@
 import { TagStatus } from './TagStatus';
-declare type TagClasses = 'Cors' | 'Flag' | 'Ipns' | 'Node' | 'Origin' | 'Status' | 'Trustless';
-declare type TagContent = TagStatus;
+type TagClasses = 'Cors' | 'Flag' | 'Ipns' | 'Node' | 'Origin' | 'Status' | 'Trustless';
+type TagContent = TagStatus;
 declare class Tag {
     element: HTMLElement;
     constructor(tagName?: keyof HTMLElementTagNameMap, className?: TagClasses | undefined, textContent?: TagContent);

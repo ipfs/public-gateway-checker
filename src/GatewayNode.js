@@ -11,10 +11,23 @@ import { HASH_TO_TEST } from './constants';
 import { gatewayHostname } from './gatewayHostname';
 const log = new Log('GatewayNode');
 class GatewayNode extends UiComponent /* implements Checkable */ {
+    parent;
+    // tag: Tag
+    status;
+    cors;
+    ipns;
+    origin;
+    trustless;
+    link;
+    flag;
+    took;
+    gateway;
+    index;
+    checkingTime;
+    atLeastOneSuccess = false;
     constructor(parent, gateway, index) {
         super(parent, 'div', 'Node');
         this.parent = parent;
-        this.atLeastOneSuccess = false;
         this.tag.empty();
         this.tag.style.order = Date.now().toString();
         this.status = new Status(this);

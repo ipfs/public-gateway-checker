@@ -5,11 +5,12 @@ import { IPNS_PATH_TO_TEST } from './constants';
 const { fetch } = fetchPonyfill();
 const log = new Log('Ipns');
 class IPNSCheck extends CheckBase {
+    parent;
+    _className = 'Ipns';
+    _tagName = 'div';
     constructor(parent) {
         super(parent, 'div', 'Ipns');
         this.parent = parent;
-        this._className = 'Ipns';
-        this._tagName = 'div';
     }
     async check() {
         const now = Date.now();

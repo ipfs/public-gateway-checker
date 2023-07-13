@@ -1,4 +1,9 @@
 class Results {
+    parent;
+    append(tag) {
+        this.element.append(tag.element);
+    }
+    element;
     constructor(parent) {
         this.parent = parent;
         const element = document.getElementById('checker.results');
@@ -6,9 +11,6 @@ class Results {
             throw new Error('Element with Id "checker.results" not found.');
         }
         this.element = element;
-    }
-    append(tag) {
-        this.element.append(tag.element);
     }
 }
 export { Results };

@@ -4,6 +4,7 @@
  * When using this class to log errors or messages, one can assume it's intentional and principled.
  */
 class Log {
+    namespace;
     constructor(namespace) {
         this.namespace = namespace;
     }

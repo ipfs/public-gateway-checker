@@ -1,5 +1,6 @@
 import { TagStatus } from './TagStatus';
 class Tag {
+    element;
     constructor(tagName = 'div', className = undefined, textContent = TagStatus.pending) {
         const element = document.createElement(tagName);
         this.element = element;

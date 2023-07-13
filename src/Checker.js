@@ -4,8 +4,11 @@ import { Results } from './Results';
 import { Stats } from './Stats';
 const log = new Log('Checker');
 class Checker {
+    element;
+    nodes = [];
+    stats;
+    results;
     constructor() {
-        this.nodes = [];
         const element = document.getElementById('checker');
         if (element == null) {
             throw new Error('Element with Id "checker" not found.');

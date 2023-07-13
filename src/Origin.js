@@ -6,6 +6,8 @@ import { IMG_HASH } from './constants';
 import { expectSubdomainRedirect } from './expectSubdomainRedirect';
 const log = new Log('Origin');
 class Origin {
+    parent;
+    tag;
     constructor(parent) {
         this.parent = parent;
         this.tag = new Tag('div', 'Origin');

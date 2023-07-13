@@ -5,11 +5,12 @@ import { HASH_STRING, HASH_TO_TEST } from './constants';
 const { fetch } = fetchPonyfill();
 const log = new Log('Cors');
 class Cors extends CheckBase {
+    parent;
+    _className = 'Cors';
+    _tagName = 'div';
     constructor(parent) {
         super(parent, 'div', 'Cors');
         this.parent = parent;
-        this._className = 'Cors';
-        this._tagName = 'div';
     }
     async check() {
         const now = Date.now();

@@ -1,4 +1,4 @@
-declare type Console = typeof console;
+type Console = typeof console;
 /**
  * This class' sole purpose is to avoid cluttering the codebase with `eslint-disable-line no-console` comments
  *

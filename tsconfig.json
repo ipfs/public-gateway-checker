@@ -12,6 +12,6 @@
     "types",
     "test", // remove this line if you don't want to type-check tests
     "src",
-    "src/gateways.json"
+    "src/gateways.ts"
   ]
 }

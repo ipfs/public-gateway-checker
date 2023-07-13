@@ -83,7 +83,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
       this.ipns.check().then(() => { log.debug(this.gateway, 'IPNS success') }).then(this.onSuccessfulCheck.bind(this)),
       this.origin.check().then(() => { log.debug(this.gateway, 'Origin success') }).then(this.onSuccessfulCheck.bind(this)),
       this.trustless.check().then(
-        () => { log.debug(this.gateway, 'Trustless success') }).then(this.onSuccessfulCheck.bind(this))
+        () => { log.debug(this.gateway, 'Trustless success') }).then(this.onSuccessfulCheck.bind(this)),
     ]
 
     // we care only about the fastest method to return a success

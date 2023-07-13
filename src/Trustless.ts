@@ -26,7 +26,7 @@ class Trustless extends CheckBase implements Checkable {
           const testUrl = `${gatewayAndHash}?format=${trustlessTypes}&now=${now}#x-ipfs-companion-no-redirect`
           const response = await fetch(testUrl)
           return Boolean(response.headers.get('Content-Type')?.includes(`application/vnd.ipld.${trustlessTypes}`))
-        }
+        },
       ))
 
       const failedTests = TRUSTLESS_RESPONSE_TYPES.filter((_result, idx) => !trustlessResponseTypesTests[idx])

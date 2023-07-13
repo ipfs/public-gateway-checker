@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/ipfs/public-gateway-checker/compare/v1.5.3...v1.5.4) (2023-07-13)
+
+
+### Bug Fixes
+
+* remove ipfs and ipfs-http-client deps ([#429](https://github.com/ipfs/public-gateway-checker/issues/429)) ([7618207](https://github.com/ipfs/public-gateway-checker/commit/7618207cb806b3106be7791a94ee128415769c7e))
+
 ## [1.5.3](https://github.com/ipfs/public-gateway-checker/compare/v1.5.2...v1.5.3) (2023-07-13)
 
 

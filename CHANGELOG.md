@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/ipfs/public-gateway-checker/compare/v1.5.2...v1.5.3) (2023-07-13)
+
+
+### Trivial Changes
+
+* **deps:** bump @grpc/grpc-js from 1.7.3 to 1.8.18 ([#428](https://github.com/ipfs/public-gateway-checker/issues/428)) ([0fdf876](https://github.com/ipfs/public-gateway-checker/commit/0fdf876a049b660410a6477aeec6d5328856c4cd))
+
 ## [1.5.2](https://github.com/ipfs/public-gateway-checker/compare/v1.5.1...v1.5.2) (2023-07-13)
 
 

@@ -1,3 +1,11 @@
+## [1.5.2](https://github.com/ipfs/public-gateway-checker/compare/v1.5.1...v1.5.2) (2023-07-13)
+
+
+### Trivial Changes
+
+* **deps:** update deps and npm audit fix ([#427](https://github.com/ipfs/public-gateway-checker/issues/427)) ([08b508e](https://github.com/ipfs/public-gateway-checker/commit/08b508ec8e591417214f73d7689f5094e3f6f9db))
+* update pull request template ([1c06dbc](https://github.com/ipfs/public-gateway-checker/commit/1c06dbc2eb5d891c9bae4c8c64e83e63d61fdf1b))
+
 ## [1.5.1](https://github.com/ipfs/public-gateway-checker/compare/v1.5.0...v1.5.1) (2023-07-13)
 
 

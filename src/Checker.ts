@@ -1,8 +1,8 @@
 
 import { GatewayNode } from './GatewayNode'
+import { Log } from './Log'
 import { Results } from './Results'
 import { Stats } from './Stats'
-import { Log } from './Log'
 
 const log = new Log('Checker')
 
@@ -34,7 +34,7 @@ class Checker {
       this.results.append(node.tag)
       // void node.check()
       setTimeout(() => {
-        allChecks.push(node.check().catch((err) => log.error(err)).finally(this.updateStats))
+        allChecks.push(node.check().catch((err) => { log.error(err) }).finally(this.updateStats))
       }, 100 * this.nodes.length)
     }
     // await Promise.all(allChecks).finally(this.updateStats)

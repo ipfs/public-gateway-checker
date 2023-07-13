@@ -1,10 +1,9 @@
 import fetchPonyfill from 'fetch-ponyfill'
-
 import { CheckBase } from './CheckBase'
+import { Log } from './Log'
 import { IPNS_PATH_TO_TEST } from './constants'
 import type { GatewayNode } from './GatewayNode'
-
-import { Log } from './Log'
+import type { Checkable } from './types'
 
 const { fetch } = fetchPonyfill()
 

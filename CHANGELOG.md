@@ -1,3 +1,44 @@
+## [1.3.2](https://github.com/ipfs/public-gateway-checker/compare/v1.3.1...v1.3.2) (2023-06-15)
+
+
+### Trivial Changes
+
+* **deps:** bump s0/git-publish-subdir-action from 399aab378450f99b7de6767f62b0d1dbfcb58b53 to 92faf786f11dfa44fc366ac3eb274d193ca1af7e ([#417](https://github.com/ipfs/public-gateway-checker/issues/417)) ([041f23e](https://github.com/ipfs/public-gateway-checker/commit/041f23eeda151c252e46ba17e61082e4aac4345c))
+
+## [1.3.1](https://github.com/ipfs/public-gateway-checker/compare/v1.3.0...v1.3.1) (2023-06-15)
+
+
+### Trivial Changes
+
+* **deps:** bump actions/checkout from 2 to 3 ([#416](https://github.com/ipfs/public-gateway-checker/issues/416)) ([0706590](https://github.com/ipfs/public-gateway-checker/commit/07065904417fa2ee609b697b54fb7feb156b13c2))
+* **deps:** bump codecov/codecov-action from 3.1.1 to 3.1.4 ([#415](https://github.com/ipfs/public-gateway-checker/issues/415)) ([2caf047](https://github.com/ipfs/public-gateway-checker/commit/2caf0474a5d8bc3ccfe3b6ab95b37b0933fcd5f5))
+
+## [1.3.0](https://github.com/ipfs/public-gateway-checker/compare/v1.2.2...v1.3.0) (2023-06-14)
+
+
+### Features
+
+* use typescript ([#194](https://github.com/ipfs/public-gateway-checker/issues/194)) ([9bbe1b5](https://github.com/ipfs/public-gateway-checker/commit/9bbe1b53a18215efa3304def3b3ac7f3e8495caf))
+
+
+### Trivial Changes
+
+* Update .github/workflows/stale.yml [skip ci] ([25aecd9](https://github.com/ipfs/public-gateway-checker/commit/25aecd9f865b6d2eb612006070826b038fb9dfbe))
+
+## [1.2.2](https://github.com/ipfs/public-gateway-checker/compare/v1.2.1...v1.2.2) (2023-06-08)
+
+
+### Trivial Changes
+
+* update eslint-config-ipfs and fix lint ([#413](https://github.com/ipfs/public-gateway-checker/issues/413)) ([165f35c](https://github.com/ipfs/public-gateway-checker/commit/165f35ce394f0f6e452174e0133cd111ba48170e))
+
+## [1.2.1](https://github.com/ipfs/public-gateway-checker/compare/v1.2.0...v1.2.1) (2023-06-08)
+
+
+### Trivial Changes
+
+* **deps:** bump undici from 5.10.0 to 5.20.0 ([#387](https://github.com/ipfs/public-gateway-checker/issues/387)) ([5157670](https://github.com/ipfs/public-gateway-checker/commit/5157670558880761309ff16a84c12d04a44381cc))
+
 ## [1.2.0](https://github.com/ipfs/public-gateway-checker/compare/v1.1.0...v1.2.0) (2023-05-26)
 
 

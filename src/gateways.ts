@@ -83,5 +83,5 @@ export default [
   'https://ipfs.jpu.jp/ipfs/:hash',
   'https://ipfs.soul-network.com/ipfs/:hash',
   'https://ipfs.twdragon.net/ipfs/:hash',
-  'https://getipfs.com/ipfs/:hash',
+  'https://getipfs.com/ipfs/:hash'
 ]

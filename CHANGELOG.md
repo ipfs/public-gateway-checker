@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/ipfs/public-gateway-checker/compare/v1.4.0...v1.5.0) (2023-07-13)
+
+
+### Features
+
+* add getipfs.com ([#419](https://github.com/ipfs/public-gateway-checker/issues/419)) ([f356d06](https://github.com/ipfs/public-gateway-checker/commit/f356d06f8b74035a5d3fcb21c61c76ad4aa2efa5))
+
 ## [1.4.0](https://github.com/ipfs/public-gateway-checker/compare/v1.3.2...v1.4.0) (2023-07-13)
 
 

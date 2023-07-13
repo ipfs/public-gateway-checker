@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/ipfs/public-gateway-checker/compare/v1.5.0...v1.5.1) (2023-07-13)
+
+
+### Bug Fixes
+
+* reduce PR hell ([#425](https://github.com/ipfs/public-gateway-checker/issues/425)) ([64dce8d](https://github.com/ipfs/public-gateway-checker/commit/64dce8d23d6b1186c0c3e899eccf95ef640c118c)), closes [#419](https://github.com/ipfs/public-gateway-checker/issues/419)
+
 ## [1.5.0](https://github.com/ipfs/public-gateway-checker/compare/v1.4.0...v1.5.0) (2023-07-13)
 
 

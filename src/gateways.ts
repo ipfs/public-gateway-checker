@@ -84,4 +84,5 @@ export default [
   'https://ipfs.soul-network.com/ipfs/:hash',
   'https://ipfs.twdragon.net/ipfs/:hash',
   'https://getipfs.com/ipfs/:hash',
+  'https://storage.web3ph.dev/gw/:hash'
 ]

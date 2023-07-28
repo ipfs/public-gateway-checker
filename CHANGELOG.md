@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/ipfs/public-gateway-checker/compare/v1.5.5...v1.6.0) (2023-07-28)
+
+
+### Features
+
+* add storage.web3ph.dev ([#435](https://github.com/ipfs/public-gateway-checker/issues/435)) ([90202b1](https://github.com/ipfs/public-gateway-checker/commit/90202b1db668338d0e6bbf27e65a028779528647))
+
 ## [1.5.5](https://github.com/ipfs/public-gateway-checker/compare/v1.5.4...v1.5.5) (2023-07-28)
 
 

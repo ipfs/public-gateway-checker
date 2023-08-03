@@ -79,5 +79,5 @@ export default [
   'https://cthd.icu/ipfs/:hash',
   'https://ipfs.tayfundogdas.me/ipfs/:hash',
   'https://ipfs.jpu.jp/ipfs/:hash',
-  'https://ipfs.soul-network.com/ipfs/:hash'
+  'https://ipfs.soul-network.com/ipfs/:hash',
 ]

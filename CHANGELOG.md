@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/ipfs/public-gateway-checker/compare/v1.6.0...v1.6.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* **gateways:** Removing Offending Gateways ([#443](https://github.com/ipfs/public-gateway-checker/issues/443)) ([7bf97f5](https://github.com/ipfs/public-gateway-checker/commit/7bf97f53b376f66a1123ba412925413c94aa5859))
+
 ## [1.6.0](https://github.com/ipfs/public-gateway-checker/compare/v1.5.5...v1.6.0) (2023-07-28)
 
 

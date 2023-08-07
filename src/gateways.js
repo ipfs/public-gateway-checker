@@ -46,7 +46,6 @@ export default [
     'https://ipfs.xoqq.ch/ipfs/:hash',
     'http://natoboram.mynetgear.com:8080/ipfs/:hash',
     'https://video.oneloveipfs.com/ipfs/:hash',
-    'http://ipfs.anonymize.com/ipfs/:hash',
     'https://ipfs.scalaproject.io/ipfs/:hash',
     'https://search.ipfsgate.com/ipfs/:hash',
     'https://ipfs.decoo.io/ipfs/:hash',
@@ -81,8 +80,5 @@ export default [
     'https://ipfs.tayfundogdas.me/ipfs/:hash',
     'https://ipfs.jpu.jp/ipfs/:hash',
     'https://ipfs.soul-network.com/ipfs/:hash',
-    'https://ipfs.twdragon.net/ipfs/:hash',
-    'https://getipfs.com/ipfs/:hash',
-    'https://storage.web3ph.dev/gw/:hash',
 ];
 //# sourceMappingURL=gateways.js.map

@@ -80,4 +80,5 @@ export default [
   'https://ipfs.tayfundogdas.me/ipfs/:hash',
   'https://ipfs.jpu.jp/ipfs/:hash',
   'https://ipfs.soul-network.com/ipfs/:hash',
+  'https://ipfs.twdragon.net/ipfs/:hash'
 ]

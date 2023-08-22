@@ -20,19 +20,102 @@ jobs:
   configure:
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.set-matrix.outputs.matrix }}
+      gateways: ${{ steps.set-matrix.outputs.gateways }}
     steps:
      - name: Checkout to repository
        uses: actions/checkout@v3
      - name: Set matrix data
        id: set-matrix
        run: |
-        echo "matrix=$(jq -c . < ./src/gateways.json)" >> $GITHUB_OUTPUT
-  print:
+        echo "gateways=$(jq -c . < ./src/gateways.json)" >> $GITHUB_OUTPUT
+  conformance:
     runs-on: ubuntu-latest
     needs: configure
     strategy:
       matrix:
-          gateway: ${{ fromJson(needs.configure.outputs.matrix) }}
+          gateway_url: ${{ fromJson(needs.configure.outputs.gateways) }}
+      fail-fast: false
     steps:
-     - run: echo ${{ matrix.gateway }}
+      # 1. Generate the ID used for outputs
+      - name: Generate id
+        id: id
+        env:
+          GATEWAY_URL: ${{ matrix.gateway_url }}
+        run: |
+          slug=$(echo "${GATEWAY_URL}" |
+              sed -e 's/http[s]\?:\/\///' \
+              -e 's/[:/@.]/-/g' \
+              -e 's/[^A-Za-z0-9\-]/-/g' |
+              tr "[:upper:]" "[:lower:]")
+          echo "slug=$slug" >> $GITHUB_OUTPUT
+
+      # 2. Run the gateway-conformance tests
+      # TODO: Decide if we want to ignore test failure (likely)
+      - name: Run gateway-conformance tests
+        uses: ipfs/gateway-conformance/.github/actions/test@v0.3
+        with:
+          gateway-url: ${{ matrix.gateway_url }}
+          json: output.json
+          xml: output.xml
+          html: output.html
+          markdown: output.md
+
+      # 3. Upload the results
+      - name: Upload MD summary
+        # TODO: generate a minimal output.md in the action
+        if: failure() || success()
+        run: cat output.md | sed -i '/Failures\/Errors/,$d' >> $GITHUB_STEP_SUMMARY
+      - name: Upload JSON output
+        if: failure() || success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: conformance-${{ steps.id.outputs.slug }}.json
+          path: ./output.json
+      - name: Upload HTML report
+        if: failure() || success()
+        uses: actions/upload-artifact@v3
+        with:
+          name: conformance-${{ steps.id.outputs.slug }}.html
+          path: output.html
+
+  aggregate:
+    runs-on: "ubuntu-latest"
+    needs: [conformance]
+    # the tests might have failed
+    if: always()
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          path: "gateway-conformance"
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+      - name: Aggregate results
+        working-directory: ./artifacts
+        run: |
+          echo "Root:" >> $GITHUB_STEP_SUMMARY
+          ls >> $GITHUB_STEP_SUMMARY
+
+          mkdir ./aggregates
+
+          # download-artifact downloads artifacts in a directory named after the artifact
+          # details: https://github.com/actions/download-artifact#download-all-artifacts
+          for folder in ./conformance-*.json; do
+            file="${folder}/output.json"
+            new_file="aggregates/${folder#.\/conformance-}"
+            jq -ns 'inputs' "$file" > "${new_file}"
+          done
+
+          echo "Aggregates:" >> $GITHUB_STEP_SUMMARY
+          ls ./aggregates >> $GITHUB_STEP_SUMMARY
+      - name: Upload Data Aggregates
+        # will be useful for local debugging
+        if: (failure() || success())
+        uses: actions/upload-artifact@v3
+        with:
+          name: dashboard-aggregates
+          path: ./aggregates

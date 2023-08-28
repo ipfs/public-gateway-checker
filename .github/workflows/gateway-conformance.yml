@@ -26,11 +26,11 @@ jobs:
        uses: actions/checkout@v3
      - name: install yq
        env:
-          VERSION: v4.2.0
+          VERSION: v4.35.1
           BINARY: yq_linux_amd64
        run: |
-        wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/bin/yq
-        chmod +x /usr/bin/yq
+        wget https://github.com/mikefarah/yq/releases/download/${VERSION}/${BINARY} -O /usr/local/bin/yq
+        chmod +x /usr/local/bin/yq
      - name: Set matrix data
        id: set-matrix
        run: |

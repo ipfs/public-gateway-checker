@@ -18,7 +18,7 @@ class Trustless extends CheckBase implements Checkable {
 
   async check (): Promise<void> {
     const now = Date.now()
-    const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST)
+    const gatewayAndHash = `${this.parent.gateway}/ipfs/${HASH_TO_TEST}`
     this.parent.tag.classList.add('trustless')
     try {
       const trustlessResponseTypesTests = await Promise.all(TRUSTLESS_RESPONSE_TYPES.map(

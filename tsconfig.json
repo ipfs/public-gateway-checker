@@ -1,6 +1,8 @@
 {
   "extends": "aegir/src/config/tsconfig.aegir.json",
   "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
     "outDir": "dist",
     "paths": {
       "*": [
@@ -12,6 +14,6 @@
     "types",
     "test", // remove this line if you don't want to type-check tests
     "src",
-    "src/gateways.ts"
+    "src/report.json"
   ]
 }

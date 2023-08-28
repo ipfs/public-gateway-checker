@@ -1,0 +1,173 @@
+{
+  "https://dweb.link": {
+    "metadata": {
+      "time": "2023-08-28T09:09:02.057072248Z",
+      "version": "main",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/5997879157",
+      "gateway_url": "https://dweb.link"
+    },
+    "results": {
+      "TestDNSLinkGatewayUnixFSDirectoryListing": {
+        "outcome": "fail"
+      },
+      "TestCors": {
+        "outcome": "fail"
+      },
+      "TestGatewayJsonCbor": {
+        "outcome": "fail"
+      },
+      "TestDagPbConversion": {
+        "outcome": "fail"
+      },
+      "TestPlainCodec": {
+        "outcome": "fail"
+      },
+      "TestPathing": {
+        "outcome": "fail"
+      },
+      "TestNativeDag": {
+        "outcome": "fail"
+      },
+      "TestGatewayJSONCborAndIPNS": {
+        "outcome": "fail"
+      },
+      "TestRedirectCanonicalIPNS": {
+        "outcome": "fail"
+      },
+      "TestGatewayBlock": {
+        "outcome": "fail"
+      },
+      "TestTar": {
+        "outcome": "fail"
+      },
+      "TestUnixFSDirectoryListing": {
+        "outcome": "fail"
+      },
+      "TestGatewayCache": {
+        "outcome": "fail"
+      },
+      "TestGatewayCacheWithIPNS": {
+        "outcome": "fail"
+      },
+      "TestGatewaySymlink": {
+        "outcome": "fail"
+      },
+      "TestGatewayUnixFSFileRanges": {
+        "outcome": "fail"
+      },
+      "TestRedirectsFileSupport": {
+        "outcome": "fail"
+      },
+      "TestRedirectsFileSupportWithDNSLink": {
+        "outcome": "fail"
+      },
+      "TestUnixFSDirectoryListingOnSubdomainGateway": {
+        "outcome": "fail"
+      },
+      "TestGatewaySubdomains": {
+        "outcome": "fail"
+      },
+      "TestGatewaySubdomainAndIPNS": {
+        "outcome": "fail"
+      },
+      "TestSubdomainGatewayDNSLinkInlining": {
+        "outcome": "fail"
+      },
+      "TestTrustlessCarPathing": {
+        "outcome": "fail"
+      },
+      "TestTrustlessCarDagScopeBlock": {
+        "outcome": "fail"
+      },
+      "TestTrustlessCarDagScopeEntity": {
+        "outcome": "fail"
+      },
+      "TestTrustlessCarDagScopeAll": {
+        "outcome": "fail"
+      },
+      "TestTrustlessCarEntityBytes": {
+        "outcome": "fail"
+      },
+      "TestTrustlessCarOrderAndDuplicates": {
+        "outcome": "fail"
+      },
+      "TestGatewayIPNSRecord": {
+        "outcome": "fail"
+      },
+      "TestTrustlessRaw": {
+        "outcome": "fail"
+      },
+      "TestTrustlessRawRanges": {
+        "outcome": "fail"
+      }
+    }
+  },
+  "https://gateway.ipfs.io": {
+    "metadata": {
+      "time": "2023-08-28T09:10:28.613523175Z",
+      "version": "main",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/5997879157",
+      "gateway_url": "https://gateway.ipfs.io"
+    },
+    "results": {
+      "TestDNSLinkGatewayUnixFSDirectoryListing": {
+        "outcome": "fail"
+      },
+      "TestCors": {
+        "outcome": "fail"
+      },
+      "TestGatewayJsonCbor": {
+        "outcome": "pass"
+      },
+      "TestDagPbConversion": {
+        "outcome": "fail"
+      },
+      "TestPlainCodec": {
+        "outcome": "pass"
+      },
+      "TestPathing": {
+        "outcome": "pass"
+      },
+      "TestNativeDag": {
+        "outcome": "fail"
+      },
+      "TestGatewayJSONCborAndIPNS": {
+        "outcome": "fail"
+      }
+    }
+  },
+  "https://ipfs.io": {
+    "metadata": {
+      "time": "2023-08-28T09:10:13.37720758Z",
+      "version": "main",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/5997879157",
+      "gateway_url": "https://ipfs.io"
+    },
+    "results": {
+      "TestDNSLinkGatewayUnixFSDirectoryListing": {
+        "outcome": "fail"
+      },
+      "TestCors": {
+        "outcome": "fail"
+      },
+      "TestGatewayJsonCbor": {
+        "outcome": "pass"
+      },
+      "TestDagPbConversion": {
+        "outcome": "fail"
+      },
+      "TestPlainCodec": {
+        "outcome": "pass"
+      },
+      "TestPathing": {
+        "outcome": "pass"
+      },
+      "TestNativeDag": {
+        "outcome": "fail"
+      },
+      "TestGatewayJSONCborAndIPNS": {
+        "outcome": "fail"
+      }
+    }
+  }
+}

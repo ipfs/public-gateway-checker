@@ -6,7 +6,7 @@ on:
     branches:
       - master
   schedule:
-    - cron: "0 */1 * * *" # every one hour
+    - cron: "0 */6 * * *" # every six hours
 
 concurrency:
   group: "conformance"
@@ -22,7 +22,7 @@ jobs:
     outputs:
       gateways: ${{ steps.set-matrix.outputs.gateways }}
     steps:
-     - name: Checkout to repository
+     - name: Checkout repository
        uses: actions/checkout@v3
      - name: install yq
        env:
@@ -43,9 +43,9 @@ jobs:
           gateway_url: ${{ fromJson(needs.configure.outputs.gateways) }}
       fail-fast: false
     steps:
-      # 1. Generate the ID used for outputs
-      - name: Generate id
-        id: id
+      # 1. Generate the slug used for reporting
+      - name: Generate slug
+        id: slug
         env:
           GATEWAY_URL: ${{ matrix.gateway_url }}
         run: |
@@ -77,7 +77,7 @@ jobs:
         if: failure() || success()
         uses: actions/upload-artifact@v3
         with:
-          name: conformance-${{ steps.id.outputs.slug }}.json
+          name: conformance-${{ steps.slug.outputs.slug }}.json
           path: |
             ./output.json
             ./output.html
@@ -86,7 +86,7 @@ jobs:
         if: failure() || success()
         uses: actions/upload-artifact@v3
         with:
-          name: conformance-${{ steps.id.outputs.slug }}.html
+          name: conformance-${{ steps.slug.outputs.slug }}.html
           path: output.html
 
   aggregate:
@@ -105,9 +105,6 @@ jobs:
           path: artifacts
       - name: Aggregate reports
         run: |
-          echo "## Root:" >> $GITHUB_STEP_SUMMARY
-          ls >> $GITHUB_STEP_SUMMARY
-
           mkdir ./reports
 
           # download-artifact downloads artifacts in a directory named after the artifact
@@ -118,11 +115,8 @@ jobs:
             new_file="./reports/${new_name}"
             cp "${file}" "${new_file}"
           done
-
-          echo "## Reports:" >> $GITHUB_STEP_SUMMARY
-          ls ./reports >> $GITHUB_STEP_SUMMARY
       - name: Upload Data Aggregates
-        # will be useful for local debugging
+        # This will be useful for local debugging
         if: (failure() || success())
         uses: actions/upload-artifact@v3
         with:
@@ -131,11 +125,8 @@ jobs:
       - name: Generate final report
         run: |
           node ./aggregate.js ./reports/*.json > ./src/report.json
-
-          echo "## Report:" >> $GITHUB_STEP_SUMMARY
-          cat ./src/report.json >> $GITHUB_STEP_SUMMARY
       - name: Upload Report
-        # will be useful for local debugging
+        # This will be useful for local debugging
         if: (failure() || success())
         uses: actions/upload-artifact@v3
         with:

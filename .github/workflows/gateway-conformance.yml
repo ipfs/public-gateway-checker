@@ -52,13 +52,14 @@ jobs:
       # 2. Run the gateway-conformance tests
       # TODO: Decide if we want to ignore test failure (likely)
       - name: Run gateway-conformance tests
-        uses: ipfs/gateway-conformance/.github/actions/test@v0.3
+        uses: singulargarden/gateway-conformance/.github/actions/test@main
         with:
           gateway-url: ${{ matrix.gateway_url }}
           json: output.json
           xml: output.xml
           html: output.html
           markdown: output.md
+          report: report.json
 
       # 3. Upload the results
       - name: Upload MD summary
@@ -70,7 +71,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: conformance-${{ steps.id.outputs.slug }}.json
-          path: ./output.json
+          path: |
+            ./output.json
+            ./output.html
+            ./report.json
       - name: Upload HTML report
         if: failure() || success()
         uses: actions/upload-artifact@v3
@@ -88,34 +92,45 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v3
-        with:
-          path: "gateway-conformance"
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
           path: artifacts
-      - name: Aggregate results
-        working-directory: ./artifacts
+      - name: Aggregate reports
         run: |
-          echo "Root:" >> $GITHUB_STEP_SUMMARY
+          echo "## Root:" >> $GITHUB_STEP_SUMMARY
           ls >> $GITHUB_STEP_SUMMARY
 
-          mkdir ./aggregates
+          mkdir ./reports
 
           # download-artifact downloads artifacts in a directory named after the artifact
           # details: https://github.com/actions/download-artifact#download-all-artifacts
-          for folder in ./conformance-*.json; do
-            file="${folder}/output.json"
-            new_file="aggregates/${folder#.\/conformance-}"
-            jq -ns 'inputs' "$file" > "${new_file}"
+          for folder in ./artifacts/conformance-*.json; do
+            file="${folder}/report.json"
+            new_name="${folder#.\/artifacts\/conformance-}" # drop path prefix "./artifacts/conformance-"
+            new_file="./reports/${new_name}"
+            cp "${file}" "${new_file}"
           done
 
-          echo "Aggregates:" >> $GITHUB_STEP_SUMMARY
-          ls ./aggregates >> $GITHUB_STEP_SUMMARY
+          echo "## Reports:" >> $GITHUB_STEP_SUMMARY
+          ls ./reports >> $GITHUB_STEP_SUMMARY
       - name: Upload Data Aggregates
         # will be useful for local debugging
         if: (failure() || success())
         uses: actions/upload-artifact@v3
         with:
-          name: dashboard-aggregates
-          path: ./aggregates
+          name: dashboard-reports
+          path: ./reports
+      - name: Generate final report
+        run: |
+          node ./aggregate.js ./reports/*.json > ./report.json
+
+          echo "## Report:" >> $GITHUB_STEP_SUMMARY
+          cat ./report.json >> $GITHUB_STEP_SUMMARY
+      - name: Upload Report
+        # will be useful for local debugging
+        if: (failure() || success())
+        uses: actions/upload-artifact@v3
+        with:
+          name: dashboard-report
+          path: ./report.json

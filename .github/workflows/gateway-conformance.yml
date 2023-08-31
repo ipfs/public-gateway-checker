@@ -72,7 +72,7 @@ jobs:
       - name: Upload MD summary
         # TODO: generate a minimal output.md in the action
         if: failure() || success()
-        run: cat output.md | sed -i '/Failures\/Errors/,$d' >> $GITHUB_STEP_SUMMARY
+        run: cat output.md | sed '/Failures\/Errors/,$d' >> $GITHUB_STEP_SUMMARY
       - name: Upload JSON output
         if: failure() || success()
         uses: actions/upload-artifact@v3

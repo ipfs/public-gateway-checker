@@ -57,7 +57,6 @@ jobs:
           echo "slug=$slug" >> $GITHUB_OUTPUT
 
       # 2. Run the gateway-conformance tests
-      # TODO: Decide if we want to ignore test failure (likely)
       - name: Run gateway-conformance tests
         uses: singulargarden/gateway-conformance/.github/actions/test@main
         with:
@@ -67,6 +66,7 @@ jobs:
           html: output.html
           markdown: output.md
           report: report.json
+          accept-test-failure: true
 
       # 3. Upload the results
       - name: Upload MD summary

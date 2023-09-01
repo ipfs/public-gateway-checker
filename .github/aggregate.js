@@ -1,11 +1,13 @@
 const fs = require('fs')
 const process = require('process')
+const path = require('path')
 
 // params: list of json reports to aggregate
 const inputs = process.argv.slice(2)
 
 const processReport = (filePath) => {
-  const json = require(filePath)
+  const resolvedPath = path.isAbsolute(filePath) ? filePath : path.resolve(process.cwd(), filePath);
+  const json = JSON.parse(fs.readFileSync(resolvedPath, 'utf8'))
 
   // extract the TestMetadata
   const { TestMetadata, ...rest } = json

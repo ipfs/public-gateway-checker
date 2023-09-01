@@ -91,6 +91,8 @@ jobs:
           path: output.html
 
   aggregate:
+    permissions:
+      contents: write
     runs-on: "ubuntu-latest"
     needs: [conformance]
     # the tests might have failed

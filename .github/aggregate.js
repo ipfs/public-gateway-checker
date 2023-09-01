@@ -11,8 +11,8 @@ const processReport = (filePath) => {
 
   // extract the TestMetadata
   const { TestMetadata, ...rest } = json
-  const { time, meta } = TestMetadata
-  const { version, job_url, gateway_url } = meta
+  const { time, meta } = TestMetadata || {}
+  const { version, job_url, gateway_url } = meta || {}
 
   // and the data we care about.
   // keep only the tests at the root

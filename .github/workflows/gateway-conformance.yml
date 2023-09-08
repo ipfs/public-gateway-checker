@@ -30,7 +30,7 @@ jobs:
        run: |
         jq --raw-input --slurp --compact-output 'split("\n")[:-1]' gateways.txt | \
           tr -d '\n' | \
-          xargs -null --max-chars=2000000 -I {} echo "gateways={}" | \
+          xargs --null --max-chars=2000000 -I {} echo "gateways={}" | \
           tee -a "$GITHUB_OUTPUT"
   conformance:
     runs-on: ubuntu-latest

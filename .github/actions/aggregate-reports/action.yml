@@ -1,0 +1,27 @@
+name: 'Aggregate Reports'
+description: 'Load gateway conformance reports and generate the report.json used by public-gateway-checker'
+
+# Define your inputs here.
+inputs:
+  paths:
+    description: 'report input files'
+    required: true
+  output:
+    description: 'output file'
+    required: true
+
+runs:
+  using: composite
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+      shell: bash
+    - name: Run Script
+      run: ts-node ./index.ts ${{ inputs.paths }} > ${{ inputs.output }}
+      shell: bash

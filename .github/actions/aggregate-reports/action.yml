@@ -3,7 +3,7 @@ description: 'Load gateway conformance reports and generate the report.json used
 
 # Define your inputs here.
 inputs:
-  paths:
+  inputs:
     description: 'report input files'
     required: true
   output:
@@ -23,5 +23,5 @@ runs:
       run: npm ci
       shell: bash
     - name: Run Script
-      run: ts-node ./index.ts ${{ inputs.paths }} > ${{ inputs.output }}
+      run: ts-node ./index.ts ${{ inputs.inputs }} > ${{ inputs.output }}
       shell: bash

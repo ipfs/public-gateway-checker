@@ -120,7 +120,7 @@ jobs:
         uses: ./.github/actions/aggregate-reports
         with:
           inputs: ./reports/*.json
-          ouput: ./src/report.json
+          output: ./src/report.json
       - name: Upload Report
         # This will be useful for local debugging
         if: (failure() || success())

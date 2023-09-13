@@ -23,5 +23,8 @@ runs:
       run: npm ci
       shell: bash
     - name: Run Script
-      run: ts-node ./index.ts ${{ inputs.inputs }} > ${{ inputs.output }}
+      env:
+        INPUTS: ${{ inputs.inputs }}
+        OUTPUT: ${{ inputs.output }}
+      run: ts-node ./index.ts ${INPUTS} > ${OUTPUT}
       shell: bash

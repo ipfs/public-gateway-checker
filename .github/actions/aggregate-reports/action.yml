@@ -1,20 +1,43 @@
-name: 'Aggregate Reports'
-description: 'Load gateway conformance reports and generate the report.json used by public-gateway-checker'
+name: "Aggregate Reports"
+description: "Load gateway conformance reports and generate the report.json used by public-gateway-checker"
 
 # Define your inputs here.
 inputs:
   inputs:
-    description: 'report input files'
+    description: "report input files"
     required: true
   output:
-    description: 'output file'
+    description: "output file"
     required: true
 
 runs:
   using: composite
   steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+    # When you are calling an action with "using", you could just copy and paste the steps.
+    # same path, no need for checkouts, etc.
+    - name: Convert To Absolute
+      id: absolute
+      env:
+        INPUTS: ${{ inputs.inputs }}
+        OUTPUT: ${{ inputs.output }}
+      run: |
+        ABSOLUTE_PATHS=()
+
+        # Iterate over each path/glob and convert to absolute
+        for path in $INPUTS; do
+          for file in $path; do
+            ABSOLUTE_PATHS+=( "$(realpath "$file")" )
+          done
+        done
+
+        # Convert the array of absolute paths to a space-separated string
+        ABSOLUTE_INPUTS="${ABSOLUTE_PATHS[*]}"
+
+        ABSOLUTE_OUTPUT="$(realpath "$OUTPUT")"
+
+        echo "inputs=$ABSOLUTE_INPUTS" >> $GITHUB_OUTPUT
+        echo "output=$ABSOLUTE_OUTPUT" >> $GITHUB_OUTPUT
+      shell: bash
     - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
@@ -25,8 +48,9 @@ runs:
       working-directory: ./.github/actions/aggregate-reports
     - name: Run Script
       env:
-        INPUTS: ${{ inputs.inputs }}
-        OUTPUT: ${{ inputs.output }}
-      run: npm run aggregate -- ${OUTPUT} ${INPUTS}
+        INPUTS: ${{ steps.absolute.outputs.inputs }}
+        OUTPUT: ${{ steps.absolute.outputs.output }}
+      run: |
+        npm run aggregate -- ${OUTPUT} ${INPUTS}
       shell: bash
       working-directory: ./.github/actions/aggregate-reports

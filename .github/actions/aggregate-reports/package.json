@@ -11,7 +11,7 @@
     "node": ">=16"
   },
   "scripts": {
-    "run": "ts-node src/index.ts"
+    "aggregate": "ts-node ./index.ts"
   },
   "devDependencies": {
     "@types/node": "^20.6.0",

@@ -26,5 +26,5 @@ runs:
       env:
         INPUTS: ${{ inputs.inputs }}
         OUTPUT: ${{ inputs.output }}
-      run: npm run aggregate -- ${INPUTS} > ${OUTPUT}
+      run: npm run aggregate -- ${OUTPUT} ${INPUTS}
       shell: bash

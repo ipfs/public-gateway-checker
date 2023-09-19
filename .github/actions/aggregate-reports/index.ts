@@ -1,10 +1,7 @@
 import fs  from 'fs'
 import process from 'process'
 import path from 'path'
-import { promisify } from 'util'
 import { z } from "zod";
-
-const write = promisify(fs.write)
 
 interface ReportOutput {
   metadata: {
@@ -102,7 +99,8 @@ const processReport = (filePath: string): [GatewayURL, ReportOutput] => {
  * Main function to process all input files and write the results to standard output.
  */
 const main = async (): Promise<void> => {
-  const inputs: string[] = process.argv.slice(2) // List of json reports to aggregate.
+  const output: string = process.argv[2] // Output file path.
+  const inputs: string[] = process.argv.slice(3) // List of json reports to aggregate.
 
   const results: {[key: string]: ReportOutput} = {}
   
@@ -111,7 +109,7 @@ const main = async (): Promise<void> => {
     results[name] = report
   })
 
-  await write(process.stdout.fd, JSON.stringify(results, null, 2))
+  fs.writeFileSync(output, JSON.stringify(results, null, 2))
 }
 
 main()

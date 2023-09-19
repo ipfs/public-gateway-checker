@@ -55,7 +55,7 @@ jobs:
 
       # 2. Run the gateway-conformance tests
       - name: Run gateway-conformance tests
-        uses: singulargarden/gateway-conformance/.github/actions/test@main
+        uses: ipfs/gateway-conformance/.github/actions/test@v0
         with:
           gateway-url: ${{ matrix.gateway_url }}
           json: output.json

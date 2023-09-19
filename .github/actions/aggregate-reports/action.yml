@@ -20,11 +20,13 @@ runs:
       with:
         node-version: lts/*
     - name: Install dependencies
-      run: npm ci
+      run: npm install
       shell: bash
+      working-directory: ./.github/actions/aggregate-reports
     - name: Run Script
       env:
         INPUTS: ${{ inputs.inputs }}
         OUTPUT: ${{ inputs.output }}
       run: npm run aggregate -- ${OUTPUT} ${INPUTS}
       shell: bash
+      working-directory: ./.github/actions/aggregate-reports

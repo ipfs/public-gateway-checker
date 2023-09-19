@@ -26,5 +26,5 @@ runs:
       env:
         INPUTS: ${{ inputs.inputs }}
         OUTPUT: ${{ inputs.output }}
-      run: ts-node ./index.ts ${INPUTS} > ${OUTPUT}
+      run: ./node-modules/bin/ts-node ./index.ts ${INPUTS} > ${OUTPUT}
       shell: bash

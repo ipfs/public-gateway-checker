@@ -41,7 +41,7 @@ const ReportFileInput = z.intersection(
         job_url: z.string().optional(),
         gateway_url: z.string(),
       })
-    })
+    }).optional(),
   })
 )
 
@@ -54,6 +54,11 @@ const processReport = (filePath: string): [GatewayURL, ReportOutput] => {
 
   // extract the TestMetadata
   const { TestMetadata, ...allOtherTests } = reportContent
+
+  if (!TestMetadata) {
+    throw new Error(`No TestMetadata found in ${resolvedPath}`)
+  }
+
   const { time, meta } = TestMetadata
   const { version, job_url, gateway_url } = meta
 
@@ -105,8 +110,12 @@ const main = async (): Promise<void> => {
   const results: {[key: string]: ReportOutput} = {}
   
   inputs.forEach((filePath) => {
-    const [name, report] = processReport(filePath)
-    results[name] = report
+    try {
+      const [name, report] = processReport(filePath)
+      results[name] = report
+    } catch (err) {
+      console.error(`Error processing ${filePath}`, err)
+    }
   })
 
   fs.writeFileSync(output, JSON.stringify(results, null, 2))

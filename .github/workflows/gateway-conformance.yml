@@ -117,10 +117,9 @@ jobs:
           name: dashboard-reports
           path: ./reports
       - name: Generate final report
-        uses: ./.github/actions/aggregate-reports
-        with:
-          inputs: ./reports/*.json
-          output: ./src/report.json
+        run: |
+          npm ci --include=dev
+          npx ts-node ./.github/aggregate.ts ./reports/*.json > ./src/report.json
       - name: Upload Report
         # This will be useful for local debugging
         if: (failure() || success())

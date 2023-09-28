@@ -21,7 +21,10 @@ interface ReportOutput {
 
 type GatewayURL = string
 
-const Outcome = z.enum(['pass', 'fail', 'skip'])
+// At the moment test2json is likely to miss some outputs.
+// We'll accept "Unknown" as a valid outcome for now.
+// Related: https://github.com/golang/go/issues/61767
+const Outcome = z.enum(['pass', 'fail', 'skip', 'Unknown'])
 
 const ReportFileInput = z.intersection(
   z.record(z.object({
@@ -74,7 +77,8 @@ const processReport = (filePath: string): [GatewayURL, ReportOutput] => {
     })
     .reduce((acc, value) => {
       // then group by "group" value and sum their outcomes
-      const { outcome, group } = value
+      const { group } = value
+      const outcome = value.outcome === 'Unknown' ? 'fail' : value.outcome
 
       if (!acc[group]) {
         acc[group] = {

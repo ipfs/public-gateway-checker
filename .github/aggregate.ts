@@ -1,7 +1,7 @@
 import fs  from 'fs'
 import process from 'process'
 import path from 'path'
-import { z } from "zod";
+import { z } from 'zod';
 
 interface ReportOutput {
   metadata: {

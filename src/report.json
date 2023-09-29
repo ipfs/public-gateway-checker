@@ -1,172 +1,2666 @@
 {
+  "https://4everland.io": {
+    "metadata": {
+      "time": "2023-09-29T15:06:51.677399956Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://4everland.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://alexdav.id": {
+    "metadata": {
+      "time": "2023-09-29T15:06:47.424368547Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://alexdav.id"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://aragon.ventures": {
+    "metadata": {
+      "time": "2023-09-29T15:06:54.913622741Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://aragon.ventures"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://astyanax.io": {
+    "metadata": {
+      "time": "2023-09-29T15:06:54.336442978Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://astyanax.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://cdn.cwinfo.net": {
+    "metadata": {
+      "time": "2023-09-29T15:06:58.32369778Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://cdn.cwinfo.net"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://cf-ipfs.com": {
+    "metadata": {
+      "time": "2023-09-29T15:06:58.726528632Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://cf-ipfs.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      }
+    }
+  },
+  "https://cloudflare-ipfs.com": {
+    "metadata": {
+      "time": "2023-09-29T15:07:07.301585651Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://cloudflare-ipfs.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 1,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://cthd.icu": {
+    "metadata": {
+      "time": "2023-09-29T15:07:06.472231178Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://cthd.icu"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://dweb.eu.org": {
+    "metadata": {
+      "time": "2023-09-29T15:07:22.775429204Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://dweb.eu.org"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
   "https://dweb.link": {
     "metadata": {
-      "time": "2023-08-28T09:09:02.057072248Z",
-      "version": "main",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/5997879157",
+      "time": "2023-09-29T15:06:55.726811704Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
       "gateway_url": "https://dweb.link"
     },
     "results": {
-      "TestDNSLinkGatewayUnixFSDirectoryListing": {
-        "outcome": "fail"
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestCors": {
-        "outcome": "fail"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestGatewayJsonCbor": {
-        "outcome": "fail"
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion": {
+    "metadata": {
+      "time": "2023-09-29T15:06:51.7030442Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
       },
-      "TestDagPbConversion": {
-        "outcome": "fail"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestPlainCodec": {
-        "outcome": "fail"
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
       },
-      "TestPathing": {
-        "outcome": "fail"
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
       },
-      "TestNativeDag": {
-        "outcome": "fail"
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
       },
-      "TestGatewayJSONCborAndIPNS": {
-        "outcome": "fail"
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
       },
-      "TestRedirectCanonicalIPNS": {
-        "outcome": "fail"
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestGatewayBlock": {
-        "outcome": "fail"
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
       },
-      "TestTar": {
-        "outcome": "fail"
-      },
-      "TestUnixFSDirectoryListing": {
-        "outcome": "fail"
-      },
-      "TestGatewayCache": {
-        "outcome": "fail"
-      },
-      "TestGatewayCacheWithIPNS": {
-        "outcome": "fail"
-      },
-      "TestGatewaySymlink": {
-        "outcome": "fail"
-      },
-      "TestGatewayUnixFSFileRanges": {
-        "outcome": "fail"
-      },
-      "TestRedirectsFileSupport": {
-        "outcome": "fail"
-      },
-      "TestRedirectsFileSupportWithDNSLink": {
-        "outcome": "fail"
-      },
-      "TestUnixFSDirectoryListingOnSubdomainGateway": {
-        "outcome": "fail"
-      },
-      "TestGatewaySubdomains": {
-        "outcome": "fail"
-      },
-      "TestGatewaySubdomainAndIPNS": {
-        "outcome": "fail"
-      },
-      "TestSubdomainGatewayDNSLinkInlining": {
-        "outcome": "fail"
-      },
-      "TestTrustlessCarPathing": {
-        "outcome": "fail"
-      },
-      "TestTrustlessCarDagScopeBlock": {
-        "outcome": "fail"
-      },
-      "TestTrustlessCarDagScopeEntity": {
-        "outcome": "fail"
-      },
-      "TestTrustlessCarDagScopeAll": {
-        "outcome": "fail"
-      },
-      "TestTrustlessCarEntityBytes": {
-        "outcome": "fail"
-      },
-      "TestTrustlessCarOrderAndDuplicates": {
-        "outcome": "fail"
-      },
-      "TestGatewayIPNSRecord": {
-        "outcome": "fail"
-      },
-      "TestTrustlessRaw": {
-        "outcome": "fail"
-      },
-      "TestTrustlessRawRanges": {
-        "outcome": "fail"
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
       }
     }
   },
   "https://gateway.ipfs.io": {
     "metadata": {
-      "time": "2023-08-28T09:10:28.613523175Z",
-      "version": "main",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/5997879157",
+      "time": "2023-09-29T15:09:15.614517583Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
       "gateway_url": "https://gateway.ipfs.io"
     },
     "results": {
-      "TestDNSLinkGatewayUnixFSDirectoryListing": {
-        "outcome": "fail"
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestCors": {
-        "outcome": "fail"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestGatewayJsonCbor": {
-        "outcome": "pass"
+      "JSON-CBOR": {
+        "pass": 3,
+        "fail": 2,
+        "skip": 0
       },
-      "TestDagPbConversion": {
-        "outcome": "fail"
+      "IPNS": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
       },
-      "TestPlainCodec": {
-        "outcome": "pass"
+      "Others": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      }
+    }
+  },
+  "https://gateway.originprotocol.com": {
+    "metadata": {
+      "time": "2023-09-29T15:07:50.999290419Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://gateway.originprotocol.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
       },
-      "TestPathing": {
-        "outcome": "pass"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestNativeDag": {
-        "outcome": "fail"
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
       },
-      "TestGatewayJSONCborAndIPNS": {
-        "outcome": "fail"
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://gateway.pinata.cloud": {
+    "metadata": {
+      "time": "2023-09-29T15:08:01.467733487Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://gateway.pinata.cloud"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      }
+    }
+  },
+  "https://gravity.jup.io": {
+    "metadata": {
+      "time": "2023-09-29T15:09:24.052523172Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://gravity.jup.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://gw3.io": {
+    "metadata": {
+      "time": "2023-09-29T15:09:31.793818536Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://gw3.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://hardbin.com": {
+    "metadata": {
+      "time": "2023-09-29T15:14:35.008559641Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://hardbin.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 3,
+        "fail": 2,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 2,
+        "fail": 1,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 1,
+        "fail": 3,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 1,
+        "fail": 3,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 1,
+        "fail": 2,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://hashnews.k1ic.com": {
+    "metadata": {
+      "time": "2023-09-29T15:09:59.522478723Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://hashnews.k1ic.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://hub.textile.io": {
+    "metadata": {
+      "time": "2023-09-29T15:08:28.098609293Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://hub.textile.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.1-2.dev": {
+    "metadata": {
+      "time": "2023-09-29T15:08:31.910278269Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.1-2.dev"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.alloyxuast.tk": {
+    "metadata": {
+      "time": "2023-09-29T15:08:12.884385649Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.alloyxuast.tk"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.best-practice.se": {
+    "metadata": {
+      "time": "2023-09-29T15:08:26.94289217Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.best-practice.se"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.busy.org": {
+    "metadata": {
+      "time": "2023-09-29T15:08:53.727185896Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.busy.org"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.chisdealhd.co.uk": {
+    "metadata": {
+      "time": "2023-09-29T15:08:32.564603721Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.chisdealhd.co.uk"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.decoo.io": {
+    "metadata": {
+      "time": "2023-09-29T15:11:03.350443595Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.decoo.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.drink.cafe": {
+    "metadata": {
+      "time": "2023-09-29T15:10:03.883080805Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.drink.cafe"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.eth.aragon.network": {
+    "metadata": {
+      "time": "2023-09-29T15:12:27.569853918Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.eth.aragon.network"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 5,
+        "fail": 0,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 1,
+        "fail": 5,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 2,
+        "fail": 1,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.fleek.co": {
+    "metadata": {
+      "time": "2023-09-29T15:09:29.614264649Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.fleek.co"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.fooock.com": {
+    "metadata": {
+      "time": "2023-09-29T15:09:59.680878373Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.fooock.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.funnychain.co": {
+    "metadata": {
+      "time": "2023-09-29T15:09:44.186648327Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.funnychain.co"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs-gateway.cloud": {
+    "metadata": {
+      "time": "2023-09-29T15:13:49.878660088Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs-gateway.cloud"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "http://ipfs.genenetwork.org": {
+    "metadata": {
+      "time": "2023-09-29T15:06:45.369746934Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "http://ipfs.genenetwork.org"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.greyh.at": {
+    "metadata": {
+      "time": "2023-09-29T15:09:46.779604442Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.greyh.at"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.ink": {
+    "metadata": {
+      "time": "2023-09-29T15:10:05.825434341Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.ink"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
       }
     }
   },
   "https://ipfs.io": {
     "metadata": {
-      "time": "2023-08-28T09:10:13.37720758Z",
-      "version": "main",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/5997879157",
+      "time": "2023-09-29T15:11:54.600889815Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
       "gateway_url": "https://ipfs.io"
     },
     "results": {
-      "TestDNSLinkGatewayUnixFSDirectoryListing": {
-        "outcome": "fail"
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestCors": {
-        "outcome": "fail"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestGatewayJsonCbor": {
-        "outcome": "pass"
+      "JSON-CBOR": {
+        "pass": 3,
+        "fail": 2,
+        "skip": 0
       },
-      "TestDagPbConversion": {
-        "outcome": "fail"
+      "IPNS": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
       },
-      "TestPlainCodec": {
-        "outcome": "pass"
+      "Others": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.kaleido.art": {
+    "metadata": {
+      "time": "2023-09-29T15:10:41.632288669Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.kaleido.art"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestPathing": {
-        "outcome": "pass"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestNativeDag": {
-        "outcome": "fail"
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.kavin.rocks": {
+    "metadata": {
+      "time": "2023-09-29T15:11:02.167923112Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.kavin.rocks"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
       },
-      "TestGatewayJSONCborAndIPNS": {
-        "outcome": "fail"
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.kinematiks.com": {
+    "metadata": {
+      "time": "2023-09-29T15:10:51.202914242Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.kinematiks.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.lain.la": {
+    "metadata": {
+      "time": "2023-09-29T15:11:58.264644165Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.lain.la"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.mttk.net": {
+    "metadata": {
+      "time": "2023-09-29T15:11:06.830195887Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.mttk.net"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.namebase.io": {
+    "metadata": {
+      "time": "2023-09-29T15:16:00.157809246Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.namebase.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.overpi.com": {
+    "metadata": {
+      "time": "2023-09-29T15:11:22.841145652Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.overpi.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.runfission.com": {
+    "metadata": {
+      "time": "2023-09-29T15:20:08.900513325Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.runfission.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 4,
+        "fail": 1,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 2,
+        "fail": 2,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 3,
+        "fail": 6,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 2,
+        "fail": 1,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.scalaproject.io": {
+    "metadata": {
+      "time": "2023-09-29T15:11:34.739005221Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.scalaproject.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.slang.cx": {
+    "metadata": {
+      "time": "2023-09-29T15:11:25.237863596Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.slang.cx"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.smartholdem.io": {
+    "metadata": {
+      "time": "2023-09-29T15:12:16.491137792Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.smartholdem.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.soul-network.com": {
+    "metadata": {
+      "time": "2023-09-29T15:12:11.383831143Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.soul-network.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.tayfundogdas.me": {
+    "metadata": {
+      "time": "2023-09-29T15:12:23.722617606Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.tayfundogdas.me"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.telos.miami": {
+    "metadata": {
+      "time": "2023-09-29T15:12:35.34010309Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.telos.miami"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.tribecap.co": {
+    "metadata": {
+      "time": "2023-09-29T15:12:30.48055106Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.tribecap.co"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.trusti.id": {
+    "metadata": {
+      "time": "2023-09-29T15:12:43.176783922Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.trusti.id"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.uploads.nu": {
+    "metadata": {
+      "time": "2023-09-29T15:13:14.524162132Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.uploads.nu"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs.yt": {
+    "metadata": {
+      "time": "2023-09-29T15:13:22.69171646Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs.yt"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfs1.pixura.io": {
+    "metadata": {
+      "time": "2023-09-29T15:14:22.135276507Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfs1.pixura.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ipfsgateway.makersplace.com": {
+    "metadata": {
+      "time": "2023-09-29T15:13:33.753155748Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ipfsgateway.makersplace.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://jorropo.net": {
+    "metadata": {
+      "time": "2023-09-29T15:13:44.675529321Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://jorropo.net"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://konubinix.eu": {
+    "metadata": {
+      "time": "2023-09-29T15:15:55.318767438Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://konubinix.eu"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      }
+    }
+  },
+  "http://natoboram.mynetgear.com:8080": {
+    "metadata": {
+      "time": "2023-09-29T15:06:50.446497154Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "http://natoboram.mynetgear.com:8080"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://nftstorage.link": {
+    "metadata": {
+      "time": "2023-09-29T15:14:01.163974448Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://nftstorage.link"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ninetailed.ninja": {
+    "metadata": {
+      "time": "2023-09-29T15:14:07.130728135Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ninetailed.ninja"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://permaweb.eu.org": {
+    "metadata": {
+      "time": "2023-09-29T15:14:23.055106024Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://permaweb.eu.org"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://permaweb.io": {
+    "metadata": {
+      "time": "2023-09-29T15:15:19.175335041Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://permaweb.io"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://ravencoinipfs-gateway.com": {
+    "metadata": {
+      "time": "2023-09-29T15:15:00.968633526Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://ravencoinipfs-gateway.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://search.ipfsgate.com": {
+    "metadata": {
+      "time": "2023-09-29T15:15:05.90870497Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://search.ipfsgate.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 2,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 5,
+        "skip": 0
+      },
+      "IPNS": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Others": {
+        "pass": 0,
+        "fail": 4,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 0,
+        "fail": 9,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      },
+      "Subdomains": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://storjipfs-gateway.com": {
+    "metadata": {
+      "time": "2023-09-29T15:15:07.45752632Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://storjipfs-gateway.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://storry.tv": {
+    "metadata": {
+      "time": "2023-09-29T15:15:16.545014964Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://storry.tv"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://tth-ipfs.com": {
+    "metadata": {
+      "time": "2023-09-29T15:15:10.299285373Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://tth-ipfs.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://twdragon.net": {
+    "metadata": {
+      "time": "2023-09-29T15:15:38.830003241Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://twdragon.net"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://via0.com": {
+    "metadata": {
+      "time": "2023-09-29T15:15:37.756829889Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://via0.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://video.oneloveipfs.com": {
+    "metadata": {
+      "time": "2023-09-29T15:15:45.84693658Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://video.oneloveipfs.com"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
+      }
+    }
+  },
+  "https://w3s.link": {
+    "metadata": {
+      "time": "2023-09-29T15:15:38.792144779Z",
+      "version": "dev",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "gateway_url": "https://w3s.link"
+    },
+    "results": {
+      "DNSLink": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "CORS": {
+        "pass": 0,
+        "fail": 1,
+        "skip": 0
+      },
+      "JSON-CBOR": {
+        "pass": 0,
+        "fail": 3,
+        "skip": 0
       }
     }
   }

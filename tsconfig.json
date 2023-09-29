@@ -15,5 +15,11 @@
     "test", // remove this line if you don't want to type-check tests
     "src",
     "src/report.json"
-  ]
+  ],
+  "ts-node": {
+    "transpileOnly": true,
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
 }

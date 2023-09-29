@@ -89,7 +89,7 @@ const processReport = (filePath: string): [GatewayURL, ReportOutput] => {
       acc[group][outcome] += 1
 
       return acc
-    }, {} as { [key: string]: { pass: number, fail: number, skip: number } })
+    }, {} as ReportOutput['results'])
 
   return [
     gateway_url,

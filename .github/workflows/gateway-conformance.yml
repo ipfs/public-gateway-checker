@@ -1,0 +1,139 @@
+name: Gateway Conformance Dashboard
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+  # Enable this when we're ready to generate the dashboard
+  # schedule:
+  #   - cron: "0 */6 * * *" # every six hours
+
+concurrency:
+  group: "conformance"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    outputs:
+      gateways: ${{ steps.set-matrix.outputs.gateways }}
+    steps:
+     - name: Checkout repository
+       uses: actions/checkout@v3
+     - name: Set matrix data
+       id: set-matrix
+       run: |
+        # See details in https://github.com/ipfs/public-gateway-checker/pull/450#discussion_r1318704756
+        jq --raw-input --slurp --compact-output 'split("\n")[:-1]' gateways.txt | \
+          xargs --null --max-chars=2000000 -I {} echo "gateways={}" | \
+          tee -a "$GITHUB_OUTPUT"
+  conformance:
+    runs-on: ubuntu-latest
+    needs: configure
+    strategy:
+      matrix:
+          gateway_url: ${{ fromJson(needs.configure.outputs.gateways) }}
+      fail-fast: false
+    steps:
+      # 1. Generate the slug used for reporting
+      - name: Generate slug
+        id: slug
+        env:
+          GATEWAY_URL: ${{ matrix.gateway_url }}
+        run: |
+          slug=$(echo "${GATEWAY_URL}" |
+              sed -e 's/http[s]\?:\/\///' \
+              -e 's/[:/@.]/-/g' \
+              -e 's/[^A-Za-z0-9\-]/-/g' |
+              tr "[:upper:]" "[:lower:]")
+          echo "slug=$slug" >> $GITHUB_OUTPUT
+
+      # 2. Run the gateway-conformance tests
+      - name: Run gateway-conformance tests
+        uses: ipfs/gateway-conformance/.github/actions/test@v0
+        with:
+          gateway-url: ${{ matrix.gateway_url }}
+          json: output.json
+          xml: output.xml
+          html: output.html
+          markdown: output.md
+          report: report.json
+          accept-test-failure: true
+
+      # 3. Upload the results
+      - name: Upload MD summary
+        # TODO: generate a minimal output.md in the action
+        # See https://github.com/ipfs/gateway-conformance/issues/171
+        run: cat output.md | sed '/Failures\/Errors/,$d' >> $GITHUB_STEP_SUMMARY
+      - name: Upload JSON output
+        uses: actions/upload-artifact@v3
+        with:
+          name: conformance-${{ steps.slug.outputs.slug }}.json
+          path: |
+            ./output.json
+            ./output.html
+            ./report.json
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: conformance-${{ steps.slug.outputs.slug }}.html
+          path: output.html
+
+  aggregate:
+    permissions:
+      contents: write
+    runs-on: "ubuntu-latest"
+    needs: [conformance]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v3
+      - name: Download Artifacts
+        uses: actions/download-artifact@v3
+        with:
+          path: artifacts
+      - name: Aggregate reports
+        run: |
+          mkdir ./reports
+
+          # download-artifact downloads artifacts in a directory named after the artifact
+          # details: https://github.com/actions/download-artifact#download-all-artifacts
+          for folder in ./artifacts/conformance-*.json; do
+            file="${folder}/report.json"
+            new_name="${folder#.\/artifacts\/conformance-}" # drop path prefix "./artifacts/conformance-"
+            new_file="./reports/${new_name}"
+            cp "${file}" "${new_file}"
+          done
+      - name: Upload Data Aggregates
+        # This will be useful for local debugging
+        if: (failure() || success())
+        uses: actions/upload-artifact@v3
+        with:
+          name: dashboard-reports
+          path: ./reports
+      - name: Generate final report
+        run: |
+          npm ci --include=dev
+          npx ts-node ./.github/aggregate.ts ./reports/*.json > ./src/report.json
+      - name: Upload Report
+        # This will be useful for local debugging
+        if: (failure() || success())
+        uses: actions/upload-artifact@v3
+        with:
+          name: dashboard-report
+          path: ./src/report.json
+      - name: Configure git
+        run: |
+          git config --global user.email "${GITHUB_ACTOR}@users.noreply.github.com>"
+          git config --global user.name "${GITHUB_ACTOR}"
+      - name: Push
+        run: |
+          git add src/report.json
+          git commit -m "chore: update conformance results"
+          git push

@@ -15,7 +15,7 @@ View the Public Gateway Checker in action
 
 ## Adding a new public gateway
 
-If you'd like to add a new public gateway, please edit `./src/gateways.ts`:
+If you'd like to add a new public gateway, please edit `./gateways.txt`:
 
 1. Add the gateway's address to the bottom of the list
 2. Make sure the final item in the list does **not** have a comma at the end, but all preceding items do

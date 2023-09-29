@@ -124,7 +124,7 @@
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {
-    "aegir": "^39.0.13",
+    "aegir": "^40.0.13",
     "browserslist": "^4.21.9",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",
@@ -133,9 +133,11 @@
     "fetch-ponyfill": "^7.1.0",
     "ipfs-geoip": "^9.0.1",
     "js-beautify": "^1.14.8",
+    "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "workbox-build": "7.0.0",
-    "workbox-window": "7.0.0"
+    "workbox-window": "7.0.0",
+    "zod": "^3.22.2"
   },
   "aegir": {
     "tsRepo": true,

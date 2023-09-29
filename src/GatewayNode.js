@@ -41,7 +41,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
         this.trustless = new Trustless(this);
         this.tag.append(this.trustless.tag);
         this.link = document.createElement('div');
-        const gatewayAndHash = gateway.replace(':hash', HASH_TO_TEST);
+        const gatewayAndHash = `${gateway}/ipfs/${HASH_TO_TEST}`;
         this.link.url = new URL(gatewayAndHash);
         this.link.textContent = gatewayHostname(this.link.url);
         this.link.className = 'Link';

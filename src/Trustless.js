@@ -14,7 +14,7 @@ class Trustless extends CheckBase {
     }
     async check() {
         const now = Date.now();
-        const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST);
+        const gatewayAndHash = `${this.parent.gateway}/ipfs/${HASH_TO_TEST}`;
         this.parent.tag.classList.add('trustless');
         try {
             const trustlessResponseTypesTests = await Promise.all(TRUSTLESS_RESPONSE_TYPES.map(async (trustlessTypes) => {

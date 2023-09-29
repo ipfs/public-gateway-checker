@@ -14,7 +14,7 @@ class Cors extends CheckBase {
     }
     async check() {
         const now = Date.now();
-        const gatewayAndHash = this.parent.gateway.replace(':hash', HASH_TO_TEST);
+        const gatewayAndHash = `${this.parent.gateway}/ipfs/${HASH_TO_TEST}`;
         const testUrl = `${gatewayAndHash}?now=${now}#x-ipfs-companion-no-redirect`;
         // response body can be accessed only if fetch was executed when
         // liberal CORS is present (eg. '*')

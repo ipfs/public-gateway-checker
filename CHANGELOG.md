@@ -1,3 +1,10 @@
+## [1.7.0](https://github.com/ipfs/public-gateway-checker/compare/v1.6.1...v1.7.0) (2023-09-29)
+
+
+### Features
+
+* twdragon.net ([#444](https://github.com/ipfs/public-gateway-checker/issues/444)) ([3a71191](https://github.com/ipfs/public-gateway-checker/commit/3a71191ff8ea6ba75db016dd2d77f4c3def7e400))
+
 ## [1.6.1](https://github.com/ipfs/public-gateway-checker/compare/v1.6.0...v1.6.1) (2023-08-07)
 
 

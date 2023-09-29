@@ -1,3 +1,10 @@
+## [1.8.0](https://github.com/ipfs/public-gateway-checker/compare/v1.7.0...v1.8.0) (2023-09-29)
+
+
+### Features
+
+* generate results with gateway-conformance ([#450](https://github.com/ipfs/public-gateway-checker/issues/450)) ([e200e3a](https://github.com/ipfs/public-gateway-checker/commit/e200e3a703ae5489716312e9a134740a032e7327)), closes [#442](https://github.com/ipfs/public-gateway-checker/issues/442)
+
 ## [1.7.0](https://github.com/ipfs/public-gateway-checker/compare/v1.6.1...v1.7.0) (2023-09-29)
 
 

@@ -53,10 +53,8 @@ const ReportFileInput = z.intersection(
  */
 const processReport = (filePath: string): [GatewayURL, ReportOutput] => {
   const resolvedPath = path.isAbsolute(filePath) ? filePath : path.resolve(process.cwd(), filePath);
-  const reportContent = ReportFileInput.parse(JSON.parse(fs.readFileSync(resolvedPath, 'utf8')))
+  const { TestMetadata, ...allOtherTests } = ReportFileInput.parse(JSON.parse(fs.readFileSync(resolvedPath, 'utf8')))
 
-  // extract the TestMetadata
-  const { TestMetadata, ...allOtherTests } = reportContent
 
   if (!TestMetadata) {
     throw new Error(`No TestMetadata found in ${resolvedPath}`)

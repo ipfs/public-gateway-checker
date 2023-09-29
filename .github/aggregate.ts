@@ -121,7 +121,7 @@ const main = async (): Promise<void> => {
     }
   })
 
-  fs.writeFileSync(1, JSON.stringify(results, null, 2))
+  fs.writeFileSync(1, JSON.stringify(results, null, 2) + '\n')
 }
 
 main()

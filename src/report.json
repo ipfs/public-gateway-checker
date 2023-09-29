@@ -1,9 +1,9 @@
 {
   "https://4everland.io": {
     "metadata": {
-      "time": "2023-09-29T15:06:51.677399956Z",
+      "time": "2023-09-29T17:55:19.752949005Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://4everland.io"
     },
     "results": {
@@ -26,9 +26,9 @@
   },
   "https://alexdav.id": {
     "metadata": {
-      "time": "2023-09-29T15:06:47.424368547Z",
+      "time": "2023-09-29T17:55:09.114150396Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://alexdav.id"
     },
     "results": {
@@ -81,9 +81,9 @@
   },
   "https://aragon.ventures": {
     "metadata": {
-      "time": "2023-09-29T15:06:54.913622741Z",
+      "time": "2023-09-29T17:55:14.783844289Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://aragon.ventures"
     },
     "results": {
@@ -106,9 +106,9 @@
   },
   "https://astyanax.io": {
     "metadata": {
-      "time": "2023-09-29T15:06:54.336442978Z",
+      "time": "2023-09-29T17:55:06.898159424Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://astyanax.io"
     },
     "results": {
@@ -131,9 +131,9 @@
   },
   "https://cdn.cwinfo.net": {
     "metadata": {
-      "time": "2023-09-29T15:06:58.32369778Z",
+      "time": "2023-09-29T17:55:35.637292042Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://cdn.cwinfo.net"
     },
     "results": {
@@ -156,9 +156,9 @@
   },
   "https://cf-ipfs.com": {
     "metadata": {
-      "time": "2023-09-29T15:06:58.726528632Z",
+      "time": "2023-09-29T17:55:11.318041177Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://cf-ipfs.com"
     },
     "results": {
@@ -181,9 +181,9 @@
   },
   "https://cloudflare-ipfs.com": {
     "metadata": {
-      "time": "2023-09-29T15:07:07.301585651Z",
+      "time": "2023-09-29T17:55:08.23685106Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://cloudflare-ipfs.com"
     },
     "results": {
@@ -206,9 +206,9 @@
   },
   "https://cthd.icu": {
     "metadata": {
-      "time": "2023-09-29T15:07:06.472231178Z",
+      "time": "2023-09-29T17:55:16.690394754Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://cthd.icu"
     },
     "results": {
@@ -231,9 +231,9 @@
   },
   "https://dweb.eu.org": {
     "metadata": {
-      "time": "2023-09-29T15:07:22.775429204Z",
+      "time": "2023-09-29T17:55:27.905098698Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://dweb.eu.org"
     },
     "results": {
@@ -256,9 +256,9 @@
   },
   "https://dweb.link": {
     "metadata": {
-      "time": "2023-09-29T15:06:55.726811704Z",
+      "time": "2023-09-29T17:55:10.826465067Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://dweb.link"
     },
     "results": {
@@ -281,9 +281,9 @@
   },
   "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion": {
     "metadata": {
-      "time": "2023-09-29T15:06:51.7030442Z",
+      "time": "2023-09-29T17:55:07.991977199Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion"
     },
     "results": {
@@ -336,9 +336,9 @@
   },
   "https://gateway.ipfs.io": {
     "metadata": {
-      "time": "2023-09-29T15:09:15.614517583Z",
+      "time": "2023-09-29T17:57:05.911365758Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://gateway.ipfs.io"
     },
     "results": {
@@ -371,9 +371,9 @@
   },
   "https://gateway.originprotocol.com": {
     "metadata": {
-      "time": "2023-09-29T15:07:50.999290419Z",
+      "time": "2023-09-29T17:55:13.428070477Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://gateway.originprotocol.com"
     },
     "results": {
@@ -426,9 +426,9 @@
   },
   "https://gateway.pinata.cloud": {
     "metadata": {
-      "time": "2023-09-29T15:08:01.467733487Z",
+      "time": "2023-09-29T17:55:15.894120094Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://gateway.pinata.cloud"
     },
     "results": {
@@ -451,9 +451,9 @@
   },
   "https://gravity.jup.io": {
     "metadata": {
-      "time": "2023-09-29T15:09:24.052523172Z",
+      "time": "2023-09-29T17:55:50.008993898Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://gravity.jup.io"
     },
     "results": {
@@ -506,9 +506,9 @@
   },
   "https://gw3.io": {
     "metadata": {
-      "time": "2023-09-29T15:09:31.793818536Z",
+      "time": "2023-09-29T17:55:47.140769482Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://gw3.io"
     },
     "results": {
@@ -561,9 +561,9 @@
   },
   "https://hardbin.com": {
     "metadata": {
-      "time": "2023-09-29T15:14:35.008559641Z",
+      "time": "2023-09-29T18:03:08.159509647Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://hardbin.com"
     },
     "results": {
@@ -584,7 +584,7 @@
       },
       "IPNS": {
         "pass": 2,
-        "fail": 1,
+        "fail": 2,
         "skip": 0
       },
       "Others": {
@@ -593,8 +593,8 @@
         "skip": 0
       },
       "Block-CAR": {
-        "pass": 1,
-        "fail": 3,
+        "pass": 3,
+        "fail": 6,
         "skip": 0
       },
       "Tar": {
@@ -616,9 +616,9 @@
   },
   "https://hashnews.k1ic.com": {
     "metadata": {
-      "time": "2023-09-29T15:09:59.522478723Z",
+      "time": "2023-09-29T17:58:19.536164823Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://hashnews.k1ic.com"
     },
     "results": {
@@ -671,35 +671,10 @@
   },
   "https://hub.textile.io": {
     "metadata": {
-      "time": "2023-09-29T15:08:28.098609293Z",
+      "time": "2023-09-29T17:56:35.827533398Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://hub.textile.io"
-    },
-    "results": {
-      "DNSLink": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      },
-      "CORS": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      },
-      "JSON-CBOR": {
-        "pass": 0,
-        "fail": 3,
-        "skip": 0
-      }
-    }
-  },
-  "https://ipfs.1-2.dev": {
-    "metadata": {
-      "time": "2023-09-29T15:08:31.910278269Z",
-      "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
-      "gateway_url": "https://ipfs.1-2.dev"
     },
     "results": {
       "DNSLink": {
@@ -721,9 +696,9 @@
   },
   "https://ipfs.alloyxuast.tk": {
     "metadata": {
-      "time": "2023-09-29T15:08:12.884385649Z",
+      "time": "2023-09-29T17:56:36.52321357Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.alloyxuast.tk"
     },
     "results": {
@@ -776,9 +751,9 @@
   },
   "https://ipfs.best-practice.se": {
     "metadata": {
-      "time": "2023-09-29T15:08:26.94289217Z",
+      "time": "2023-09-29T17:56:29.038260674Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.best-practice.se"
     },
     "results": {
@@ -801,9 +776,9 @@
   },
   "https://ipfs.busy.org": {
     "metadata": {
-      "time": "2023-09-29T15:08:53.727185896Z",
+      "time": "2023-09-29T17:56:29.803398567Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.busy.org"
     },
     "results": {
@@ -856,9 +831,9 @@
   },
   "https://ipfs.chisdealhd.co.uk": {
     "metadata": {
-      "time": "2023-09-29T15:08:32.564603721Z",
+      "time": "2023-09-29T17:56:41.860554856Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.chisdealhd.co.uk"
     },
     "results": {
@@ -881,9 +856,9 @@
   },
   "https://ipfs.decoo.io": {
     "metadata": {
-      "time": "2023-09-29T15:11:03.350443595Z",
+      "time": "2023-09-29T18:04:44.701013049Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.decoo.io"
     },
     "results": {
@@ -904,7 +879,7 @@
       },
       "IPNS": {
         "pass": 0,
-        "fail": 4,
+        "fail": 3,
         "skip": 0
       },
       "Others": {
@@ -914,7 +889,7 @@
       },
       "Block-CAR": {
         "pass": 0,
-        "fail": 9,
+        "fail": 1,
         "skip": 0
       },
       "Tar": {
@@ -929,16 +904,16 @@
       },
       "Subdomains": {
         "pass": 0,
-        "fail": 3,
+        "fail": 2,
         "skip": 0
       }
     }
   },
   "https://ipfs.drink.cafe": {
     "metadata": {
-      "time": "2023-09-29T15:10:03.883080805Z",
+      "time": "2023-09-29T17:57:28.050283996Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.drink.cafe"
     },
     "results": {
@@ -991,9 +966,9 @@
   },
   "https://ipfs.eth.aragon.network": {
     "metadata": {
-      "time": "2023-09-29T15:12:27.569853918Z",
+      "time": "2023-09-29T18:00:08.794858719Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.eth.aragon.network"
     },
     "results": {
@@ -1046,9 +1021,9 @@
   },
   "https://ipfs.fleek.co": {
     "metadata": {
-      "time": "2023-09-29T15:09:29.614264649Z",
+      "time": "2023-09-29T17:57:06.665977655Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.fleek.co"
     },
     "results": {
@@ -1071,9 +1046,9 @@
   },
   "https://ipfs.fooock.com": {
     "metadata": {
-      "time": "2023-09-29T15:09:59.680878373Z",
+      "time": "2023-09-29T17:57:12.700148952Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.fooock.com"
     },
     "results": {
@@ -1096,9 +1071,9 @@
   },
   "https://ipfs.funnychain.co": {
     "metadata": {
-      "time": "2023-09-29T15:09:44.186648327Z",
+      "time": "2023-09-29T17:57:53.767017353Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.funnychain.co"
     },
     "results": {
@@ -1121,9 +1096,9 @@
   },
   "https://ipfs-gateway.cloud": {
     "metadata": {
-      "time": "2023-09-29T15:13:49.878660088Z",
+      "time": "2023-09-29T18:02:03.930410838Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs-gateway.cloud"
     },
     "results": {
@@ -1146,9 +1121,9 @@
   },
   "http://ipfs.genenetwork.org": {
     "metadata": {
-      "time": "2023-09-29T15:06:45.369746934Z",
+      "time": "2023-09-29T17:55:11.22141793Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "http://ipfs.genenetwork.org"
     },
     "results": {
@@ -1171,9 +1146,9 @@
   },
   "https://ipfs.greyh.at": {
     "metadata": {
-      "time": "2023-09-29T15:09:46.779604442Z",
+      "time": "2023-09-29T17:57:59.709310238Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.greyh.at"
     },
     "results": {
@@ -1196,9 +1171,9 @@
   },
   "https://ipfs.ink": {
     "metadata": {
-      "time": "2023-09-29T15:10:05.825434341Z",
+      "time": "2023-09-29T17:58:05.891824689Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.ink"
     },
     "results": {
@@ -1221,9 +1196,9 @@
   },
   "https://ipfs.io": {
     "metadata": {
-      "time": "2023-09-29T15:11:54.600889815Z",
+      "time": "2023-09-29T17:59:57.033494762Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.io"
     },
     "results": {
@@ -1256,9 +1231,9 @@
   },
   "https://ipfs.kaleido.art": {
     "metadata": {
-      "time": "2023-09-29T15:10:41.632288669Z",
+      "time": "2023-09-29T17:58:25.978997188Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.kaleido.art"
     },
     "results": {
@@ -1281,9 +1256,9 @@
   },
   "https://ipfs.kavin.rocks": {
     "metadata": {
-      "time": "2023-09-29T15:11:02.167923112Z",
+      "time": "2023-09-29T17:58:29.211341458Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.kavin.rocks"
     },
     "results": {
@@ -1306,9 +1281,9 @@
   },
   "https://ipfs.kinematiks.com": {
     "metadata": {
-      "time": "2023-09-29T15:10:51.202914242Z",
+      "time": "2023-09-29T17:58:50.180123245Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.kinematiks.com"
     },
     "results": {
@@ -1361,9 +1336,9 @@
   },
   "https://ipfs.lain.la": {
     "metadata": {
-      "time": "2023-09-29T15:11:58.264644165Z",
+      "time": "2023-09-29T17:59:13.660052143Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.lain.la"
     },
     "results": {
@@ -1416,9 +1391,9 @@
   },
   "https://ipfs.mttk.net": {
     "metadata": {
-      "time": "2023-09-29T15:11:06.830195887Z",
+      "time": "2023-09-29T17:59:12.171060468Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.mttk.net"
     },
     "results": {
@@ -1441,9 +1416,9 @@
   },
   "https://ipfs.namebase.io": {
     "metadata": {
-      "time": "2023-09-29T15:16:00.157809246Z",
+      "time": "2023-09-29T18:04:32.17760521Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.namebase.io"
     },
     "results": {
@@ -1496,9 +1471,9 @@
   },
   "https://ipfs.overpi.com": {
     "metadata": {
-      "time": "2023-09-29T15:11:22.841145652Z",
+      "time": "2023-09-29T17:59:31.380203453Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.overpi.com"
     },
     "results": {
@@ -1521,9 +1496,9 @@
   },
   "https://ipfs.runfission.com": {
     "metadata": {
-      "time": "2023-09-29T15:20:08.900513325Z",
+      "time": "2023-09-29T18:07:47.150832051Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.runfission.com"
     },
     "results": {
@@ -1576,9 +1551,9 @@
   },
   "https://ipfs.scalaproject.io": {
     "metadata": {
-      "time": "2023-09-29T15:11:34.739005221Z",
+      "time": "2023-09-29T17:59:57.71931129Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.scalaproject.io"
     },
     "results": {
@@ -1601,9 +1576,9 @@
   },
   "https://ipfs.slang.cx": {
     "metadata": {
-      "time": "2023-09-29T15:11:25.237863596Z",
+      "time": "2023-09-29T18:00:04.433881445Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.slang.cx"
     },
     "results": {
@@ -1656,9 +1631,9 @@
   },
   "https://ipfs.smartholdem.io": {
     "metadata": {
-      "time": "2023-09-29T15:12:16.491137792Z",
+      "time": "2023-09-29T18:00:22.643642844Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.smartholdem.io"
     },
     "results": {
@@ -1711,9 +1686,9 @@
   },
   "https://ipfs.soul-network.com": {
     "metadata": {
-      "time": "2023-09-29T15:12:11.383831143Z",
+      "time": "2023-09-29T18:00:29.802208353Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.soul-network.com"
     },
     "results": {
@@ -1766,9 +1741,9 @@
   },
   "https://ipfs.tayfundogdas.me": {
     "metadata": {
-      "time": "2023-09-29T15:12:23.722617606Z",
+      "time": "2023-09-29T18:00:38.580823934Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.tayfundogdas.me"
     },
     "results": {
@@ -1821,9 +1796,9 @@
   },
   "https://ipfs.telos.miami": {
     "metadata": {
-      "time": "2023-09-29T15:12:35.34010309Z",
+      "time": "2023-09-29T18:00:46.813812181Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.telos.miami"
     },
     "results": {
@@ -1876,9 +1851,9 @@
   },
   "https://ipfs.tribecap.co": {
     "metadata": {
-      "time": "2023-09-29T15:12:30.48055106Z",
+      "time": "2023-09-29T18:01:07.093338311Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.tribecap.co"
     },
     "results": {
@@ -1931,9 +1906,9 @@
   },
   "https://ipfs.trusti.id": {
     "metadata": {
-      "time": "2023-09-29T15:12:43.176783922Z",
+      "time": "2023-09-29T18:01:15.029806848Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.trusti.id"
     },
     "results": {
@@ -1956,9 +1931,9 @@
   },
   "https://ipfs.uploads.nu": {
     "metadata": {
-      "time": "2023-09-29T15:13:14.524162132Z",
+      "time": "2023-09-29T18:01:24.278478858Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.uploads.nu"
     },
     "results": {
@@ -2011,9 +1986,9 @@
   },
   "https://ipfs.yt": {
     "metadata": {
-      "time": "2023-09-29T15:13:22.69171646Z",
+      "time": "2023-09-29T18:02:09.057685769Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs.yt"
     },
     "results": {
@@ -2066,9 +2041,9 @@
   },
   "https://ipfs1.pixura.io": {
     "metadata": {
-      "time": "2023-09-29T15:14:22.135276507Z",
+      "time": "2023-09-29T18:02:00.463783606Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfs1.pixura.io"
     },
     "results": {
@@ -2121,9 +2096,9 @@
   },
   "https://ipfsgateway.makersplace.com": {
     "metadata": {
-      "time": "2023-09-29T15:13:33.753155748Z",
+      "time": "2023-09-29T18:02:06.97858572Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ipfsgateway.makersplace.com"
     },
     "results": {
@@ -2146,9 +2121,9 @@
   },
   "https://jorropo.net": {
     "metadata": {
-      "time": "2023-09-29T15:13:44.675529321Z",
+      "time": "2023-09-29T18:02:11.365516443Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://jorropo.net"
     },
     "results": {
@@ -2171,9 +2146,9 @@
   },
   "https://konubinix.eu": {
     "metadata": {
-      "time": "2023-09-29T15:15:55.318767438Z",
+      "time": "2023-09-29T18:04:30.497088311Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://konubinix.eu"
     },
     "results": {
@@ -2196,9 +2171,9 @@
   },
   "http://natoboram.mynetgear.com:8080": {
     "metadata": {
-      "time": "2023-09-29T15:06:50.446497154Z",
+      "time": "2023-09-29T17:55:22.768172149Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "http://natoboram.mynetgear.com:8080"
     },
     "results": {
@@ -2251,9 +2226,9 @@
   },
   "https://nftstorage.link": {
     "metadata": {
-      "time": "2023-09-29T15:14:01.163974448Z",
+      "time": "2023-09-29T18:02:30.082327288Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://nftstorage.link"
     },
     "results": {
@@ -2276,9 +2251,9 @@
   },
   "https://ninetailed.ninja": {
     "metadata": {
-      "time": "2023-09-29T15:14:07.130728135Z",
+      "time": "2023-09-29T18:03:04.397356Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ninetailed.ninja"
     },
     "results": {
@@ -2301,9 +2276,9 @@
   },
   "https://permaweb.eu.org": {
     "metadata": {
-      "time": "2023-09-29T15:14:23.055106024Z",
+      "time": "2023-09-29T18:02:57.74417796Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://permaweb.eu.org"
     },
     "results": {
@@ -2326,9 +2301,9 @@
   },
   "https://permaweb.io": {
     "metadata": {
-      "time": "2023-09-29T15:15:19.175335041Z",
+      "time": "2023-09-29T18:04:41.291780878Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://permaweb.io"
     },
     "results": {
@@ -2381,9 +2356,9 @@
   },
   "https://ravencoinipfs-gateway.com": {
     "metadata": {
-      "time": "2023-09-29T15:15:00.968633526Z",
+      "time": "2023-09-29T18:04:25.926333935Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://ravencoinipfs-gateway.com"
     },
     "results": {
@@ -2436,9 +2411,9 @@
   },
   "https://search.ipfsgate.com": {
     "metadata": {
-      "time": "2023-09-29T15:15:05.90870497Z",
+      "time": "2023-09-29T18:03:49.617210479Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://search.ipfsgate.com"
     },
     "results": {
@@ -2491,9 +2466,9 @@
   },
   "https://storjipfs-gateway.com": {
     "metadata": {
-      "time": "2023-09-29T15:15:07.45752632Z",
+      "time": "2023-09-29T18:03:26.328842849Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://storjipfs-gateway.com"
     },
     "results": {
@@ -2516,9 +2491,9 @@
   },
   "https://storry.tv": {
     "metadata": {
-      "time": "2023-09-29T15:15:16.545014964Z",
+      "time": "2023-09-29T18:03:25.739232057Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://storry.tv"
     },
     "results": {
@@ -2541,9 +2516,9 @@
   },
   "https://tth-ipfs.com": {
     "metadata": {
-      "time": "2023-09-29T15:15:10.299285373Z",
+      "time": "2023-09-29T18:03:58.377495645Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://tth-ipfs.com"
     },
     "results": {
@@ -2566,9 +2541,9 @@
   },
   "https://twdragon.net": {
     "metadata": {
-      "time": "2023-09-29T15:15:38.830003241Z",
+      "time": "2023-09-29T18:04:06.464924181Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://twdragon.net"
     },
     "results": {
@@ -2591,9 +2566,9 @@
   },
   "https://via0.com": {
     "metadata": {
-      "time": "2023-09-29T15:15:37.756829889Z",
+      "time": "2023-09-29T18:04:24.352335785Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://via0.com"
     },
     "results": {
@@ -2616,9 +2591,9 @@
   },
   "https://video.oneloveipfs.com": {
     "metadata": {
-      "time": "2023-09-29T15:15:45.84693658Z",
+      "time": "2023-09-29T18:04:19.895111678Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://video.oneloveipfs.com"
     },
     "results": {
@@ -2641,9 +2616,9 @@
   },
   "https://w3s.link": {
     "metadata": {
-      "time": "2023-09-29T15:15:38.792144779Z",
+      "time": "2023-09-29T18:04:40.218589645Z",
       "version": "dev",
-      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6353436516",
+      "job_url": "https://github.com/laurentsenta/public-gateway-checker/actions/runs/6355261287",
       "gateway_url": "https://w3s.link"
     },
     "results": {

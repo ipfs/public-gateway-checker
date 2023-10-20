@@ -53,7 +53,6 @@ https://ipfs.uploads.nu
 https://hub.textile.io
 https://ipfs1.pixura.io
 https://ravencoinipfs-gateway.com
-https://konubinix.eu
 https://ipfs.tubby.cloud
 https://ipfs.lain.la
 https://ipfs.kaleido.art

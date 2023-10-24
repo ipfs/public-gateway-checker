@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/ipfs/public-gateway-checker/compare/v1.8.0...v1.8.1) (2023-10-20)
+
+
+### Trivial Changes
+
+* update conformance results ([0ad4003](https://github.com/ipfs/public-gateway-checker/commit/0ad4003c2a8d1ccc0ac86a416362c60b6e6b61fe))
+
 ## [1.8.0](https://github.com/ipfs/public-gateway-checker/compare/v1.7.0...v1.8.0) (2023-09-29)
 
 

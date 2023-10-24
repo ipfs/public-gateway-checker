@@ -39,7 +39,6 @@ https://ipfs.scalaproject.io
 https://ipfs.decoo.io
 https://hub.textile.io
 https://ravencoinipfs-gateway.com
-https://konubinix.eu
 https://ipfs.tubby.cloud
 https://ipfs.lain.la
 https://ipfs.kaleido.art
@@ -57,4 +56,3 @@ https://ipfs-gateway.cloud
 https://w3s.link
 https://cthd.icu
 https://ipfs.jpu.jp
-https://twdragon.net

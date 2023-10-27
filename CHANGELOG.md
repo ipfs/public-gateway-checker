@@ -1,3 +1,11 @@
+## [1.8.2](https://github.com/ipfs/public-gateway-checker/compare/v1.8.1...v1.8.2) (2023-10-27)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump eslint-plugin-compat from 4.1.4 to 4.2.0 ([#454](https://github.com/ipfs/public-gateway-checker/issues/454)) ([5d185ee](https://github.com/ipfs/public-gateway-checker/commit/5d185eeedf96e11ba67473bcf4707119f5cef2c8))
+* **deps:** bump actions/checkout from 3 to 4 ([#457](https://github.com/ipfs/public-gateway-checker/issues/457)) ([177a90e](https://github.com/ipfs/public-gateway-checker/commit/177a90e54021542af7073faa360f8e6762c18270))
+
 ## [1.8.1](https://github.com/ipfs/public-gateway-checker/compare/v1.8.0...v1.8.1) (2023-10-20)
 
 

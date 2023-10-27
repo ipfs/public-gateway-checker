@@ -24,7 +24,7 @@ jobs:
       gateways: ${{ steps.set-matrix.outputs.gateways }}
     steps:
      - name: Checkout repository
-       uses: actions/checkout@v3
+       uses: actions/checkout@v4
      - name: Set matrix data
        id: set-matrix
        run: |
@@ -93,7 +93,7 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:

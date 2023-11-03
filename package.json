@@ -124,7 +124,7 @@
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {
-    "aegir": "^40.0.13",
+    "aegir": "^41.1.8",
     "browserslist": "^4.21.9",
     "check-aegir-project": "^1.1.1",
     "cp-cli": "^2.0.0",

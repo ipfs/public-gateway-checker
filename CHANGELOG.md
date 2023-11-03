@@ -1,3 +1,10 @@
+## [1.8.3](https://github.com/ipfs/public-gateway-checker/compare/v1.8.2...v1.8.3) (2023-11-03)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump aegir from 40.0.13 to 41.1.8 ([#482](https://github.com/ipfs/public-gateway-checker/issues/482)) ([6aab923](https://github.com/ipfs/public-gateway-checker/commit/6aab92304ef1106d50984d93161f2a09b94f3ae8))
+
 ## [1.8.2](https://github.com/ipfs/public-gateway-checker/compare/v1.8.1...v1.8.2) (2023-10-27)
 
 

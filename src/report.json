@@ -1,9 +1,9 @@
 {
   "https://4everland.io": {
     "metadata": {
-      "time": "2023-10-20T14:29:48.836846589Z",
+      "time": "2023-11-10T16:16:20.309667491Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://4everland.io"
     },
     "results": {
@@ -26,9 +26,9 @@
   },
   "https://alexdav.id": {
     "metadata": {
-      "time": "2023-10-20T14:29:34.218182842Z",
+      "time": "2023-11-10T16:15:57.318634761Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://alexdav.id"
     },
     "results": {
@@ -81,9 +81,9 @@
   },
   "https://aragon.ventures": {
     "metadata": {
-      "time": "2023-10-20T14:29:31.612177717Z",
+      "time": "2023-11-10T16:15:55.790780876Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://aragon.ventures"
     },
     "results": {
@@ -106,9 +106,9 @@
   },
   "https://astyanax.io": {
     "metadata": {
-      "time": "2023-10-20T14:29:39.529089873Z",
+      "time": "2023-11-10T16:16:07.050196759Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://astyanax.io"
     },
     "results": {
@@ -131,9 +131,9 @@
   },
   "https://cdn.cwinfo.net": {
     "metadata": {
-      "time": "2023-10-20T14:29:43.696340159Z",
+      "time": "2023-11-10T16:15:58.346900018Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://cdn.cwinfo.net"
     },
     "results": {
@@ -156,9 +156,9 @@
   },
   "https://cf-ipfs.com": {
     "metadata": {
-      "time": "2023-10-20T14:29:52.3470069Z",
+      "time": "2023-11-10T16:16:15.659132565Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://cf-ipfs.com"
     },
     "results": {
@@ -181,9 +181,9 @@
   },
   "https://cloudflare-ipfs.com": {
     "metadata": {
-      "time": "2023-10-20T14:29:45.12839863Z",
+      "time": "2023-11-10T16:16:15.701956731Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://cloudflare-ipfs.com"
     },
     "results": {
@@ -206,9 +206,9 @@
   },
   "https://cthd.icu": {
     "metadata": {
-      "time": "2023-10-20T14:29:42.305953847Z",
+      "time": "2023-11-10T16:16:13.273129679Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://cthd.icu"
     },
     "results": {
@@ -218,8 +218,8 @@
         "skip": 0
       },
       "CORS": {
-        "pass": 1,
-        "fail": 0,
+        "pass": 0,
+        "fail": 1,
         "skip": 0
       },
       "JSON-CBOR": {
@@ -231,9 +231,9 @@
   },
   "https://dweb.eu.org": {
     "metadata": {
-      "time": "2023-10-20T14:29:49.14968829Z",
+      "time": "2023-11-10T16:16:06.709555851Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://dweb.eu.org"
     },
     "results": {
@@ -256,9 +256,9 @@
   },
   "https://dweb.link": {
     "metadata": {
-      "time": "2023-10-20T14:29:55.114461234Z",
+      "time": "2023-11-10T16:16:18.638383839Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://dweb.link"
     },
     "results": {
@@ -281,9 +281,9 @@
   },
   "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion": {
     "metadata": {
-      "time": "2023-10-20T14:29:28.472163755Z",
+      "time": "2023-11-10T16:16:16.110238719Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "http://fzdqwfb5ml56oadins5jpuhe6ki6bk33umri35p5kt2tue4fpws5efid.onion"
     },
     "results": {
@@ -336,9 +336,9 @@
   },
   "https://gateway.ipfs.io": {
     "metadata": {
-      "time": "2023-10-20T14:32:10.890139836Z",
+      "time": "2023-11-10T16:18:16.108732056Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://gateway.ipfs.io"
     },
     "results": {
@@ -353,22 +353,17 @@
         "skip": 0
       },
       "JSON-CBOR": {
-        "pass": 3,
+        "pass": 1,
         "fail": 2,
-        "skip": 0
-      },
-      "IPNS": {
-        "pass": 0,
-        "fail": 1,
         "skip": 0
       }
     }
   },
   "https://gateway.originprotocol.com": {
     "metadata": {
-      "time": "2023-10-20T14:30:19.202151614Z",
+      "time": "2023-11-10T16:16:37.093847654Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://gateway.originprotocol.com"
     },
     "results": {
@@ -421,9 +416,9 @@
   },
   "https://gateway.pinata.cloud": {
     "metadata": {
-      "time": "2023-10-20T14:29:55.460016002Z",
+      "time": "2023-11-10T16:15:57.053506231Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://gateway.pinata.cloud"
     },
     "results": {
@@ -446,9 +441,9 @@
   },
   "https://gravity.jup.io": {
     "metadata": {
-      "time": "2023-10-20T14:30:12.921815594Z",
+      "time": "2023-11-10T16:16:26.611434177Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://gravity.jup.io"
     },
     "results": {
@@ -501,9 +496,9 @@
   },
   "https://gw3.io": {
     "metadata": {
-      "time": "2023-10-20T14:31:08.679219744Z",
+      "time": "2023-11-10T16:15:59.407866866Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://gw3.io"
     },
     "results": {
@@ -554,66 +549,11 @@
       }
     }
   },
-  "https://hardbin.com": {
-    "metadata": {
-      "time": "2023-10-20T14:40:11.198981373Z",
-      "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
-      "gateway_url": "https://hardbin.com"
-    },
-    "results": {
-      "DNSLink": {
-        "pass": 0,
-        "fail": 2,
-        "skip": 0
-      },
-      "CORS": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      },
-      "JSON-CBOR": {
-        "pass": 3,
-        "fail": 2,
-        "skip": 0
-      },
-      "IPNS": {
-        "pass": 0,
-        "fail": 3,
-        "skip": 0
-      },
-      "Others": {
-        "pass": 2,
-        "fail": 4,
-        "skip": 0
-      },
-      "Block-CAR": {
-        "pass": 1,
-        "fail": 3,
-        "skip": 0
-      },
-      "Tar": {
-        "pass": 1,
-        "fail": 0,
-        "skip": 0
-      },
-      "UnixFS": {
-        "pass": 1,
-        "fail": 2,
-        "skip": 0
-      },
-      "Subdomains": {
-        "pass": 0,
-        "fail": 3,
-        "skip": 0
-      }
-    }
-  },
   "https://hashnews.k1ic.com": {
     "metadata": {
-      "time": "2023-10-20T14:33:05.943365833Z",
+      "time": "2023-11-10T16:18:20.327881425Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://hashnews.k1ic.com"
     },
     "results": {
@@ -666,9 +606,9 @@
   },
   "https://hub.textile.io": {
     "metadata": {
-      "time": "2023-10-20T14:30:48.563390679Z",
+      "time": "2023-11-10T16:16:09.759153468Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://hub.textile.io"
     },
     "results": {
@@ -691,9 +631,9 @@
   },
   "https://ipfs.1-2.dev": {
     "metadata": {
-      "time": "2023-10-20T14:30:58.59175971Z",
+      "time": "2023-11-10T16:15:56.824961859Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.1-2.dev"
     },
     "results": {
@@ -716,9 +656,9 @@
   },
   "https://ipfs.alloyxuast.tk": {
     "metadata": {
-      "time": "2023-10-20T14:31:19.03775169Z",
+      "time": "2023-11-10T16:16:09.87503926Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.alloyxuast.tk"
     },
     "results": {
@@ -771,9 +711,9 @@
   },
   "https://ipfs.best-practice.se": {
     "metadata": {
-      "time": "2023-10-20T14:31:08.269272686Z",
+      "time": "2023-11-10T16:16:10.787715973Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.best-practice.se"
     },
     "results": {
@@ -796,9 +736,9 @@
   },
   "https://ipfs.busy.org": {
     "metadata": {
-      "time": "2023-10-20T14:31:14.214166913Z",
+      "time": "2023-11-10T16:16:27.250413949Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.busy.org"
     },
     "results": {
@@ -851,9 +791,9 @@
   },
   "https://ipfs.chisdealhd.co.uk": {
     "metadata": {
-      "time": "2023-10-20T14:31:10.766511022Z",
+      "time": "2023-11-10T16:15:57.37614556Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.chisdealhd.co.uk"
     },
     "results": {
@@ -876,9 +816,9 @@
   },
   "https://ipfs.decoo.io": {
     "metadata": {
-      "time": "2023-10-20T14:33:26.454076324Z",
+      "time": "2023-11-10T16:18:46.942324312Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.decoo.io"
     },
     "results": {
@@ -931,9 +871,9 @@
   },
   "https://ipfs.drink.cafe": {
     "metadata": {
-      "time": "2023-10-20T14:32:04.150966734Z",
+      "time": "2023-11-10T16:16:47.981868423Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.drink.cafe"
     },
     "results": {
@@ -986,15 +926,15 @@
   },
   "https://ipfs.eth.aragon.network": {
     "metadata": {
-      "time": "2023-10-20T14:33:45.912734119Z",
+      "time": "2023-11-10T16:25:29.952351715Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.eth.aragon.network"
     },
     "results": {
       "DNSLink": {
         "pass": 0,
-        "fail": 1,
+        "fail": 2,
         "skip": 0
       },
       "CORS": {
@@ -1003,43 +943,48 @@
         "skip": 0
       },
       "JSON-CBOR": {
-        "pass": 2,
-        "fail": 1,
-        "skip": 0
-      }
-    }
-  },
-  "https://ipfs.fleek.co": {
-    "metadata": {
-      "time": "2023-10-20T14:31:43.115242358Z",
-      "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
-      "gateway_url": "https://ipfs.fleek.co"
-    },
-    "results": {
-      "DNSLink": {
-        "pass": 0,
-        "fail": 1,
+        "pass": 5,
+        "fail": 0,
         "skip": 0
       },
-      "CORS": {
+      "IPNS": {
         "pass": 0,
-        "fail": 1,
+        "fail": 3,
         "skip": 0
       },
-      "JSON-CBOR": {
+      "Others": {
+        "pass": 3,
+        "fail": 3,
+        "skip": 0
+      },
+      "Block-CAR": {
+        "pass": 1,
+        "fail": 5,
+        "skip": 0
+      },
+      "Tar": {
+        "pass": 1,
+        "fail": 0,
+        "skip": 0
+      },
+      "UnixFS": {
+        "pass": 1,
+        "fail": 2,
+        "skip": 0
+      },
+      "Subdomains": {
         "pass": 0,
         "fail": 3,
         "skip": 0
       }
     }
   },
-  "https://ipfs.fooock.com": {
+  "https://ipfs.fleek.co": {
     "metadata": {
-      "time": "2023-10-20T14:32:31.323566242Z",
+      "time": "2023-11-10T16:16:09.144154219Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
-      "gateway_url": "https://ipfs.fooock.com"
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
+      "gateway_url": "https://ipfs.fleek.co"
     },
     "results": {
       "DNSLink": {
@@ -1061,9 +1006,9 @@
   },
   "https://ipfs.funnychain.co": {
     "metadata": {
-      "time": "2023-10-20T14:32:30.180500418Z",
+      "time": "2023-11-10T16:16:12.48517568Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.funnychain.co"
     },
     "results": {
@@ -1086,9 +1031,9 @@
   },
   "https://ipfs-gateway.cloud": {
     "metadata": {
-      "time": "2023-10-20T14:36:13.661160852Z",
+      "time": "2023-11-10T16:17:48.4100416Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs-gateway.cloud"
     },
     "results": {
@@ -1111,9 +1056,9 @@
   },
   "http://ipfs.genenetwork.org": {
     "metadata": {
-      "time": "2023-10-20T14:29:43.166257754Z",
+      "time": "2023-11-10T16:16:23.551289883Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "http://ipfs.genenetwork.org"
     },
     "results": {
@@ -1136,9 +1081,9 @@
   },
   "https://ipfs.greyh.at": {
     "metadata": {
-      "time": "2023-10-20T14:32:38.018936195Z",
+      "time": "2023-11-10T16:15:55.73167506Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.greyh.at"
     },
     "results": {
@@ -1148,8 +1093,8 @@
         "skip": 0
       },
       "CORS": {
-        "pass": 0,
-        "fail": 1,
+        "pass": 1,
+        "fail": 0,
         "skip": 0
       },
       "JSON-CBOR": {
@@ -1161,9 +1106,9 @@
   },
   "https://ipfs.ink": {
     "metadata": {
-      "time": "2023-10-20T14:32:49.363724498Z",
+      "time": "2023-11-10T16:16:45.256350454Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.ink"
     },
     "results": {
@@ -1186,9 +1131,9 @@
   },
   "https://ipfs.io": {
     "metadata": {
-      "time": "2023-10-20T14:34:43.635173005Z",
+      "time": "2023-11-10T16:19:20.847976589Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.io"
     },
     "results": {
@@ -1216,9 +1161,9 @@
   },
   "https://ipfs.kaleido.art": {
     "metadata": {
-      "time": "2023-10-20T14:32:54.413422113Z",
+      "time": "2023-11-10T16:16:59.019416119Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.kaleido.art"
     },
     "results": {
@@ -1241,9 +1186,9 @@
   },
   "https://ipfs.kavin.rocks": {
     "metadata": {
-      "time": "2023-10-20T14:33:33.223706773Z",
+      "time": "2023-11-10T16:17:08.211198842Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.kavin.rocks"
     },
     "results": {
@@ -1266,9 +1211,9 @@
   },
   "https://ipfs.kinematiks.com": {
     "metadata": {
-      "time": "2023-10-20T14:33:20.326244932Z",
+      "time": "2023-11-10T16:16:58.075108477Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.kinematiks.com"
     },
     "results": {
@@ -1321,9 +1266,9 @@
   },
   "https://ipfs.lain.la": {
     "metadata": {
-      "time": "2023-10-20T14:34:14.15226408Z",
+      "time": "2023-11-10T16:18:08.11700429Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.lain.la"
     },
     "results": {
@@ -1376,9 +1321,9 @@
   },
   "https://ipfs.mttk.net": {
     "metadata": {
-      "time": "2023-10-20T14:33:40.916131924Z",
+      "time": "2023-11-10T16:17:01.230662074Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.mttk.net"
     },
     "results": {
@@ -1401,9 +1346,9 @@
   },
   "https://ipfs.namebase.io": {
     "metadata": {
-      "time": "2023-10-20T14:39:06.552936451Z",
+      "time": "2023-11-10T16:22:31.920303576Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.namebase.io"
     },
     "results": {
@@ -1456,9 +1401,9 @@
   },
   "https://ipfs.overpi.com": {
     "metadata": {
-      "time": "2023-10-20T14:34:14.599617501Z",
+      "time": "2023-11-10T16:17:03.485071064Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.overpi.com"
     },
     "results": {
@@ -1479,66 +1424,11 @@
       }
     }
   },
-  "https://ipfs.runfission.com": {
-    "metadata": {
-      "time": "2023-10-20T14:36:19.688098309Z",
-      "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
-      "gateway_url": "https://ipfs.runfission.com"
-    },
-    "results": {
-      "DNSLink": {
-        "pass": 0,
-        "fail": 2,
-        "skip": 0
-      },
-      "CORS": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      },
-      "JSON-CBOR": {
-        "pass": 4,
-        "fail": 1,
-        "skip": 0
-      },
-      "IPNS": {
-        "pass": 0,
-        "fail": 4,
-        "skip": 0
-      },
-      "Others": {
-        "pass": 3,
-        "fail": 3,
-        "skip": 0
-      },
-      "Block-CAR": {
-        "pass": 3,
-        "fail": 6,
-        "skip": 0
-      },
-      "Tar": {
-        "pass": 1,
-        "fail": 0,
-        "skip": 0
-      },
-      "UnixFS": {
-        "pass": 2,
-        "fail": 1,
-        "skip": 0
-      },
-      "Subdomains": {
-        "pass": 0,
-        "fail": 3,
-        "skip": 0
-      }
-    }
-  },
   "https://ipfs.scalaproject.io": {
     "metadata": {
-      "time": "2023-10-20T14:33:57.4608195Z",
+      "time": "2023-11-10T16:17:09.216698394Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.scalaproject.io"
     },
     "results": {
@@ -1561,9 +1451,9 @@
   },
   "https://ipfs.slang.cx": {
     "metadata": {
-      "time": "2023-10-20T14:34:23.911680806Z",
+      "time": "2023-11-10T16:17:10.76679449Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.slang.cx"
     },
     "results": {
@@ -1616,9 +1506,9 @@
   },
   "https://ipfs.smartholdem.io": {
     "metadata": {
-      "time": "2023-10-20T14:34:54.865602828Z",
+      "time": "2023-11-10T16:17:43.492256891Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.smartholdem.io"
     },
     "results": {
@@ -1671,9 +1561,9 @@
   },
   "https://ipfs.soul-network.com": {
     "metadata": {
-      "time": "2023-10-20T14:34:34.789791982Z",
+      "time": "2023-11-10T16:17:39.78720431Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.soul-network.com"
     },
     "results": {
@@ -1726,9 +1616,9 @@
   },
   "https://ipfs.tayfundogdas.me": {
     "metadata": {
-      "time": "2023-10-20T14:34:53.007659571Z",
+      "time": "2023-11-10T16:17:14.482978466Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.tayfundogdas.me"
     },
     "results": {
@@ -1781,9 +1671,9 @@
   },
   "https://ipfs.telos.miami": {
     "metadata": {
-      "time": "2023-10-20T14:35:10.68643052Z",
+      "time": "2023-11-10T16:17:55.381804899Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.telos.miami"
     },
     "results": {
@@ -1836,9 +1726,9 @@
   },
   "https://ipfs.tribecap.co": {
     "metadata": {
-      "time": "2023-10-20T14:35:19.338827054Z",
+      "time": "2023-11-10T16:17:19.247864592Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.tribecap.co"
     },
     "results": {
@@ -1891,9 +1781,9 @@
   },
   "https://ipfs.trusti.id": {
     "metadata": {
-      "time": "2023-10-20T14:35:02.809145945Z",
+      "time": "2023-11-10T16:17:43.4923845Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.trusti.id"
     },
     "results": {
@@ -1916,9 +1806,9 @@
   },
   "https://ipfs.uploads.nu": {
     "metadata": {
-      "time": "2023-10-20T14:35:15.652575787Z",
+      "time": "2023-11-10T16:17:27.08208636Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.uploads.nu"
     },
     "results": {
@@ -1971,9 +1861,9 @@
   },
   "https://ipfs.yt": {
     "metadata": {
-      "time": "2023-10-20T14:35:54.090224425Z",
+      "time": "2023-11-10T16:17:57.590828798Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs.yt"
     },
     "results": {
@@ -2026,9 +1916,9 @@
   },
   "https://ipfs1.pixura.io": {
     "metadata": {
-      "time": "2023-10-20T14:36:37.582100348Z",
+      "time": "2023-11-10T16:17:49.277368823Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfs1.pixura.io"
     },
     "results": {
@@ -2081,9 +1971,9 @@
   },
   "https://ipfsgateway.makersplace.com": {
     "metadata": {
-      "time": "2023-10-20T14:36:15.469583374Z",
+      "time": "2023-11-10T16:17:51.358190263Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ipfsgateway.makersplace.com"
     },
     "results": {
@@ -2104,36 +1994,11 @@
       }
     }
   },
-  "https://konubinix.eu": {
-    "metadata": {
-      "time": "2023-10-20T14:38:19.827256758Z",
-      "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
-      "gateway_url": "https://konubinix.eu"
-    },
-    "results": {
-      "DNSLink": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      },
-      "CORS": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      },
-      "JSON-CBOR": {
-        "pass": 0,
-        "fail": 1,
-        "skip": 0
-      }
-    }
-  },
   "http://natoboram.mynetgear.com:8080": {
     "metadata": {
-      "time": "2023-10-20T14:30:04.56066049Z",
+      "time": "2023-11-10T16:16:27.215344586Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "http://natoboram.mynetgear.com:8080"
     },
     "results": {
@@ -2186,9 +2051,9 @@
   },
   "https://nftstorage.link": {
     "metadata": {
-      "time": "2023-10-20T14:36:13.687334736Z",
+      "time": "2023-11-10T16:17:57.562681645Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://nftstorage.link"
     },
     "results": {
@@ -2211,9 +2076,9 @@
   },
   "https://ninetailed.ninja": {
     "metadata": {
-      "time": "2023-10-20T14:36:42.190879865Z",
+      "time": "2023-11-10T16:17:55.623595039Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ninetailed.ninja"
     },
     "results": {
@@ -2236,9 +2101,9 @@
   },
   "https://permaweb.eu.org": {
     "metadata": {
-      "time": "2023-10-20T14:36:40.639417804Z",
+      "time": "2023-11-10T16:18:22.022244025Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://permaweb.eu.org"
     },
     "results": {
@@ -2261,9 +2126,9 @@
   },
   "https://permaweb.io": {
     "metadata": {
-      "time": "2023-10-20T14:38:02.428412843Z",
+      "time": "2023-11-10T16:18:24.186112703Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://permaweb.io"
     },
     "results": {
@@ -2316,9 +2181,9 @@
   },
   "https://ravencoinipfs-gateway.com": {
     "metadata": {
-      "time": "2023-10-20T14:38:27.8316126Z",
+      "time": "2023-11-10T16:18:59.784119561Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://ravencoinipfs-gateway.com"
     },
     "results": {
@@ -2371,9 +2236,9 @@
   },
   "https://search.ipfsgate.com": {
     "metadata": {
-      "time": "2023-10-20T14:37:40.672792502Z",
+      "time": "2023-11-10T16:18:20.688870916Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://search.ipfsgate.com"
     },
     "results": {
@@ -2426,9 +2291,9 @@
   },
   "https://storjipfs-gateway.com": {
     "metadata": {
-      "time": "2023-10-20T14:37:29.064594795Z",
+      "time": "2023-11-10T16:18:31.088852083Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://storjipfs-gateway.com"
     },
     "results": {
@@ -2451,9 +2316,9 @@
   },
   "https://storry.tv": {
     "metadata": {
-      "time": "2023-10-20T14:37:47.326410538Z",
+      "time": "2023-11-10T16:18:13.95008086Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://storry.tv"
     },
     "results": {
@@ -2476,9 +2341,9 @@
   },
   "https://tth-ipfs.com": {
     "metadata": {
-      "time": "2023-10-20T14:37:49.781737532Z",
+      "time": "2023-11-10T16:18:32.982972792Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://tth-ipfs.com"
     },
     "results": {
@@ -2501,9 +2366,9 @@
   },
   "https://via0.com": {
     "metadata": {
-      "time": "2023-10-20T14:37:54.955785218Z",
+      "time": "2023-11-10T16:18:44.504780907Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://via0.com"
     },
     "results": {
@@ -2526,9 +2391,9 @@
   },
   "https://video.oneloveipfs.com": {
     "metadata": {
-      "time": "2023-10-20T14:38:16.44387274Z",
+      "time": "2023-11-10T16:19:27.242633331Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://video.oneloveipfs.com"
     },
     "results": {
@@ -2551,9 +2416,9 @@
   },
   "https://w3s.link": {
     "metadata": {
-      "time": "2023-10-20T14:38:11.589715795Z",
+      "time": "2023-11-10T16:19:06.5449328Z",
       "version": "dev",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/6589064675",
+      "job_url": "https://github.com/Setland34/public-gateway-checker/actions/runs/6827166330",
       "gateway_url": "https://w3s.link"
     },
     "results": {

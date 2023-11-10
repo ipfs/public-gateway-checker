@@ -120,7 +120,7 @@
   },
   "dependencies": {
     "@dutu/rate-limiter": "github:dutu/rate-limiter#v1.3.1",
-    "countly-sdk-web": "^23.2.2",
+    "countly-sdk-web": "^23.6.3",
     "url-ponyfill": "^0.5.10"
   },
   "devDependencies": {

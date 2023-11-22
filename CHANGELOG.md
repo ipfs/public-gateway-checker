@@ -1,3 +1,10 @@
+## [1.8.4](https://github.com/ipfs/public-gateway-checker/compare/v1.8.3...v1.8.4) (2023-11-22)
+
+
+### Trivial Changes
+
+* remove ninetailed.ninja  ([#490](https://github.com/ipfs/public-gateway-checker/issues/490)) ([2945831](https://github.com/ipfs/public-gateway-checker/commit/2945831a7b8e9e1c43fa64944c3485af8eac719d))
+
 ## [1.8.3](https://github.com/ipfs/public-gateway-checker/compare/v1.8.2...v1.8.3) (2023-11-03)
 
 

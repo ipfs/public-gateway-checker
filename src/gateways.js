@@ -2,7 +2,6 @@ export default [
     'https://ipfs.io/ipfs/:hash',
     'https://dweb.link/ipfs/:hash',
     'https://gateway.ipfs.io/ipfs/:hash',
-    'https://ninetailed.ninja/ipfs/:hash',
     'https://via0.com/ipfs/:hash',
     'https://ipfs.eternum.io/ipfs/:hash',
     'https://hardbin.com/ipfs/:hash',

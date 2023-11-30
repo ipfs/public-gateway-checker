@@ -53,7 +53,6 @@ export default [
   'https://hub.textile.io/ipfs/:hash',
   'https://ipfs1.pixura.io/ipfs/:hash',
   'https://ravencoinipfs-gateway.com/ipfs/:hash',
-  'https://konubinix.eu/ipfs/:hash',
   'https://ipfs.tubby.cloud/ipfs/:hash',
   'https://ipfs.lain.la/ipfs/:hash',
   'https://ipfs.kaleido.art/ipfs/:hash',

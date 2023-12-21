@@ -75,7 +75,6 @@ export default [
     'https://4everland.io/ipfs/:hash',
     'https://ipfs-gateway.cloud/ipfs/:hash',
     'https://w3s.link/ipfs/:hash',
-    'https://cthd.icu/ipfs/:hash',
     'https://ipfs.tayfundogdas.me/ipfs/:hash',
     'https://ipfs.jpu.jp/ipfs/:hash',
     'https://ipfs.soul-network.com/ipfs/:hash',

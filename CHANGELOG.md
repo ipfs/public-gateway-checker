@@ -1,3 +1,10 @@
+## [1.8.5](https://github.com/ipfs/public-gateway-checker/compare/v1.8.4...v1.8.5) (2023-12-21)
+
+
+### Trivial Changes
+
+* **gateway:** 🗑️ Removing cthd.icu ([#502](https://github.com/ipfs/public-gateway-checker/issues/502)) ([a78066b](https://github.com/ipfs/public-gateway-checker/commit/a78066b22f1a31f0cca7ce78b80962414dbee8d2))
+
 ## [1.8.4](https://github.com/ipfs/public-gateway-checker/compare/v1.8.3...v1.8.4) (2023-11-22)
 
 

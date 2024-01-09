@@ -2,7 +2,7 @@ name: Build and Publish github pages
 on:
   push:
     branches:
-      - master
+      - patch-1
 jobs:
   build-and-publish:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.

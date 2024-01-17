@@ -1,3 +1,16 @@
+## [1.8.6](https://github.com/ipfs/public-gateway-checker/compare/v1.8.5...v1.8.6) (2024-01-17)
+
+
+### Bug Fixes
+
+* 🗑️ Removing konubinix.eu ([#492](https://github.com/ipfs/public-gateway-checker/issues/492)) ([0b28d72](https://github.com/ipfs/public-gateway-checker/commit/0b28d72421f24129a8883bc79e0b662212dc7b79))
+
+
+### Trivial Changes
+
+* **deps-dev:** bump aegir from 41.1.8 to 42.2.1 ([#517](https://github.com/ipfs/public-gateway-checker/issues/517)) ([2fb3445](https://github.com/ipfs/public-gateway-checker/commit/2fb3445c78cc80b5d70b77c956bb0d7e3a9947ab))
+* update conformance results ([44d369f](https://github.com/ipfs/public-gateway-checker/commit/44d369f938f9153b15e8c2f024257f756247162e))
+
 ## [1.8.5](https://github.com/ipfs/public-gateway-checker/compare/v1.8.4...v1.8.5) (2023-12-21)
 
 

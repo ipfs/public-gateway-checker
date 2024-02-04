@@ -78,4 +78,5 @@ export default [
   'https://ipfs.jpu.jp/ipfs/:hash',
   'https://ipfs.soul-network.com/ipfs/:hash',
   'https://twdragon.net/ipfs/:hash',
+  'https://ipfs.imjcj.eu.org/ipfs/:hash',
 ]

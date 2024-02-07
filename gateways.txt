@@ -77,3 +77,4 @@ https://w3s.link
 https://ipfs.tayfundogdas.me
 https://ipfs.jpu.jp
 https://ipfs.soul-network.com
+https://trustless-gateway.link

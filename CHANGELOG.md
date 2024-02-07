@@ -1,3 +1,21 @@
+## [1.9.0](https://github.com/ipfs/public-gateway-checker/compare/v1.8.6...v1.9.0) (2024-02-07)
+
+
+### Features
+
+* add trustless-gateway.link ([#527](https://github.com/ipfs/public-gateway-checker/issues/527)) ([d217c73](https://github.com/ipfs/public-gateway-checker/commit/d217c73f8bd98c2286ed9a4a9005dd5cb26ebca1))
+
+
+### Bug Fixes
+
+* gateway list ([#528](https://github.com/ipfs/public-gateway-checker/issues/528)) ([740e582](https://github.com/ipfs/public-gateway-checker/commit/740e58222fcfdc18c8168daa2e74ef7dfae70a88))
+
+
+### Trivial Changes
+
+* Update .github/dependabot.yml [skip ci] ([eae6603](https://github.com/ipfs/public-gateway-checker/commit/eae6603cb6d887245e47611eded6159e95e2b6e0))
+* Update .github/workflows/stale.yml [skip ci] ([bf0c1e5](https://github.com/ipfs/public-gateway-checker/commit/bf0c1e5a3b9b20785ad92a60471804c3038e2b5f))
+
 ## [1.8.6](https://github.com/ipfs/public-gateway-checker/compare/v1.8.5...v1.8.6) (2024-01-17)
 
 

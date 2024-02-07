@@ -1,6 +1,7 @@
 https://ipfs.io
 https://dweb.link
 https://gateway.ipfs.io
+https://trustless-gateway.link
 https://ninetailed.ninja
 https://via0.com
 https://ipfs.eternum.io

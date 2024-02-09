@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/ipfs/public-gateway-checker/compare/v1.9.0...v1.9.1) (2024-02-09)
+
+
+### Trivial Changes
+
+* update conformance results ([2d5434c](https://github.com/ipfs/public-gateway-checker/commit/2d5434c8278a341162add67cf9d26caa69c09c16))
+
 ## [1.9.0](https://github.com/ipfs/public-gateway-checker/compare/v1.8.6...v1.9.0) (2024-02-07)
 
 

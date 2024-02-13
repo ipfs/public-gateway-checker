@@ -3,7 +3,7 @@ name: test & maybe release
 on:
   workflow_run:
     workflows: ["Gateway Conformance Dashboard"]
-    branches: ["master"]
+    branches: ["main"]
     types:
       - completed
   pull_request:

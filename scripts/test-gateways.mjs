@@ -81,5 +81,5 @@ function trim (str) {
     }
   }
 
-  await fs.writeFile('./gateways.json', JSON.stringify(resolvableGateways, null, "  "))
+  await fs.writeFile('./gateways.json', JSON.stringify(resolvableGateways, null, '  '))
 })()

@@ -5,16 +5,15 @@
     "resolveJsonModule": true,
     "outDir": "dist",
     "paths": {
-      "*": [
-        "./types/*"
-      ]
+      "*": ["./types/*"]
     }
   },
   "include": [
     "types",
     "test", // remove this line if you don't want to type-check tests
     "src",
-    "src/report.json"
+    "src/report.json",
+    "gateways.json"
   ],
   "ts-node": {
     "transpileOnly": true,

@@ -29,7 +29,7 @@ jobs:
        id: set-matrix
        run: |
         # See details in https://github.com/ipfs/public-gateway-checker/pull/450#discussion_r1318704756
-        jq --raw-input --slurp --compact-output 'split("\n")[:-1]' gateways.txt | \
+        jq . gateways.json | \
           xargs --null --max-chars=2000000 -I {} echo "gateways={}" | \
           tee -a "$GITHUB_OUTPUT"
   conformance:

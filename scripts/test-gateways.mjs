@@ -32,7 +32,7 @@ function makeRequest (url) {
     })
 
     req.setTimeout(timeout, () => {
-      req.abort()
+      req.destroy()
       reject(new Error(`HTTP GET timed out after ${timeout}ms`))
     })
 

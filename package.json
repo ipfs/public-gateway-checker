@@ -113,6 +113,7 @@
     "lint:fix": "aegir lint --fix && npx -y standard --fix && node scripts/beautify.mjs --fix",
     "release": "aegir release",
     "sw": "node scripts/build-sw.mjs",
+    "test-gateways": "node scripts/test-gateways.mjs",
     "build": "aegir build && npm run copy-assets && npm run sw",
     "test-TBD": "aegir test",
     "test-TBD:node": "aegir test --target node",

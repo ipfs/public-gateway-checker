@@ -1,3 +1,22 @@
+## [1.9.2](https://github.com/ipfs/public-gateway-checker/compare/v1.9.1...v1.9.2) (2024-02-22)
+
+
+### Bug Fixes
+
+* remove unresolvable gateways ([#532](https://github.com/ipfs/public-gateway-checker/issues/532)) ([ee4d247](https://github.com/ipfs/public-gateway-checker/commit/ee4d247dfc87fb2c252e5a041bc82b2d7edd2465))
+
+
+### Trivial Changes
+
+* **deps-dev:** bump aegir from 42.2.1 to 42.2.3 ([#526](https://github.com/ipfs/public-gateway-checker/issues/526)) ([20139d1](https://github.com/ipfs/public-gateway-checker/commit/20139d19cfd8540e1985100ef9e10a192aea397e))
+* remove non recursive gateways ([da1ea97](https://github.com/ipfs/public-gateway-checker/commit/da1ea97c00a14d69875d2762b02255413b87417d))
+* Update .github/workflows/stale.yml [skip ci] ([622bd88](https://github.com/ipfs/public-gateway-checker/commit/622bd883fc69ea159e88b28dd962ead9244a7716))
+* update conformance results ([bca195f](https://github.com/ipfs/public-gateway-checker/commit/bca195fce7c3d13673a99085ec7fb76b0d58d408))
+* update conformance results ([54a2fb9](https://github.com/ipfs/public-gateway-checker/commit/54a2fb9910eda712a4e279a125d31ba2507d864a))
+* update conformance results ([621a352](https://github.com/ipfs/public-gateway-checker/commit/621a352d891f2ba7a2db31552062cb138a328acf))
+* update conformance results ([29a2aee](https://github.com/ipfs/public-gateway-checker/commit/29a2aeea8ebf2e397e2933c0a6ae7a42efb1c4f2))
+* update conformance results ([2e06a78](https://github.com/ipfs/public-gateway-checker/commit/2e06a786bcc3712befb22de0abe9ee36f4181086))
+
 ## [1.9.1](https://github.com/ipfs/public-gateway-checker/compare/v1.9.0...v1.9.1) (2024-02-09)
 
 

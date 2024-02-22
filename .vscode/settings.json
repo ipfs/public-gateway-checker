@@ -14,16 +14,16 @@
   "standard.autoFixOnSave": true,
   "editor.defaultFormatter": "standard.vscode-standard",
   "[html]": {
-    "editor.defaultFormatter": "standard.vscode-standard",
+    "editor.defaultFormatter": "standard.vscode-standard"
   },
   "[json]": {
-    "editor.defaultFormatter": "standard.vscode-standard",
+    "editor.defaultFormatter": "standard.vscode-standard"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "standard.vscode-standard",
+    "editor.defaultFormatter": "standard.vscode-standard"
   },
   "files.autoSave": "afterDelay",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   }
 }

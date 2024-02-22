@@ -45,7 +45,7 @@ function trim (str) {
 }
 
 (async () => {
-  const gateways = (await fs.readFile('./gateways.txt')).toString().trim().split('\n')
+  const gateways = JSON.parse(await fs.readFile('./gateways.json'))
   const resolvableGateways = []
 
   for (const gw of gateways) {
@@ -81,5 +81,5 @@ function trim (str) {
     }
   }
 
-  await fs.writeFile('./gateways.txt', resolvableGateways.join('\n').concat('\n'))
+  await fs.writeFile('./gateways.json', JSON.stringify(resolvableGateways, null, '  '))
 })()

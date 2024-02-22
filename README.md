@@ -3,6 +3,7 @@
 **A site displaying public IPFS gateways and their online/offline status.**
 
 View the Public Gateway Checker in action
+
 * on Fleek:  https://ipfs-public-gateway-check.on.fleek.co/
 * on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
 

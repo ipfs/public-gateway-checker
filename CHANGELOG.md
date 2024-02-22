@@ -1,3 +1,11 @@
+## [1.9.3](https://github.com/ipfs/public-gateway-checker/compare/v1.9.2...v1.9.3) (2024-02-22)
+
+
+### Trivial Changes
+
+* update conformance results ([44b8c21](https://github.com/ipfs/public-gateway-checker/commit/44b8c21023ba8614d77089a2f8da296a1810373b))
+* Update Fleek url ([#538](https://github.com/ipfs/public-gateway-checker/issues/538)) ([24a5887](https://github.com/ipfs/public-gateway-checker/commit/24a58874806fbe55750d9866f726122cd6d0ae18))
+
 ## [1.9.2](https://github.com/ipfs/public-gateway-checker/compare/v1.9.1...v1.9.2) (2024-02-22)
 
 

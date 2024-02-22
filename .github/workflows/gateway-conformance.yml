@@ -29,8 +29,8 @@ jobs:
        id: set-matrix
        run: |
         # See details in https://github.com/ipfs/public-gateway-checker/pull/450#discussion_r1318704756
-        jq . gateways.json | \
-          xargs --null --max-chars=2000000 -I {} echo "gateways={}" | \
+        jq . --compact-output gateways.json | \
+          xargs --null -S2000000 --max-chars=2000000 -I {} echo "gateways={}" | \
           tee -a "$GITHUB_OUTPUT"
   conformance:
     runs-on: ubuntu-latest

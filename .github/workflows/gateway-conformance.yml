@@ -134,6 +134,7 @@ jobs:
           git config --global user.name "${GITHUB_ACTOR}"
       - name: Push
         run: |
+          git pull
           git add src/report.json
           git commit -m "chore: update conformance results"
           git push

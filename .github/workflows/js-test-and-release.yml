@@ -1,11 +1,9 @@
 name: test & maybe release
 
 on:
-  workflow_run:
-    workflows: ["Gateway Conformance Dashboard"]
-    branches: ["main"]
-    types:
-      - completed
+  push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 

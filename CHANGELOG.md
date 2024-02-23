@@ -1,3 +1,11 @@
+## [1.9.4](https://github.com/ipfs/public-gateway-checker/compare/v1.9.3...v1.9.4) (2024-02-23)
+
+
+### Trivial Changes
+
+* remove dweb and fleek ([#541](https://github.com/ipfs/public-gateway-checker/issues/541)) ([08f4a0c](https://github.com/ipfs/public-gateway-checker/commit/08f4a0cc30d3bc67c81f366717a1f6ddfffacd68))
+* update conformance results ([c25d713](https://github.com/ipfs/public-gateway-checker/commit/c25d713b2506359cc7ac593e62fd985eb0ced762))
+
 ## [1.9.3](https://github.com/ipfs/public-gateway-checker/compare/v1.9.2...v1.9.3) (2024-02-22)
 
 

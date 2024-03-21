@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   js-test-and-release:
-    uses: pl-strflt/uci/.github/workflows/js-test-and-release.yml@v1.0
+    uses: ipdxco/unified-github-workflows/.github/workflows/js-test-and-release.yml@v1.0
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}

@@ -20,4 +20,9 @@ concurrency:
 jobs:
   js-test-and-release:
     uses: pl-strflt/uci/.github/workflows/js-test-and-release.yml@v1.0
-    secrets: inherit
+    secrets:
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      UCI_GITHUB_TOKEN: ${{ secrets.UCI_GITHUB_TOKEN }}
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

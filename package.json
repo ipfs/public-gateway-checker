@@ -134,7 +134,7 @@
     "fetch-ponyfill": "^7.1.0",
     "ipfs-geoip": "^9.0.1",
     "js-beautify": "^1.14.8",
-    "ts-node": "^10.9.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5.1.6",
     "workbox-build": "7.0.0",
     "workbox-window": "7.0.0",

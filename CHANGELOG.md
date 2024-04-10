@@ -1,3 +1,16 @@
+## [1.10.0](https://github.com/ipfs/public-gateway-checker/compare/v1.9.6...v1.10.0) (2024-04-10)
+
+
+### Features
+
+* add storry.tv ([#550](https://github.com/ipfs/public-gateway-checker/issues/550)) ([127e5eb](https://github.com/ipfs/public-gateway-checker/commit/127e5eb6db5ffd72ceabfb603b7b46b7365ad42a))
+
+
+### Trivial Changes
+
+* **deps-dev:** bump typescript from 5.1.6 to 5.4.4 ([#551](https://github.com/ipfs/public-gateway-checker/issues/551)) ([eaa45c1](https://github.com/ipfs/public-gateway-checker/commit/eaa45c1b75480e1b268313fccbcbb9d8afd4c37d))
+* update conformance results ([0723c33](https://github.com/ipfs/public-gateway-checker/commit/0723c335a75ea690e8f49654a604619641ecf55e))
+
 ## [1.9.6](https://github.com/ipfs/public-gateway-checker/compare/v1.9.5...v1.9.6) (2024-03-21)
 
 

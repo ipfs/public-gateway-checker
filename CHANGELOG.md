@@ -1,3 +1,10 @@
+## [1.10.1](https://github.com/ipfs/public-gateway-checker/compare/v1.10.0...v1.10.1) (2024-04-11)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump ipfs-geoip from 9.0.1 to 9.1.0 ([#519](https://github.com/ipfs/public-gateway-checker/issues/519)) ([33c71d4](https://github.com/ipfs/public-gateway-checker/commit/33c71d43a02dba9cc501b576cbe8ef64876c3a71))
+
 ## [1.10.0](https://github.com/ipfs/public-gateway-checker/compare/v1.9.6...v1.10.0) (2024-04-10)
 
 

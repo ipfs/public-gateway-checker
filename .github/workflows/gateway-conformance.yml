@@ -71,7 +71,7 @@ jobs:
         # See https://github.com/ipfs/gateway-conformance/issues/171
         run: cat output.md | sed '/Failures\/Errors/,$d' >> $GITHUB_STEP_SUMMARY
       - name: Upload JSON output
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: conformance-${{ steps.slug.outputs.slug }}.json
           path: |
@@ -79,7 +79,7 @@ jobs:
             ./output.html
             ./report.json
       - name: Upload HTML report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: conformance-${{ steps.slug.outputs.slug }}.html
           path: output.html
@@ -113,7 +113,7 @@ jobs:
       - name: Upload Data Aggregates
         # This will be useful for local debugging
         if: (failure() || success())
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dashboard-reports
           path: ./reports
@@ -124,7 +124,7 @@ jobs:
       - name: Upload Report
         # This will be useful for local debugging
         if: (failure() || success())
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: dashboard-report
           path: ./src/report.json

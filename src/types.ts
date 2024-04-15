@@ -13,9 +13,9 @@ export interface Checkable {
 
   // @todo: Update to async/await
   // check: () => Promise<void>
-  check: () => void
-  checked: () => void
-  onerror: () => void
+  check(): void
+  checked(): void
+  onerror(): void
 }
 
 /**

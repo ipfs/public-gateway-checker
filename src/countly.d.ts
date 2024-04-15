@@ -25,16 +25,16 @@ declare module 'countly-sdk-web' {
   type IgnoreList = Array<string | RegExp>
   type CountlyEventQueueItem = [string, CountlyEventData] | [eventName: string, key: string] | [eventName: string]
   interface CountlyWebSdk {
-    group_features: (arg0: Record<string, string[]>) => unknown
-    add_consent: (consentFeature: string | string[]) => void
-    remove_consent: (consentFeature: string | string[]) => void
+    group_features(arg0: Record<string, string[]>): unknown
+    add_consent(consentFeature: string | string[]): void
+    remove_consent(consentFeature: string | string[]): void
     require_consent: boolean
-    init: (configOptions?: Partial<CountlyWebSdk>) => void
+    init(configOptions?: Partial<CountlyWebSdk>): void
     /**
      * Report custom event
      *
      */
-    add_event: (event: CountlyEvent) => void
+    add_event(event: CountlyEvent): void
     app_key: string
     url: string
     q?: CountlyEventQueueItem[]
@@ -48,12 +48,12 @@ declare module 'countly-sdk-web' {
      *
      * @param {Segments} segments - additional key value pairs you want to provide with error report, like versions of libraries used, etc.
      */
-    track_errors: (segments?: Segments) => void
+    track_errors(segments?: Segments): void
 
     /**
      * Track user sessions automatically, including  time user spent on your website
      */
-    track_sessions: () => void
+    track_sessions(): void
 
     /**
      * Track page views user visits
@@ -62,7 +62,7 @@ declare module 'countly-sdk-web' {
      * @param {IgnoreList} ignoreList - optional array of strings or regexps to test for the url/view name to ignore and not report
      * @param {Segments} viewSegments - optional key value object with segments to report with the view
      */
-    track_pageview: (page?: string, ignoreList?: IgnoreList, viewSegments?: Segments) => void
+    track_pageview(page?: string, ignoreList?: IgnoreList, viewSegments?: Segments): void
 
     /**
      * Track page views user visits. Alias of {@link track_pageview} method for compatibility with NodeJS SDK
@@ -71,34 +71,34 @@ declare module 'countly-sdk-web' {
      * @param {IgnoreList} ignoreList - optional array of strings or regexps to test for the url/view name to ignore and not report
      * @param {Segments} segments - optional view segments to track with the view
      */
-    track_view: (page?: string, ignoreList?: IgnoreList, viewSegments?: Segments) => void
+    track_view(page?: string, ignoreList?: IgnoreList, viewSegments?: Segments): void
 
     /**
      * Track all clicks on this page
      *
      * @param {HTMLElement} parent - DOM object which children to track, by default it is document body
      */
-    track_clicks: (parent = document.body) => void
+    track_clicks(parent = document.body): void
 
     /**
      * Track all scrolls on this page
      *
      * @param {HTMLElement} parent - DOM object which children to track, by default it is document body
      */
-    track_scrolls: (parent = document.body) => void
+    track_scrolls(parent = document.body): void
     /**
      * Generate custom event for all links that were clicked on this page
      *
      * @param {HTMLElement} parent - DOM object which children to track, by default it is document body
      */
-    track_links: (parent = document.body) => void
+    track_links(parent = document.body): void
     /**
      * Generate custom event for all forms that were submitted on this page
      *
      * @param {HTMLElement} parent - DOM object which children to track, by default it is document body
      * @param {boolean} trackHidden - provide true to also track hidden inputs, default false
      * */
-    track_forms: (parent = document.body, trackHidden = false) => void
+    track_forms(parent = document.body, trackHidden = false): void
   }
   declare const Countly: CountlyWebSdk
   export default Countly

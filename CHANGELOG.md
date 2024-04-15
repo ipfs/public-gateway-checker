@@ -1,3 +1,11 @@
+## [1.10.2](https://github.com/ipfs/public-gateway-checker/compare/v1.10.1...v1.10.2) (2024-04-15)
+
+
+### Trivial Changes
+
+* **deps:** bump actions/download-artifact from 3 to 4 ([#504](https://github.com/ipfs/public-gateway-checker/issues/504)) ([402b232](https://github.com/ipfs/public-gateway-checker/commit/402b2328f884224962da4c4de42735bd4f50cb5d))
+* **deps:** bump actions/upload-artifact from 3 to 4 ([#503](https://github.com/ipfs/public-gateway-checker/issues/503)) ([a6c407e](https://github.com/ipfs/public-gateway-checker/commit/a6c407e1316534f495a05757c90b1297084603c3))
+
 ## [1.10.1](https://github.com/ipfs/public-gateway-checker/compare/v1.10.0...v1.10.1) (2024-04-11)
 
 

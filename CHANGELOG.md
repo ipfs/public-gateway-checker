@@ -1,3 +1,10 @@
+## [1.10.3](https://github.com/ipfs/public-gateway-checker/compare/v1.10.2...v1.10.3) (2024-04-18)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump browserslist from 4.21.10 to 4.23.0 ([#535](https://github.com/ipfs/public-gateway-checker/issues/535)) ([b5d2dd4](https://github.com/ipfs/public-gateway-checker/commit/b5d2dd4f989fa0d04fd271185cd0fe4155a302a4))
+
 ## [1.10.2](https://github.com/ipfs/public-gateway-checker/compare/v1.10.1...v1.10.2) (2024-04-15)
 
 

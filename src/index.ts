@@ -2,12 +2,13 @@ import { Workbox } from 'workbox-window'
 import gateways from '../gateways.json'
 import { Checker } from './Checker'
 import { Log } from './Log'
-import { loadCountly } from './metrics'
+import { loadMetrics } from './metrics'
 
 const wb = new Workbox('/sw.js')
 void wb.register()
 
-loadCountly()
+// note: currently disabled and `.metricsConsentToggle` is currently display:none;
+loadMetrics()
 const log = new Log('App index')
 
 window.checker = new Checker()

@@ -1,4 +1,3 @@
-
 enum TagStatus {
   empty = '',
   pending = '🕑',

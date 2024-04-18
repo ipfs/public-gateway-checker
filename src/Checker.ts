@@ -1,4 +1,3 @@
-
 import { GatewayNode } from './GatewayNode'
 import { Log } from './Log'
 import { Results } from './Results'

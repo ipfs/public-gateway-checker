@@ -1,3 +1,15 @@
+## [1.10.6](https://github.com/ipfs/public-gateway-checker/compare/v1.10.5...v1.10.6) (2024-04-18)
+
+
+### Bug Fixes
+
+* disable countly metrics ([#553](https://github.com/ipfs/public-gateway-checker/issues/553)) ([68733bd](https://github.com/ipfs/public-gateway-checker/commit/68733bdc8fc1157e26be040167213ec5b5e2daf2))
+
+
+### Trivial Changes
+
+* update conformance results ([0f7217d](https://github.com/ipfs/public-gateway-checker/commit/0f7217deb919f3a0202ba712654da8f713c840a6))
+
 ## [1.10.5](https://github.com/ipfs/public-gateway-checker/compare/v1.10.4...v1.10.5) (2024-04-18)
 
 

@@ -1,3 +1,11 @@
+## [1.10.4](https://github.com/ipfs/public-gateway-checker/compare/v1.10.3...v1.10.4) (2024-04-18)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump eslint-config-ipfs from 4.0.3 to 6.0.1 ([#522](https://github.com/ipfs/public-gateway-checker/issues/522)) ([77ce4a9](https://github.com/ipfs/public-gateway-checker/commit/77ce4a917e67d3492d0eb6a444e59c75656eaba5))
+* **deps-dev:** bump js-beautify from 1.14.8 to 1.15.1 ([#537](https://github.com/ipfs/public-gateway-checker/issues/537)) ([533a84f](https://github.com/ipfs/public-gateway-checker/commit/533a84f4687c03b5cdf98d376a8278e79875fa6a))
+
 ## [1.10.3](https://github.com/ipfs/public-gateway-checker/compare/v1.10.2...v1.10.3) (2024-04-18)
 
 

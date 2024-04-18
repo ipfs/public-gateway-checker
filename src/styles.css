@@ -391,6 +391,8 @@ button#metrics-notification-warning-close {
  * From https://unpkg.com/@beyonk/gdpr-cookie-consent-banner@9.1.0/dist/style.css
  */
 .metricsConsentToggle {
+  /* TODO: make visible when we implement other metrics */
+  display: none;
   width: 43px;
   height: 43px;
   will-change: transform;

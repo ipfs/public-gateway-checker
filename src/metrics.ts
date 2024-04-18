@@ -1,5 +1,3 @@
-import Countly from 'countly-sdk-web'
-
 const metricsConsent = localStorage.getItem('metrics_consent')
 
 const metricsNotificationModal = document.querySelector('.js-metrics-notification-modal')
@@ -16,7 +14,7 @@ const necessaryMetricsToggle = document.querySelector('.js-necessary-toggle') as
 const metricsModalToggle = document.querySelector('.js-metrics-modal-toggle')
 
 function addConsent (consent: string[]): void {
-  Countly.add_consent(consent)
+  // TODO: add consent to metrics provider
 
   if (Array.isArray(consent)) {
     localStorage.setItem('metrics_consent', JSON.stringify(consent))
@@ -40,7 +38,7 @@ function updateNecessaryMetricPreferences (): void {
   if (necessaryMetricsAccepted) {
     addConsent(['minimal'])
   } else {
-    Countly.remove_consent(['minimal'])
+    // TODO: remove consent from metrics provider
     localStorage.setItem('metrics_consent', JSON.stringify([]))
   }
 }
@@ -76,50 +74,9 @@ function metricsModalToggleEventHandler (): void {
   initMetricsModal()
 }
 
-function loadCountly (): void {
+function loadMetrics (): void {
   metricsModalToggle?.addEventListener('click', metricsModalToggleEventHandler)
-  Countly.init({
-    app_key: '3c2c0819434074fc4d339ddd8e112a1e741ecb72',
-    url: 'https://countly.ipfs.io',
-    require_consent: true, // this true means consent is required
-  })
-  /**
-   * @see https://support.count.ly/hc/en-us/articles/360037441932-Web-analytics-JavaScript-#features-for-consent
-   */
-
-  const minimalFeatures = ['sessions', 'views', 'events']
-  const performanceFeatures = ['crashes', 'apm']
-  const uxFeatures = ['scrolls', 'clicks', 'forms']
-  const feedbackFeatures = ['star-rating', 'feedback']
-  const locationFeatures = ['location']
-
-  Countly.group_features({
-    all: [
-      ...minimalFeatures,
-      ...performanceFeatures,
-      ...uxFeatures,
-      ...feedbackFeatures,
-      ...locationFeatures,
-    ],
-    minimal: minimalFeatures,
-    performance: performanceFeatures,
-    ux: uxFeatures,
-    feedback: feedbackFeatures,
-    location: locationFeatures,
-  })
-
-  /**
-   * we can call all the helper methods we want, they won't record until consent is provided for specific features
-   */
-  //
-  Countly.track_clicks()
-  Countly.track_errors()
-  Countly.track_forms()
-  Countly.track_links()
-  Countly.track_pageview()
-  Countly.track_scrolls()
-  Countly.track_sessions()
-  Countly.track_view()
+  // TODO: initialize metrics provider
 
   if (metricsConsent != null) {
     addConsent(JSON.parse(metricsConsent))
@@ -128,4 +85,4 @@ function loadCountly (): void {
   }
 }
 
-export { loadCountly, Countly }
+export { loadMetrics }

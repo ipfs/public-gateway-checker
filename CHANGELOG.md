@@ -1,3 +1,11 @@
+## [1.10.5](https://github.com/ipfs/public-gateway-checker/compare/v1.10.4...v1.10.5) (2024-04-18)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump ts-node from 10.9.1 to 10.9.2 ([#521](https://github.com/ipfs/public-gateway-checker/issues/521)) ([229d210](https://github.com/ipfs/public-gateway-checker/commit/229d210dfad0b429601241f24bc2d616f1784e01))
+* **deps:** bump actions/configure-pages from 4 to 5 ([#549](https://github.com/ipfs/public-gateway-checker/issues/549)) ([26e7665](https://github.com/ipfs/public-gateway-checker/commit/26e766595a614e10a93e429cfd9f4303fa87dad9))
+
 ## [1.10.4](https://github.com/ipfs/public-gateway-checker/compare/v1.10.3...v1.10.4) (2024-04-18)
 
 

@@ -1,3 +1,11 @@
+## [1.10.7](https://github.com/ipfs/public-gateway-checker/compare/v1.10.6...v1.10.7) (2024-04-22)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump the npm_and_yarn group across 1 directories with 2 updates ([#540](https://github.com/ipfs/public-gateway-checker/issues/540)) ([445d849](https://github.com/ipfs/public-gateway-checker/commit/445d849b81909e40a7d68fc0ac2fa9b196c78e87))
+* update conformance results ([6e3108b](https://github.com/ipfs/public-gateway-checker/commit/6e3108b49e0ed6ac94ce454e1e570c9304898747))
+
 ## [1.10.6](https://github.com/ipfs/public-gateway-checker/compare/v1.10.5...v1.10.6) (2024-04-18)
 
 

@@ -1,9 +1,9 @@
 {
   "https://4everland.io": {
     "metadata": {
-      "time": "2024-04-18T20:25:38.376954444Z",
+      "time": "2024-04-22T18:10:43.119150092Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://4everland.io"
     },
     "results": {
@@ -26,9 +26,9 @@
   },
   "https://cf-ipfs.com": {
     "metadata": {
-      "time": "2024-04-18T20:25:39.840930982Z",
+      "time": "2024-04-22T18:10:48.514912661Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://cf-ipfs.com"
     },
     "results": {
@@ -51,9 +51,9 @@
   },
   "https://cloudflare-ipfs.com": {
     "metadata": {
-      "time": "2024-04-18T20:25:37.134922188Z",
+      "time": "2024-04-22T18:10:49.189135087Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://cloudflare-ipfs.com"
     },
     "results": {
@@ -76,9 +76,9 @@
   },
   "https://dweb.link": {
     "metadata": {
-      "time": "2024-04-18T20:25:35.762436216Z",
+      "time": "2024-04-22T18:10:46.060969525Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://dweb.link"
     },
     "results": {
@@ -101,9 +101,9 @@
   },
   "https://gateway.pinata.cloud": {
     "metadata": {
-      "time": "2024-04-18T20:25:37.68276652Z",
+      "time": "2024-04-22T18:10:48.073788394Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://gateway.pinata.cloud"
     },
     "results": {
@@ -126,9 +126,9 @@
   },
   "https://hardbin.com": {
     "metadata": {
-      "time": "2024-04-18T20:26:10.057271994Z",
+      "time": "2024-04-22T18:11:14.16941472Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://hardbin.com"
     },
     "results": {
@@ -151,15 +151,15 @@
   },
   "https://ipfs.eth.aragon.network": {
     "metadata": {
-      "time": "2024-04-18T20:28:29.957870759Z",
+      "time": "2024-04-22T18:11:49.206634363Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://ipfs.eth.aragon.network"
     },
     "results": {
       "DNSLink": {
         "pass": 0,
-        "fail": 2,
+        "fail": 1,
         "skip": 0
       },
       "CORS": {
@@ -168,47 +168,17 @@
         "skip": 0
       },
       "JSON-CBOR": {
-        "pass": 5,
-        "fail": 0,
-        "skip": 0
-      },
-      "IPNS": {
-        "pass": 0,
-        "fail": 3,
-        "skip": 0
-      },
-      "Others": {
         "pass": 3,
-        "fail": 3,
-        "skip": 0
-      },
-      "Block-CAR": {
-        "pass": 1,
-        "fail": 3,
-        "skip": 0
-      },
-      "Tar": {
-        "pass": 1,
-        "fail": 0,
-        "skip": 0
-      },
-      "UnixFS": {
-        "pass": 2,
         "fail": 1,
-        "skip": 0
-      },
-      "Subdomains": {
-        "pass": 0,
-        "fail": 3,
         "skip": 0
       }
     }
   },
   "https://ipfs.io": {
     "metadata": {
-      "time": "2024-04-18T20:32:40.773985014Z",
+      "time": "2024-04-22T18:17:47.998018002Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://ipfs.io"
     },
     "results": {
@@ -224,16 +194,16 @@
       },
       "JSON-CBOR": {
         "pass": 0,
-        "fail": 4,
+        "fail": 3,
         "skip": 0
       }
     }
   },
   "https://ipfs.runfission.com": {
     "metadata": {
-      "time": "2024-04-18T20:27:49.304537097Z",
+      "time": "2024-04-22T18:12:36.200555879Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://ipfs.runfission.com"
     },
     "results": {
@@ -286,9 +256,9 @@
   },
   "https://nftstorage.link": {
     "metadata": {
-      "time": "2024-04-18T20:25:38.111944579Z",
+      "time": "2024-04-22T18:10:45.605956127Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://nftstorage.link"
     },
     "results": {
@@ -311,9 +281,9 @@
   },
   "https://storry.tv": {
     "metadata": {
-      "time": "2024-04-18T20:25:36.097811406Z",
+      "time": "2024-04-22T18:10:51.035643056Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://storry.tv"
     },
     "results": {
@@ -336,9 +306,9 @@
   },
   "https://trustless-gateway.link": {
     "metadata": {
-      "time": "2024-04-18T20:25:37.122474279Z",
+      "time": "2024-04-22T18:10:56.420186716Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://trustless-gateway.link"
     },
     "results": {
@@ -361,9 +331,9 @@
   },
   "https://w3s.link": {
     "metadata": {
-      "time": "2024-04-18T20:25:34.899489003Z",
+      "time": "2024-04-22T18:10:45.079602511Z",
       "version": "v0.5.1",
-      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8744237422",
+      "job_url": "https://github.com/ipfs/public-gateway-checker/actions/runs/8788832024",
       "gateway_url": "https://w3s.link"
     },
     "results": {

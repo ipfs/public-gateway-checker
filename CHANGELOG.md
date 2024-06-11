@@ -1,3 +1,11 @@
+## [1.10.8](https://github.com/ipfs/public-gateway-checker/compare/v1.10.7...v1.10.8) (2024-06-11)
+
+
+### Trivial Changes
+
+* Delist CloudFlare's gateways due to their discontinuation. ([#572](https://github.com/ipfs/public-gateway-checker/issues/572)) ([5c46874](https://github.com/ipfs/public-gateway-checker/commit/5c4687488d46f2004e2db409ba0c5876430cc9be))
+* update conformance results ([87935be](https://github.com/ipfs/public-gateway-checker/commit/87935be73b3b81c745866d0dcb899d4e5d8953f2))
+
 ## [1.10.7](https://github.com/ipfs/public-gateway-checker/compare/v1.10.6...v1.10.7) (2024-04-22)
 
 

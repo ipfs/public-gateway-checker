@@ -1,3 +1,10 @@
+## [1.10.9](https://github.com/ipfs/public-gateway-checker/compare/v1.10.8...v1.10.9) (2024-07-23)
+
+
+### Trivial Changes
+
+* **deps-dev:** bump eslint-plugin-compat from 4.2.0 to 6.0.0 ([#584](https://github.com/ipfs/public-gateway-checker/issues/584)) ([bffe137](https://github.com/ipfs/public-gateway-checker/commit/bffe1374fa90a258617a05b3c4ff149386a506c1))
+
 ## [1.10.8](https://github.com/ipfs/public-gateway-checker/compare/v1.10.7...v1.10.8) (2024-06-11)
 
 

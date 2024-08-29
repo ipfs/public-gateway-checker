@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/ipfs/public-gateway-checker/compare/v1.10.9...v1.11.0) (2024-08-29)
+
+
+### Features
+
+* dlunar.net ([#582](https://github.com/ipfs/public-gateway-checker/issues/582)) ([c00d5a7](https://github.com/ipfs/public-gateway-checker/commit/c00d5a7aee03eaa99fdaf5ed7219eda47229d364))
+
 ## [1.10.9](https://github.com/ipfs/public-gateway-checker/compare/v1.10.8...v1.10.9) (2024-07-23)
 
 

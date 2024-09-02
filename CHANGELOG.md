@@ -1,3 +1,10 @@
+## [1.14.0](https://github.com/ipfs/public-gateway-checker/compare/v1.13.0...v1.14.0) (2024-08-30)
+
+
+### Features
+
+* add dwt.my.id ([#592](https://github.com/ipfs/public-gateway-checker/issues/592)) ([7d00759](https://github.com/ipfs/public-gateway-checker/commit/7d0075937ea517a590dd5e5dd32e2e606503d9e0))
+
 ## [1.13.0](https://github.com/ipfs/public-gateway-checker/compare/v1.12.0...v1.13.0) (2024-08-29)
 
 

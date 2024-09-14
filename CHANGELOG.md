@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/ipfs/public-gateway-checker/compare/v1.14.0...v1.14.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* remove dwt.my.id ([#593](https://github.com/ipfs/public-gateway-checker/issues/593)) ([219dc8e](https://github.com/ipfs/public-gateway-checker/commit/219dc8e5f2d85809c033a148878e8349bac0a1fe))
+
 ## [1.14.0](https://github.com/ipfs/public-gateway-checker/compare/v1.13.0...v1.14.0) (2024-08-30)
 
 

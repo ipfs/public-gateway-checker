@@ -1,3 +1,10 @@
+## [1.15.0](https://github.com/ipfs/public-gateway-checker/compare/v1.14.1...v1.15.0) (2024-09-23)
+
+
+### Features
+
+* add flk-ipfs.xyz ([#596](https://github.com/ipfs/public-gateway-checker/issues/596)) ([c8e2f05](https://github.com/ipfs/public-gateway-checker/commit/c8e2f0531502c94e7700bec74d8492f14d05e108))
+
 ## [1.14.1](https://github.com/ipfs/public-gateway-checker/compare/v1.14.0...v1.14.1) (2024-09-04)
 
 

@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/ipfs/public-gateway-checker/compare/v1.15.0...v1.15.1) (2025-02-19)
+
+
+### Trivial Changes
+
+* ipfs-geoip v9.2.0 ([#614](https://github.com/ipfs/public-gateway-checker/issues/614)) ([5f1a002](https://github.com/ipfs/public-gateway-checker/commit/5f1a002379430e8c139f50f8809dd618e5927c60))
+
 ## [1.15.0](https://github.com/ipfs/public-gateway-checker/compare/v1.14.1...v1.15.0) (2024-09-23)
 
 

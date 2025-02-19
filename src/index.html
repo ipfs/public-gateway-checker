@@ -37,13 +37,13 @@
     <div id="origin-warning" class="f5 pa2 tl">
       <p>SECURITY NOTES</p>
       <ul class="pl3">
-        <li>Avoid storing sensitive data (or providing credentials) on websites loaded via gateways marked with <big>⚠️ </big><br />
+        <li>Avoid storing sensitive data (or providing credentials) on websites loaded via gateways, especially ones marked with <big>⚠️ </big><br />
           These are legacy gateways for fetching standalone data, not designed to serve dapps/websites.<br />
-          <strong>They do not provide <a href="https://docs.ipfs.io/how-to/address-ipfs-on-web/#path-gateway">origin isolation</a></strong>.
+          <strong>They do NOT provide <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">origin isolation</a> and <a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval">trustless, verifiable retrieval</a></strong>.
         </li>
         <li class="pt2">
           The list contains gateways operated by various parties, coordinated by loose mutual consensus, <strong>without a central governing authority</strong>.<br />
-          Protocol Labs operates and is responsible for only two of the listed gateways: <code>ipfs.io</code> and <code>dweb.link</code>.
+          IPFS Foundation operates and is responsible for only three <strong><a href="https://docs.ipfs.tech/concepts/public-utilities/#public-ipfs-gateways">public good gateways</a></strong>: <code>ipfs.io</code>, <code>dweb.link</code> and <code>trustless-gateway.link</code>.
         </li>
       </ul>
     </div>
@@ -54,7 +54,7 @@
         <div class="Cors" title="Allows Cross-Origin Resource Sharing (CORS fetch)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">CORS</a></div>
         <div class="Ipns" title="Allows IPNS Resolution to IPFS Content Addresses"><a href="https://docs.ipfs.tech/concepts/ipns" target="_blank">IPNS</a></div>
         <div class="Origin" title="Provides Origin Isolation (Subdomain Gateway)"><a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
-        <div class="Trustless" title="Supports Trustless Gateway Specification"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Block/CAR</a></div>
+        <div class="Trustless" title="Supports Trustless Gateway Specification"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Verifiable</a></div>
         <div class="Flag">Country</div>
         <div class="Link">Hostname</div>
         <div class="Took">ΔT</div>

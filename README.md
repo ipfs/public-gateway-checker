@@ -4,7 +4,6 @@
 
 View the Public Gateway Checker in action
 
-* on Fleek: https://ipfs-public-gateway-check.on.fleek.co/
 * on GitHub Pages: https://ipfs.github.io/public-gateway-checker/
 
 [![Screenshot of Public Gateway Checker](https://user-images.githubusercontent.com/157609/121263486-f7fb2800-c8b5-11eb-9061-0b6f586a6f25.png)](https://ipfs.github.io/public-gateway-checker/)

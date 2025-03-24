@@ -1,3 +1,10 @@
+## [1.15.2](https://github.com/ipfs/public-gateway-checker/compare/v1.15.1...v1.15.2) (2025-03-24)
+
+
+### Bug Fixes
+
+* public url ([22b5198](https://github.com/ipfs/public-gateway-checker/commit/22b51985454490b4565ed60427290786975ba0a3))
+
 ## [1.15.1](https://github.com/ipfs/public-gateway-checker/compare/v1.15.0...v1.15.1) (2025-02-19)
 
 

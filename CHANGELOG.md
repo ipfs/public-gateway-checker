@@ -1,3 +1,15 @@
+## [1.16.0](https://github.com/ipfs/public-gateway-checker/compare/v1.15.2...v1.16.0) (2025-11-03)
+
+
+### Features
+
+* add dget.top ([#635](https://github.com/ipfs/public-gateway-checker/issues/635)) ([2ce24b5](https://github.com/ipfs/public-gateway-checker/commit/2ce24b5909e527f4f6c6b91ee97fbcc40f9c99c1))
+
+
+### Trivial Changes
+
+* update conformance results ([92a9763](https://github.com/ipfs/public-gateway-checker/commit/92a9763e2bb5ea736c670ddd37037408aeeee563))
+
 ## [1.15.2](https://github.com/ipfs/public-gateway-checker/compare/v1.15.1...v1.15.2) (2025-03-24)
 
 

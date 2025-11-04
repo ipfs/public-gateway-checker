@@ -119,7 +119,7 @@ jobs:
           path: ./reports
       - name: Generate final report
         run: |
-          npm i
+          npm ci --include=dev
           npx ts-node ./.github/aggregate.ts ./reports/*.json > ./src/report.json
       - name: Upload Report
         # This will be useful for local debugging

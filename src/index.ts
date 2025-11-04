@@ -1,8 +1,8 @@
 import { Workbox } from 'workbox-window'
-import gateways from '../gateways.json'
-import { Checker } from './Checker'
-import { Log } from './Log'
-import { loadMetrics } from './metrics'
+import gateways from '../gateways.json' with { type: 'json' }
+import { Checker } from './Checker.js'
+import { Log } from './Log.js'
+import { loadMetrics } from './metrics.js'
 
 const wb = new Workbox('/sw.js')
 void wb.register()

@@ -1,8 +1,8 @@
-import { UiComponent } from './UiComponent'
-import type { Checker } from './Checker'
-import type { GatewayNode } from './GatewayNode'
-import type { Tag } from './Tag'
-import type { Checkable } from './types'
+import { UiComponent } from './UiComponent.js'
+import type { Checker } from './Checker.js'
+import type { GatewayNode } from './GatewayNode.js'
+import type { Tag } from './Tag.js'
+import type { Checkable } from './types.js'
 
 /**
  * Base Check functionality

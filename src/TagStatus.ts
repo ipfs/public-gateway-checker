@@ -5,7 +5,7 @@ enum TagStatus {
   caution = '⚠️',
   failed = '❌',
   global = '🌍',
-  asterisk = '*',
+  asterisk = '*'
 }
 
 export { TagStatus }

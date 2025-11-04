@@ -1,4 +1,4 @@
-import { TagStatus } from './TagStatus'
+import { TagStatus } from './TagStatus.js'
 
 type TagClasses = 'Cors' | 'Flag' | 'Ipns' | 'Node' | 'Origin' | 'Status' | 'Trustless'
 

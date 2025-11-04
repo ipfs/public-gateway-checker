@@ -1,6 +1,6 @@
 import { URL } from 'url-ponyfill'
-import { Log } from './Log'
-import { IMG_HASH } from './constants'
+import { Log } from './Log.js'
+import { IMG_HASH } from './constants.js'
 
 const log = new Log('expectSubdomainRedirect')
 

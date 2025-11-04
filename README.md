@@ -25,7 +25,7 @@ Then, submit a pull request for this change. Be sure to follow all the direction
 ## Testing locally
 
 ```bash
-npm ci
+npm i
 npm run build
 npm start
 ```

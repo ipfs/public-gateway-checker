@@ -1,7 +1,7 @@
-import { GatewayNode } from './GatewayNode'
-import { Log } from './Log'
-import { Results } from './Results'
-import { Stats } from './Stats'
+import { GatewayNode } from './GatewayNode.js'
+import { Log } from './Log.js'
+import { Results } from './Results.js'
+import { Stats } from './Stats.js'
 
 const log = new Log('Checker')
 

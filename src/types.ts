@@ -1,5 +1,5 @@
-import type { Checker } from './Checker'
-import type { Tag } from './Tag'
+import type { Checker } from './Checker.js'
+import type { Tag } from './Tag.js'
 
 declare global {
   interface Window {

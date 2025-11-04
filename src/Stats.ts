@@ -1,6 +1,6 @@
-import { Tag } from './Tag'
-import { UiComponent } from './UiComponent'
-import type { Checker } from './Checker'
+import { Tag } from './Tag.js'
+import { UiComponent } from './UiComponent.js'
+import type { Checker } from './Checker.js'
 
 class Stats extends UiComponent {
   gateways: HTMLDivElement

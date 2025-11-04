@@ -1,3 +1,13 @@
+## [1.16.1](https://github.com/ipfs/public-gateway-checker/compare/v1.16.0...v1.16.1) (2025-11-04)
+
+### Bug Fixes
+
+* update logo path ([#638](https://github.com/ipfs/public-gateway-checker/issues/638)) ([0b82f20](https://github.com/ipfs/public-gateway-checker/commit/0b82f2003f163f0929184bc80e0bd5cf997626aa))
+
+### Trivial Changes
+
+* **deps-dev:** bump aegir from 42.2.11 to 46.0.0 ([#632](https://github.com/ipfs/public-gateway-checker/issues/632)) ([23fe01a](https://github.com/ipfs/public-gateway-checker/commit/23fe01acb57bca97d17e3c04307763d3fb7036d8))
+
 ## [1.16.0](https://github.com/ipfs/public-gateway-checker/compare/v1.15.2...v1.16.0) (2025-11-03)
 
 

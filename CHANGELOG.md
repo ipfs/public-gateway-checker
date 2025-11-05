@@ -1,3 +1,9 @@
+## [1.16.2](https://github.com/ipfs/public-gateway-checker/compare/v1.16.1...v1.16.2) (2025-11-05)
+
+### Trivial Changes
+
+* update ipfs.io and discuss.ipfs.io links to .tech domains ([7e93624](https://github.com/ipfs/public-gateway-checker/commit/7e93624d36372ef9c5d5289504873a5c46ff4372))
+
 ## [1.16.1](https://github.com/ipfs/public-gateway-checker/compare/v1.16.0...v1.16.1) (2025-11-04)
 
 ### Bug Fixes

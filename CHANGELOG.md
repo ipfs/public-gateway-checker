@@ -1,3 +1,9 @@
+## [1.16.3](https://github.com/ipfs/public-gateway-checker/compare/v1.16.2...v1.16.3) (2025-11-05)
+
+### Bug Fixes
+
+* **ci:** skip ipns and dnslink tests in conformance ([#640](https://github.com/ipfs/public-gateway-checker/issues/640)) ([1e24fbb](https://github.com/ipfs/public-gateway-checker/commit/1e24fbb78e308564fe9a118cda3b50b7d1f9f7bb))
+
 ## [1.16.2](https://github.com/ipfs/public-gateway-checker/compare/v1.16.1...v1.16.2) (2025-11-05)
 
 ### Trivial Changes

@@ -1,3 +1,9 @@
+## [1.18.0](https://github.com/ipfs/public-gateway-checker/compare/v1.17.0...v1.18.0) (2025-11-30)
+
+### Features
+
+* add 5d6zyscsdarzytpbi3mypv37uoaro2to7oqru4a3oga42bwt3jkof4qd.onion ([#622](https://github.com/ipfs/public-gateway-checker/issues/622)) ([bce99e2](https://github.com/ipfs/public-gateway-checker/commit/bce99e24eeeb62e92d9c58105e3a9c223b40f8ce))
+
 ## [1.17.0](https://github.com/ipfs/public-gateway-checker/compare/v1.16.3...v1.17.0) (2025-11-30)
 
 ### Features

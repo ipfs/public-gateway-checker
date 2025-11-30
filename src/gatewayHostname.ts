@@ -1,4 +1,4 @@
-import { HASH_TO_TEST } from './constants'
+import { HASH_TO_TEST } from './constants.js'
 
 function gatewayHostname (url: URL): string {
   let urlString: string = url.toString()

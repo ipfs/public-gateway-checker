@@ -1,10 +1,10 @@
 import { TokenBucketLimiter } from '@dutu/rate-limiter'
 import { lookup as IpfsGeoIpLookup } from 'ipfs-geoip'
-import { Log } from './Log'
-import { UiComponent } from './UiComponent'
-import { DEFAULT_IPFS_GATEWAY } from './constants'
-import type { GatewayNode } from './GatewayNode'
-import type { DnsQueryResponse } from './types'
+import { Log } from './Log.js'
+import { UiComponent } from './UiComponent.js'
+import { DEFAULT_IPFS_GATEWAY } from './constants.js'
+import type { GatewayNode } from './GatewayNode.js'
+import type { DnsQueryResponse } from './types.js'
 
 const log = new Log('Flag')
 
@@ -19,6 +19,12 @@ class Flag extends UiComponent {
   }
 
   async check (): Promise<void> {
+    // For .onion hostnames, skip country lookup (not applicable for Tor)
+    if (this.hostname.endsWith('.onion')) {
+      this.tag.empty()
+      return
+    }
+
     let ask = true
 
     try {
@@ -67,7 +73,7 @@ class Flag extends UiComponent {
         if (tokenAvailable) {
           return `https://cloudflare-dns.com/dns-query?name=${this.hostname}&type=A`
         }
-      }),
+      })
     ])
     if (url == null) {
       // No available tokens...
@@ -83,8 +89,8 @@ class Flag extends UiComponent {
       const response = await fetch(url, {
         method: 'GET',
         headers: {
-          Accept: 'application/dns-json',
-        },
+          Accept: 'application/dns-json'
+        }
       })
       const responseJson = await response.json()
 

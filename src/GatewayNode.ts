@@ -1,15 +1,15 @@
 import { URL } from 'url-ponyfill'
-import { Cors } from './Cors'
-import { Flag } from './Flag'
-import { IPNSCheck } from './Ipns'
-import { Log } from './Log'
-import { Origin } from './Origin'
-import { Status } from './Status'
-import { Trustless } from './Trustless'
-import { UiComponent } from './UiComponent'
-import { HASH_TO_TEST } from './constants'
-import { gatewayHostname } from './gatewayHostname'
-import type { Results } from './Results'
+import { Cors } from './Cors.js'
+import { Flag } from './Flag.js'
+import { IPNSCheck } from './Ipns.js'
+import { Log } from './Log.js'
+import { Origin } from './Origin.js'
+import { Status } from './Status.js'
+import { Trustless } from './Trustless.js'
+import { UiComponent } from './UiComponent.js'
+import { HASH_TO_TEST } from './constants.js'
+import { gatewayHostname } from './gatewayHostname.js'
+import type { Results } from './Results.js'
 
 const log = new Log('GatewayNode')
 
@@ -83,7 +83,7 @@ class GatewayNode extends UiComponent /* implements Checkable */ {
       this.ipns.check().then(() => { log.debug(this.gateway, 'IPNS success') }).then(this.onSuccessfulCheck.bind(this)),
       this.origin.check().then(() => { log.debug(this.gateway, 'Origin success') }).then(this.onSuccessfulCheck.bind(this)),
       this.trustless.check().then(
-        () => { log.debug(this.gateway, 'Trustless success') }).then(this.onSuccessfulCheck.bind(this)),
+        () => { log.debug(this.gateway, 'Trustless success') }).then(this.onSuccessfulCheck.bind(this))
     ]
 
     // we care only about the fastest method to return a success

@@ -1,10 +1,10 @@
 import { URL } from 'url-ponyfill'
-import { Log } from './Log'
-import { Tag } from './Tag'
-import { checkViaImgSrc } from './checkViaImgSrc'
-import { IMG_HASH } from './constants'
-import { expectSubdomainRedirect } from './expectSubdomainRedirect'
-import type { GatewayNode } from './GatewayNode'
+import { Log } from './Log.js'
+import { Tag } from './Tag.js'
+import { checkViaImgSrc } from './checkViaImgSrc.js'
+import { IMG_HASH } from './constants.js'
+import { expectSubdomainRedirect } from './expectSubdomainRedirect.js'
+import type { GatewayNode } from './GatewayNode.js'
 
 const log = new Log('Origin')
 

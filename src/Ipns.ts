@@ -1,9 +1,9 @@
 import fetchPonyfill from 'fetch-ponyfill'
-import { CheckBase } from './CheckBase'
-import { Log } from './Log'
-import { IPNS_PATH_TO_TEST } from './constants'
-import type { GatewayNode } from './GatewayNode'
-import type { Checkable } from './types'
+import { CheckBase } from './CheckBase.js'
+import { Log } from './Log.js'
+import { IPNS_PATH_TO_TEST } from './constants.js'
+import type { GatewayNode } from './GatewayNode.js'
+import type { Checkable } from './types.js'
 
 const { fetch } = fetchPonyfill()
 

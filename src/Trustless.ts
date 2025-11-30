@@ -1,9 +1,9 @@
 import fetchPonyfill from 'fetch-ponyfill'
-import { CheckBase } from './CheckBase'
-import { Log } from './Log'
-import { HASH_TO_TEST, TRUSTLESS_RESPONSE_TYPES } from './constants'
-import type { GatewayNode } from './GatewayNode'
-import type { Checkable } from './types'
+import { CheckBase } from './CheckBase.js'
+import { Log } from './Log.js'
+import { HASH_TO_TEST, TRUSTLESS_RESPONSE_TYPES } from './constants.js'
+import type { GatewayNode } from './GatewayNode.js'
+import type { Checkable } from './types.js'
 
 const { fetch } = fetchPonyfill()
 
@@ -26,7 +26,7 @@ class Trustless extends CheckBase implements Checkable {
           const testUrl = `${gatewayAndHash}?format=${trustlessTypes}&now=${now}#x-ipfs-companion-no-redirect`
           const response = await fetch(testUrl)
           return Boolean(response.headers.get('Content-Type')?.includes(`application/vnd.ipld.${trustlessTypes}`))
-        },
+        }
       ))
 
       const failedTests = TRUSTLESS_RESPONSE_TYPES.filter((_result, idx) => !trustlessResponseTypesTests[idx])

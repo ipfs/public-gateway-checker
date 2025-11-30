@@ -1,8 +1,8 @@
-import { Tag } from './Tag'
-import type { Checker } from './Checker'
-import type { GatewayNode } from './GatewayNode'
-import type { Results } from './Results'
-import type { Visible } from './types'
+import { Tag } from './Tag.js'
+import type { Checker } from './Checker.js'
+import type { GatewayNode } from './GatewayNode.js'
+import type { Results } from './Results.js'
+import type { Visible } from './types.js'
 
 class UiComponent {
   tag: Tag

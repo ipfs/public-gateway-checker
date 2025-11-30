@@ -21,7 +21,7 @@ function addConsent (consent: string[]): void {
   } else {
     localStorage.setItem(
       'metrics_consent',
-      JSON.stringify([consent]),
+      JSON.stringify([consent])
     )
   }
 }
@@ -61,7 +61,9 @@ function hideMetricsModal (): void {
 
 function managePreferencesClicked (): void {
   const metricsConsent = localStorage.getItem('metrics_consent')
-  if (metricsConsent != null) necessaryMetricsToggle.checked = JSON.parse(metricsConsent)[0] === 'minimal'
+  if (metricsConsent != null) {
+    necessaryMetricsToggle.checked = JSON.parse(metricsConsent)[0] === 'minimal'
+  }
   metricsAgreementContent?.classList.add('hidden')
   saveMetricPreferencesBtn?.classList.remove('hidden')
   metricsManagePreferencesContent?.classList.remove('hidden')

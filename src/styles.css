@@ -31,6 +31,10 @@ div.Stats div.Totals {
   background-color: #0cb892;
 }
 
+#checker\.onion\.stats div.Totals {
+  background-color: #7d4698;
+}
+
 div.Results {
   display: flex;
   flex-direction: column;
@@ -106,23 +110,30 @@ div.Node:not(.online):not(:first-child) {
 }
 
 div#origin-warning {
-  padding: .1rem 1.5rem;
+  padding: 1em 1.5rem;
+  margin: 0 auto 1em auto;
+  max-width: 1024px;
   border-left: 4px solid #e7c000;
   background-color: #fff7d2;
   color: #34373f;
+  border-radius: 0 4px 4px 0;
 }
 
 div#origin-warning p {
   letter-spacing: .5px;
   color: #b29400;
   font-weight: 600;
-  margin-bottom: -.4rem;
+  margin: 0 0 0.5em 0;
 }
 
 div#origin-warning ol,
-div#origin-warning p,
 div#origin-warning ul {
-  line-height: 1.7;
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+div#origin-warning li {
+  line-height: 1.6;
 }
 
 
@@ -426,4 +437,63 @@ button#metrics-notification-warning-close {
 
 .metricsConsentToggle:hover path {
   stroke: #60BCC7 !important;
+}
+
+/* Public Gateways Header */
+.GatewaysHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  gap: 0.5em;
+}
+
+.GatewaysHeader .gateways-icon {
+  font-size: 1.5em;
+}
+
+/* Tor Onion Gateways Section */
+.OnionSection {
+  margin-top: 2em;
+  padding-top: 1.5em;
+  border-top: 2px solid #edf0f4;
+}
+
+.OnionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1em;
+  gap: 0.5em;
+}
+
+.OnionHeader .onion-icon {
+  font-size: 1.5em;
+}
+
+.OnionMessage {
+  text-align: center;
+  padding: 1em 1.5em;
+  margin: 1em auto;
+  width: 100%;
+  max-width: 1024px;
+  background-color: #f5e6ff;
+  border-left: 4px solid #7d4698;
+  color: #34373f;
+  border-radius: 0 4px 4px 0;
+}
+
+.OnionMessage p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.OnionMessage a {
+  color: #7d4698;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.OnionMessage a:hover {
+  color: #5a3470;
 }

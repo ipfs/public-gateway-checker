@@ -1,17 +1,21 @@
 import { Tag } from './Tag.js'
 import { UiComponent } from './UiComponent.js'
 import type { Checker } from './Checker.js'
+import type { GatewayNode } from './GatewayNode.js'
 
 class Stats extends UiComponent {
   gateways: HTMLDivElement
   totals: HTMLDivElement
-  constructor (readonly parent: Checker) {
+  private readonly nodes: GatewayNode[]
+
+  constructor (readonly parent: Checker, elementId: string = 'checker.stats', nodes?: GatewayNode[]) {
     super(parent)
-    const statsElement = document.getElementById('checker.stats')
+    const statsElement = document.getElementById(elementId)
     if (statsElement == null) {
-      throw new Error('Could not find element with Id "checker.stats"')
+      throw new Error(`Could not find element with Id "${elementId}"`)
     }
     this.tag = Tag.fromElement(statsElement)
+    this.nodes = nodes ?? parent.nodes
 
     this.gateways = document.createElement('div')
     this.gateways.textContent = '0/0 tested'
@@ -27,14 +31,14 @@ class Stats extends UiComponent {
   public update (): void {
     let up = 0
     let down = 0
-    for (const savedNode of this.parent.nodes) {
+    for (const savedNode of this.nodes) {
       if (savedNode.status.up) {
         up += 1
       } else if (savedNode.status.down) {
         down += 1
       }
     }
-    this.gateways.textContent = `${up + down}/${this.parent.nodes.length} tested`
+    this.gateways.textContent = `${up + down}/${this.nodes.length} tested`
     this.totals.textContent = `${up} online`
   }
 }

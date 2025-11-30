@@ -6,6 +6,7 @@
   "include": [
     "test", // remove this line if you don't want to type-check tests
     "src",
-    "gateways.json"
+    "gateways.json",
+    "onion-gateways.json"
   ]
 }

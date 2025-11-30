@@ -19,6 +19,12 @@ class Flag extends UiComponent {
   }
 
   async check (): Promise<void> {
+    // For .onion hostnames, skip country lookup (not applicable for Tor)
+    if (this.hostname.endsWith('.onion')) {
+      this.tag.empty()
+      return
+    }
+
     let ask = true
 
     try {

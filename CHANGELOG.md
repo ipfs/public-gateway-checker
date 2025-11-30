@@ -1,3 +1,9 @@
+## [1.17.0](https://github.com/ipfs/public-gateway-checker/compare/v1.16.3...v1.17.0) (2025-11-30)
+
+### Features
+
+* add support for Tor .onion gateways ([#651](https://github.com/ipfs/public-gateway-checker/issues/651)) ([e145c95](https://github.com/ipfs/public-gateway-checker/commit/e145c95381337767c8e4ca84470cf5237d97b29e))
+
 ## [1.16.3](https://github.com/ipfs/public-gateway-checker/compare/v1.16.2...v1.16.3) (2025-11-05)
 
 ### Bug Fixes

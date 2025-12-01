@@ -1,3 +1,9 @@
+## [1.19.0](https://github.com/ipfs/public-gateway-checker/compare/v1.18.0...v1.19.0) (2025-12-01)
+
+### Features
+
+* add ipfs.disobey.net ([#652](https://github.com/ipfs/public-gateway-checker/issues/652)) ([73dd8fe](https://github.com/ipfs/public-gateway-checker/commit/73dd8fe2a5481fbbc7a126aa88506ca5a206bce3))
+
 ## [1.18.0](https://github.com/ipfs/public-gateway-checker/compare/v1.17.0...v1.18.0) (2025-11-30)
 
 ### Features

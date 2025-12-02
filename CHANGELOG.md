@@ -1,3 +1,9 @@
+## [1.20.0](https://github.com/ipfs/public-gateway-checker/compare/v1.19.0...v1.20.0) (2025-12-02)
+
+### Features
+
+* add http://udsyk...onion gateway ([#653](https://github.com/ipfs/public-gateway-checker/issues/653)) ([8ed1a3f](https://github.com/ipfs/public-gateway-checker/commit/8ed1a3f9c475d6b2a7c13aa097d6b02553a721c9))
+
 ## [1.19.0](https://github.com/ipfs/public-gateway-checker/compare/v1.18.0...v1.19.0) (2025-12-01)
 
 ### Features

@@ -1,3 +1,9 @@
+## [1.21.0](https://github.com/ipfs/public-gateway-checker/compare/v1.20.0...v1.21.0) (2025-12-17)
+
+### Features
+
+* add ipfs.filebase.io ([#660](https://github.com/ipfs/public-gateway-checker/issues/660)) ([855bdfa](https://github.com/ipfs/public-gateway-checker/commit/855bdfa49fced944680d90e3de71aa518f7ff878))
+
 ## [1.20.0](https://github.com/ipfs/public-gateway-checker/compare/v1.19.0...v1.20.0) (2025-12-02)
 
 ### Features

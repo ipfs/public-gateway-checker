@@ -1,3 +1,9 @@
+## [1.21.1](https://github.com/ipfs/public-gateway-checker/compare/v1.21.0...v1.21.1) (2025-12-18)
+
+### Trivial Changes
+
+* remove nftstorage.link ([14b730f](https://github.com/ipfs/public-gateway-checker/commit/14b730f48758e5a6a67a71f7a952aa57700db07c))
+
 ## [1.21.0](https://github.com/ipfs/public-gateway-checker/compare/v1.20.0...v1.21.0) (2025-12-17)
 
 ### Features

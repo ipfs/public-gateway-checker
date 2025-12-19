@@ -74,6 +74,7 @@ div#origin-warning a {
 }
 
 div.Node div.Status,
+div.Node div.Hotlink,
 div.Node div.Cors,
 div.Node div.Origin,
 div.Node div.Trustless,
@@ -83,6 +84,10 @@ div.Node div.Flag {
   text-align: center;
   margin: 0 0.5em;
   user-select: none;
+}
+
+div.Node div[title] {
+  cursor: help;
 }
 
 div.Node div.Flag {
@@ -101,9 +106,6 @@ div.Node div.Took {
   font-style: italic;
 }
 
-div.Node.trustless div.Trustless {
-  margin: 0 1.3em;
-}
 
 div.Node:not(.online):not(:first-child) {
   opacity: .5

@@ -39,7 +39,7 @@
       <ul class="pl3">
         <li>
           <strong>For complex websites and apps, only use gateways with ✅ in the Origin column.</strong><br />
-          Gateways marked ⚠️ lack <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">origin isolation</a>:
+          Gateways marked ❌ lack <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy">origin isolation</a>:
           all sites share <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">localStorage</a>, cookies, and session data.
           A malicious page could access data from every other site you've visited via that gateway.
           <a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway">Subdomain gateways</a> also ensure relative links work correctly.
@@ -66,11 +66,12 @@
     <div id="checker.stats" class="Stats monospace f6"></div>
     <div id="checker.results" class="Results monospace f6">
       <div class="Node Header">
-        <div class="Status" title="Online status: is it possible to read data?" style="cursor: help">Online</div>
-        <div class="Cors" title="Allows Cross-Origin Resource Sharing (CORS fetch)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">CORS</a></div>
-        <div class="Ipns" title="Allows IPNS Resolution to IPFS Content Addresses"><a href="https://docs.ipfs.tech/concepts/ipns" target="_blank">IPNS</a></div>
-        <div class="Origin" title="Provides Origin Isolation (Subdomain Gateway)"><a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
-        <div class="Trustless" title="Supports Trustless Gateway Specification"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Verifiable</a></div>
+        <div class="Status" title="Working — at least one test passed">Online</div>
+        <div class="Hotlink" title="Gateway allows image embedding — via &lt;img src=&quot;/ipfs/cid&quot;&gt;"><a href="https://en.wikipedia.org/wiki/Inline_linking" target="_blank">Hotlink</a></div>
+        <div class="Cors" title="Cross-origin requests allowed — CORS headers safelist all origins (*)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a></div>
+        <div class="Ipns" title="Updatable links — resolves /ipns/ paths to current content"><a href="https://docs.ipfs.tech/concepts/ipns" target="_blank">IPNS</a></div>
+        <div class="Origin" title="Security isolation — each CID runs on cid.ipfs.gateway.tld"><a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
+        <div class="Trustless" title="Verify without trust — supports ?format=raw and ?format=car"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Verifiable</a></div>
         <div class="Flag">Country</div>
         <div class="Link">Hostname</div>
         <div class="Took">ΔT</div>
@@ -93,11 +94,12 @@
       <div id="checker.onion.stats" class="Stats monospace f6"></div>
       <div id="checker.onion.results" class="Results monospace f6">
         <div class="Node Header">
-          <div class="Status" title="Online status: is it possible to read data?" style="cursor: help">Online</div>
-          <div class="Cors" title="Allows Cross-Origin Resource Sharing (CORS fetch)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#The_HTTP_response_headers" target="_blank">CORS</a></div>
-          <div class="Ipns" title="Allows IPNS Resolution to IPFS Content Addresses"><a href="https://docs.ipfs.tech/concepts/ipns" target="_blank">IPNS</a></div>
-          <div class="Origin" title="Provides Origin Isolation (Subdomain Gateway)"><a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
-          <div class="Trustless" title="Supports Trustless Gateway Specification"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Verifiable</a></div>
+          <div class="Status" title="Working — at least one test passed">Online</div>
+          <div class="Hotlink" title="Gateway allows image embedding — via &lt;img src=&quot;/ipfs/cid&quot;&gt;"><a href="https://en.wikipedia.org/wiki/Inline_linking" target="_blank">Hotlink</a></div>
+          <div class="Cors" title="Cross-origin requests allowed — CORS headers safelist all origins (*)"><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a></div>
+          <div class="Ipns" title="Updatable links — resolves /ipns/ paths to current content"><a href="https://docs.ipfs.tech/concepts/ipns" target="_blank">IPNS</a></div>
+          <div class="Origin" title="Security isolation — each CID runs on cid.ipfs.gateway.tld"><a href="https://docs.ipfs.tech/how-to/address-ipfs-on-web/#subdomain-gateway" target="_blank">Origin</a></div>
+          <div class="Trustless" title="Verify without trust — supports ?format=raw and ?format=car"><a href="https://docs.ipfs.tech/reference/http/gateway/#trustless-verifiable-retrieval" target="_blank">Verifiable</a></div>
           <div class="Flag"></div>
           <div class="Link">Hostname</div>
           <div class="Took">ΔT</div>

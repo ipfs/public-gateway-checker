@@ -44,7 +44,9 @@ function trim (str) {
   return str.length > 7 ? str.slice(0, 7) + '...' : str
 }
 
-(async () => {
+const shouldPrune = process.argv.includes('--prune')
+
+;(async () => {
   const gateways = JSON.parse(await fs.readFile('./gateways.json'))
   const resolvableGateways = []
 
@@ -81,5 +83,8 @@ function trim (str) {
     }
   }
 
-  await fs.writeFile('./gateways.json', JSON.stringify(resolvableGateways, null, '  '))
+  if (shouldPrune) {
+    await fs.writeFile('./gateways.json', JSON.stringify(resolvableGateways, null, '  '))
+    console.log(`\nPruned gateways.json: ${gateways.length} → ${resolvableGateways.length}`)
+  }
 })()

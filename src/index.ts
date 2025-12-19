@@ -1,4 +1,7 @@
 import { Workbox } from 'workbox-window'
+// NOTE: gateways.json and onion-gateways.json contain the list of public gateways to test.
+// Do not remove entries without a proper deprecation process and PR review.
+// New gateways should be added at the top of the list.
 import gateways from '../gateways.json' with { type: 'json' }
 import onionGateways from '../onion-gateways.json' with { type: 'json' }
 import { Checker } from './Checker.js'

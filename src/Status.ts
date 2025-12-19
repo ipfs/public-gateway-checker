@@ -1,38 +1,16 @@
-import { URL } from 'url-ponyfill'
-import { Log } from './Log.js'
 import { UiComponent } from './UiComponent.js'
-import { checkViaImgSrc } from './checkViaImgSrc.js'
-import { IMG_HASH } from './constants.js'
 import type { GatewayNode } from './GatewayNode.js'
 
-const log = new Log('Status')
-
+/**
+ * Status is a summary column that shows overall gateway reachability.
+ * It does not run any tests itself - it shows 🌍 if any test passed,
+ * ❌ if all tests failed, or ↪️ if a redirect was detected.
+ */
 class Status extends UiComponent {
   private _up: boolean = false
   private _down: boolean = false
   constructor (readonly parent: GatewayNode) {
     super(parent, 'div', 'Status')
-  }
-
-  async check (): Promise<void> {
-    // test by loading subresource via img.src (path will work on both old and subdomain gws)
-    const gwUrl = new URL(this.parent.gateway)
-    const imgPathUrl = new URL(`${gwUrl.protocol}//${gwUrl.hostname}/ipfs/${IMG_HASH}?now=${Date.now()}&filename=1x1.png#x-ipfs-companion-no-redirect`)
-    await checkViaImgSrc(imgPathUrl).catch((err) => {
-      if (err != null) {
-        log.error(this.parent.gateway, err)
-      }
-      // this.down = true
-      // we check this because the gateway could be already checked by CORS before onerror executes
-      // and, even though it is failing here, we know it is UP
-      // if (!this.up) {
-      //   this.down = false
-      //   // this.tag.textContent = '❌'
-      //   this.tag.lose()
-      //   // this.parent.failed()
-      // }
-      throw err
-    })
   }
 
   get down (): boolean {
@@ -43,6 +21,7 @@ class Status extends UiComponent {
     if (!this.up && !this.down) {
       this._down = true
       this.tag.lose()
+      this.tag.title = 'All tests failed'
     }
   }
 
@@ -53,18 +32,25 @@ class Status extends UiComponent {
   set up (value: boolean) {
     if (!this.up && !this.down) {
       this._up = true
-      this.tag.global()
+      if (this.parent.crossDomainRedirect != null) {
+        this.tag.redirect(this.parent.crossDomainRedirect)
+      } else {
+        this.tag.global()
+      }
       this.parent.tag.classList.add('online')
     }
   }
 
-  // checked () {
-  //   // this.up = true
-  //   // this.tag.global()
-  // }
-
-  onerror (): void {
-    throw new Error('Not implemented')
+  /**
+   * Update status to show redirect after initial display.
+   * Called when a later test detects a redirect that wasn't known
+   * when status.up was first set (e.g., Hotlink succeeded before
+   * CORS detected the redirect).
+   */
+  updateForRedirect (): void {
+    if (this._up && this.parent.crossDomainRedirect != null) {
+      this.tag.redirect(this.parent.crossDomainRedirect)
+    }
   }
 }
 

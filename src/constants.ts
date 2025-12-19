@@ -6,6 +6,10 @@ const IPNS_PATH_TO_TEST = '/ipns/en.wikipedia-on-ipfs.org/favicon.ico'
 const TRUSTLESS_RESPONSE_TYPES = ['raw', 'car']
 const DEFAULT_IPFS_GATEWAY = 'https://ipfs.io'
 
+// Delay before starting CORS/IPNS/Origin/Trustless tests (in ms).
+// Hotlink test runs immediately to provide fast visual feedback.
+const SLOW_TESTS_DELAY = 3000
+
 export {
   DEFAULT_IPFS_GATEWAY,
   HASH_STRING,
@@ -13,5 +17,6 @@ export {
   // IFRAME_HASH,
   IMG_HASH,
   IPNS_PATH_TO_TEST,
+  SLOW_TESTS_DELAY,
   TRUSTLESS_RESPONSE_TYPES
 }

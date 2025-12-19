@@ -1,6 +1,6 @@
 import { TagStatus } from './TagStatus.js'
 
-type TagClasses = 'Cors' | 'Flag' | 'Ipns' | 'Node' | 'Origin' | 'Status' | 'Trustless'
+type TagClasses = 'Cors' | 'Flag' | 'Hotlink' | 'Ipns' | 'Node' | 'Origin' | 'Status' | 'Trustless'
 
 type TagContent = TagStatus
 
@@ -50,6 +50,13 @@ class Tag {
 
   global (): void {
     this.textContent = TagStatus.global
+  }
+
+  redirect (targetDomain?: string): void {
+    this.textContent = TagStatus.redirect
+    if (targetDomain != null) {
+      this.element.title = `Redirects some or all requests to ${targetDomain}`
+    }
   }
 
   err (): void {

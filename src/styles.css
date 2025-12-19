@@ -36,20 +36,38 @@ div.Stats div.Totals {
 }
 
 div.Results {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns:
+    5em
+    /* Status */
+    6em
+    /* Hotlink */
+    5em
+    /* Cors */
+    5em
+    /* Ipns */
+    5em
+    /* Origin */
+    7em
+    /* Trustless/Verifiable */
+    4em
+    /* Flag */
+    1fr
+    /* Link - remaining space */
+    5em;
+  /* Took */
   margin: 0 auto;
   width: 100%;
   max-width: 1024px;
 }
 
 div.Node {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
   align-items: center;
   border-bottom: 1px solid #edf0f4;
-  padding: 0.5em 1em;
+  padding: 0.5em 0;
 }
 
 div.Node:hover {
@@ -58,9 +76,8 @@ div.Node:hover {
 
 
 div.Node div.Link {
-  width: 100%;
   text-align: left;
-  padding-left: 2em;
+  padding-left: 1em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -80,9 +97,8 @@ div.Node div.Origin,
 div.Node div.Trustless,
 div.Node div.Ipns,
 div.Node div.Flag {
-  width: 7.2em;
   text-align: center;
-  margin: 0 0.5em;
+  padding: 0 0.5em;
   user-select: none;
 }
 
@@ -100,8 +116,8 @@ div.Node div.Flag {
 }
 
 div.Node div.Took {
-  min-width: 5em;
   text-align: right;
+  padding-right: 0.5em;
   font-size: 80%;
   font-style: italic;
 }
@@ -139,9 +155,6 @@ div#origin-warning li {
 }
 
 
-div#checker\.results .Node:nth-child(1) .Link {
-  padding-left: 1em;
-}
 
 /**
  * Consent notification for metrics collection

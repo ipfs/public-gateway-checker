@@ -512,3 +512,98 @@ button#metrics-notification-warning-close {
 .OnionMessage a:hover {
   color: #5a3470;
 }
+
+/* Mobile responsive breakpoints for gateway results table */
+/* Column order: Status, Hotlink, Cors, Ipns, Origin, Trustless, Flag, Link, Took */
+@media (max-width: 768px) {
+  div.Results {
+    grid-template-columns: 3.5em 4em 3em 3em 3.5em 5em 2.5em 1fr 3.5em;
+    max-width: 100%;
+  }
+
+  /* Truncate header labels with ellipsis and ensure spacing */
+  div.Node.Header>div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0.25em;
+  }
+
+  div.Node div.Status,
+  div.Node div.Hotlink,
+  div.Node div.Cors,
+  div.Node div.Origin,
+  div.Node div.Trustless,
+  div.Node div.Ipns,
+  div.Node div.Flag {
+    padding: 0 0.125em;
+  }
+
+  div.Node div.Link {
+    padding-left: 0.5em;
+  }
+
+  div.Node div.Took {
+    padding-right: 0.25em;
+  }
+}
+
+@media (max-width: 480px) {
+  div.Results {
+    grid-template-columns: 2em 2em 2em 2em 2em 2em 1.5em 1fr 2.5em;
+    font-size: 0.875em;
+  }
+
+  div.Node div.Status,
+  div.Node div.Hotlink,
+  div.Node div.Cors,
+  div.Node div.Origin,
+  div.Node div.Trustless,
+  div.Node div.Ipns,
+  div.Node div.Flag {
+    padding: 0;
+  }
+
+  div.Node {
+    padding: 0.25em 0;
+  }
+
+  div.Node div.Link {
+    padding-left: 0.25em;
+  }
+
+  div.Node div.Took {
+    font-size: 75%;
+    padding-right: 0.125em;
+  }
+
+  div.Node.Header {
+    font-size: 0.7em;
+  }
+
+  div.Node.Header>div {
+    padding: 0 0.125em;
+  }
+}
+
+@media (max-width: 360px) {
+  .ph4-l.pt4-l.overflow-hidden {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  div.Results {
+    grid-template-columns:
+      1.75em 1.75em 1.75em 1.75em 1.75em 1.75em 1.5em 1fr 2em;
+    font-size: 0.8em;
+    min-width: 18em;
+  }
+
+  div.Node.Header {
+    font-size: 0.6em;
+  }
+
+  div.Node.Header>div {
+    padding: 0 0.0625em;
+  }
+}

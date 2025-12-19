@@ -1,3 +1,9 @@
+## [1.22.0](https://github.com/ipfs/public-gateway-checker/compare/v1.21.1...v1.22.0) (2025-12-19)
+
+### Features
+
+* add hotlink column, cross-domain redirect detection ([#661](https://github.com/ipfs/public-gateway-checker/issues/661)) ([6151c1d](https://github.com/ipfs/public-gateway-checker/commit/6151c1da2c682847acc7ceda20f2bca15b2f9bef))
+
 ## [1.21.1](https://github.com/ipfs/public-gateway-checker/compare/v1.21.0...v1.21.1) (2025-12-18)
 
 ### Trivial Changes

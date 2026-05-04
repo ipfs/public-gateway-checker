@@ -1,3 +1,9 @@
+## [1.22.2](https://github.com/ipfs/public-gateway-checker/compare/v1.22.1...v1.22.2) (2026-05-04)
+
+### Bug Fixes
+
+* remove 6 dead gateways ([#670](https://github.com/ipfs/public-gateway-checker/issues/670)) ([782d89a](https://github.com/ipfs/public-gateway-checker/commit/782d89aa32aba388efb99c1c82b196f8944efe89))
+
 ## [1.22.1](https://github.com/ipfs/public-gateway-checker/compare/v1.22.0...v1.22.1) (2026-02-27)
 
 ### Trivial Changes

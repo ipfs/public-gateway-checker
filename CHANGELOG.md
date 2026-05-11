@@ -1,3 +1,9 @@
+## [1.23.0](https://github.com/ipfs/public-gateway-checker/compare/v1.22.2...v1.23.0) (2026-05-11)
+
+### Features
+
+* re-add ipfs.cyou ([#672](https://github.com/ipfs/public-gateway-checker/issues/672)) ([5adb952](https://github.com/ipfs/public-gateway-checker/commit/5adb952c66dd56622f58eac9984f06215ab3fbdb))
+
 ## [1.22.2](https://github.com/ipfs/public-gateway-checker/compare/v1.22.1...v1.22.2) (2026-05-04)
 
 ### Bug Fixes

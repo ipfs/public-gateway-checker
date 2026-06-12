@@ -84,7 +84,8 @@ div.Node div.Link {
 }
 
 div.Node a,
-div#origin-warning a {
+div#origin-warning a,
+div#usage-notice a {
   text-decoration: none;
   color: #357edd;
   white-space: nowrap;
@@ -125,6 +126,38 @@ div.Node div.Took {
 
 div.Node:not(.online):not(:first-child) {
   opacity: .5
+}
+
+div#usage-notice {
+  position: relative;
+  padding: 0.55em 1.5rem 0.55em 2.7rem;
+  margin: 0 auto 1em auto;
+  max-width: 1024px;
+  border-left: 4px solid #3b8c90;
+  background-color: #eef6f7;
+  color: #1b3a3c;
+  border-radius: 0 4px 4px 0;
+}
+
+div#usage-notice::before {
+  content: "\24D8";
+  position: absolute;
+  left: 1rem;
+  top: 0.5em;
+  color: #3b8c90;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+div#usage-notice p {
+  margin: 0;
+  line-height: 1.45;
+  font-size: 0.93em;
+}
+
+div#usage-notice strong {
+  color: #0a6c73;
 }
 
 div#origin-warning {

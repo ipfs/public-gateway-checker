@@ -8,6 +8,8 @@ View the Public Gateway Checker in action
 
 [![Screenshot of Public Gateway Checker](https://user-images.githubusercontent.com/157609/121263486-f7fb2800-c8b5-11eb-9061-0b6f586a6f25.png)](https://ipfs.github.io/public-gateway-checker/)
 
+**Public gateways are best-effort, with no SLA.** They run as a public good and can rate-limit, change, or go offline at any time, so they suit demos and testing only. Production apps that can't run full peer-to-peer and need an [HTTP Gateway](https://specs.ipfs.tech/http-gateways/) or [Delegated Routing](https://specs.ipfs.tech/routing/http-routing-v1/) should [run a self-hosted IPFS stack end-to-end](https://docs.ipfs.tech/how-to/replace-public-gateways-with-self-hosted-ipfs/).
+
 ## SECURITY NOTES
 
 - For complex websites and apps, only use gateways with ✅ in the Origin column. Gateways marked ⚠️ lack origin isolation: all sites share localStorage, cookies, and session data. [Learn more](https://github.com/ipfs/public-gateway-checker/issues/150).

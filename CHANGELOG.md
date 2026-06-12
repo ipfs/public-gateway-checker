@@ -1,3 +1,13 @@
+## [1.23.1](https://github.com/ipfs/public-gateway-checker/compare/v1.23.0...v1.23.1) (2026-06-12)
+
+### Bug Fixes
+
+* remove w3s.link (redirects to dweb.link) ([bd0fa45](https://github.com/ipfs/public-gateway-checker/commit/bd0fa45c22d1ad7133d29a3697601e01e13af8f8))
+
+### Trivial Changes
+
+* note gateways are best-effort, no SLA ([ee7f444](https://github.com/ipfs/public-gateway-checker/commit/ee7f444f1375062ae263e9514132f1b480b2354f))
+
 ## [1.23.0](https://github.com/ipfs/public-gateway-checker/compare/v1.22.2...v1.23.0) (2026-05-11)
 
 ### Features

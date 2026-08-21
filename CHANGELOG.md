@@ -1,3 +1,9 @@
+## [1.23.3](https://github.com/ipfs/public-gateway-checker/compare/v1.23.2...v1.23.3) (2026-08-21)
+
+### Trivial Changes
+
+* point storry.tv entry at gateway host ([9d227f1](https://github.com/ipfs/public-gateway-checker/commit/9d227f15114302534dfdf5040a2ed4de614c710b))
+
 ## [1.23.2](https://github.com/ipfs/public-gateway-checker/compare/v1.23.1...v1.23.2) (2026-08-21)
 
 ### Trivial Changes

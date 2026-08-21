@@ -1,3 +1,9 @@
+## [1.23.2](https://github.com/ipfs/public-gateway-checker/compare/v1.23.1...v1.23.2) (2026-08-21)
+
+### Trivial Changes
+
+* trim gateway list ([7310399](https://github.com/ipfs/public-gateway-checker/commit/731039994e033c8c3d067fd34ea18c3a63cfaa01))
+
 ## [1.23.1](https://github.com/ipfs/public-gateway-checker/compare/v1.23.0...v1.23.1) (2026-06-12)
 
 ### Bug Fixes
